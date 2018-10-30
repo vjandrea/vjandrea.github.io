@@ -3,7 +3,7 @@ layout: post
 title: Agenda XML export format
 date: 2018-10-29 23:36 +0100
 ---
-Agenda elements are structured like:
+Agenda XML elements generated using the *Export* command are structured like:
 
     {% highlight xml %}
     <Agenda>
@@ -12,12 +12,11 @@ Agenda elements are structured like:
         </InfoItems>
     </Agenda>{% endhighlight %}
 
-
-Here's a breakdown of the attributes:
+Attribute breakdown
 
     {% highlight xml %}
     <Agenda
-        index="0" 
+        index="(integer)" # starts from 0
         repeat="(string)"
             Options:
             |none
@@ -25,18 +24,17 @@ Here's a breakdown of the attributes:
             |week
             |month
             |year
-            |day_each_month
+            |day_each_month # stated twice in the XSD, probably a bug.
             |week_each_month
-            |day_each_month # repetition, looks like a bug in the XSD
             |week_each_year
             |month_each_year
-            |day_2 # TODO: see if "every 3rd day" uses this attribute
+            |day_2 # *TODO*: see if "every 3rd day" uses this attribute
                      with repeat_count
         repeat_count="(integer)"
         date="(timestamp)" # formatted as YYYY-MM-DDThh:mm:ss
-        time="(integer)" # looks like an offset of fractions of a second
-                           eg: 108000
-        last_day="(integer)" # looks like the number of days from 0000-00-00 
+        time="(integer)" # looks like an offset
+                           eg: 108000 = 3600 * 30
+        last_day="(integer)" # looks like the number of days from 0000-00-00
                                but there's an offset, eg: 737367
         duration="(integer)" # duration in seconds, eg: 30
         special_time="(string)"
@@ -48,7 +46,7 @@ Here's a breakdown of the attributes:
             |last_daylight
         >
         <InfoItems>
-            <Info 
+            <Info
                 date="(timestamp of the comment creation YYYY-MM-DDThh:mm:ss)">
                 (comment)
             </Info>
@@ -57,4 +55,3 @@ Here's a breakdown of the attributes:
             (actual command line)
         </macro_line>
     </Agenda>{% endhighlight %}
-
