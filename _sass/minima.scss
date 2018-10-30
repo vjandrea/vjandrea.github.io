@@ -14,6 +14,9 @@ $text-color:       #eee !default;
 $background-color: #1A1A1A !default;
 $brand-color:      #E8A901 !default;
 
+$dark-red:         #770001 !default;
+$green:            #008000 !default;
+
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 20%) !default;
@@ -47,5 +50,6 @@ $on-laptop:        800px !default;
 @import
   "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "minima/syntax-highlighting",
+  "minima/custom-styles"
 ;
