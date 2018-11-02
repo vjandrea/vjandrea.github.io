@@ -1,0 +1,5 @@
+.key { color: $brand-color; border: 1px solid $grey-color-dark; padding: 2px; margin: 2px; }
+.rednote { color: lighten($dark-red, 40%); }
+.cmd { color: lighten($green, 5%);
+       font-family: $dejavu-sans-mono, monospace;
+       font-weight: 900; }

@@ -1,4 +1,7 @@
 @charset "utf-8";
+@import url("https://fontlibrary.org/face/dejavu-sans-mono");
+
+$dejavu-sans-mono: 'DejaVuSansMonoBold' !default;
 
 // Define defaults for each variable.
 
@@ -14,6 +17,9 @@ $text-color:       #eee !default;
 $background-color: #1A1A1A !default;
 $brand-color:      #E8A901 !default;
 
+$dark-red:         #770001 !default;
+$green:            #008000 !default;
+
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 20%) !default;
@@ -21,10 +27,10 @@ $grey-color-dark:  darken($grey-color, 20%) !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    1000px !default;
 
 $on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-laptop:        1000px !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -47,5 +53,6 @@ $on-laptop:        800px !default;
 @import
   "minima/base",
   "minima/layout",
-  "minima/syntax-highlighting"
+  "minima/syntax-highlighting",
+  "minima/custom-styles"
 ;
