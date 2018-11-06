@@ -3,3 +3,28 @@
 .cmd { color: lighten($green, 5%);
        font-family: $dejavu-sans-mono, monospace;
        font-weight: 900; }
+.gma2-btn {
+	font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #F8B92B;
+	border: 2px solid;
+	border-color: #888 #343434 #343434 #888;
+	background-color: #333333;
+	padding: 5px;
+}
+.gma2-cmd {
+	font-family: "Roboto", sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 16px;
+	color: #FFF;
+	border: 2px solid #F8B92B;
+	background-color: #0A6058;
+	padding: 2px 30px 2px 30px; 
+	background-image: url('/assets/yellowbullet.svg');
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-origin: border-box;
+}

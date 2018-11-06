@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Agenda in the command line
+title: Agenda editing
 ---
 # *Agenda*
 
 shortcut: **ag**{:.cmd}
 
-key: **Macro**{:.key}**Macro**{:.key}**Macro**{:.key}
+key: **Macro**{:.gma2-btn} **Macro**{:.gma2-btn} **Macro**{:.gma2-btn}
 
-**Assign**{:.cmd} **Agenda**{:.cmd} X \<parameter\>
+An agenda item must already exist to be modified with **Assign**, so we should start with: **\> Store Agenda 1**{:.gma2-cmd}
 
-An agenda item must already exist to be modified with Assign, so we should start with: **Store Agenda**{:.cmd} 1
+The agenda index is progressive, so it's not possible to store an arbitrary number.  
 
-The agenda index is progressive, so it's not possible to start from an arbitrary number.  
+**\> Store Agenda 99**{:.gma2-cmd} _will return an error (Error 16 # RESIZE FORBIDDEN) if there aren't at least 98 items already in the agenda_.
 
-**Store Agenda**{:.cmd} 99 _will return an error (Error 16 # RESIZE FORBIDDEN) if there aren't at least 98 items already in the agenda_.
+To verify the number of agenda items, use **\> List Agenda**{:.gma2-cmd}
 
-To verify the number of agenda items, use **List Agenda**{:.cmd}
+### Usage
+
+**\> Assign Agenda X \<parameter\>**{:.gma2-cmd}
 
 ### Parameters
 
@@ -31,15 +33,15 @@ To verify the number of agenda items, use **List Agenda**{:.cmd}
 
   > Dusk
 
-  **/Time** = *use the _h_m_s syntax without quotes, like:* **Assign**{:.cmd} **Agenda**{:.cmd} 1 /Time=1h15m
+  **/Time** = use the _h_m_s syntax without quotes, like: **\> Assign Agenda 1 /Time=1h15m**{:.gma2-cmd}
 
 > **The hh/mm/ss syntax shown in the manual doesn't work**{:.rednote}
 
 > Relative times set for Dawn, Sunrise, Sunset, Dusk allow a maximum difference of 1 hour.
 
-> To enter a negative relative time just add a dash: **Assign**{:.cmd} **Agenda**{:.cmd} 1 /Time=-20m
+> To enter a negative relative time just add a dash: **\> Assign Agenda 1 /Time=-20m**{:.gma2-cmd}
 
-  **/Duration** = *use the _h_m_s syntax without quotes, like:* **Assign**{:.cmd} **Agenda**{:.cmd} 1 /Duration=1h
+  **/Duration** = use the _h_m_s syntax without quotes, like: **\> Assign Agenda 1 /Duration=1h**{:.gma2-cmd}
 
 > **The hh/mm/ss syntax shown in the manual doesn't work**{:.rednote}
 
@@ -54,25 +56,25 @@ To verify the number of agenda items, use **List Agenda**{:.cmd}
 
   > Annually :  **Doesn't work**{:.rednote}
 
-  > Daily each month : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="daily each month"
+  > Daily each month : use quotes: **\> Assign Agenda 1 /Repeat="daily each month"**{:.gma2-cmd}
 
-  > Weekly each month : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="weekly each month"
+  > Weekly each month : use quotes: **\> Assign Agenda 1 /Repeat="weekly each month"**{:.gma2-cmd}
 
-  > Daily each year : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="daily each year"
+  > Daily each year : use quotes: **\> Assign Agenda 1 /Repeat="daily each year"**{:.gma2-cmd}
 
-  > Weekly each year : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="weekly each year"
+  > Weekly each year : use quotes: **\> Assign Agenda 1 /Repeat="weekly each year"**{:.gma2-cmd}
 
-  > Monthly each year : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="monthly each year"
+  > Monthly each year : use quotes: **\> Assign Agenda 1 /Repeat="monthly each year"**{:.gma2-cmd}
 
-  > Every 2nd day : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="every 2nd day"
+  > Every 2nd day : use quotes: **\> Assign Agenda 1 /Repeat="every 2nd day"**{:.gma2-cmd}
 
-  > Every 3rd day : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="every 3rd day"
+  > Every 3rd day : use quotes: **\> Assign Agenda 1 /Repeat="every 3rd day"**{:.gma2-cmd}
 
-  > Every 4th day : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="every 4th day"
+  > Every 4th day : use quotes: **\> Assign Agenda 1 /Repeat="every 4th day"**{:.gma2-cmd}
 
-  > Every 5th day : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="every 5th day"
+  > Every 5th day : use quotes: **\> Assign Agenda 1 /Repeat="every 5th day"**{:.gma2-cmd}
 
-  > Every 6th day : use quotes: **Assign Agenda**{:.cmd} 1 /Repeat="every 6th day"
+  > Every 6th day : use quotes: **\> Assign Agenda 1 /Repeat="every 6th day"**{:.gma2-cmd}
 
   **/CMD** = ""
 
@@ -84,6 +86,6 @@ To verify the number of agenda items, use **List Agenda**{:.cmd}
 
 # *Export and Import*
 
-**Export Agenda**{:.cmd} * "(filename)"
+**\> Export Agenda * "\<filename\>"**{:.gma2-cmd}
 
-**Import**{:.cmd} "(filename)" **At Agenda**{:.cmd} 1
+**\> Import "\<filename\>" At Agenda 1**{:.gma2-cmd}
