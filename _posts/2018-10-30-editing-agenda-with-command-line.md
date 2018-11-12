@@ -54,7 +54,7 @@ To verify the number of agenda items, use **\> List Agenda**{:.gma2-cmd}
 
   > Monthly
 
-  > Annually :  **Doesn't work**{:.rednote}
+  > Annually :  **Doesn't work**{:.rednote} Use 'yearly' instead: **\> Assign Agenda 1 /Repeat=yearly**{:.gma2-cmd}
 
   > Daily each month : use quotes: **\> Assign Agenda 1 /Repeat="daily each month"**{:.gma2-cmd}
 
