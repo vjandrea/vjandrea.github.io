@@ -28,9 +28,14 @@ Attribute breakdown
             |week_each_month
             |week_each_year
             |month_each_year
-            |day_2 # *TODO*: see if "every 3rd day" uses this attribute
-                     with repeat_count
+            |day_2
         repeat_count="(integer)"
+            Some options:
+            | "3" = "Every 3rd day"
+            | "4" = "Every 4th day"
+            | "5" = "Every 5th day"
+            | "6" = "Every 6th day"
+            | "7" = **Illegal**{:.rednote}
         date="(timestamp)" # formatted as YYYY-MM-DDThh:mm:ss
         time="(integer)" # looks like an offset
                            eg: 108000 = 3600 * 30
