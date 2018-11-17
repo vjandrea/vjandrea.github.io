@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Module Manager</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="module manager, fixture type - class" />
+	</head>
+	<body>
+		
+		
+		<h1>Module Manager</h1>
+		
+		<p>If you have arrived at this topic from a link without reading the previous topic, then please read <a href="key_adv_fixture_anatomy.html">Anatomy of a Fixture Type</a> first.</p>
+
+<p>All fixtures needs a minimum of one <strong>Module</strong>. Some fixtures have more than one. For instance a fixture that has one pan attribute but several tilt attributes (several small heads mounted on same yoke). Or more commonly one module with pan, tilt, zoom, master intensity, and other common functions and then another module for each LED pixel in a wash moving head.</p>
+
+<p>In the <strong>Module Manager</strong>, it is possible to edit the module information. The manager can be opened from the <strong>Fixture Type Editor</strong>. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_fixture-editor_module-manager_v3-3.png" />
+<figcaption><em>Module manager</em></figcaption>
+</figure>
+
+<p>There are buttons at the bottom to add more modules or delete the existing ones. The <span class="softkey">Diagnostics</span> button opens a pop-up listing errors or warnings for the modules.</p>
+
+<p>The module manager displays the different modules in rows and several columns are used to display and edit the module elements. Here is a short description of the columns:</p>
+
+<ul>
+	<li><strong>No.</strong>:<br />
+	This is an auto generated number for the row. It cannot be edited.</li>
+	<li><strong>Name</strong>:<br />
+	This is the name of the module.</li>
+	<li><strong>BeamAngle</strong>:<br />
+	Here it is possible to set a static beam angle. If the fixture has a variable zoom, then it is best to set this value to "1" and defined the physical zoom degrees in the zoom attribute.</li>
+	<li><strong>BeamIntensity</strong>:<br />
+	Here it is possible to set a lumen intensity. This value is used in MA 3D.</li>
+	<li><strong>MIB Delay</strong>:<br />
+	The module can have a custom MIB delay value. The "Default" value will use the <strong>MIB Delay</strong> time defined in the <strong>Playback &amp; MIB Timing</strong> settings in the <strong>Setup</strong>. Read more about MIB in the <a href="key_adv_seq_mib.html">Working with MIB topic</a>.</li>
+	<li><strong>Class</strong>:<br />
+	The <strong>Class</strong> describes the type of module. Editing this cell will open the <strong>Select Class pop-up</strong>. Please read more <a href="#class">below</a>.</li>
+	<li><strong>Beam</strong>:<br />
+	The <strong>Beam</strong> option defines how the light beam is visualized in MA 3D. Editing the cell opens the <strong>Select Beam pop-up</strong>:
+	<figure class="caption"><img alt="" src="../../img/popup_select-beam_v3-3.png" />
+	<figcaption><em>Select Beam type</em></figcaption>
+	</figure>
+	<br />
+	The options are: <strong>None</strong>, <strong>Spot</strong>, <strong>Wash</strong>, <strong>Effect</strong>, and <strong>Fiber</strong>. Be aware that the LED class does not display a beam - no matter what is selected in this option. Often it is only the <strong>Spot</strong> and <strong>Wash</strong> beam types that are used and visualized correctly in MA 3D.</li>
+	<li><strong>Model</strong>:<br />
+	The model is the 3D model used in MA 3D. Editing this cell opens the <strong>Model pop-up</strong>. It list all the different 3D models in the show file. To read more about custom 3D models please read the <a href="ma_3d/key_3d-modeling-and-import.html">3D Modeling and Import topics</a> in the MA 3D manual.</li>
+	<li><strong>Size X</strong>, <strong>Size Y</strong>, <strong>Size Z</strong>, <strong>Axis X</strong>, <strong>Axis Y</strong>, and <strong>Axis Z</strong>:<br />
+	The size and the axis column describe the physical size of the fixture and where the movement axis are for the fixture. Editing one of these cells opens the <strong>Body Description pop-up</strong>. It looks different depending on the selected Class. Most classes do not have a body description and the cells are locked for editing.</li>
+	<li><strong>Local</strong>:<br />
+	Setting this cell to On, will make this module be calculated locally. This should be used with great care. It is intended to be used for tracking systems. It might help if there is a small latency in the tracking system to have the Stage Marker fixtures calculated locally instead of distributed in the system. If local calculation is applied to many fixtures then it might have the reverse effect and actually add more latency.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2><a id="class" name="class"></a>Module Classes</h2>
+
+<p>The <strong>Class </strong>is used to describe the type of fixture. It defines how it is visualized in MA 3D. The Select Class pop-up opens when the cell is edited in the module manager.</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-class_v3-3.png" />
+<figcaption><em>Select Class</em></figcaption>
+</figure>
+
+<p>This is a show description of the different classes:</p>
+
+<ul>
+	<li><strong>None</strong>:<br />
+	This class does not display any 3D models in MA 3D.</li>
+	<li><strong>Mirror</strong>:<br />
+	This class is for moving mirror fixtures. The default 3D model type is a classic "scanner" model.</li>
+	<li><strong>Headmover</strong>:<br />
+	This is a moving head or moving body fixture type. The default 3D model type is a classic "yoke" model.</li>
+	<li><strong>Conventional</strong>:<br />
+	This is used for non moving fixtures. The default 3D model type is a classic "parcan" model. This might also be a useful class for non-moving LED fixtures where the beam is to be visualized in MA 3D and the Stage window.</li>
+	<li><strong>LED</strong>:<br />
+	This class is used for non moving LED fixtures. There is no light beam from this class. It is a light emitting surface. The default 3D model type is a "box" model.</li>
+	<li><strong>Video Keystone</strong>:<br />
+	This class is used by some media servers. There is no 3D model associated with the class.</li>
+	<li><strong>Video Effect Master</strong>:<br />
+	This class is used by some media servers. There is no 3D model associated with the class.</li>
+	<li><strong>Video Layer</strong>:<br />
+	This class is used by some media servers. There is no 3D model associated with the class.</li>
+	<li><strong>Video Output</strong>:<br />
+	This class is used by some media servers. There is no 3D model associated with the class.</li>
+	<li><strong>Video Splitscreen</strong>:<br />
+	This class is used by some media servers. There is no 3D model associated with the class.</li>
+	<li><strong>Moving Path</strong>:<br />
+	The moving path class is used by the <strong>Moving Path</strong> fixtures from MA Lighting. They can be used to move other 3D elements in MA 3D. There is no 3D model associated with the class.</li>
+	<li><strong>Video Master</strong>:<br />
+	This class is used by some media servers. There is no 3D model associated with the class.</li>
+	<li><strong>Grandma Bitmap Layer</strong>:<br />
+	This class is used by the <strong>Bitmap</strong> fixture from MA Lighting. This virtual fixture can be used to apply values to other fixtures - Read more in the <a href="key_bitmapfixture.html">Bitmap Fixture section</a>. There is no 3D model associated with the class.</li>
+	<li><strong>Marker</strong>:<br />
+	This class is used by the <strong>Stage Marker</strong> fixtures from MA Lighting. These virtual fixtures can be used to move a marker around the 3D space. There is no 3D model associated with the class.</li>
+	<li><strong>Camera Controller</strong>:<br />
+	This class is used by the <strong>Camera Controller</strong> fixture from MA Lighting. This virtual fixture can be used to move a camera around the 3D space. There is no 3D model associated with the class.</li>
+	<li><strong>Preset</strong>:<br />
+	This class is used by the auto generated "Fixture Type" fixtures that appear in the Fixture Sheet and Channel Sheet. It should not be used by other fixtures.&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

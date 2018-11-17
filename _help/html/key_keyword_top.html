@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Top Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Top Keyword, Top Cue List" />
+	</head>
+	<body>
+		
+		
+		<h1>Top Keyword</h1>
+		
+		<p>To go to the Top keyword, press <span class="hardkey">Top</span> or type <strong>Top </strong>in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The Top keyword jumps to the beginning of the cue list or sets the timecode marker at the beginning of the timecode show.</p>
+
+<p>The Top keyword is a function keyword.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Top [Executor-list] / [Option] = [Option Value]</span></p>
+
+<p><span class="syntax">Top [Timecode-list] </span></p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available options to the top keyword, type in the command line</p>
+
+<div class="cl_input">[Channel]&gt; Top /?</div>
+
+<p>The top keyword has the following options.</p>
+
+<div class="important"><strong>Important:</strong><br />
+The cue mode options along with the top keyword are only necessary if the cue zero mode is set to on, all, dimmers only, or effects. For more information, see <a href="key_adv_seq_cue_modes.html">Using cue modes</a>.</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option Shortcut</th>
+			<th scope="col">Option Value</th>
+			<th scope="col">Option Value Shortcut</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>Normal</td>
+			<td>N</td>
+			<td>Goes to the top of the sequence and calls the first cue normal.</td>
+		</tr>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>Assert</td>
+			<td>A</td>
+			<td>Goes to the top of the sequence and calls the first cue with an assert.</td>
+		</tr>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>XAssert</td>
+			<td>XA</td>
+			<td>Goes to the top of the sequence and calls the first cue with a xassert.</td>
+		</tr>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>Release</td>
+			<td>R</td>
+			<td>Goes to the top of the sequence and calls the first cue and release it.</td>
+		</tr>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>Break</td>
+			<td>B</td>
+			<td>Goes to the top of the sequence and calls the first cue and sets a break before the cue.</td>
+		</tr>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>XBreak</td>
+			<td>XB</td>
+			<td>Goes to the top of the sequence and calls the first cue and sets a xbreak before the cue.</td>
+		</tr>
+		<tr>
+			<td>userprofile</td>
+			<td>upr</td>
+			<td>"Name of the user profile", e.g. "Dominik"</td>
+			<td>not available</td>
+			<td>Goes to the top of the sequence and calls the first cue with specified user profile.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Go to the top of the cue list on executor 5.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Top Executor 5</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Go to the top of the cue list on executor 5 in 3 seconds.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Top Executor 5 Fade 3</div>
+
+		
+	</body>
+</html>

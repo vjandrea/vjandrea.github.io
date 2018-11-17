@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Cue Zero</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="cue zero, cuezero extract" />
+	</head>
+	<body>
+		
+		
+		<h1>Cue Zero</h1>
+		
+		<p>Cue Zero is an automatically created cue containing a link to default values of attributes. Cue Zero cannot be modified manually. A sequence with activated Cue Zero will start at the first cue after Cue Zero. This cue provides default values when starting the sequence and provides the missing default data when moving or copying cues.</p>
+
+<p>Cue Zero is only available in sequences where <a href="key_cs_what_is_tracking.html">Tracking</a> is activated and there needs to be more than one cue.</p>
+
+<p>&nbsp;</p>
+
+<p>The settings are all made in the <strong>Assign Menu</strong>. This can be opened by pressing the <span class="hardkey">Assign</span> key followed by one of the keys associated with the executor you want to change. In the Assign Menu please tap the <span class="softkey">Options button</span> on the right side of the menu.</p>
+
+<p>This is the options we will be looking at in this topic:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_assign-menu_cue-zero-settings_v3-3.PNG" />
+<figcaption><em>Cue Zero options in the Assign Menu</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<p>Tapping the <span class="softkey">Cue Zero</span> button will open a small <strong>Select Cue Zero Mode pop-up</strong> like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-cue-zero-mode_v3-3.png" />
+<figcaption><em>Select Cue Zero Mode pop-up</em></figcaption>
+</figure>
+
+<p>This pop-up offers the following options:</p>
+
+<ul>
+	<li><strong>Off</strong>:<br />
+	Cue Zero is turned off and cue zero is not created - if cue zero exist, then it is removed.</li>
+	<li><strong>On</strong>:<br />
+	Cue zero will be created and will contain default values for all attributes used by this sequence.</li>
+	<li><strong>Dimmers Only</strong>:<br />
+	Cue zero will be created and will contain default values for dimmer attributes only.</li>
+	<li><strong>All</strong>:<br />
+	Cue zero will be created and will contain default values for all attributes of fixtures that have any of its attributes stored in the sequence.</li>
+	<li><strong>Effects</strong>:<br />
+	This is like the On option with the addition of a Stomp is added to cue zero for each attribute stored in any cue of the related sequence.</li>
+</ul>
+
+<div class="restriction"><strong>Restriction:</strong><br />
+Activating Cue Zero will hide the <strong>Release Firststep</strong> option - except for the <strong>Dimmers Only</strong> option.</div>
+
+<p>When Cue Zero is activated, then it will appear in Sequence Executor Sheets. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/window_sequence-executor-sheet_cue-zero-on_v3-3.png" />
+<figcaption><em>Sequence Executor Sheet - Cue Zero On</em></figcaption>
+</figure>
+
+<p>The cue is locked and cannot the called or edited. Activating the first cue in the sequence will not activate Cue Zero but the first cue made by a user (cue number 1 in the image above).</p>
+
+<p>The only thing that can be edited in the Cue Zero is the timing. These timings will be used for example when GoBack, with option <strong>cuetiming</strong>, is used to fade from a values or effect value back to values tracking from cue zero. Cue Zero timing is also used when using <strong>Autostomp</strong> setting of executors.</p>
+
+<p>&nbsp;</p>
+
+<h2>CueZero Extract</h2>
+
+<p>When Cue Zero is activated then it is possible to activate <strong>CueZero Extract</strong>.</p>
+
+<p>When Extract is not activated then cue zero creates <strong>links</strong> to default values of the attributes. This means that if the default values is changed after the cue is created then Cue Zero will use the new default values without any need to update the sequence.</p>
+
+<p>When CueZero Extract is activated then, Cue Zero will get the actual default values when CueZero Extract or Cue Zero is activated and when new attributes are added. It is not a link to the default values, but the actual default value. This means that changing the default values afterwards will not change the look of the sequence. Deactivating CueZero Extract (or Cue Zero) and activating it again will store the new defaults. &nbsp; &nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

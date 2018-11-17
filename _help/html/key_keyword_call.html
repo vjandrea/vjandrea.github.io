@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Call keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Call keyword, parameters, universal presets, active values, non-active values" />
+	</head>
+	<body>
+		
+		
+		<h1>Call keyword</h1>
+		
+		<p><strong>Call </strong>is a function used to apply/engage an object or its content (press 2x button "ON").</p>
+
+<p>To execute this keyword type <strong>Call </strong>or the shortcut <strong>Ca </strong>into the command line.&nbsp;</p>
+
+<p>If the&nbsp;Call&nbsp;function is used on objects which contain parameters (fixture values) these values will be loaded (added) into the programmer without a selection of the fixtures. If&nbsp;Call&nbsp;is used on other object types, their content will be applied in its context.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Call [Object-list] </span></p>
+
+<p><span class="syntax"><strong>Call [Object-list] / [option]​</strong></span></p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available options for the keyword Call in the command line feedback window type into the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Call /?</div>
+
+<p>The keyword Call has the following options:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Shortcut</th>
+			<th scope="col">Option value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>status</td>
+			<td>s</td>
+			<td>=False; =True</td>
+			<td>Takes all values along with the tracking values actively into the programmer.</td>
+		</tr>
+		<tr>
+			<td>LAYER</td>
+			<td>&nbsp;</td>
+			<td>no option value</td>
+			<td>
+			<p>Sets destination layer.&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>SCREEN</td>
+			<td>&nbsp;</td>
+			<td>no option value</td>
+			<td>Sets destination screen.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>toggle_activation</td>
+			<td>t</td>
+			<td>no option value</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<div class="cl_input">[Channel]&gt;&nbsp;​Call Preset 3.1</div>
+
+<p>Loads the content of Preset 3.1 into programmer without selecting the fixtures. At universal presets all fixtures supporting these attributes are affected.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;​Call Sequence 1</div>
+
+<p>Status of the last cue of sequence 1 is loaded into the programmer without selecting the fixtures.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;​<strong>Call Cue</strong> 3</div>
+
+<p>Takes all values of Cue 3 of the selected executors actively and all values of Cue 1 and 2 non-actively into the programmer.</p>
+
+<div class="important">&nbsp;<strong>Note:</strong><br />
+All values which can be stored are called active values; Values which cannot be stored are called non-active values.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;Call Cue 3 /status</div>
+
+<p>Takes all values along with the tracking values actively into the programmer.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Quickstart with grandMA2</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Quickstart, with, grandMA2" />
+	</head>
+	<body>
+		
+		
+		<h1>Quickstart with grandMA2</h1>
+		
+		<p>First start the VPU with grandMA2 network.</p>
+
+<h2>Startup and loading a show</h2>
+
+<p>Start the grandMA2 onPC.</p>
+
+<p>Press <span class="hardkey">Backup</span>, select the tab&nbsp;<span class="softkey">Demoshows</span> <span class="softkey">Load Show</span>.</p>
+
+<p>In the upcoming dialog select the 'vpu demo show.show.gz'.</p>
+
+<p>Tap <span class="softkey">Check all</span>, then tap <span class="softkey">Load Show</span>.</p>
+
+<p>The show will be loaded.</p>
+
+<p>On the Display you see an overview of the layers and the fixture sheet:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_displayoverview.png" /></p>
+
+<p>You can configure the layout via the buttons on the right:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_displaybuttons.png" /></p>
+
+<h2>Connecting the VPU to a session</h2>
+
+<p>Now we will invite the VPU to the session:</p>
+
+<p>To start a session press <span class="hardkey">Setup</span> and tap <span class="softkey">MA Network Control</span>.</p>
+
+<p>In the upcoming dialog tap <span class="softkey">Create Session</span>. The session will start:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart_01.png" /></p>
+
+<p>Press <span class="hardkey">Setup</span> and tap <span class="softkey">MA Network Configuration</span>.</p>
+
+<p>In the upcoming dialog select the <span class="softkey">VPU</span> tab:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart_02.png" /></p>
+
+<p>If your VPU is not listed, tab <span class="softkey">Add Present</span>.</p>
+
+<p>If the VPU is not already a member of the session, select the 'Session Member’ entry and press the screen encoder. The entry will change to 'Yes’ and the VPU will join the session.<br />
+After that choose the 'Layer' entry and press the screen encoder. Choose the fixture layer 'VPU A 2'.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+If the VPU does not join, check the VPU IP address and software version.</div>
+
+<p>It is displayed in the VPU status bar e.g.:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_statusbar_2.png" /></p>
+
+<p>In this case the desk IP is&nbsp;<strong>172.16.7.191</strong> and the VPU IP is&nbsp;<strong>172.16.7.152</strong></p>
+
+<p>Console and VPU must be in the same IP segment.</p>
+
+<h2>Playback of a still image</h2>
+
+<p>To select the first layer of the VPU demo show, press <span class="hardkey">Fixture</span> <span class="hardkey">1</span> <span class="hardkey">Please</span>, or select the first group '1: Lay1’ in the group pool:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart_04.PNG" /></p>
+
+<p>To see the layer at the output of the MA VPU, press <span class="hardkey">at</span> <span class="hardkey">1</span> <span class="hardkey">0</span> <span class="hardkey">0</span> <span class="hardkey">Please</span> to open the dimmer.</p>
+
+<p>At the Fixture sheet you can see all attributes of layer 1:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_fixturesheetlayer1.png" /></p>
+
+<p>On the Smart view all settings of the VPU Layer are displayed as buttons. Select the 'Images’ attribute and you get an overview of all images of the selected I-Pool.</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart_05.png" /></p>
+
+<p>Tap an image button and the appropriate image is displayed on the VPU output screen:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Desk Image button</th>
+			<th>VPU output</th>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_deskimagebutton.png" /></td>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_vpuoutput.png" /></td>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Hiding the VPU GUI</h2>
+
+<p>To hide the GUI of the MA VPU you can either press 'Shift + Enter' at the keyboard of the VPU station or use the fullscreen mode of the VPU master fixture.</p>
+
+<p>To select the master fixture at the VPU demo show, press <span class="hardkey">Fixture</span> <span class="hardkey">11</span> <span class="hardkey">Please</span>, or select group 15 '11: Mas A’ in the group pool.</p>
+
+<p>Select the preset type 'Control':</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th><img alt="" src="../../../img/ma_vpu/vpu_quickstart_06.PNG" /></th>
+			<th><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_control.png" /></th>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+<p>The 'Smart View’ offers the controlling possibility to watch the output in 'Fullscreen’:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_smart2.png" /></p>
+
+<h2>Playback of a video file</h2>
+
+<p>Press the <span class="hardkey">Clear</span> button, select layer 1 again, select the attribute 'I-Pool’ and tap the channel set 'HD_25’.</p>
+
+<p>Select the attribute 'Images’:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_layer1.png" /></th>
+			<th><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_i-pool.png" /></th>
+			<th><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_hd25.png" /></th>
+			<th><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_images.png" /></th>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+<p>Now the 'Smart View’ offers a choice of video loops in HD quality with 25 frames:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_smart3.png" /></p>
+
+<p>Select a video of your choice, tap the feature 'VPlayer’ and select the attribute 'Playmode'.</p>
+
+<p>Now you can choose how to play the video e.g. as a loop, select 'Loop’:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_vplayer.png" /></th>
+			<th><img alt="" src="../../../img/ma_vpu/vpu_quickstart2_playbar.png" /></th>
+		</tr>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+
+		
+	</body>
+</html>

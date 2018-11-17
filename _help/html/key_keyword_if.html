@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>If Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="If Keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>If Keyword</h1>
+		
+		<p>To get the If keyword into the command line as a starting function, press <span class="hardkey">If</span> <span class="hardkey">If</span> <span class="hardkey">If</span> <span class="hardkey">If</span> (= If).</p>
+
+<p>To get the If keyword into the command line as a helping keyword, press&nbsp;<span class="hardkey">If</span>&nbsp;or type&nbsp;<strong>If</strong>&nbsp;or the shortcut&nbsp;<strong>I</strong>&nbsp;in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The If keyword as a function keyword deselects fixtures not in the entered selection list.</p>
+
+<p>As a helping keyword keyword to the Clone function, If sets the scope of the cloning. For more information see <a href="key_keyword_clone.html">clone keyword</a> and <a href="key_clone.html">clone or replace fixtures</a>.</p>
+
+<p>As a helping keyword keyword to other operational functions, If sets a filter for the operation.</p>
+
+<p>To end an if statement in the middle of a longer syntax, use the <a href="key_keyword_endif.html">EndIf keyword</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">If [Selection-list] </span></p>
+
+<p><span class="syntax">Clone [Selection-list] At [Selection-list] If [Object-list] </span></p>
+
+<p><span class="syntax">[General syntax] If [Object-list] </span></p>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To deselect fixtures not in group 5 type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; If Group 5</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To select fixtures which are a part of group 3 and group 5 type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Group 3 If Group 5</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To delete channel 4 from cue 3 type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Delete Cue 3 If Channel 4</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To delete fixture 4 and attribute "pan" from cue 3 type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Delete Cue 3 If Fixture 4 Attribute "pan"</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To delete attribute "pan" of fixture 4 from cue 3 type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Delete Cue 3 If Fixture 4 If Attribute "pan"</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

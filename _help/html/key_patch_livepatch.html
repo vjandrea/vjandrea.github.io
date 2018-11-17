@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Live patching</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="live patch, patch - change, patch only, LiveSetup" />
+	</head>
+	<body>
+		
+		
+		<h1>Live patching</h1>
+		
+		<p>You can change the patch of fixtures without going into the full setup or "Edit Setup".</p>
+
+<p>If you have not added any fixtures to your show yet, then you need to read the <a href="key_patch_add_fixtures.html">Adding fixtures to your show</a> topic. This is also a good idea to read if you are in doubt about anything described in this topic.</p>
+
+<p>The problem with the full access to the entire fixture schedule is that you might make structural changes to your show file. So when leaving the fixture schedule the console will do a show upload to all connected devices - this causes a stop in the DMX transmission while the upload is running.</p>
+
+<p>So, the thing that does not concern the fixture structure, can be changed without giving a show upload, this is called "Live editing/patching".</p>
+
+<div class="important"><strong>Important:</strong><br />
+Be aware that live editing a lot of fixtures at the same time might be distributed with a delay throughout all stations and NPUs in the session. For instance changing the pan or tilt offset for several hundred fixtures with one command will cause a delay in the distribution of the values. The real time DMX output has a higher priority and this needs to be calculated at the same time. If possible then only edit a small amount of fixtures at the same time or use the <a href="key_patch_add_fixtures.html">EditSetup</a> instead.</div>
+
+<p>&nbsp;</p>
+
+<h2>Live patching using the Setup Menu</h2>
+
+<p>You can access this in the Setup menu. Press the <span class="hardkey">Setup</span> key and then tap the <span class="softkey">Patch Only (Live)</span> button.</p>
+
+<p>Then you get the LiveSetup menu. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_livesetup_v3-3.png" />
+<figcaption><em>LiveSetup menu</em></figcaption>
+</figure>
+
+<p>This is very similar to the EditSetup menu (Long description in the <a href="key_patch_add_fixtures.html">Adding fixtures to your show</a> topic).</p>
+
+<p>Everything that has a gray background can be edited. Everything with a black background is locked and cannot be edited.</p>
+
+<p>Looking at the layers and their content, shows you what you can change "Live" - without causing a show upload.</p>
+
+<p>This includes the DMX address.</p>
+
+<p>&nbsp;</p>
+
+<h2>Live patching using the Command Line</h2>
+
+<p>If you are looking for multi patching then please read the <a href="key_patch_multipatch.html">Multipatching</a> topic.&nbsp;</p>
+
+<p>This is the process using the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Assign Fixture [Fixture-list] At DMX [DMX-address]</div>
+
+<p>Assigning a list of fixtures (or just a single fixture) will remove all patch data from the fixtures and assign them DMX addresses beginning from the typed DMX address - without an Offset.</p>
+
+<p>You might get a warning pop-up telling you about any collisions.</p>
+
+<p>You can do the same with Channel IDs.</p>
+
+<p>You do not need to type the "At".</p>
+
+<h3>Examples:</h3>
+
+<p>Patching fixture 101 at DMX address 2.1:</p>
+
+<div class="cl_input">[Channel]&gt; Assign Fixture 101 At DMX 2.1</div>
+
+<p>Assigning fixture 101, 103, 105 DMX address beginning from address 5.61:</p>
+
+<div class="cl_input">[Channel]&gt; Assign Fixture 101 + 103 + 105 DMX 5.61</div>
+
+<p>&nbsp;</p>
+
+<h2>Live patching by editing the fixture</h2>
+
+<p>If you edit the fixture then there is also have the possibility to change the DMX address.</p>
+
+<p>In the top part of the Edit pop-up you will find the fixture (and any multipatched fixtures) and there is a Patch column. Editing this values will change the address.</p>
+
+<p>&nbsp;</p>
+
+<h2>Live patching using the DMX Sheet and the DMX Tester</h2>
+
+<p>To read details about the <strong>DMX sheet</strong> <a href="key_patch_dmx_sheet.html">please follow this link</a>. To read about the <strong>DMX tester</strong> <a href="key_patch_dmx_testing.html">follow this link</a>.</p>
+
+<p>You can also patch using the DMX Sheet and the DMX tester.</p>
+
+<ol>
+	<li>Open the sheet</li>
+	<li>Activate "Link Encoders"</li>
+	<li>Locate the DMX address where you want to patch the fixtures and tap the location</li>
+	<li>Know you can tap the right encoder. It opens a screen like this:</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_patch-address-to-fixture-channel_v3-2.png" />
+<figcaption><em>Patch Address to Fixture/Channel pop-up</em></figcaption>
+</figure>
+
+<p>This pop-up shows you all the fixtures in the show. It might look like you can edit the DMX address directly in this pop-up, but you cannot.</p>
+
+<p>You can filter the list by typing a Fixture ID or Channel ID in the respective green input fields at the top. There is also a dropdown list that allow you to filter the list to only show unpatched fixtures.</p>
+
+<ol start="5">
+	<li>Select the fixture you want to patch to the address</li>
+	<li>&nbsp;
+	<ol start="1" style="list-style-type:upper-alpha">
+		<li>If you want to patch the selected fixture to the selected address then tap the <span class="softkey">Patch</span> button&nbsp;</li>
+		<li>If you want to add a multipatched fixture to the selected fixture at the selected address, then tap the <span class="softkey">Add Multipatch</span> button (<a href="key_patch_multipatch.html">Follow this link to read more about </a><a href="key_patch_multipatch.html">Multipatchin</a>g)</li>
+	</ol>
+	</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>A second option for the DMX sheet is to press the <span class="hardkey">Assign</span> key and the <span class="hardkey">Channel</span> or <span class="hardkey">Fixture</span> key followed by the ID and then directly in the DMX sheet, where you want the selected fixture.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>This was some different ways of editing the DMX address of a fixture without creating a show upload.</p>
+
+		
+	</body>
+</html>

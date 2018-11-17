@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>RDM</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="RDM, RDM - timeout" />
+	</head>
+	<body>
+		
+		
+		<h1>RDM</h1>
+		
+		<p><strong>Requirements:</strong><br />
+A Remote Device Management (= RDM) directly connected to one of the devices of the following grandMA2 series:<br />
+- grandMA2 consoles<br />
+- MA onPC command wing<br />
+- MA onPC fader wing<br />
+- MA NPU<br />
+​- MA 8Port Node, MA 8Port Node onPC<br />
+​- MA 4Port Node, MA 4Port Node onPC, MA 4Port&nbsp;WM<br />
+​- MA 2Port&nbsp;Node, MA 2Port Node onPC 2K, MA 2Port Node onPC 1K, MA 2Port&nbsp;WM</p>
+
+<div class="restriction"><strong>Restriction:</strong><br />
+RDM does not support the following devices of the grandMA1&nbsp;series:<br />
+- MA&nbsp;2Port Node<br />
+- MA&nbsp;2Port Node PRO<br />
+- MA 2Port Node Flush-mounted<br />
+- MA NSP&nbsp;in 4Port Node Mode</div>
+
+<p>RDM is a protocol that allows bi-directional communication between the grandMA2 and RDM compliant devices attached to it (= RDM compliant fixtures) over a standard DMX line. ANSI E1.20 - 2010 by PLASA specifies the RDM standard as an extension of the DMX 512 protocol.</p>
+
+<p>Manual settings, such as adjusting the DMX starting address, are no longer needed. This is especially useful for devices installed in a remote area.</p>
+
+<p>RDM is integrated in DMX without influencing the connections. The RDM data is transmitted via the standard XLR-poles&nbsp;– new DMX cables are not required. RDM ready and conventional DMX devices can be operated in one DMX line. The RDM protocol sends its own data packages in the DMX512 data feed and does not influence conventional devices.</p>
+
+<p>Furthermore, RDM works simultaneously via Art-Net and MA-Net2. This allows configuration, status monitoring, and management of these devices.</p>
+
+<p>RDM can provide the following uses, depending on the RDM device:</p>
+
+<ul>
+	<li>Identification of the connected devices</li>
+	<li>Addressing of devices controllable by DMX512</li>
+	<li>Status reporting of fixtures (alerts and warnings)</li>
+	<li>Configuration of fixtures by setting RDM parameters</li>
+</ul>
+
+<p>RDM starts a discovery (= search) for the RDM device every six seconds. If an&nbsp;RDM device is offline, a timeout will be reported after three unsuccessful discoveries for RDM (= 18 seconds).</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

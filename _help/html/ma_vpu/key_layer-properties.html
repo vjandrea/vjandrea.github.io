@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Layer Properties</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Layer Properties" />
+	</head>
+	<body>
+		
+		
+		<h1>Layer Properties</h1>
+		
+		<p>For a better overview the patch of a show can be arranged in Fixture Layers on the grandMA2 desks. E.g. the conventional lights can be separated from the multi functional fixtures and video engines.</p>
+
+<p>For each MA VPU station an own Fixture Layer is created. This Layer accepts several Video Layers. These Video Layers can be combined to meet your requirements. In the following example the Fixture Layer with the name ‚VPU' contains 1 Master Fixture, 6 Video Layers and 2 Camera Fixtures (known as former VPU Output fixture):&nbsp;</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_layerproperties_00.png" /></p>
+
+<p>Layers for a show can be arranged for your requirements on the desk. You can find them in the fixture library at the entry: ,MA LIGHTING'</p>
+
+<p>The different Layer Types have the following meanings:&nbsp;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Video Layer:</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_layerproperties_02_1.png" /></td>
+			<td>
+			<p>This Layer can use several 3D Objects from the library to represent images and videos. The content can be shown on several outputs of the graphics card or the pixel mapper. A MA VPU application can contain several 3D Video Layers for images and videos. You can patch up to 32 layers to be more flexible in programming.</p>
+
+			<div class="tip">Please note that you can not run video clips on all these layers at the same time due to performance reasons.</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Master:</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_layerproperties_03.png" /></td>
+			<td>One grandMA VPU application can contain only one Master Layer. This layer represents a total view on all other layers. It serves the shapers, iris and scaling for all outputs. A control channel offers for example - remote controlled PC shut down - Switch into Fullscreen View</td>
+		</tr>
+	</tbody>
+</table>
+
+<table>
+	<tbody>
+		<tr>
+			<th colspan="2">Camera Layer (former Output Layer):</th>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_layerproperties_04.png" /></td>
+			<td>
+			<p>Each output has its own camera fixture. Additional to the effects in the video layers this fixture layer serves separate effects for each output and: - Shapers - Softedging - Keystoning.</p>
+
+			<div class="important">The name of the former VPU “Output Layer” has been changed to VPU “Camera”. This was chosen to hopefully make it clearer and easier for the users to understand the main concept of this fixture and to don´t mix up real DVI Outputs and Output fixture. As known from grandMA video, with this version it is possible to freely assign a Camera to an Output. This was „Softedge ID“ in grandMA video.</div>
+
+			<p><strong>Remember:</strong>&nbsp;Before this version the amount of Outputs (Camera) to patch into your show was limited by the amount of real DVI Outputs. So maximum 2. So when having a show with 6 monitors used as panoramic screens (one big screen composed of 6 screens) you needed to have 3 Fixture Layers „VPU“ in your show each consisting of Layers, Master and 2 Output fixtures. So you needed to handle 3 Fixture Layers but the setup could look much simplier. With the new function it is no longer necessary to handle different VPUs for this kind of widescreen application. One Fixture Layer with VPU Layers, Master and Cameras is enough and in the Settings - Display Dialog of the VPU you can tell the VPU witch Camera „View“ it should display.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+		
+	</body>
+</html>

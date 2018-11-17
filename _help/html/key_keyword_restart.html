@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Restart Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Restart Keyword, application - restart, console - restart" />
+	</head>
+	<body>
+		
+		
+		<h1>Restart Keyword</h1>
+		
+		<p>To go to the Restart keyword, type Restart in the command line or use the shortcut <strong>Res</strong>.</p>
+
+<h2>Description</h2>
+
+<p>The Restart keyword restarts the application. This is the same as close the program and open it again.</p>
+
+<p>A restart is necessary after an IP address change.</p>
+
+<p>The Restart keyword is a function keyword.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Restart </span></p>
+
+<p><span class="syntax">Restart [IP address] / [option]</span></p>
+
+<h2>Options</h2>
+
+<p>To get the list of the available options to the restart keyword in the command line feedback window, type in the command line.</p>
+
+<div class="cl_input">[Channel]&gt; Restart /?</div>
+
+<p>The restart keyword has the following options.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option Shortcut</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>save</td>
+			<td>s</td>
+			<td>Saves the show file before restart.</td>
+		</tr>
+		<tr>
+			<td>nosave</td>
+			<td>ns</td>
+			<td>Do not saves the show file before restart.</td>
+		</tr>
+		<tr>
+			<td>noconfirm</td>
+			<td>nc</td>
+			<td>Suppress restart confirmation pop-up.</td>
+		</tr>
+		<tr>
+			<td>force</td>
+			<td>f</td>
+			<td>Forces a restart.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Restart the application of the console.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Restart</div>
+
+<div style="page-break-after: always" class="ck_pagebreak"><span style="display:none">&nbsp;</span></div>
+
+<ul>
+	<li>Restart the application of the console with the IP address 192.168.0.32 in the network.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Restart 192.168.0.32</div>
+
+<div class="tip"><strong>Hint:</strong><br />
+To be faster, type only the part of the IP address in the command line what is differently.<br />
+If the console which sends the command has the IP address 192.168.0.11, type <span class="syntax">Restart 32</span> only.</div>
+
+		
+	</body>
+</html>

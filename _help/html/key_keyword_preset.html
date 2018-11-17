@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Preset Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Preset Keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>Preset Keyword</h1>
+		
+		<p>To get the Preset keyword in the command line, press <span class="hardkey">Preset</span>.</p>
+
+<p>You can also type <strong>Preset </strong>or the shortcut <strong>Pres </strong>in the command line.</p>
+
+<h2>Description</h2>
+
+<p>With the Preset keyword you can:</p>
+
+<ul>
+	<li>Select the fixtures stored in a preset.</li>
+	<li>At a preset to the fixture or channel selection.</li>
+</ul>
+
+<p>If no fixtures or channels are selected in the programmer, the default function is <strong>SelFix</strong>. For more information, see <a href="key_keyword_selfix.html">SelFix keyword</a>.<br />
+If fixtures or channels are selected in the programmer, the default function is <strong>At</strong>. For more information, see <a href="key_keyword_at.html">At keyword</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax"><strong>Preset </strong>[ID]</span></p>
+
+<p><span class="syntax"><strong>Preset </strong>[Preset-type].[ID]</span></p>
+
+<p><span class="syntax"><strong>Preset </strong>"Name"</span></p>
+
+<p><span class="syntax">Assign <strong>Preset </strong>[ID] / [Parameter] = [Parameter Value]</span></p>
+
+<h2>Parameter</h2>
+
+<p>The following table displays the assignable parameters via command line.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Name</td>
+			<td>"PresetName"</td>
+			<td>Assign the preset pool name.</td>
+		</tr>
+		<tr>
+			<td>Special</td>
+			<td>"Normal", "Default", "Highlight", "Stage"</td>
+			<td>Assign the special mode. For more information, see <a href="key_presets_special_modes.html">What are special modes?</a></td>
+		</tr>
+		<tr>
+			<td>Info</td>
+			<td>"additional information"</td>
+			<td>Assign additional information. Assigned information are displayed in the <a href="key_ws_info.html">info window</a>.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Select the fixtures stored in preset 5 of the selected preset type, e.g. dimmer.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Preset 5</div>
+
+<hr />
+<ul>
+	<li>Sets current selection to the second preset of preset type 3 (gobo).</li>
+</ul>
+
+<div class="cl_input">&nbsp;[Channel]&gt; At Preset 3.2</div>
+
+<hr />
+<ul>
+	<li>Select all fixtures stored in any preset with the label "DarkRed".</li>
+</ul>
+
+<div class="cl_input">&nbsp;&nbsp;[Channel]&gt; Preset *."DarkRed"</div>
+
+		
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Use worlds when programming</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="worlds" />
+	</head>
+	<body>
+		
+		
+		<h1>Use worlds when programming</h1>
+		
+		<p>Worlds are a great tool when programming.</p>
+
+<p>The point about the worlds is to apply a limitation to what fixtures and attributes you are affecting.</p>
+
+<p>This can be very useful if you have a lot of different values in your programmer, but you only want to store some of the values. For instance if you want to store a color preset for some of your fixtures before storing all values in a cue.</p>
+
+<p>Let us have a closer look at this example. Make sure you have a show with some different fixtures - you could load the "demo dimmer and more" show from the Demo shows.</p>
+
+<p>Create a world for each of the different fixture types. Name the worlds: Spot, LED, Blinder, Par</p>
+
+<p>This is the setup needed for all the following examples.</p>
+
+<h3>Preset example</h3>
+
+<ol>
+	<li>Make sure you are in the "Full" world.</li>
+	<li>Give your spots a dimmer value, a position value, and a color (do not use an existing color preset).</li>
+	<li>Give some of the other fixtures some colors and dimmer values.</li>
+</ol>
+
+<p>This is our look on the stage that everyone is happy about. But you want to be a cool and organized programmer, so instead of just storing these values in the cue, you want to make color presets for the spots and use the preset in the cue.</p>
+
+<ol start="4">
+	<li>Select your "Spots" world.</li>
+</ol>
+
+<p>Notice that now you can only see your sports in the Fixture Sheet and in the Stage View. But a DMX Sheet will show you that you are still outputting all the other values as well.</p>
+
+<ol start="5">
+	<li>Store a color preset.</li>
+	<li>If you do not use the "Keep activation" setting, then apply the preset, so you have preset link in your programmer.</li>
+	<li>Select the "Full" world</li>
+</ol>
+
+<p>Now you are back to where you where. The output to the stage never changed! Entering a world do not change the output.</p>
+
+<p>You can now store a cue that uses the color preset for the spots.</p>
+
+<p>&nbsp;</p>
+
+<h3>Delete example</h3>
+
+<p>Using the same setup as mentioned above.</p>
+
+<p>In the demo show there is a sequence called "Look". In this sequence there is something programmed for the Blinders.</p>
+
+<p>The Look only contains one cue, but let us imagine that it was a bigger sequence and we wanted to remove the Blinders from this sequence.</p>
+
+<ol>
+	<li>Select the "Blinder" world</li>
+	<li>Delete the "Look" sequence - <span class="hardkey">Del</span> <span class="hardkey">Sequ</span> <span class="hardkey">3</span> <span class="hardkey">Please</span></li>
+	<li>Confirm the deletion in the pop-up</li>
+	<li>Select the "Full" world</li>
+</ol>
+
+<p>You did not actually delete the entire Sequence 3 ("Look"). You only deleted the fixtures and attributes that you could control. The Blinders are no longer in the "Look" sequence.</p>
+
+<p>&nbsp;</p>
+
+<h3>Unwanted attributes example</h3>
+
+<p>Most of the time it is not desired to program fixture control channel information in a cue list. It is not fun when a fixture suddenly turns off the lamp or resets because it accidentally was programmed in the cues.</p>
+
+<p>Worlds can be used to avoid this.</p>
+
+<ol>
+	<li>Select all your fixtures.</li>
+	<li>Make sure you have some values in your programmer for all attributes except the Control preset type.</li>
+	<li>Store a new world.</li>
+	<li>Select this world.</li>
+</ol>
+
+<p>Now the Control Preset Type disappeared from the Preset Control Bar above your encoders. And you cannot accidentally get those attributes in your programmer and store it somewhere.</p>
+
+<p>&nbsp;</p>
+
+<h3>Multi User example</h3>
+
+<p>In bigger shows it can be very useful and efficient to have multiple programmers working in the same show file. Often each programmer will have responsibility to program a smaller section of all the lights.</p>
+
+<p>To avoid interfering with each other it is a good idea to create worlds with the sections of the rig for each programmer and then the programmers can comfortably work with their fixtures and not be disturbed by each other.</p>
+
+<p>They still share the executors, so there is not a complete separation.</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<p>There are many other situations where worlds can help you work better.</p>
+
+<p>There are two predefined macros called "World is Full" and "World is Selection". The first one selects world number one ("Full"). The second one creates a world based on your current selection (world number 999) and enters this world. This can be a very nice tool if you want to do something where a worlds would be nice and you do not have one that matches. Each time you use "World is Selection" then world number 999 is overwritten.</p>
+
+<p>If you use a different default world then number one then you might want to edit the "World is Full" macro to select the world you use (remember macros are shared among all Users).</p>
+
+<p>&nbsp;</p>
+
+<p>Remember that the world you select only affects your programmer and what is displayed on some windows. Executors and already programmed elements are not affected by the worlds you have selected.</p>
+
+<p>But you can assign a world to an executor or a sequence. Read more about that in the <a href="key_wfm_apply_to_exec_seq.html">Apply worlds or filters to executors and sequences topic</a>.</p>
+
+		
+	</body>
+</html>

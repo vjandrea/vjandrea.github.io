@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Timer Pool</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="timers, timer pool" />
+	</head>
+	<body>
+		
+		
+		<h1>Timer Pool</h1>
+		
+		<p>Manage the stopwatch and the countdowns in the timer pool.&nbsp;</p>
+
+<ol>
+	<li>Open the timer pool:<br />
+	-Tap <span class="softkey">Pools</span> in <strong>Create Basic Window</strong>. For more information on how to open a basic window see <a href="key_windows.html">Manage windows</a>.<br />
+	-Tap <span class="softkey">Time</span> and the timer pool opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/window_timer-pool_v3-3.png" />
+<figcaption><em>Open the timer pool</em></figcaption>
+</figure>
+
+<ol start="2">
+	<li>Set a new timer, for example <strong>Countdown</strong>:<br />
+	-Press <span class="hardkey">Edit</span> and then tap an empty cell in the timer pool.<br />
+	-The <strong>pop-up Edit Timer</strong> opens.
+
+	<figure class="caption"><img alt="" src="../../img/popup_edit-timer_timer-pool_v3-3.png" />
+	<figcaption><em>Edit the timer Countdown</em></figcaption>
+	</figure>
+	</li>
+</ol>
+
+<ol start="3">
+	<li>Now, select the timer mode:<br />
+	-Tap the drop-down and tap <strong>Countdown</strong>.</li>
+	<li>Set the time unit:<br />
+	-To set the time, tap <strong>Time Unit</strong>.<br />
+	-The <strong>pop-up Select Time Unit</strong> opens.
+	<figure class="caption"><img alt="" src="../../img/popup_select-time-unit_timer-pool_v3-3.png" />
+	<figcaption><em>Select unit</em></figcaption>
+	</figure>
+	<br />
+	-Tap to select the unit, for example 1 / 10 Seconds.</li>
+	<li>To continue the countdown after restart, tap <strong>When Restarting</strong>. The button toggles between <strong>Continue </strong>or <strong>Reset</strong>.&nbsp;</li>
+	<li>To set a link to an executor, tap <strong>Exec Trigger</strong>.<br />
+	-The <strong>pop-up Select Exec Trigger</strong> opens.
+	<figure class="caption"><img alt="" src="../../img/popup_exec-trigger_timer-pool_v3-3.png" />
+	<figcaption><em>Link timer to an executor</em></figcaption>
+	</figure>
+	<br />
+	-If you do not want to set a link to an executor, tap <strong>Not linked</strong>.&nbsp;</li>
+</ol>
+
+<hr />
+<h2>Exec Triggers</h2>
+
+<ul>
+	<li><strong>LinkSelected-Start</strong> and <strong>LinkSelected-Toggle</strong>&nbsp;are linked to the executors you have selected.<br />
+	-If an executor is linked as&nbsp;<strong>LinkSelected-Start</strong>, the commands GO, GOTO, and TOP start the timer.&nbsp;<br />
+	-If an executor is linked as <strong>LinkSelected-Toggle</strong>, the timer toggles between start and pause.&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>LinkLastGo-Start</strong> and <strong>LinkLastGo-Toggle</strong> are linked to all executors, also the ones you have selected.&nbsp;<br />
+	-If the link is set as <strong>LinkLastGo-Start</strong>, the commands GO, GOTO, and TOP start the timer on all executors.&nbsp;<br />
+	-If the link is set as&nbsp;<strong>LinkLastGo-Toggle</strong>, the timer toggles between start and pause on all executors.&nbsp;&nbsp;</li>
+</ul>
+
+<hr />
+<ol start="7">
+	<li>Label the timer you have set:</li>
+	<li>-Tap <span class="softkey">Label</span> and an editor opens.<br />
+	-Type the name of the timer and press <span class="hardkey">Please</span>.</li>
+	<li>Set countdown time and alert duration:<br />
+	-Tap the green button below&nbsp;<strong>Countdown Time</strong> and the calculator opens.<br />
+	-Enter the time of the countdown.<br />
+	-Tap the green button below&nbsp;<strong>Alert Duration</strong> and the calculator opens.<br />
+	-Enter the duration of the alert.</li>
+	<li>Now, select the type of the alert:<br />
+	-Tap <strong>Alert Type</strong> and the <strong>pop-up Select Alert Type</strong> opens.
+	<figure class="caption"><img alt="" src="../../img/popup_select-alter-type_timer-pool_v3-3.png" />
+	<figcaption><em>Setting the type of an alert</em></figcaption>
+	</figure>
+	<br />
+	-Tap <strong>Command, Pop-up &amp; Beep</strong>.<br />
+	-The alert can now be set off via the command line simultaneously displaying a warning pop-up and an audio signal on the console.</li>
+	<li>Set the range of the alert:<br />
+	&nbsp;-To toggle the range of the alert to <strong>Local</strong>, tap <strong>Alert Range</strong>.<br />
+	-The alert only sets off on the console currently in use.</li>
+	<li>Type the command that is to be executed in the session master:<br />
+	-Tap the green button below <strong>Alert Command executed on Master</strong> and an editor opens.<br />
+	-Enter the command.</li>
+	<li>Enter the message that is to be displayed in the warning pop-up as soon as the alert sets off.<br />
+	-Tap the green button below <strong>Alert Text</strong>.<br />
+	-An editor opens.&nbsp;<br />
+	-Enter the message of the pop-up.</li>
+	<li>The countdown is now set.&nbsp;</li>
+</ol>
+
+<div class="tip"><strong>Hint:</strong><br />
+The current time of the timer can be assigned as the timing of a cue. Use the following syntax "Assign fade $timer1 cue 1 please" or&nbsp;<span class="hardkey">Assign</span>&nbsp;<span class="hardkey">Time</span>&nbsp;TimerPoolObject <span class="hardkey">Cue</span> <span class="hardkey">1</span> <span class="hardkey">Please</span>.</div>
+
+<div class="tip"><strong>Hint:</strong><br />
+You can play back a stopwatch or a countdown saved in the timer pool in the Clock. For more information see <a href="key_ost_clock.html">Other System Tools - Clock</a>.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

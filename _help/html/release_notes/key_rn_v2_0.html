@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Release Notes - Version 2.0</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="release notes version 2.0" />
+	</head>
+	<body>
+		
+		
+		<h1>Release Notes - Version 2.0</h1>
+		
+		<p>* Means something was changed/fixed.</p>
+
+<p>+ Means something was added.</p>
+
+<p>- Means something was removed.</p>
+
+<p>&nbsp;</p>
+
+<h2>Version 2.0.0.6 (Bugfix) - released 2010-10-19</h2>
+
+<p>* The presettypes (eg."Position") above the encoders change their functionality no more, when selecting a presets from other presettypes (eg."Color").</p>
+
+<p>* crash 'copy Layout inside a layout' removed</p>
+
+<p>* crash 'export effect from demo show' removed</p>
+
+<p>* crash 'move cue x at y from not selected sequence' removed</p>
+
+<p>* crash 'poolsize too small for giant shows' removed</p>
+
+<p>* this version automatically removes invalid doubled DMX-Remotes from folder</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Known bugs and limitations: </strong></p>
+
+<p>- Remote configuration of 2-Port Nodes via grandMA2 is shown right in the display of the nodes, but do not change the real output online. After resetting the nodes (disconnect/connect mains) everything is working fine.</p>
+
+<p>- Fixture Types with more than 2 Mode channels may not work</p>
+
+<p>&nbsp;</p>
+
+<h2>Version 2.0.0 released 2010-09-01</h2>
+
+<p><strong>IMPORTANT!!!!!!! </strong></p>
+
+<p>THE CURRENT VERSIONS OF OnPC AND 3D DEMAND MINIMUM WINDOWS® XP WITH INSTALLED Service Pack 3 (Microsoft® .NET Framework (4.0) WILL BE INSTALLED IF NOT EXISTING ON YOUR COMPUTER)</p>
+
+<p><strong>IMPORTANT!!!!!!! </strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong>MAIN FEATURE OVERVIEW: </strong></p>
+
+<p>+ Layout</p>
+
+<p>+ MAtricks</p>
+
+<p>+ Auto create</p>
+
+<p>+ "fast call"</p>
+
+<p>+ "Dynamic Channel Fader"</p>
+
+<p>+ Tracking sheet options</p>
+
+<p>+ MA network dimmer</p>
+
+<p>&nbsp;</p>
+
+<p><strong>IN DETAIL:</strong></p>
+
+<p>+ Layout pool and layout view are implemented (New hardkey combination: press "MA" + "group")</p>
+
+<p>You can store a selection of channels or fixtures in the layout pool.</p>
+
+<p>Pressing a layout pool button selects this layout.</p>
+
+<p>This shows the layout directly in the layout view. (If the layout view is "link selected")</p>
+
+<p>Note 1: "setup" opens the layout encoderbar. Hardkey "clear" deselects all objects when "setup" is turned on. It's possible to assign macros, preset, effects or groups onto a layout button ("assign macro x layout y"), or directly in the layout view. Assign presets in a layout is only possible via the commandline, because a command "assign preset x" will open directly the assign options. Right mouse button on an object assigns a text.</p>
+
+<p>Note 2: Layout view options: "snap always" setting "no" can be temporarily disabeled by pressing and turning the encoder button. ("setup" in layout view must switched on). Layout view options: "fast call" is a direct call for presets and effects.</p>
+
+<p>Note 3: Hardkey "delete" and afterwards pressing onto a layout-object will delete this. via commandline: "delete layout 1 fixture x"</p>
+
+<p>Note 4: Selection of multiple cha/fix via frame object possible</p>
+
+<p>Note 5: Copying fixture positions from the stage view to the layout view: Store the fixtures in the layout, push the button "arrange" in the layout-setup encoderbar. The button "camera" enables to select all stage view cameras via an encoder. Positions from selected objects will be directly mapped into the layout view "apply" will take the stage positions. "line", "circle" and "rectangle" work similar, and take the new positions with the "apply" button as well the "element properties" button will bring you back to the position encoder bar.</p>
+
+<p>+ MAtricks implemented (new button in the encoder bar)</p>
+
+<p>Select any Fixtures.</p>
+
+<p>"interleave" is the matrix size.</p>
+
+<p>(The "set" button indicator lights up.)</p>
+
+<p>"single X" selects your "MAtricks" in horizontal order.</p>
+
+<p>"prev" and "next" buttons do the same.</p>
+
+<p>"single Y" selects your "MAtricks" in vertical order.</p>
+
+<p>"MA+prev" and "MA+next" buttons do the same.</p>
+
+<p>"MAtricks active" has the same function as the "set" button, it toggles between the whole selection and the MAtricks selection.</p>
+
+<p>"blockX/Y" generates blocks of selections.</p>
+
+<p>"Align group X/Y" generates groups of selection for alignment.</p>
+
+<p>"Wingstyle" does only work for Pan and Tilt.</p>
+
+<p>A long "clear" (AllClear) resets the MAtricks.</p>
+
+<p>All settings (green background) can be stored in the new "MAtricks Pool"</p>
+
+<p>Note 1: Its possible to assign a MAtricks pool button to a user button (X1 - X20). The MAtricks pool is user based. (Same as view pool)</p>
+
+<p>Note 2: Use via commandline:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>&nbsp;</th>
+			<th>Next (inc)</th>
+			<th>Prev (dec)</th>
+			<th>Next &amp; Prev (reset)</th>
+		</tr>
+		<tr>
+			<td>-none-</td>
+			<td>Next</td>
+			<td>Previous</td>
+			<td>All</td>
+		</tr>
+		<tr>
+			<td>+MA (vertical)</td>
+			<td>NextRow</td>
+			<td>PreviousRow</td>
+			<td>AllRows</td>
+		</tr>
+		<tr>
+			<td>+Set (Interleave)</td>
+			<td>MatricksInterleave +</td>
+			<td>MatricksInterleave -</td>
+			<td>MatricksInterleave off</td>
+		</tr>
+		<tr>
+			<td>+MA &amp; Set (Blocks)</td>
+			<td>MatricksBlocks +</td>
+			<td>MatricksBlocks -</td>
+			<td>MatricksBlocks off</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>+ Auto create group/world/preset/channel pages implemented (setup/show)</p>
+
+<p>Notes group/world: Multi selection is possible (Fixture types/single fixtures) with the "ctrl" button. "use earliest" takes the first free pool button, "use latest" takes the first pool button after the last used. "always ask for name" does not work for "create single groups"</p>
+
+<p>Notes presets 1: if the button "encoder grouping" is set, preset combinations are produced on the based on the encoder grouping settings in channel sets. (setup/show/patch&amp;fixture schedule/fixture types/attribute&amp;encoder grouping) E.g. "Gobo 1 and gobo 2 open", "color 1 and colormix open"</p>
+
+<p>Notes presets 2: The channel sets of fixtures now have a new column "auto create" Notes channel pages: Only attribute dimmer will be auto created to channel fader.</p>
+
+<p>+ Clone is implemented (New hardkey combination: press "copy"-key twice)</p>
+
+<p>The syntax for using the clone cmd is:</p>
+
+<p>"CLONE SourceFixtureList AT DestinationFixtureList [IF CloneObjectList] [/merge] [/overwrite]"</p>
+
+<p>Options:</p>
+
+<p>No option - simply clone (low priority merge) does only clone data which exist in the source - not in the target</p>
+
+<p>Merge - executes a normal merge that overwrites existing data - additional information which only exists at the destination remains untouched</p>
+
+<p>Overwrite - as the name implies the destination object is completely overwritten by the source object (Note: all existing data at destination will be removed, resp. exchanged) the option shortcuts are /m /o</p>
+
+<p>Note 1: Without specifying options, clone is a performing a "low-priority" merge which is non-destructive. It does not overwrite already existing data, and it does not remove already existing data. If clone is performed on a specific object list, it will perform a clone also for the dependencies of those objects (like presets and effects used in a sequence). This second level run (it may also perform a third and a fourth if neccessary) is always performed with the non-destructive default setting.</p>
+
+<p>Note 2: Clone respects the "at" filter</p>
+
+<p>Note 3: Clone respects worlds for the destination. But it is possible to clone data from outside into the current world.</p>
+
+<p>Example 1: CLONE FIXTURE 1 AT 2 IF SEQUENCE 1 -&gt; if fixture 2 has nothing else to do, it will do what fixture 1 did.</p>
+
+<p>Example 2: CLONE FIXTURE 1 AT 2 IF SEQUENCE 1 /merge -&gt; fixture 2 will do everything fixture 1 did, but it may have additional data that existed before.</p>
+
+<p>Example 3: CLONE FIXTURE 1 AT 2 IF SEQUENCE 1 /overwrite -&gt; fixture 2 will do exactly what fixture 1 did and nothing else</p>
+
+<p>+ New option "fast call" for presets and effect pools (indicated by a red backround in the pool). In the Mode "normal call", the first press on a preset/effect select the fixtures, the second press executes the preset/effect. (as before). In the mode "fast call" the preset/effect does not need a selection. It executes directly for the stored selection (selective/global/universal)</p>
+
+<p>Note: The command "call" can also be used ( via a macro) with the commandline. Call [object] will do a fast call, in a normal call pool.</p>
+
+<p>+ New option "fast call" for sequence pool (indicated by a red backround in the pool). In the Mode "normal call", the press on a sequence button only selects the fixtures. In the mode "fast call" it will bring the status of the last cue into the programmer.</p>
+
+<p>+ "Dynamic Channel Fader" Mode implemented. (Headline of channel/fixture sheet) When an attribute e.g. "Position" is selected in the headline of a fixturesheet and the "link" button is pressed, all selected fixtures with pan/tilt will automatically be mapped at the new dynamic channel fader page With the following commands (for macros) usable:</p>
+
+<p>&gt;ChannelLink&lt; = Toggle the function on/off.</p>
+
+<p>&gt;ChannelLink on&lt; = Switch the function on.</p>
+
+<p>&gt;ChannelLink on Feature "colormix"&lt; = shows all selected fixtures with colormix.</p>
+
+<p>&gt;ChannelLink on Attribute "Iris"&lt; = shows all selected fixtures with Iris.</p>
+
+<p>&gt;ChannelLink on Attribute "dim" + "Iris"&lt; = shows all selected fixtures with dimmer + iris.</p>
+
+<p>&gt;ChannelLink on Presettype 0&lt; = shows all attributes off selected fixtures.</p>
+
+<p>&gt;ChannelLink on and than type on a preset type button&lt; = show this preset type.</p>
+
+<p>Note: &gt;ChannelLink&lt; toggles from current stade to attribute "dimmer".</p>
+
+<p>+ "Dynamic channel Fader": Whether only the selected channels/fixtures or all are displayed can be choosen via an option (setup/user/settings)</p>
+
+<p>+ Channel page width implemented (setup/user/settings) Command: &gt;assign channel thru channelpage 1.1&lt; Note: "normal" uses the number of channelfader of your console (fullsize or light/ultra) "half page" -&gt; 15 channelfader p. page "full page" -&gt; 30 channelfader p. page</p>
+
+<p>+ Import/export macros and effects implemented (setup/show)</p>
+
+<p>Note: To import effects you need to create fixture types in the edit setup first, otherwise the attributes wiil not be transferred.</p>
+
+<p>+ Export/Import of FixtureType will also include the used profiles of the FixtureType(s)</p>
+
+<p>Note: If a DMX profile is imported with a fixture type and this profile does already exist, then the profile will be renamed (name extended by a number)</p>
+
+<p>+ Tracking options implemented (right mouse or edit on a selection in tracking sheet).</p>
+
+<p>Note: The "edit" button opens the calculator for the selected fields.</p>
+
+<p>+ Tracking sheet: It is possible to select colomns with the same attribute horizontal and edit the values with the middle, or "middle and right" (opens the calculator), mouse button.</p>
+
+<p>Note: Only values, not for presets at this time.</p>
+
+<p>+ Move cues implemented.</p>
+
+<p>Note: The target must be empty.</p>
+
+<p>+ New commands:</p>
+
+<p>"delete sequence x fixture y": delete this fixture from this sequence.</p>
+
+<p>"delete cue x fixture y": delete this fixture from this cue.</p>
+
+<p>"delete group x fixture y": delete this fixture from this goup.</p>
+
+<p>"delete preset x.x fixture y": delete this fixture from this preset.</p>
+
+<p>Note: This only works for selective presets.</p>
+
+<p>+ session collision dialog is implemented</p>
+
+<p>+ "Highlight" and "solo" does now work per User in Network (was desk local before.)</p>
+
+<p>Note 1: "highlight" and "solo" will be switched off when the user logs out.</p>
+
+<p>Note 2: When the user works in different worlds, every user has his own "solo".</p>
+
+<p>Note 3: When the user works in the same world, user A can take fixtures in his programmer, which were controlled from highlight or solo from user B.</p>
+
+<p>+ MA network dimmer (NDP) for MA-Net2 has been finally implemented Since NDPs are fully integrated in MA-Net2, it becomes necessary to run the same streaming version on consoles and NDPs!</p>
+
+<p>+ Poolwindows have frames.</p>
+
+<p>+ Patching and labelling is possible on the channelpages.</p>
+
+<p>+ [assign] and pressing a preset button opens a pop-up to change the Special Preset Mode directly. ( Special Preset Modes: Normal, Default, Highlight ).</p>
+
+<p>+ Breaks in Cues: Changing values in a tracking sheet, does now respect break cues.</p>
+
+<p>+ Views on user keys (X1 - X20) show witch view is stored.</p>
+
+<p>+ 2 Ranges of combined selections are possible. e.g. "store seq 1+3+5 cue 5+7".</p>
+
+<p>Example: You have 3 Sequences, called "truss red" "truss blue" and "truss green", The command "store truss* cue 2" stores a cue 2 in all 3 sequences.</p>
+
+<p>+ New preset symbols:</p>
+
+<p>e.g. a color preset has values from color1 and colormix is open = coloured circle and small square</p>
+
+<p>e.g. a color preset has values from colormix and color1 is open = coloured square and small white circle</p>
+
+<p>+ New preset indicator. When a preset is not part of a world, the preset name is displayed in red. When parts of a preset with multible presettyes are not in the current world, the presettype indicator is displayed in red</p>
+
+<p>+ "page down" long press jumps to page 1. (about 2 seconds)</p>
+
+<p>+ The cmd command "/noconfirm" executes the command with no warnings.</p>
+
+<p>Example: "Assign Fixture 1 At DMX 1.1 /noconfirm" does not give any warning.</p>
+
+<p>+ Programmer values in network: When a user logs out of a session, his programmer will be cleared.</p>
+
+<p>+ Setup/console/user+profiles setup: Display which user/profile is used.</p>
+
+<p>+ Mini-scrollbar in text views (e.g. in help view) can now used for mouse scrolling (before it displayed only the current position).</p>
+
+<p>+ New function for executor fader with "special master programmer time" or "special master exec time": MXF = manual x-fade (to switch on/off programmer times and button executor times)</p>
+
+<p>+ New grids allow sorting the data in a grid via a mouse gesture:</p>
+
+<p>Click into head cell and drag to top or to bottom. (old style via right click also possible)</p>
+
+<p>e.g. Swatch book in detail view.</p>
+
+<p>+ Fixture Type Revision Notes can be edited. (Scroll down to "Make Editable") Note: Line breaks are not supported. Long notes will be cutted.</p>
+
+<p>+ Backup: Show backups are deleteable.</p>
+
+<p>+ "auto pre pos" is implemented. (assign menu)</p>
+
+<p>+ "Default at" Value implemented. (setup/user/settings: at normal percent)</p>
+
+<p>+ Copy cue with multiple cues implemented. The copy will get the same name as the origin cue - extended by a number.</p>
+
+<p>+ Setup/user/settings: "Trackball sequence" show the function of the mouse button</p>
+
+<p>+ Setup/user/settings: "Trackball rotation" rotates the position of the trackball.</p>
+
+<p>Note: First implementation only for "pan/tilt", "xyz stage" will follow.</p>
+
+<p>+ Fixtures invert pan/tilt: The inversion flags do now only change the output, not the stage view and 3D.</p>
+
+<p>Note: Please check your xyz posision and rotation in 3D and stage view. This has only influence on inverted pan and tilt attributes from older showfiles.</p>
+
+<p>+ Sequence pool button: Right Mouse button opens the edit sequence popup.</p>
+
+<p>+ New focus management Scroll focus (blue frame) and keyboard focus (white frame, can be used with the "please" from the keyboard) are seperated.</p>
+
+<p>+ New fixture wizzard:(setup/show/patch&amp;fixture schedule) Usability issue, works now as expected.</p>
+
+<p>Single click places the cursor at the clicked point - entered text is added at that point.</p>
+
+<p>Double-click selects all text entries in the field - entered text replaces existing text.</p>
+
+<p>+ It is possible now to update the On-desk help files via USB-stick without reinstalling the console (setup/console/software update/update resourse). This is because the help files are completed after the final implementation of features.</p>
+
+<p>Download resource-file and copy it to a /gma2/import/ folder on your USB-stick (http://www.grandma2.de/help/download)</p>
+
+<p>New command "ImportResource [filename] /import", e.g. for help update Parameter "list" to list all update files on current drive. (ImportResource /list)</p>
+
+<p>+ edit setup: new button "same as channel id" in the calculator of fixture id´s.</p>
+
+<p>+ "swap" (pan / tilt) is implemented.</p>
+
+<p>+ The command "delete fixture x" (to unpatch this fixture) will bring up a warning dialogue.</p>
+
+<p>+ "Time to live" (TTL) is implemented. (setup/network/ma network control) and (setup/network/DMX protocols/ETC net 2 and streaming ACN).</p>
+
+<p>Note: The Time-To-Live (TTL) value specifies the number of routers (hops) that multicast traffic is permitted to pass through before expiring on the network. For each router (hop), the original specified TTL is decremented by one (1). When its TTL reaches a value of zero (0), each multicast datagram expires and is no longer forwarded through the network to other subnets.</p>
+
+<p>+ Very simple csv report function for the command line command "list" added.</p>
+
+<p>E.g. "list cue thru /f="test" or "list /filename="test" saves the list output at the folder "reports" as file "test.csv"</p>
+
+<p>* The command keywords of matricks have changed. When you use the old (predefined) macros, the "interleave" keyword is wrong. Please use the new matricks functions in the encoderbar, and store them in the "matricks pool" .</p>
+
+<p>* Changed: "preset times" names now "programmer times"</p>
+
+<p>* The shortcut for "userprofile" has been changed from "up" to "upr" because "up" is reserved for the up button function.</p>
+
+<p>* Focus in "store popup" changed: When the box appears with the "Create Second Cue" option, this is default selection. When the box appears without the "Create Second Cue" option, "merge" is default selection.</p>
+
+<p>* Pressing a timecode pool button select this timecode directly.</p>
+
+<p>Note: This shows the selected timecode in the in the timecode view.</p>
+
+<p>* Id's in sheets have a new representation:</p>
+
+<p>When a fixture has only a fixture id: 20:</p>
+
+<p>When a fixture has only a channel id: :20</p>
+
+<p>When a fixture has both ids: 20</p>
+
+<p>Note: In all option menues of sheets the visibility of channel or fixture ids can be switched off.</p>
+
+<p>* "if output", "if active" and "if programm" do no more select fixtures from other users.</p>
+
+<p>Note: "if output" selects all channel/fixtures with dim &gt;0 from the own programmer and all running sequences with dim &gt;0.</p>
+
+<p>* Rate fader has now much more dynamic towards the end position.</p>
+
+<p>* The "Invert" cmd does now work when active values are in the programmer</p>
+
+<p>* The list button shows in screen 1 the button page number.</p>
+
+<p>* &gt;Fixture y AT Cue THRU X&lt; loads active values into the programmer.</p>
+
+<p>* Changing the video layer in network configuration. A scrollbar appears when you have more then 10 layers ( multitouch ).</p>
+
+<p>* Smart view now also works with preset times.</p>
+
+<p>* "Assign Time x Please" adjusts the fade time only for the current cue in the selected executor.</p>
+
+<p>* Labelling speedgroups works in network environment.</p>
+
+<p>* Changing userprofiles in network is locked, when the profiles are in use.</p>
+
+<p>* The gofast (&gt;&gt;&gt;) timing is be displayed rightin sequence executor sheet.</p>
+
+<p>* Edit Effect: "kill individuals" does now work for all selected lines at once.</p>
+
+<p>* "programmer times" (means "preset times" in former versions) do now work also with colorpicker and swatch book.</p>
+
+<p>* Group Master can now be selected and used on the 100mm fader.</p>
+
+<p>* system time between onPC and desks are now correct</p>
+
+<p>* Pan and tilt axis of all mirror fixture models corrected. Take the new fixtures from the library</p>
+
+<p>* When assigning a group with a single Fixture as a Groupmaster, labelling does now take the name of the Fixture automatically, just like the Group already did</p>
+
+<p>* If you swap a fixturetype in your show file, the snap/invert/default/highlight values are swapped correctly now</p>
+
+<p>* The "Red Filter" / "Green Filter" / "Blue Filter" from catalyst fixtures are changed to colormix 1, 2, 3 and do now work with the colorpicker.</p>
+
+<p>* onPC now supports special characters, e.g. @</p>
+
+<p>* onPC in single screen mode with option "messageboxes on all screens": The on screen keyboard has now the right functionality.</p>
+
+<p>* When using the internal DMX-out as source for DMX-in remote while starting the show it is no longer possible to receive undefined internal DMX streams.</p>
+
+<p>* Multi oops view crashes the desk no more when "clear screen" is in the list.</p>
+
+<p>* Edit Setup: sort a Layer by the Fixture Id´s: Results: 1,2,3,..,10,11,12...</p>
+
+<p>* user fade time (setup/user/defaults/sequence defaults) is now used immediately after change.</p>
+
+<p>* We can now directly label a new stored color preset, even the colorpicker is open.</p>
+
+<p>* Midichannel 1 thru 16 via commandline use now the same enumeration as Midi-Remotes and MSC-setup, Channel 1=1 Channel 16=16 (before 0 thru 15)</p>
+
+<p>* Representation of Groupmaster (darker name field in fixture + channel sheet) remains when a NPU is in the Session.</p>
+
+<p>* Chaser and sequences have now own user defaults (assign menu).</p>
+
+<p>* An option button inside the Showfile browser became new titles: "Viewing Shows", "Viewing Shows &amp; Backups", "Viewing Backups Only" - the functionality remained the same.</p>
+
+<p>* Edit fixture types: if a channelset value (from or to) is identical with the minimal or maximal value of the parent channel_TYPE_, the programmer will no longer be set to the center of the channelset value range. Instead the programmer will be set to the boundary value. As a result a DIM "closed" channel set will be shown in a channel sheet exactly as 0.0 (before e.g 0.2)</p>
+
+<p>* Artnet does no longer send wrong Artnet sequence information (caused delayed output to artistic licence nodes )</p>
+
+<p>* Additional plausibilty check for network address (e.g. 192.168.0.0) and broadcast address.</p>
+
+<p>* Fixture sheet: Having selected an Attribute cm1, cm2 or cm3, an edit of a colormix value with the right mouse button opens directly the calculator.</p>
+
+<p>* The green and blue fade-time bars in Tracking and Sequence sheet are displaying right values, when fading the cue with the A + B Crossfader.</p>
+
+<p>* Sequence executer sheet progress bars displays now the right information, when a switched-off sequence will be switched-on with a "load cue x".</p>
+
+<p>* The "move" button in "attribute &amp; encoder grouping" does work as in grandMA series 1.</p>
+
+<p>* After a showdownload in a session a "locked desk" remains locked.</p>
+
+<p>* selecting a dimmer now changes the encoderbar to presettype dimmer.</p>
+
+<p>* The commandtree numbering has changed. Macros which are based on theses numbers may call wrong functions- pls use function names or use the new predefined macros</p>
+
+<p>* Auto join mechanism in network improved</p>
+
+<p>* Network: the "join session" button has new label "start/join session".</p>
+
+<p>* The "update view" refresh follows now the "selected executor only", when changing the selection afterwards.</p>
+
+<p>* The LED of the "def. pause" button is working.</p>
+
+<p>* Patch operation shows progress bar (...when patching large amount of fixtures).</p>
+
+<p>* Create presets in a completely new show does work.</p>
+
+<p>* Macros with fade or delay work if they are combined with "(" or ")".</p>
+
+<p>* The command "block cue thru fixture x" does work.</p>
+
+<p>* "edit preset x", "update", keeps the right status (selectiv/global/universal).</p>
+
+<p>* The commands "ifoutput full" and "ifoutput .." do work. Note: "ifoutput" does not work for default values.</p>
+
+<p>* The commands "dmx y full" and "dmx y .." do work.</p>
+
+<p>* The command "attribute 1 thru 9 at 100" does work with world attribute filter.</p>
+
+<p>* The "if" command "group x if group y" does work.</p>
+
+<p>* Units of measurement from encoders are now in sync with the displayed readout from the actual channel/fixture sheet. (natural/percent/decimal/hex/physical).</p>
+
+<p>* The "symbol output" field in channel sheet shows now also highlight values and values from additive group master.</p>
+
+<p>* Profiles on dmx level have now also functionality in network.</p>
+
+<p>* Edit timecode: Press the "event encoder" will open and execute the event list immedeately. (press the event encoder on "goto" opens the cue selection list).</p>
+
+<p>* If the subattribute of a channel function is changed (or a channelfunction was created) and the physical values are empty, default physical values will be set.</p>
+
+<p>* Values in phys columns of channel functions in setup are extended by their unit sign - e.g. "20 hz". * Update cue/presets clears programmer when playback is updated.</p>
+
+<p>* Fixture library updated.</p>
+
+<p>* Changing the colors in the "edit fixture" "edit color wheel", the smartview will be updated.</p>
+
+<p>* "channel fader" and "dynamic channel fader" have new button assignment</p>
+
+<p>Note: The "off" button does not deselect the current selection.</p>
+
+<p>* The keyword to transmit MIDI Program Change messages is changed from "MidiPage" to "MidiProgram".</p>
+
+<p>* "flash" in a runnng sequence will only flash the dimmer.</p>
+
+<p>* Move fixed executors, moves also the fixing.</p>
+
+<p>* After storing a preset and name it, the fixture sheet will display the name directly.</p>
+
+<p>* "invert" does work without a 2nd selection.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Known bugs and limitations: </strong></p>
+
+<p>- Remote configuration of 2-Port Nodes via grandMA2 is shown right in the display of the nodes, but do not change the real output online. After resetting the nodes (disconnect/connect mains) everything is working fine.</p>
+
+<p>- Fixture Types with more than 2 Mode channels may not work</p>
+
+		
+	</body>
+</html>

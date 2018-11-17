@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Control bitmap fixture</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="bitmap fixture - control, bitmap fixture - attributes" />
+	</head>
+	<body>
+		
+		
+		<h1>Control bitmap fixture</h1>
+		
+		<p>After you imported a bitmap fixture in your show, you can control the bitmap fixture in the fixture sheet. For more information, see <a href="key_of_fixture_sheet.html">fixture sheet</a>.</p>
+
+<p>The following table describes the specific bitmap fixture attributes. For more basic information about control fixtures or channels, see <a href="key_operate_fixtures.html">control channels and fixtures</a>.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Attribute</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Dimmer</td>
+			<td>Controls the dimmer intensity.</td>
+		</tr>
+		<tr>
+			<td>Mix Color (RGB)</td>
+			<td>Controls red, green, and blue.</td>
+		</tr>
+		<tr>
+			<td>HSB (Hue, Saturation, Brightness)</td>
+			<td>Controls hue shift, saturation, and brightness. HSB is a color correction of the selected RGB values.</td>
+		</tr>
+		<tr>
+			<td>VObj (= Video Object) Images</td>
+			<td>Select the image from the image pool, used for the bitmap fixture. For more information, see <a href="key_image_import.html">import image</a>.<br />
+			<strong>Important:</strong> By default are 100 images displayed, even if less images are in the image pool.</td>
+		</tr>
+		<tr>
+			<td>VObj Output</td>
+			<td>Select the layout from the layout pool, used for the bitmap fixture. For more information, see <a href="key_layouts.html">layouts</a>.<br />
+			<strong>Important:</strong> By default are 100 layouts displayed, even if less layouts are in the layout pool.</td>
+		</tr>
+		<tr>
+			<td>VPos (= Video Position)</td>
+			<td>Moves the position of the image on a relative x, y, z axis in the layout view. If you have two images about each other, the one with the lower z axis value is in front.</td>
+		</tr>
+		<tr>
+			<td>VRot (= Video Rotation)</td>
+			<td>Rotates the images around the z axis. The combination between CX (= Center X) and CY (= Center Y) moves the rotation midpoint of the z axis relative in the layout view. 0 is the center of the z axis.</td>
+		</tr>
+		<tr>
+			<td>VImg (= Video Image)</td>
+			<td>Select the video image: (See screenshots below the table for better visualization).<br />
+			<strong>Tile -:</strong> Image will be added behind. Every second image is mirrored.<br />
+			<strong>No Tile:</strong> No image will be added.<br />
+			<strong>Tile +:</strong> Image will be added behind.</td>
+		</tr>
+		<tr>
+			<td>VPlayer (= Video Player) Play Mode</td>
+			<td>Select the video play mode:<br />
+			- <strong>Loop&nbsp;</strong>loops endlessly.<br />
+			- <strong>Play&nbsp;</strong>plays once and stops with the last frame.<br />
+			- <strong>Play and Off</strong> plays once and fades out with the last frame.<br />
+			- <strong>Pause</strong> pauses the video clip.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>VPlayer Speed</td>
+			<td>Controls the speed of playing back videos.</td>
+		</tr>
+		<tr>
+			<td>VScale (= Video Scale)</td>
+			<td>Scales the image on the x and y axis.<br />
+			- <strong>1:1</strong><br />
+			- <strong>1:-1</strong> mirrored</td>
+		</tr>
+		<tr>
+			<td>VPreset (= Video Preset) Mode</td>
+			<td>Select the video preset mode:<br />
+			- <strong>Dimmer</strong> (default for only dimmer fixtures)<br />
+			- <strong>RGB + Dim</strong>&nbsp;<br />
+			- <strong>RGB</strong> (default for fixtures using RGB)<br />
+			- <strong>Preset Types</strong> allows to have the bitmap fixture running between two presets of a preset type VP1 and VP2</td>
+		</tr>
+		<tr>
+			<td>VPreset VP1</td>
+			<td>Set the preset pool index of the low value (black), e.g. 1 (= red color).</td>
+		</tr>
+		<tr>
+			<td>VPreset VP2</td>
+			<td>Set the preset pool index of the high value (white), e.g. 2 (= green color).</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="important"><strong>Important:</strong><br />
+If you pause a video clip in the VPlayer and subsequently tap <span class="softkey">Play</span> or <span class="softkey">Loop</span>, the clip is played back from the start.&nbsp;</div>
+
+<p>After you have modified all the attributes, you can store the look in a cue. For more information, see <a href="key_cues_and_sequences.html">cues and sequences</a>.</p>
+
+<h2>Examples for VImg Attributes</h2>
+
+<figure class="caption"><img alt="" src="../../img/window_layout-view-bitmap-no-tile_v3-2.png" />
+<figcaption><em>Layout view with bitmap VImg attribute no tile</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/window_layout-view-bitmap-split-x-tile-plus_v3-2.png" />
+<figcaption><em>Layout view with bitmap VImg attribute split x tile+</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/window_layout-view-bitmap-split-x-tile-_v3-2.png" />
+<figcaption><em>Layout view with bitmap VImg attribute split x tile-</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/window_layout-view-bitmap-split-x-tile-split-y-tile-_v3-2.png" />
+<figcaption><em>Layout view with bitmap VImg attribute split x tile- split y tile-</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/window_layout-view-bitmap-split-y-tile-plus_v3-2.png" />
+<figcaption><em>Layout view with bitmap VImg attribute split y tile+</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/window_layout-view-bitmap-split-y-tile-_v3-2.png" />
+<figcaption><em>Layout view with bitmap VImg attribute split y tile-</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/window_layout-view-bitmap-split-x-tile-plus-split-y-tile-plus_v3-2.png" />
+<figcaption><em>Layout view with bitmap VImg attribute split x tile+ split y tile+</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

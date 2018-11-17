@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Display</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="sheet options - display" />
+	</head>
+	<body>
+		
+		
+		<h1>Display</h1>
+		
+		<p>The Display tab has potentially a lot of options - all dealing with how the data in the sheets are presented to you.</p>
+
+<p>This topic lists all the possible options in the sheets, but each sheet does not have all options.</p>
+
+<p>&nbsp;</p>
+
+<h2>Sheet Style</h2>
+
+<p><strong>Sheet Style</strong> is an option in Fixture and Content sheets.</p>
+
+<p>This can be used to turn how the data is presented in the sheets.</p>
+
+<p>There are two options:</p>
+
+<ul>
+	<li><strong>Horizontal:</strong><br />
+	This will present the fixtures as rows and the Attributes as columns.</li>
+	<li><strong>Vertical:</strong><br />
+	This will organize the fixtures as columns and the Attributes as rows.</li>
+</ul>
+
+<p>The default is Horizontal, but some like to use the vertical in situation where you have few fixtures. For instance when programming Media Servers.</p>
+
+<h2>Font</h2>
+
+<p><strong>Font</strong> is an option in all sheets.</p>
+
+<p>There is currently only one font type available in the grandMA2 software. So the only thing to change regarding the Font is the size.</p>
+
+<p>Tapping the button opens the Small Select Font pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-font_v3-3.png" />
+<figcaption><em>Small Select Font pop-up</em></figcaption>
+</figure>
+
+<p>Here it is possible to select one of the six different sizes - ranging from 10 to 22.</p>
+
+<h2><a id="readout" name="readout"></a>Readout</h2>
+
+<p><strong>Readout</strong> is an option in Channel, DMX, Fixture, Content, and Tracking sheets.</p>
+
+<p>The readout determines how the values are displayed in the sheets.</p>
+
+<p>Tapping the button opens a small Select Readout pop-up like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-readout_v3-3.png" />
+<figcaption><em>Small Select Readout pop-up</em></figcaption>
+</figure>
+
+<p>Here it is possible to select one of the following options:</p>
+
+<ul>
+	<li><strong>Natural:</strong><br />
+	This displays the value defined in the "From" and "To" columns in the fixture profile. The range is customized, but is is always displayed with one decimal accuracy. It can even be a negative value. This can be useful when the attributes default values is not at the end of the range - for instance with Pan attributes.</li>
+	<li><strong>Percent:</strong><br />
+	Displays the attribute values as a percent without any decimal numbers. Range is 0 through 100.</li>
+	<li><strong>Decimal:</strong><br />
+	Displays the attribute values as an 8-bit DMX value. The range is from 0 through 255.</li>
+	<li><strong>Hex:</strong><br />
+	This displays the DMX values in 8-bit Hexadecimal numbers. The range is from 0 through FF.</li>
+	<li><strong>Physical:</strong><br />
+	This displays the value defined in the "From Phys" and "To Phys" columns in the fixture profile. Just as with the Natural readout, it is possible to customize the range but it is always displayed with one decimal accuracy. The idea is that values here matches the physical values for the fixtures. So for instance the zoom range of a fixture is matched to the physical range of the fixture making the sheets display the actual zoom degree.</li>
+	<li><strong>Decimal16:</strong><br />
+	This is just like the Decimal readout except the DMX value is displayed in a 16-bit range. The range is from 0 through 65 535.</li>
+	<li><strong>Hex16:</strong><br />
+	This is just like the Hex readout except the DMX value is displayed in a 16-bit range. The range is from 0 through FFFF.</li>
+</ul>
+
+<p>Changing the readout for a sheet and then tapping in the sheet will also change the readout on your Encoder Bar.</p>
+
+<p>Readout can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2><a id="cue_color_columns" name="cue_color_columns"></a>Cue Color Columns</h2>
+
+<p><strong>Cue Color Columns</strong> is an option in Executor and Tracking sheets.</p>
+
+<p>The <a href="key_keyword_appearance.html">Appearance keyword</a> can be used to give a color to individual cues. This option changes how this color is displayed in the sheets.</p>
+
+<p>Tapping the button opens the small Select Cue Color Columns pop-up. It has two different sizes regarding the options. There are more options in the Executor sheet than in the Tracking sheet. This is the pop-up from the Executor sheet:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-cue-color-columns_v3-3.png" />
+<figcaption><em>Small Select Cue Color Columns pop-up</em></figcaption>
+</figure>
+
+<p>The options in the pop-up are:</p>
+
+<ul>
+	<li><strong>Off:</strong><br />
+	This wont display any cue colors.</li>
+	<li><strong>Number:</strong><br />
+	This will display the color in the cue number column.</li>
+	<li><strong>Number+Name:</strong><br />
+	This will display the color in the cue number and name columns.</li>
+	<li><strong>Number+Info:</strong><br />
+	This will display the color in the cue number and info columns.</li>
+	<li><strong>Info:</strong><br />
+	This will display the color in the info columns only.</li>
+	<li><strong>All Columns:</strong><br />
+	This will display the color in all columns.</li>
+</ul>
+
+<p>The Tracking sheet only has the three first options.</p>
+
+<h2>Sort By</h2>
+
+<p><strong>Sort By</strong> is an option in Content and Tracking sheets.</p>
+
+<p>This option can be used to choose the sort method for the sheets.</p>
+
+<p>There are two options: <strong>Fixture ID</strong> or <strong>Channel ID</strong>. This option makes sense if your fixtures do not have the same number as Fixture ID or Channel ID. Then this chooses the priority for the sorting.</p>
+
+<h2>Symbol Output</h2>
+
+<p><strong>Symbol Output</strong> is an option in Channel and Fixture sheets.</p>
+
+<p>The Symbol Out is a small square next to the Channel ID in the Channel Sheet and next to the fixture name in the Fixture Sheet. This square shows the combined intensity and color output from the fixture.</p>
+
+<p>Tapping the button opens the small Select Symbol Output pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-symbol-output_v3-3.png" />
+<figcaption><em>Small Select Symbol Output pop-up</em></figcaption>
+</figure>
+
+<p>The options are:</p>
+
+<ul>
+	<li><strong>None:</strong><br />
+	The square is hidden.</li>
+	<li><strong>Auto:</strong><br />
+	The squares output follows the selected layer.</li>
+	<li><strong>Value Layer:</strong><br />
+	The square displays the output from the Value Layer.</li>
+	<li><strong>Output Layer:</strong><br />
+	The square displays the output from the Output Layer.</li>
+	<li><strong>DMX Layer:</strong><br />
+	The square displays the output from the DMX Layer.</li>
+</ul>
+
+<p>For more information about the different layers please read the <a href="key_of_layers_in_sheets.html">Layers in sheets topic</a>.</p>
+
+<h2>Symbol Feature</h2>
+
+<p><strong>Symbol Feature</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>Each feature of the fixtures can have a small symbol displaying a graphic representations of the features value. This symbol can be shown or hidden.</p>
+
+<p>For instance the dimmer value is represented by a dimmer bar. The position values are represented by vertical and horizontal line intersecting. Gobos are displaying a small image of the gobo. Colors are displayed as small squares displaying the colors next to each color feature.</p>
+
+<h2>Cue Colors</h2>
+
+<p><strong>Cue Colors</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>This option allows you to select how attribute values should be presented in the sheets.</p>
+
+<p>Tapping the button opens the small Select Cue Colors pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-cue-color_v3-3.png" />
+<figcaption><em>Small Select Cue Colors pop-up</em></figcaption>
+</figure>
+
+<p>There are three options:</p>
+
+<ul>
+	<li><strong>Off</strong><br />
+	All attribute values are displayed with a yellow color.</li>
+	<li><strong>On</strong><br />
+	The attribute values from the primary selected executor displays the colors Cyan, Green, White, and Magenta. These colors are described in detail in the <a href="key_ws_colors_cue.html">Cue Colors Topic</a>. Values from other executors are displayed in yellow.</li>
+	<li><strong>My Exec</strong><br />
+	This will color the values from the primary selected executor in Cyan, Green, White, and Magenta. Other executors triggered by your user are displayed in yellow. Values from executors triggered by other users are displayed in a gray color.</li>
+</ul>
+
+<h2>Namefield</h2>
+
+<p><strong>Namefield</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>The name field can be turned On or Off. When it is On then the name of the fixture is displayed in the sheet.</p>
+
+<h2>Channel ID</h2>
+
+<p><strong>Channel ID</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>The Channel ID can be turned On or Off. When it is On then the Channel ID will be displayed in the sheet.</p>
+
+<p>If the fixture has both a Channel ID and Fixture ID and the ID number is the same, then there is only displayed one number even if both Channel ID and Fixture ID is On. If the fixture has two different ID numbers and both are set to On, then they are shown separated by a colon. The Fixture ID is on the left side of the colon and the Channel ID is on the right side.</p>
+
+<h2>Fixture ID</h2>
+
+<p><strong>Fixture ID</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>The Fixture ID can be turned On or Off. When it is On then the Fixture ID will be displayed in the sheet.</p>
+
+<p>If the fixture has both a Channel ID and Fixture ID and the ID number is the same, then there is only displayed one number even if both Channel ID and Fixture ID is On. If the fixture has two different ID numbers and both are set to On, then they are shown separated by a colon. The Fixture ID is on the left side of the colon and the Channel ID is on the right side.</p>
+
+<h2>Columns</h2>
+
+<p><strong>Columns </strong>is an option in Channel, DMX, Fixture, and Content sheets.</p>
+
+<p>Tapping the green input field allows you to set a number of columns in the sheets.</p>
+
+<p>The column number is only used in Fixture and Content Sheets if the sheet is in Vertical Sheet Style.</p>
+
+<h2><a id="autoscroll" name="autoscroll"></a>Autoscroll</h2>
+
+<p><strong>Autoscroll</strong> is an option in Executor, and Tracking sheets.</p>
+
+<p>The Autoscroll function can be turned On or Off. When On it automatically scrolls the cue sequence list in the Executor and Tracking Sheets. This makes sure the active cue is always visible in the sheet.</p>
+
+<p>Autoscroll can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2><a id="feature_sort" name="feature_sort"></a>Feature Sort</h2>
+
+<p><strong>Feature Sort </strong>is an option in Fixture, Content, and Tracking sheets.</p>
+
+<p>The sheets can activate an automatic sorting of the features. This will move the attributes of the current feature so it is right next to the name of the fixture or cue. This should avoid a lot of scrolling in the sheets.</p>
+
+<p>Feature Sort can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2><a id="fixture_channel_sort" name="fixture_channel_sort"></a>Fixture / Channel Sort</h2>
+
+<p><strong>Fixture Sort</strong> or <strong>Channel Sort</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>In the Channel Sheet it is called Channel Sort, in the other sheets it is called Fixture Sort. The function is the same. The selected fixtures are displayed first in the sheets and they are displayed in the selection order.</p>
+
+<p>Fixture Sort or Channel Sort can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2>Marker</h2>
+
+<p><strong>Marker</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>The colored markers in the sheets provide additional information of what is affecting the values and to display what information might be stored in cues. These markers may be turned On or Of.</p>
+
+<p>Read more about the markers in the <a href="key_ws_colors_marker.html">Maker Colors topic</a>.</p>
+
+<h2>Preset Readout</h2>
+
+<p><strong>Preset Readout</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>Preset Readout is used to change how the preset ID is displayed in sheets. This is relevant when an attribute gets its values from a preset.</p>
+
+<p>Tapping the button opens the small Select Preset Readout pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-preset-readout_v3-3.png" />
+<figcaption><em>Small Select Preset Readout pop-up</em></figcaption>
+</figure>
+
+<p>The options are:</p>
+
+<ul>
+	<li><strong>Names:</strong><br />
+	The name of the preset will be displayed.</li>
+	<li><strong>Numbers:</strong><br />
+	The number of the preset will be displayed.</li>
+	<li><strong>Numbers &amp; Names:</strong><br />
+	Both the number and the name of the preset will be displayed.</li>
+</ul>
+
+<h2>Hide Empty Cells</h2>
+
+<p><strong>Hide Empty Cells</strong> is an option in Channel, Fixture, Content, and Tracking sheets.</p>
+
+<p>When a mixture of fixture types are patched in a show it can often happen that not all the fixtures have the same features. This means that a sheet can have empty or unused cells. These cells can be hidden in the sheets. This can often provide a better overview of the features available in the fixtures.</p>
+
+<p>Turning Hide Empty Cells On will hide these unused cells.</p>
+
+<h2><a id="hide_timing_countdown" name="hide_timing_countdown"></a>Hide Timing Countdown</h2>
+
+<p><strong>Hide Timing Countdown </strong>is an option in the Executor sheets.</p>
+
+<p>In the Sequence Executor Sheet you can see the cue times. When a fade is running you can choose to have the time count down to 0 or just always display the time stored in the cue.</p>
+
+<p>Hide Timing Countdown is an On or Off function. When it is On, then there is no visible count down. When it is Off then the count down is displayed.</p>
+
+<p>Hide Timing Countdown can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2><a id="show_additional" name="show_additional"></a>Show Additional</h2>
+
+<p><strong>Show Additional</strong> is an option in the DMX sheets.</p>
+
+<p>This function is used to display more information in the DMX Sheet than just the DMX values.</p>
+
+<p>Tapping the button opens the small Select Show Additional pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-show-additional_v3-3.png" />
+<figcaption><em>Small Select Show Additional pop-up</em></figcaption>
+</figure>
+
+<p>The options are:</p>
+
+<ul>
+	<li><strong>Show only Values:</strong><br />
+	No additional information are displayed.
+	<figure class="caption"><img alt="" src="../../img/window_dmx_additional-none_v3-2.png" />
+	<figcaption><em>DMX values without additional information</em></figcaption>
+	</figure>
+	</li>
+</ul>
+
+<ul>
+	<li><strong>Show IDs:</strong><br />
+	The fixtures ID numbers and names are displayed above the DMX values. They are only displayed once per fixture - the ID is nor displayed above each DMX value.
+	<figure class="caption"><img alt="" src="../../img/window_dmx_additional-id_v3-2.png" />
+	<figcaption><em>DMX values with ID number and name</em></figcaption>
+	</figure>
+	</li>
+</ul>
+
+<ul>
+	<li><strong>Show Attributes:</strong><br />
+	The attribute connected with the DMX address is displayed above the DMX value.
+	<figure class="caption"><img alt="" src="../../img/window_dmx_additional-attribute_v3-2.png" />
+	<figcaption><em>DMX values with attribute name above the values</em></figcaption>
+	</figure>
+	</li>
+</ul>
+
+<ul>
+	<li><strong>Show Address:</strong><br />
+	The DMX address is displayed above each DMX value.
+	<figure class="caption"><img alt="" src="../../img/window_dmx_additional-address_v3-2.png" />
+	<figcaption><em>DMX values with DMX addresses above each value</em></figcaption>
+	</figure>
+	</li>
+</ul>
+
+<p>Show Additional can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2><a id="show_only_selected" name="show_only_selected"></a>Show Only Selected</h2>
+
+<p><strong>Show Only Selected</strong> is an option in the DMX sheets.</p>
+
+<p>This will limit the DMX sheet to only display the universes of the selected fixtures.</p>
+
+<p>Show Only Selected can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2><a id="programmer_colors" name="programmer_colors"></a>Programmer Colors</h2>
+
+<p><strong>Programmer Colors</strong> is an option in the DMX sheets.</p>
+
+<p>There are two color schemes for the DMX values in the DMX sheet.</p>
+
+<p>There is the default where the background color changes from gray to light green depending on intensity of the value.</p>
+
+<p>But you can choose to use turn On Programmer Colors instead. This will then use the same color schema as the Channel and Fixture Sheets.</p>
+
+<p>Programmer Colors can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2>Merge Same Values</h2>
+
+<p><strong>Merge Same Values</strong> is an option in Fixture, Content, and Tracking sheets.</p>
+
+<p>Some features can combine or merge the values displayed in the sheets if the value is the same. For instance the MixColor attributes "R", "G", and "B". If these three attributes have the same value then it is only displayed once - as a merged value. If they have different values then they are split up into each displaying the values they have.</p>
+
+<p>This merge function can be turned On or Off.</p>
+
+<h2><a id="mixcolor_readout" name="mixcolor_readout"></a>MixColor Readout</h2>
+
+<p><strong>MixColor Readout</strong> is an option in Fixture, Content, and Tracking sheets.</p>
+
+<p>The MixColor system is a way to present the same attributes to the operator no matter if the fixtures uses different color systems. This means that the operator does not have to change between the different colors systems. In the sheets it is then possible to change how this is displayed.</p>
+
+<p>Tapping the button opens the small Select MixColor Readout pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-mixcolor-readout_v3-3.png" />
+<figcaption><em>Small Select MixColor Readout pop-up</em></figcaption>
+</figure>
+
+<p>The options are:</p>
+
+<ul>
+	<li><strong>RGB:</strong><br />
+	The MixColors are displayed as RGB attributes.</li>
+	<li><strong>CMY:</strong><br />
+	The MixColors are displayed as CMY attributes.</li>
+	<li><strong>Default:</strong><br />
+	The MixColors are displayed using the default selected in the setup - Read more about setting this in the <a href="key_single_multi_systems_user_settings.html#settings">User Settings topic</a>.</li>
+</ul>
+
+<p>MixColor Readout can also be a <a href="key_of_sheet_options_title_buttons.html">Title Button</a>.</p>
+
+<h2>RDM Info</h2>
+
+<p><strong>RDM Info</strong> is an option in Channel, and Fixture sheets.</p>
+
+<p>The RDM info is a small RDM icon that will be displayed next to the fixture name or ID.</p>
+
+<p>Tapping the button opens the small Select RDM Info pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-rdm-info_v3-3.png" />
+<figcaption><em>Small Select RDM Info pop-up</em></figcaption>
+</figure>
+
+<p>The options are:</p>
+
+<ul>
+	<li><strong>None:</strong><br />
+	No icon is displayed in the sheet.</li>
+	<li><strong>Warning:</strong><br />
+	The yellow RDM warning icon is displayed in the sheet.</li>
+	<li><strong>Alert:</strong><br />
+	The red RDM alert icon is displayed in the sheet.</li>
+	<li><strong>Warning &amp; Alert:</strong><br />
+	Both icons can be displayed in the sheets.</li>
+</ul>
+
+<p>Read more about RDM and how to configure the warning and alert notifications in the <a href="key_rdm.html">RDM section</a>.</p>
+
+		
+	</body>
+</html>

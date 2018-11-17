@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Connection States</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Connection States" />
+	</head>
+	<body>
+		
+		
+		<h1>Connection States</h1>
+		
+		<p>When you launch MA VPU (Video Processing Unit) it tries to connect to a session where its state is set to "Session Member"​.<br />
+​The two states of the connection are indicated by the heart in the status bar. The blinking of the heart indicates the communication between the desk and MA VPU.&nbsp;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_heartbroken.png" /></td>
+			<td>Heart is broken and red: No connection to a session established.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_heartgreen.png" /></td>
+			<td>Heart is blinking green: MA VPU is connected to a session.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>ATTENTION: With the start of a new session (Create) the session founder overwrites all data of the other members. I.e. if a new session is founded by the MA VPU&nbsp;<strong>all</strong>&nbsp;data in the desk will be overwritten!&nbsp;</p>
+
+<p>If more than one console, visualizer or onPC editor is connected to the network the connections to the equipment will have to be properly assigned.</p>
+
+<ul>
+	<li>The communication between consoles, visualizer, VPU applications and onPC editors takes place in sessions.&nbsp;</li>
+	<li>A session has only one founder. This is e.g. the master. On connection the founder transfers its data (fixture types) to the connected stations.&nbsp;</li>
+	<li>From then on, all session members are synchronized and have equal rights.<br />
+	If a fixture is edited at a connected station the change is reflected to the master and vice versa.</li>
+</ul>
+
+<p>A Session always has one master and several stations.</p>
+
+<p>The network configuration can be managed by the ‚Settings -&nbsp;Network’ dialog.<strong>&nbsp;</strong></p>
+
+<p>&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../../img/ma_vpu/vpu_connectionstates_1.png" />
+<figcaption><em>Network settings</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<div class="tip"><strong>Hint</strong>:<br />
+​If the session entry appears in red, the streaming version is wrong. You have to update the software.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<p>The upper part of the dialog shows the active sessions and their members in a tree view. MA VPU is marked green.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Allow Invite:&nbsp;</strong></p>
+
+<p>If this button is active, the VPU can be invited to a session.</p>
+
+<p>Settings:&nbsp;</p>
+
+<p><strong>MA Net IP:&nbsp;</strong></p>
+
+<p>Use this listbox to choose an IP address for network communication. If there is more than one IP available (e.g. multiple network cards installed) select the IP address which is linked to the grandMA desk.&nbsp;</p>
+
+<p><strong>sACN/Art-Net IP:&nbsp;</strong></p>
+
+<p>Use this listbox to select an IP address for the Art-Net communication of the Pixel Mapper (receive data only).&nbsp;</p>
+
+<p><strong>Session ID:&nbsp;</strong></p>
+
+<p>Every session in the grandMA network has a unique ID.</p>
+
+<p><strong>Session Name:&nbsp;</strong></p>
+
+<p>Displays the&nbsp;name of a session.</p>
+
+		
+	</body>
+</html>

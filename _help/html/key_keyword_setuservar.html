@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>SetUserVar Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="SetUserVar, Set User Variable, SetUserVar Keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>SetUserVar Keyword</h1>
+		
+		<p>To get the SetUserVar keyword in the command line, type <strong>SetUserVar</strong> or the shortcut <strong>SetUs </strong>in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The SetUserVar keyword sets user profile specific variables. For more information, see <a href="key_macro_create_variables.html">Macros - Use Variables</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">SetUserVar $variablename = numericvalue </span></p>
+
+<p><span class="syntax">SetUserVar $variablename = "text" </span></p>
+
+<p><span class="syntax">SetUserVar $variablename = ("text")</span></p>
+
+<p><span class="syntax">SetUserVar $variablename = nothing</span></p>
+
+<div class="tip"><strong>Hint:</strong><br />
+To see the set user variables in the command line feedback window, use the <a href="key_keyword_listuservar.html">ListUserVar keyword</a>.</div>
+
+<h2>Examples</h2>
+
+<p>Create a macro in the macro pool that asks "Cue number to store?", stores and labels the cue for the selected executor.</p>
+
+<ol>
+	<li>Open the Macro Pool.</li>
+	<li>Press <span class="hardkey">Edit</span> and tap on a empty macro pool tile.<br />
+	The Edit Macro pop-up opens.<br />
+	&nbsp;
+	<figure class="caption"><img alt="" src="../../img/popup_edit-macro_v3-2.png" />
+	<figcaption><em>Edit Macro Pop-Up</em></figcaption>
+	</figure>
+	</li>
+	<li>Tap <span class="softkey">Add</span>.<br />
+	The Edit CMD pop-up opens.<br />
+	&nbsp;
+	<figure class="caption"><img alt="" src="../../img/popup_edit-cmd_v3-2.png" />
+	<figcaption><em>Edit&nbsp;CMD&nbsp;(= Command) Pop-Up</em></figcaption>
+	</figure>
+	</li>
+	<li>Type <span class="syntax">SetUserVar $CueNumber = ("Cue number to store?")</span></li>
+	<li>Type <span class="syntax">Store Cue $CueNumber</span></li>
+	<li>Type <span class="syntax">Label Cue $CueNumber</span></li>
+</ol>
+
+<p>The macro is ready to use.</p>
+
+<hr />
+<ul>
+	<li>Delete a variable.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; SetUserVar $CueNumber =</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

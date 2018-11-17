@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>RdmSetParameter Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="SetRDMParameter, PID, Parameter ID" />
+	</head>
+	<body>
+		
+		
+		<h1>RdmSetParameter Keyword</h1>
+		
+		<p>To get the RdmSetParameter keyword in the command line, type <strong>RdmSetParameter</strong> in the command line or use the shortcut <strong>RdmS</strong>.</p>
+
+<h2>Description</h2>
+
+<p>With the RdmSetParameter keyword you can set RDM parameters by using the command line.</p>
+
+<p>If no Unique ID is given, the fixture selection will be used.</p>
+
+<p>The RdmSetParameter keyword is a function keyword.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">RdmSetParameter<span class="syntax"> [P</span>arameter ID ] [Parameter Value] / [Option] = [Option value]</span></p>
+
+<h2>Parameter ID (= PID)</h2>
+
+<p>You can enter the PIDs in the command line by using the PID name or the PID hex number.</p>
+
+<div class="important"><strong>Important:</strong><br />
+If you enter manufacturer specific PIDs or PID values in the command line, it is necessary to use the hex value. A manufacturer specific PID name or PID value name can not be processed from a grandMA2 command line.</div>
+
+<p>The following table lists the supported PIDs along with the command line and the parameter value.</p>
+
+<p>The PIDs will be processed only, if the RDM device supports the PID.</p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">PID name</th>
+			<th scope="col">PID hex value</th>
+			<th scope="col">PID value name</th>
+			<th scope="col">PID value hex value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>CLEAR_STATUS_ID</td>
+			<td>0x0032</td>
+			<td>No value.</td>
+			<td>---</td>
+			<td>Clears the status message queue.</td>
+		</tr>
+		<tr>
+			<td>DEVICE_HOURS</td>
+			<td>0x0400</td>
+			<td>32 bit number.</td>
+			<td>---</td>
+			<td>Retrieves or sets the number of hours of operation.</td>
+		</tr>
+		<tr>
+			<td>DEVICE_LABEL</td>
+			<td>0x0082</td>
+			<td>ASCII text label. Up to 32 characters.</td>
+			<td>---</td>
+			<td>Provides a means of setting a descriptive label for each device.</td>
+		</tr>
+		<tr>
+			<td>DEVICE_POWER_CYCLES</td>
+			<td>0x0405</td>
+			<td>Power Cycle Count (32-bit)</td>
+			<td>---</td>
+			<td>Retrieves or sets the number of power-up cycles. Some devices may only support the GET_COMMAND for this operation and not allow the device’s power-up cycles to be set.</td>
+		</tr>
+		<tr>
+			<td>DISPLAY_INVERT</td>
+			<td>0x0500</td>
+			<td>Off<br />
+			On<br />
+			Auto</td>
+			<td>0x00<br />
+			0x01<br />
+			0x02</td>
+			<td>Retrieves or changes the display invert setting. Invert is often used to rotate the display image by 180 degrees.</td>
+		</tr>
+		<tr>
+			<td>DISPLAY_LEVEL</td>
+			<td>0x0501</td>
+			<td>Display Level</td>
+			<td>Manufacturer specific. See fixture manual.</td>
+			<td>Retrieves or changes the display intensity setting.</td>
+		</tr>
+		<tr>
+			<td>DMX_PERSONALITY</td>
+			<td>0x00E0</td>
+			<td>
+			<p>Current Personality<br />
+			# of Personalities</p>
+			</td>
+			<td>---</td>
+			<td>Sets the responder’s DMX512 personality. Many devices such as moving lights have different DMX512 personalities. Many RDM parameters may be affected by changing personality.</td>
+		</tr>
+		<tr>
+			<td>DMX_START_ADDRESS</td>
+			<td>0x00F0</td>
+			<td>DMX512 Address (16-bit).</td>
+			<td>---</td>
+			<td>Sets the DMX512 start address</td>
+		</tr>
+		<tr>
+			<td>FACTORY_DEFAULTS</td>
+			<td>0x0090</td>
+			<td>False<br />
+			True</td>
+			<td>0x00<br />
+			0x01</td>
+			<td>Reverts the device to its factory default user settings or configuration.</td>
+		</tr>
+		<tr>
+			<td>IDENTIFY_DEVICE</td>
+			<td>0x1000</td>
+			<td>Off, Stop<br />
+			On, Start</td>
+			<td>0x00<br />
+			0x01</td>
+			<td>Physically identifies the device represented by the UID.</td>
+		</tr>
+		<tr>
+			<td>LAMP_HOURS</td>
+			<td>0x0401</td>
+			<td>Lamp Hours (32-bit)</td>
+			<td>---</td>
+			<td>Retrieves the number of lamp hours or to sets the counter to a specific start value.</td>
+		</tr>
+		<tr>
+			<td>LAMP_ON_MODE</td>
+			<td>0x0404</td>
+			<td>LAMP_ON_MODE_OFF<br />
+			LAMP_ON_MODE_DMX<br />
+			LAMP_ON_MODE_ON<br />
+			LAMP_ON_MODE_AFTER_CAL<br />
+			Manufacturer-Specific Modes</td>
+			<td>0x00<br />
+			0x01<br />
+			0x02<br />
+			0x03<br />
+			0x80 – 0xDF</td>
+			<td>Retrieves or changes the current Lamp On Mode. The Lamp On Mode defines the conditions under which a lamp will be struck.</td>
+		</tr>
+		<tr>
+			<td>LAMP_STATE</td>
+			<td>0x0403</td>
+			<td>LAMP_OFF<br />
+			LAMP_ON<br />
+			LAMP_STRIKE<br />
+			LAMP_STANDBY<br />
+			LAMP_NOT_PRESENT<br />
+			LAMP_ERROR<br />
+			Manufacturer Specific States</td>
+			<td>0x00<br />
+			0x01<br />
+			0x02<br />
+			0x03<br />
+			0x04<br />
+			0x7F<br />
+			0x80 – 0xDF</td>
+			<td>Retrieves or changes the current operating state of the lamp.</td>
+		</tr>
+		<tr>
+			<td>LAMP_STRIKES</td>
+			<td>0x0402</td>
+			<td>Lamp Strikes (32-bit)</td>
+			<td>---</td>
+			<td>Retrieves the number of lamp strikes or to sets the counter to a specific start value.</td>
+		</tr>
+		<tr>
+			<td>LANGUAGE</td>
+			<td>0x00B0</td>
+			<td>2 character alpha code for ISO 639-1</td>
+			<td>---</td>
+			<td>Changes the language of the messages.</td>
+		</tr>
+		<tr>
+			<td>PAN_INVERT</td>
+			<td>0x0600</td>
+			<td>
+			<p>Off<br />
+			On</p>
+			</td>
+			<td>0x00<br />
+			0x01</td>
+			<td>Retrieves or changes the pan invert setting.</td>
+		</tr>
+		<tr>
+			<td>PAN_TILT_SWAP</td>
+			<td>0x0602</td>
+			<td>Off<br />
+			On</td>
+			<td>0x00<br />
+			0x01</td>
+			<td>Retrieves or changes the pan/tilt swap setting.</td>
+		</tr>
+		<tr>
+			<td>PERFORM_SELFTEST</td>
+			<td>0x1020</td>
+			<td>SELF_TEST_OFF<br />
+			Manufacturer Tests<br />
+			SELF_TEST_ALL</td>
+			<td>0x00<br />
+			0x01 – 0xFE<br />
+			0xFF</td>
+			<td>Executes any built in self-test routine that may be present.</td>
+		</tr>
+		<tr>
+			<td>POWER_STATE</td>
+			<td>0x1010</td>
+			<td>POWER_STATE_FULL_OFF<br />
+			POWER_STATE_SHUTDOWN<br />
+			POWER_STATE_STANDBY<br />
+			POWER_STATE_NORMAL</td>
+			<td>0x00<br />
+			0x01<br />
+			0x02<br />
+			0xFF</td>
+			<td>Retrieves or changes the power state.</td>
+		</tr>
+		<tr>
+			<td>REAL_TIME_CLOCK</td>
+			<td>0x0603</td>
+			<td>Year (16-bit), Month, Day, Hour, Minute, Second</td>
+			<td>---</td>
+			<td>Retrieves or set the real-time clock in a device.</td>
+		</tr>
+		<tr>
+			<td>RECORD_SENSORS</td>
+			<td>0x0202</td>
+			<td>Sensor Number</td>
+			<td>---</td>
+			<td>Instructs devices such as dimming racks that monitor load changes to store the current value for monitoring sensor changes.</td>
+		</tr>
+		<tr>
+			<td>RESET_DEVICE</td>
+			<td>0x1001</td>
+			<td>Warm Reset<br />
+			Cold Reset</td>
+			<td>0x01<br />
+			0xFF</td>
+			<td>Resets the responder.</td>
+		</tr>
+		<tr>
+			<td>SENSOR_VALUE</td>
+			<td>0x0201</td>
+			<td>Sensor #, Present Value (16-bit), Lowest Detected Value (16-bit), Highest Detected Value (16-bit), Recorded Value (16-bit)</td>
+			<td>---</td>
+			<td>Retrieves or reset sensor data.</td>
+		</tr>
+		<tr>
+			<td>TILT_INVERT</td>
+			<td>0x0601</td>
+			<td>Off<br />
+			On</td>
+			<td>0x00<br />
+			0x01</td>
+			<td>Retrieves or changes the tilt invert setting.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Options</h2>
+
+<p>To get a list all available options to the RdmSetParameter keyword, type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; RdmSetParameter /?</div>
+
+<p>The RdmSetParameter has the following options:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option shortcut</th>
+			<th scope="col">Option value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>multipatch</td>
+			<td>m</td>
+			<td>0 = multipatch for all fixtures<br />
+			1 = multipatch for one fixture<br />
+			and so on</td>
+			<td>Sets the multipatch index.</td>
+		</tr>
+		<tr>
+			<td>UID</td>
+			<td>No shortcut available</td>
+			<td>e.g. "43500F019FCB"</td>
+			<td>Sets the RDM UID to send RDM Parameter to the device.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To set the DMX start address to 3 of a RDM device, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; RdmSetParameter dmx_start_address 3 / UID =&nbsp; 43500F019FCB</div>
+
+<hr />
+<ul>
+	<li>To invert the display of a RDM device for the selected fixture, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; RdmSetParameter invert_display 1</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

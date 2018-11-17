@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Replace Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Replace, Replace Fixture, Replace Objects, Replace Values, Replace Keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>Replace Keyword</h1>
+		
+		<p>To get the Replace keyword in the command line, press <span class="hardkey">Move</span> <span class="hardkey">Move</span> (= Replace).</p>
+
+<p>You can also type <strong>Replace&nbsp;</strong> or the shortcut <strong>Rep</strong> in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The replace keyword replaces object and values. For more information, see <a href="key_search_replace.html">search and replace</a>.</p>
+
+<p>The replace keyword is a function keyword.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax"><strong>Replace [</strong>search for objects]&nbsp;<strong>With [</strong>replace with objects] &nbsp;( If&nbsp;<strong>&nbsp;[</strong>search in objects] )</span></p>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>&nbsp;Add 10° to all pan values in all cues and presets.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Replace Attribute "Pan" At - 270 Thru 270 With - 260 Thru 280</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Subtract 10 % from all dimmer values in all cues from sequences 3.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Replace Attribute "Dim" At 0 Thru 100 With 0 Thru 90 If Sequence 3</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Replace the individual fade time of 5 by 10 for attribute tilt.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Replace Attribute "Tilt" Fade 5 with Fade 10</div>
+
+<p>&nbsp;</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+If you would like to replace two fixtures with each other, use a third fixture. See the examples below this box.</div>
+
+<p>Replace fixtures with each other in three steps:</p>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li>Replaces fixture 2 with 3.&nbsp;</li>
+</ol>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 2 with 3</div>
+
+<ol start="2">
+	<li>Replaces fixture 1 with 2.&nbsp;</li>
+</ol>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1 with 2</div>
+
+<ol start="3">
+	<li>Replaces fixture 3 with 1.&nbsp;</li>
+</ol>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 3 with 1&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Delete a specific fixture from everywhere where it is linked to.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1 With</div>
+
+		
+	</body>
+</html>

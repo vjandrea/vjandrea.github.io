@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>NetworkSpeedTest Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="NetworkSpeedTest Keyword, Network Speed Test, Network Test" />
+	</head>
+	<body>
+		
+		
+		<h1>NetworkSpeedTest Keyword</h1>
+		
+		<p>To get the NetworkSpeedTest keyword in the command line, type <strong>NetworkSpeedTest</strong> or the shortcut <strong>NetworkS</strong> in the command line.</p>
+
+<h2>Description</h2>
+
+<div class="important"><strong>Important:</strong><br />
+Do not use the NetworkSpeedTest keyword in show situations.The NetworkSpeedTest keyword blocks all other network traffic and DMX traffic for some seconds.</div>
+
+<p>The NetworkSpeedTest keyword checks the current network performance in the network of the following MA devices in the session:</p>
+
+<ul>
+	<li>grandMA2 consoles</li>
+	<li>grandMA2 replay unit</li>
+	<li>grandMA2 onPC</li>
+	<li>MA 3D</li>
+	<li>MA VPU (Video Processing Unit)</li>
+	<li>MA NPU (Network Processing Unit)</li>
+</ul>
+
+<p>Use the NetworkSpeedTest keyword as a troubleshooting tool. NetworkSpeedTest UDP (=User Datagram Protocol) packets will be send at port 29998.</p>
+
+<p>The result of the NetworkSpeedTest is displayed in the MAnet Speed Test pop-up.</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_manet-speed-test_v3-2.png" />
+<figcaption><em>MAnet SpeedTest pop-up</em></figcaption>
+</figure>
+
+<p>The console what sends the command is not listed in the MAnet SpeedTest pop-up.</p>
+
+<p>In the MAnet SpeedTest pop-up are five columns:</p>
+
+<p><strong>IP:</strong><br />
+Displays the IP address of the tested network device.</p>
+
+<p><strong>Time:</strong><br />
+Displays the duration between sending and receiving the packets. In a 1000 Mbit network the time for a console should be 0.1 s.</p>
+
+<p><strong>Sequence Errors:</strong><br />
+Displays of how many packets the order was swapped.</p>
+
+<p><strong>Data Errors</strong>:<br />
+Displays how many packets are damaged.</p>
+
+<p><strong>Packets Received:</strong><br />
+Displays the percentage of correctly delivered packages. In a 1000 Mbit network the received packets should be 100%. If this is not the case, the reason could be a bad network connection or an overloaded device.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">NetworkSpeedTest / [Option]</span></p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available option to the NetworkSpeedTest keyword, type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; NetworkSpeedTest /?</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option Shortcut</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>noconfirm</td>
+			<td>nc</td>
+			<td>Suppress the danger and warning pop-up.</td>
+		</tr>
+		<tr>
+			<td>data</td>
+			<td>d</td>
+			<td>Network speed test at UDP port 29999.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Example</h2>
+
+<p>To perform a network speed test of the MA devices in the network for troubleshooting:</p>
+
+<p>1. Type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; NetworkSpeedTest</div>
+
+<p>&nbsp;&nbsp;&nbsp; A danger pop-up asks if you really want to perform the network test.</p>
+
+<p>2. Tap <span class="softkey">Ok</span>.<br />
+&nbsp;&nbsp;&nbsp; A continue pop-up asks that the network traffic will disrupt for some seconds.</p>
+
+<p>3. Tap <span class="softkey">Ok</span>.</p>
+
+<p>The network speed test will be performed and the MAnet SpeedTest pop-up displays the result.</p>
+
+		
+	</body>
+</html>

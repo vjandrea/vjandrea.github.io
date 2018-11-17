@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Apply worlds or filters to executors and sequences</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="worlds - on executors, filters - on executors, worlds - on Sequences, filters - on sequences" />
+	</head>
+	<body>
+		
+		
+		<h1>Apply worlds or filters to executors and sequences</h1>
+		
+		<p>Worlds and filters can be assigned to Executors or Sequences.</p>
+
+<p>If you have come to this page without knowing about worlds and filters, then you should read the <a href="key_wfm_what_are_worlds.html">What are Worlds topic</a> and <a href="key_wfm_what_are_filters.html">What are Filters topic</a>.</p>
+
+<h2>Playback Filter</h2>
+
+<p>Assigning a world or filter to an executor will use the world or filter when the executor is running the sequence.</p>
+
+<p>For example a sequence might have stored colors and dimmer values. But if you assign a filter that does not allows color information to pass to the executor with the sequence then it will not execute the color information but only the dimmer information. It does not remove the color information from the sequence.</p>
+
+<p>This is called a <strong>Playback Filter</strong>. Playback filters only works by attributes not by layers (Value, Value Times and Effects).</p>
+
+<p>For Worlds this means that if you have applied a world that only contains the Effect layers, then everything is still played back. But a world that only have Fixture 1, then only the values for Fixture 1 will be played back.</p>
+
+<p>For Filters it means that applying a filter that only contains the timing layers will still play back everything. Using Filters allows you to filter what attributes are played back from the executor.</p>
+
+<h2>Input Filter</h2>
+
+<p>Assigning a world or filter to a sequence will use that world or filter when you add (store or update) values to the sequence.</p>
+
+<p>For example a sequence might have a world assigned that only contains some fixtures. In your programmer you have values for those fixtures but also other fixtures. If you store a new cue in the sequence then you will only store the values for the fixtures in the assigned world.</p>
+
+<p>This is called an <strong>Input Filter</strong>.</p>
+
+<p>Since the Input Filter is applied to the sequence then it is also applied at all the executors that uses this sequence.</p>
+
+<h2><a id="playback_input_filter" name="playback_input_filter"></a>Assigning Worlds and Filters</h2>
+
+<p>You can assign the world or filter using the Assign key (read more below) or by opening the assign menu of a relevant executor.</p>
+
+<p>You can open the Assign menu by pressing Assign followed by any key on the relevant executor. Now make sure you have selected the Options button on the right side of the menu. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_assign_options_v3-2.png" />
+<figcaption><em>Assign Menu - Options</em></figcaption>
+</figure>
+
+<p>This menu contains a lot of settings and options. The two we are interest in are the two bottom buttons in the Playback column and the Tracking Column.</p>
+
+<p>Tapping one of these will open a <strong>Select Playback Filter pop-up</strong> or <strong>Select Input Filter pop-up</strong> - respectively. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-playback-filter_v3-3.png" />
+<figcaption><em>Select Playback Filter pop-up</em></figcaption>
+</figure>
+
+<p>This will list all the Worlds and Filters in your show file. At the top is also the "No Filter" option - this allows you to remove a playback or input filter.</p>
+
+<p>When you have set up your filters to your linking, then you can close the assign menu.</p>
+
+<p>&nbsp;</p>
+
+<p>You can also assign the filters directly using the Assing key.</p>
+
+<h3>Playback Filter:</h3>
+
+<ol>
+	<li>Have the World or Filter pool visible.</li>
+	<li>Press the <span class="hardkey">Assign</span> key.</li>
+	<li>Tap the World or Filter you want to assign.</li>
+	<li>Press an executor button on the executor where you want to assign the world or filter.</li>
+</ol>
+
+<h3>Input Filter:</h3>
+
+<ol>
+	<li>Have the World or Filter pool visible.</li>
+	<li>Have the Sequence pool visible</li>
+	<li>Press the <span class="hardkey">Assign</span> key.</li>
+	<li>Tap the World or Filter you want to assign.</li>
+	<li>Tap the sequence you want to use the world or filter.</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>You can of coarse also use the command line: <span class="syntax">Assign Filter 7 Sequence 8</span></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>You can see in the mini executor if one or both of the filters are applied. It is a marking of ether the executor number (Playback Filter) or sequence number (Input Filter).</p>
+
+<p>Read more in the <a href="key_cs_sequence_mini_executor.html">Sequence mini executor topic</a>.</p>
+
+		
+	</body>
+</html>

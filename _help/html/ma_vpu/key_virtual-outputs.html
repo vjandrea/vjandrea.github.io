@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Virtual Outputs</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Virtual Outputs" />
+	</head>
+	<body>
+		
+		
+		<h1>Virtual Outputs</h1>
+		
+		<p>The Pixel Mapper Output can be configured with a "Virtual Output ID". You should not place any Pixel Mapper Fixtures onto that Pixel Mapper Output. If a Virtual Output ID is set, then any "Render IP" settings are ignored, the field is greyed out. The idea behind that: since a Virtual Output can be assigned with a dedicated, single Camera, you can route certain Layers to this dedicated Camera. So these Layers are only displayed on that Camera and thus only rendered on the Pixel Mapper Output. You can route as many Layers to that Virtual Output as you like. The next step is to route this Virtual Output as Virtual Input onto another Layer. This Layer is only displayed on a Camera that is only visible on a DVI Ouput.&nbsp;</p>
+
+<p>Example for 2 Virtual Outputs:</p>
+
+<p><img alt="" src="../../../img/ma_vpu/vpu_virtualoutputs01.png" /></p>
+
+<p>&nbsp;</p>
+
+<p>What is it good for?</p>
+
+<p>The user can create output display arrangements where each single arrangement is controlled by a Camera. So each single arrangement layer can be modified via the softedge, keystone and splitscreen parameters of each Camera. This comes in handy if an LED controller grabs certain areas out of the displayed picture and the VPU user wants to control these areas with a dedicated VPU Camera Fixture. This can be used to drive a “Matrox Triple Head to Go” setup and control each DVI Output with a dedicated VPU Camera Fixture. The “Triple Head to Go Device” is recognized by the VPU Software as one big output. What you basically do is to assign 3 Layers that display Virtual Output 1; 2 and 3 next to each other.</p>
+
+<div class="important">Don’t use the Virtual Output signal as input for the same layer (e.g. VirtOut 1 as input for CAM 1 on the same layer). That will lead an optical feedback!</div>
+
+		
+	</body>
+</html>

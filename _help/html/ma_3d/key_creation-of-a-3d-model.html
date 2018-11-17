@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Creation of a 3D Model</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Creation of a 3D Model, Creation, of, a, 3D, Model" />
+	</head>
+	<body>
+		
+		
+		<h1>Creation of a 3D Model</h1>
+		
+		<p>3D objects can be created with 3D CAD programs. The amount of polygons affects the performance because for each polygon the projection has to be calculated. The lesser the number of polygons, the better the frame rate.</p>
+
+<p>MA 3D supports the following formats for 3D objects:</p>
+
+<p>• .3ds - Format for drawing 3 dimensional objects</p>
+
+<p>&nbsp;</p>
+
+<div class="important"><strong>Important:</strong>
+
+<ul>
+	<li>The orientation of the object has to fit</li>
+	<li>Normals have to be organized correctly</li>
+	<li>UV coordinates for the textures have to be setup correctly</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+<p>This&nbsp;example shows the creation of a halved cylinder created with Cinema 4D:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample1_1.png" /></td>
+			<td>Insert an object of type 'Cylinder’.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample2_1.png" /></td>
+			<td style="text-align:left; vertical-align:middle">
+			<p>Set the orientation to "+Y".</p>
+
+			<table align="center" border="1" cellpadding="1" cellspacing="1" style="width:400px">
+				<caption>Comparison of axes in MA 3D and Cinema 4D</caption>
+				<thead>
+					<tr>
+						<th scope="col" style="text-align:center; vertical-align:middle">MA 3D</th>
+						<th scope="col" style="text-align:center; vertical-align:middle">Cinema 4D</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">X</td>
+						<td style="text-align:center; vertical-align:middle">X</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Y</td>
+						<td style="text-align:center; vertical-align:middle">Z</td>
+					</tr>
+					<tr>
+						<td style="text-align:center; vertical-align:middle">Z</td>
+						<td style="text-align:center; vertical-align:middle">Y</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>For the&nbsp;correct orientation of the object in MA 3D, it is important to set the correct orientation in Cinema 4D.</p>
+			</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample3_1.png" /></td>
+			<td>Make the object editable.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample4_1.png" /></td>
+			<td>Select polygons that are not used.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample5_1.png" /></td>
+			<td>Delete them.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample6_1.png" /></td>
+			<td>Set the option "Tinted Poly Normals" to On in the "View Settings".</td>
+		</tr>
+		<tr>
+			<td>
+			<p><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample7_1.png" /></p>
+			</td>
+			<td>The next copy steps are only necessary if the object has to be visible from both sides. The object has to be duplicated and the normals have to be set in both directions. First copy the object.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample8_1.png" /></td>
+			<td>Then reverse the normals of the copy.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample9_1.png" /></td>
+			<td>Select both cylinder objects and connect them to a new cylinder.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample10_1.png" /></td>
+			<td>The old cylinder objects can be deleted.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample11_2.png" /></td>
+			<td>Now you can see two objects with normals in both directions.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample12_1.png" /></td>
+			<td>Check the orientation of the resulting object.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample13_1.png" /></td>
+			<td>Insert a new material for the texturing.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample14_1.png" /></td>
+			<td>Assign an image to the texture and the material to the object (Mind the restriction of max. 8 characters + extension for the image name!).</td>
+		</tr>
+		<tr>
+			<td>
+			<p><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample15_1.png" /></p>
+			</td>
+			<td>Adjust the texture mapping parameter.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample16_1.png" /></td>
+			<td>Assign the UV coordinates for the texture mapping.</td>
+		</tr>
+		<tr>
+			<td>
+			<p><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample17_1.png" /></p>
+			</td>
+			<td>Export the object to 3D Studio format (.3ds). Objects created in this way can be added via the import tool.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_3d/3d_cinema4dobjectexample18_1.png" /></td>
+			<td>The result.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Auto Create groups</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="auto create - groups, auto create conflict - groups, groups - auto create" />
+	</head>
+	<body>
+		
+		
+		<h1>Auto Create groups</h1>
+		
+		<p>You can auto create groups.</p>
+
+<p>You do this by using the Auto Create menu. You will find this in the Setup -&gt; Show -&gt; Auto Create.&nbsp;</p>
+
+<p>This menu is separated into different tabs. One is called "Group" and it could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_auto-create_group_v3-2.png" />
+<figcaption><em>Auto Create menu - Group</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<p>There are two different sections of this window.</p>
+
+<p>The left one can displays the Fixture Types or the Layers (depending on your settings - read below).</p>
+
+<p>The right one displays the single fixtures of the selection in the left section. On the far right side there is a small green input box where you can manually select the group number where the first created group should begin.</p>
+
+<p>Everything that has a blue background is selected. Multiple selection is possible using the <span class="hardkey">Ctrl</span> key on the keyboard.</p>
+
+<p>&nbsp;</p>
+
+<p>The bottom part of the menu have different buttons:</p>
+
+<p><strong>Choose:</strong></p>
+
+<p>This button has two different modes: <strong>Layer</strong> and <strong>Fixture Type</strong>. It chooses what the left section displays.</p>
+
+<p><strong>Always ask for Name:</strong></p>
+
+<p>When this is On (yellow text and background), you will get a name pop-up for each selected Layer or Fixture Type when you create "All" groups.</p>
+
+<p><strong>Create All:</strong></p>
+
+<p>This will create "All" groups for each of the selected Fixture Types or Layers.</p>
+
+<p><strong>Create Single:</strong></p>
+
+<p>This will create single groups for every one of the selected fixtures.</p>
+
+<p><strong>Overwrite:</strong></p>
+
+<p>This will allow for auto create groups to overwrite existing groups. If this is off, and there is a conflict, the console will present you with a Auto Create Conflict pop-up (read more about this below).</p>
+
+<p><strong>Use:</strong></p>
+
+<p>This button has two modes. When it is <strong>Earliest</strong> the console will use the first free pool button. When it is <strong>Latest</strong> the console will use the first pool button after the last one used.</p>
+
+<p>&nbsp;</p>
+
+<h2>Work flow when auto creating groups</h2>
+
+<p>So the work flow is that you select the separation order in the left section using the <span class="softkey">Choose</span> button.</p>
+
+<h3>All groups</h3>
+
+<p>If you want to create "All" groups then you need to select the Fixture Types or Layers.&nbsp;</p>
+
+<p>Then select the first group number. Either by typing the number in the green input box or by the <span class="softkey">Use</span> button.</p>
+
+<p>Now you need to select if you want to name each group manually (activating the <span class="softkey">Always ask for Name</span> button) and if you want to overwrite existing groups (using the <span class="softkey">Overwrite</span> button).</p>
+
+<p>Last thing is to tap the <span class="softkey">Create All</span> button.</p>
+
+<h3>Single groups</h3>
+
+<p>If you want to create "Single" groups then you need to select the Fixture Types or Layers and then the one of the sections in the left side. You can then select the fixture you want in the right side. You can use a lasso function to select several fixtures or you can hold the <span class="hardkey">Ctrl</span> key and select or de-select fixtures in the list.</p>
+
+<p>Then select the first group number. Either by typing the number in the green input box or by the <span class="softkey">Use</span> button.</p>
+
+<p>Now you need to select if you want to name each group manually (activating the <span class="softkey">Always ask for Name</span> button) and if you want to overwrite existing groups (using the <span class="softkey">Overwrite</span> button).</p>
+
+<p>Last thing is to tap the <span class="softkey">Create Single</span> button.</p>
+
+<h2><a id="auto_create_conflict" name="auto_create_conflict"></a>Auto Create Conflict pop-up</h2>
+
+<p>If "Overwrite" is not active and there is a conflict, then you will get a pop-up like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_auto-create-conflict_v3-2.png" />
+<figcaption><em>Auto Create Conflict pop-up</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<p>This pop-up has four options:</p>
+
+<p><strong>Overwrite:</strong></p>
+
+<p>This will delete the current content in the group (world, preset, or channel page) and store the new selection instead.</p>
+
+<p><strong>Merge:</strong></p>
+
+<p>This will add the new content to the current content (group, world, preset, or channel page).</p>
+
+<p>The new content will be added after the existing content. For example if you have a group with fixture 1, 3 and 5 and you merge in fixtures 2, 4 and 6. Then your group will have fixtures 1 to 6, but the selection order will be 1,3,5,2,4,6.</p>
+
+<p><strong>Skip to next Empty:</strong></p>
+
+<p>This will store the new content (group, world, preset, or channel page) at the first empty position.</p>
+
+<p><strong>Skip to latest Empty:</strong></p>
+
+<p>This will store the content at the pool object after the currently last used pool object. For example if the highest group number you have is 11 then it will create group 12.</p>
+
+		
+	</body>
+</html>

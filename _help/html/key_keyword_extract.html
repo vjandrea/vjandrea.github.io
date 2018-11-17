@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Extract Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Extract keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>Extract Keyword</h1>
+		
+		<p>To get the extract keyword in the command line type <strong>Extract </strong>or the shortcut <strong>Ext </strong>in the command line.</p>
+
+<h2>Description</h2>
+
+<p>Extract is a function that applies hard values in the programmer and breaks any referenced links.</p>
+
+<p>The Extract function used the same syntax as the At keyword. For more information see <a href="key_keyword_at.html">At keyword</a>.</p>
+
+<p>Extract works recursively and breaks references also in subobjects, for example, a preset in a cue in an extracted sequence.</p>
+
+<p>Extract will obey the At filter and the program time.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Extract [Object list] </span></p>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To set the fixture selection to the preset "drummer". later changes to preset "drummer" will update the values, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; At Preset "drummer"</div>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To set the fixture selection to hard values of preset "drummer". later changes to preset "drummer" will not affect the values, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Extract Preset "drummer"</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To break the references (converts attributes to hard values in the programmer) for the fixture selection type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Extract Selection</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To set the fixture selection to the hard values of Cue 4 type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Extract Cue 4</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

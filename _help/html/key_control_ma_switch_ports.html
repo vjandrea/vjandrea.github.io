@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Configure ports of the MA Network Switch</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="ports MA Network Switch- configure, groups - MA Network Switch, RSTP - MA Netowork Switch, Speed - MA Network Switch, MA Network Switch - RSTP, MA Network Switch - speed, MA Network Switch - groups, MA Network Switch - ports" />
+	</head>
+	<body>
+		
+		
+		<h1>Configure ports of the MA Network Switch</h1>
+		
+		<p>This topic describes the different port settings and <a href="#Configure ports">how to configure the ports</a>.</p>
+
+<p>You can configure the following options:</p>
+
+<ul>
+	<li><a href="#Port description">Port description</a></li>
+	<li><a href="#Groups">Group</a></li>
+	<li><a href="#RSTP">RSTP</a> (=&nbsp;Rapid Spanning Tree Protocol)</li>
+	<li><a href="#Speed settings">Speed</a></li>
+	<li><a href="#LAG">LAG</a> (= Link Aggregation Group)</li>
+</ul>
+
+<hr />
+<h2><a id="Port description" name="Port description"></a>Port description</h2>
+
+<p>To have a better overview about what is connected to what port, you can change the port description of each port.</p>
+
+<p>The port description has a maximum length of 8 characters.</p>
+
+<p>The following characters are allowed.</p>
+
+<ul>
+	<li>Upper case letters A...Z</li>
+	<li>Lower case letters a...z</li>
+	<li>Numbers 0...9</li>
+	<li>Spaces, minus (-), plus (+), underscore (_)</li>
+</ul>
+
+<hr />
+<h2><a id="Groups" name="Groups"></a>Groups</h2>
+
+<p>You can assign one group for each port. Two devices must be part of the same group to communicate.</p>
+
+<p>Groups are a logical segment of network users (= VLAN). With groups it is possible to send different signals in different groups via the same network cable without affect the other signal. For example sound and light signals.</p>
+
+<p>The groups for port 1 through 13 can be manually configured. By default, all groups are managed groups.<br />
+The assigned group is visible at the front end display of the MA Network Switch and indicated by the group LED.</p>
+
+<p>The switch has eight different groups.</p>
+
+<ol>
+	<li>Group01 (Red)</li>
+	<li>Group02 (Yellow)</li>
+	<li>Group03 (Green)</li>
+	<li>Group04 (Cyan)</li>
+	<li>Group05 (Blue)</li>
+	<li>Group06 (Magenta)</li>
+	<li>Trunk (White)</li>
+	<li>Manage (Gray)</li>
+</ol>
+
+<p>If more than one switch is in a network and more than one group is in use, the Trunk is needed to forward all group packets to the other switches. The Trunk bundles all other groups.</p>
+
+<div class="important"><strong>Important:</strong><br />
+You need at least one manage group in the network.<br />
+If no manage port is in the network you can not configure the switch anymore. A <a href="key_control_ma_switch_reset.html">factory reset</a> is necessary.</div>
+
+<div class="tip"><strong>Hint:</strong><br />
+Use port 13 on the front panel as management port to connect the PC for switch configuration via the web interface.</div>
+
+<hr />
+<h2><a id="RSTP" name="RSTP"></a>RSTP</h2>
+
+<p>Rapid Spanning Tree Protocol (RSTP) uses point-to-point wiring and provides rapid convergence of the spanning tree.</p>
+
+<p>If there are more than one point-to-point connections between two switches RSTP manages the redundant link unless the original connection fails.</p>
+
+<div class="important"><strong>Important:</strong><br />
+The MA Network Switch supports an implementation of RSTP that is compatible with the IEEE 802.1w standard and does not support per VLAN RSTP. This means that the MA Network Switch will send out and expect to receive untagged RSTP messages.</div>
+
+<p>By default, RSTP is enabled.</p>
+
+<ul>
+	<li>Disabled<br />
+	The switch does not run RSTP for this port. If RSTP is disabled, LLDP (Link Layer Discovery Protocol) is disabled as well.</li>
+	<li>Enabled<br />
+	The switch runs RSTP for this port.&nbsp;If&nbsp;RSTP&nbsp;is enabled,&nbsp;LLDP&nbsp;(Link Layer Discovery Protocol) is enabled as well.</li>
+</ul>
+
+<hr />
+<h2><a id="Speed settings" name="Speed settings"></a>Speed settings</h2>
+
+<p>You can edit the port speed of each port on the MA&nbsp;Network Switch.<br />
+The selected speed is visible at the status page on the web interface.<br />
+If a port is connected, the link LED is blinking in the speed color. For more information see <a href="/Page/Network/MA_network_switch/en/3.1">MA Network Switch manual</a>.</p>
+
+<p>There are three speed settings available:</p>
+
+<ul>
+	<li>Auto: The port detects automatically the speed of the connected device (default).</li>
+	<li>100Mbit</li>
+	<li>1Gbit&nbsp;</li>
+</ul>
+
+<hr />
+<h2><a id="LAG" name="LAG"></a>LAG</h2>
+
+<p>The Link Aggregation Group (LAG) combines a number of physical ports for them to behave as one connection.</p>
+
+<p>Configure the LAGs&nbsp;via the web interface or in the <a href="key_control_ma_switch_lags.html">MA Network Configuration menu – Edit LAGs</a>. For more information see <a href="/Page/Network/MA_network_switch/en/3.3">MA Network Switch</a>.&nbsp;</p>
+
+<p>Select between 6 LAGs:</p>
+
+<ul>
+	<li>None</li>
+	<li>LAG01</li>
+	<li>LAG02</li>
+	<li>LAG03</li>
+	<li>LAG04</li>
+	<li>LAG05</li>
+	<li>LAG06</li>
+</ul>
+
+<div class="tip"><strong>Hint:</strong><br />
+Set a port to an LAG in the same manner as in setting a group to a port.</div>
+
+<div class="important"><strong>Important:</strong><br />
+-If a port is set to an LAG, its settings – group, speed etc., – are adjusted to the default settings of the LAG.<br />
+<br />
+-Changing settings on a port that has an LAG membership, changes these settings in other ports of the LAG.</div>
+
+<hr />
+<h2><a id="Configure ports" name="Configure ports"></a>Configure ports</h2>
+
+<p><strong>Requirement:</strong> <a href="key_control_ma_switch_add.html">Added MA Network Switch to the network configuration</a>.</p>
+
+<p>To configure the ports:</p>
+
+<ol>
+	<li>&nbsp;Open the MA Network Configuration.<br />
+	- Press <span class="hardkey">Setup</span>, and tap under <strong>Network</strong> <span class="softkey">MA Network Configuration</span>.<br />
+	The MA Network Configuration window opens.</li>
+	<li>Tap at <span class="softkey">Network Switch</span>.
+	<figure class="caption"><img alt="" src="../../img/menu_ma-network-configuration_network-switch_v3_2.png" />
+	<figcaption><em>MA Network Configuration - Network Switch</em></figcaption>
+	</figure>
+	</li>
+	<li>Tap and hold in the cell of a port or tap in the cell and press the screen encoder.<br />
+	The Configure Switch Port pop-up opens.
+	<figure class="caption"><img alt="" src="../../img/popup_configure-switch-port_v3_2.png" />
+	<figcaption><em>Configure Switch Port pop-up</em></figcaption>
+	</figure>
+	</li>
+	<li>Configure the port.<br />
+	- Enter in the green edit line a new port description.<br />
+	- To choose a group tap in the groups field at the arrow down and tap at a group in the drop-down.<br />
+	- To disable RSTP tap in the RSTP field at the arrow down and tap at disable.<br />
+	- To change the speed settings tap in the speed setting field at the arrow down and at a speed setting in the drop-down.<br />
+	-To assign an LAG, tap the drop-down in the filed&nbsp;<strong>Assign LAG</strong>.&nbsp;</li>
+	<li>Press <span class="hardkey">Please</span> or tap <span class="softkey">Please</span>.</li>
+</ol>
+
+<p>The port is configured and the changes are saved in the startup configuration.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

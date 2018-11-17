@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Common executor options</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="executor options, auto start, auto stop, off on overwritten function, master go, restart mode" />
+	</head>
+	<body>
+		
+		
+		<h1>Common executor options</h1>
+		
+		<p>The executors most common options, and their associated options, are explained in this topic. The rest are explained in the <a href="key_adv_exec_options.html">Executor Options topic</a>.</p>
+
+<p>There are many options available for executors - especially sequences assigned to executors. They are accessed using the Assign Menu. One way to open the menu is to press the Assign key followed by a key associated with the executor you want to change.</p>
+
+<p>On the right side of the menu there are a button called Options. Tapping this opens the options part of the Assign Menu. This is what it looks like with a sequence assigned to the executor:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_assign_options_sequence_v3-3.png" />
+<figcaption><em>Assign Menu - Options</em></figcaption>
+</figure>
+
+<p>The options look different depending on what is assigned to the executor.</p>
+
+<p>&nbsp;</p>
+
+<h2>Auto Start and Auto Stop</h2>
+
+<p>The <strong>Auto Start</strong> feature switches the executor 'On' when master is moved above zero.</p>
+
+<p>The <strong>Auto Stop</strong> feature switches the executor 'Off' when master is moved down to zero.</p>
+
+<p>There are some other options that are relevant for Auto Start and Auto Stop:</p>
+
+<h3><a id="off_time" name="off_time"></a>Auto Stop Off Time</h3>
+
+<p>If Auto Stop is active, then this option is visible. When <strong>Auto Stop Off Time</strong> is active, then performing the auto stop will use the Off time for the Executor.</p>
+
+<h3>Master Go</h3>
+
+<p>The <strong>MasterGo</strong> function is active if Auto Stop is turned Off. Tapping this button will open the Select Master Go pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-master-go_v3-3.png" />
+<figcaption><em>Small Select Master Go pop-up</em></figcaption>
+</figure>
+
+<p>There are four options here. They all take effect when the master fader is moved from zero and up. The options are:</p>
+
+<ul>
+	<li><strong>No Master Go</strong>:<br />
+	The cue is still running.</li>
+	<li><strong>Master Go</strong>:<br />
+	It executes a Go.</li>
+	<li><strong>Master On</strong>:<br />
+	The current cue is reloaded (fading in again).</li>
+	<li><strong>Master Top</strong>:<br />
+	The first cue is activated.</li>
+</ul>
+
+<h3>Restart</h3>
+
+<p>Restart is used when the executor has been Off and is turned On again.</p>
+
+<p>Tapping the button will open the small Select Restart Mode pop-up. It looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-restart-mode_v3-3.png" />
+<figcaption><em>Small Select Restart Mode pop-up</em></figcaption>
+</figure>
+
+<p>There are three options here:</p>
+
+<ul>
+	<li><strong>First Cue</strong>:<br />
+	This always restarts the sequence with the first cue.</li>
+	<li><strong>Current Cue</strong>:<br />
+	This restarts the sequence with the cue where it was when the sequence was turned Off.</li>
+	<li><strong>Next Cue</strong>:<br />
+	This restarts the sequence with the next cue based on where it was when the executor was turned Off.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Priority</h2>
+
+<p>The priorities are one of the common options to change. The description of the priorities are found in the <a href="key_cs_playback.html#priority">Playing Back Cues topic</a>.</p>
+
+<p>&nbsp;</p>
+
+<h2>Tracking</h2>
+
+<p>Explanations about tracking and how to turn it On or Off is found in the <a href="key_cs_what_is_tracking.html">What is Tracking topic</a>. Here are also the explanations about <strong>Release Firststep</strong> and <strong>Wrap Around</strong>.</p>
+
+<p>&nbsp;</p>
+
+<h2><a id="on_off_overwritten" name="on_off_overwritten"></a>Off On Overwritten</h2>
+
+<p>The <strong>Off On Overwritten</strong> function will allow that an executor is turned Off if another executor has taken control with all the attributes = this executor has no longer control of any attributes.</p>
+
+<h3>Example</h3>
+
+<p>There are two sequences. Sequence one have values for fixture 1 at 100% and using a red color. Sequence two has the same fixture also at 100% and in a blue color.</p>
+
+<p>Both sequences are assigned to executors with Off On Overwritten, AutoStart, and AutoStop active.</p>
+
+<ol>
+	<li>Moving up the fader on the first executor will turn the fixture to 100% and in a red color.</li>
+	<li>Fading in the second executor will make the fixture turn blue.<br />
+	When the second fader is completely faded in (at the top), then it has control of all the attributes stored in the first sequence.</li>
+	<li>The first executor is then turned Off by <strong>Off On Overwritten</strong>.</li>
+	<li>Taking the second fader down will make the fixture fade out.</li>
+</ol>
+
+<p>If <strong>Off On Overwritten</strong> is <em>not</em> active then the same scenario would be:</p>
+
+<ol>
+	<li>Moving up the fader for the first executor will turn the fixture On in a red color.</li>
+	<li>Moving up the second fader will make the fixture turn blue.</li>
+	<li>Moving down the second fader will make the fixture red (when the fader is at 0) because the first executor is still active.</li>
+</ol>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

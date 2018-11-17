@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Create more cue</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="quick start guide - create cues" />
+	</head>
+	<body>
+		
+		
+		<h1>Create more cue</h1>
+		
+		<p>Now we are going to make more cues.</p>
+
+<h2>Making more cues.</h2>
+
+<p>Let us make some more cues. Press:&nbsp;<span class="hardkey">&nbsp;2</span>&nbsp;<span class="hardkey">0</span>&nbsp;<span class="hardkey">+</span>&nbsp;<span class="hardkey">2</span>&nbsp;<span class="hardkey">8</span>&nbsp;<span class="hardkey">At</span>&nbsp;<span class="hardkey">8</span>&nbsp;<span class="hardkey">0</span>&nbsp;<span class="hardkey">Store</span>&nbsp;<span class="hardkey">Cue</span>&nbsp;<span class="hardkey">2</span>&nbsp;<span class="hardkey">Time</span>&nbsp;<span class="hardkey">1</span>&nbsp;<span class="hardkey">5</span>&nbsp;<span class="hardkey">Please</span>. That created cue 2 with a fade time of 15 seconds. Let us continue with cue 3. Now we are going to use the groups and the command line.</p>
+
+<p>You need to locate the Command Line. It looks like this:</p>
+
+<div class="cl_input">[Channel]&gt;</div>
+
+<p>This is the Command Line. It can be a fast way to get around the console and the commands. But sometime the keys are fastest.</p>
+
+<p>In the Command Line type this:</p>
+
+<div class="cl_input">[Channel]&gt; g 1 + 2 at 75</div>
+
+<p>followed by&nbsp;<span class="hardkey">Please</span>.</p>
+
+<p>Then type:</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;g 3 t 5 at 60</div>
+
+<p>followed by&nbsp;<span class="hardkey">Please</span>.</p>
+
+<p>Now let us have a look at the Command Line&nbsp;Feedback and how the console has responded (please do not press any buttons).</p>
+
+<p>What does all this mean?</p>
+
+<p>"g" is the shortcut for "Group". That means the respond to the first line is:</p>
+
+<div class="cl_response">[Time] : Executing : Group&nbsp;1 + 2&nbsp;At&nbsp;75</div>
+
+<p>The "t" in the second line as a short for "Thru". The console respond to the second line is:</p>
+
+<div class="cl_response">[Time] : Executing :&nbsp;Group&nbsp;3 Thru&nbsp;5 At&nbsp;60</div>
+
+<p>We are going to store the cue using the keys:&nbsp;<span class="hardkey">Store</span>&nbsp;<span class="hardkey">Time</span>&nbsp;<span class="hardkey">2</span>&nbsp;<span class="hardkey">0</span>&nbsp;<span class="hardkey">Time</span>&nbsp;<span class="hardkey">2</span>&nbsp;<span class="hardkey">5</span>&nbsp;<span class="hardkey">Please</span>. This is the response from the console:</p>
+
+<div class="cl_response">[Time] : Executing :&nbsp;​Store Fade&nbsp;20&nbsp;OutFade&nbsp;25</div>
+
+<p>Now why is this?&nbsp;We typed "Time 20 Time 25". The desk interprets this as 20 seconds Fade and 25 seconds OutFade. Pretty clever, huh?</p>
+
+<p>Notice that after the second cue we do not need to specify the cue number. The desk automatically uses the next available number.</p>
+
+<p>&nbsp;</p>
+
+<p>In cue 4 we need to take 30% of everything that is on. We do this in a fast and easy way:&nbsp;<span class="hardkey">If</span>&nbsp;<span class="hardkey">Please</span>&nbsp;<span class="hardkey">At</span>&nbsp;<span class="hardkey">-</span>&nbsp;<span class="hardkey">3</span>&nbsp;<span class="hardkey">0</span>&nbsp;<span class="hardkey">Store</span>&nbsp;<span class="hardkey">Time</span>&nbsp;<span class="hardkey">1</span>&nbsp;<span class="hardkey">0</span>&nbsp;<span class="hardkey">Please</span>.</p>
+
+<p>That was fast!</p>
+
+<p>By using "If Please" you run the command "IfOutput". This selects everything that currently have output.</p>
+
+<p>Then by using "At - 30" you subtract 30% from whatever value the channels had before (of course nothing less than 0%).</p>
+
+<p>&nbsp;</p>
+
+<p>Now we are going to make a lot of changes:&nbsp;</p>
+
+<p><span class="hardkey">Group</span>&nbsp;<span class="hardkey">6</span>&nbsp;<span class="hardkey">.</span>&nbsp;<span class="hardkey">.</span>&nbsp;<span class="hardkey">Group</span>&nbsp;<span class="hardkey">9</span>&nbsp;<span class="hardkey">Thru</span>&nbsp;<span class="hardkey">1</span>&nbsp;<span class="hardkey">1</span>&nbsp;<span class="hardkey">At</span>&nbsp;<span class="hardkey">6</span>&nbsp;<span class="hardkey">0</span>&nbsp;<span class="hardkey">Please</span>&nbsp;</p>
+
+<p><span class="hardkey">Group</span>&nbsp;<span class="hardkey">7</span>&nbsp;<span class="hardkey">+</span>&nbsp;<span class="hardkey">8</span>&nbsp;<span class="hardkey">At</span>&nbsp;<span class="hardkey">7</span>&nbsp;<span class="hardkey">5</span>&nbsp;<span class="hardkey">Store</span>&nbsp;<span class="hardkey">Time</span>&nbsp;<span class="hardkey">1</span>&nbsp;<span class="hardkey">5</span>&nbsp;<span class="hardkey">Time</span>&nbsp;<span class="hardkey">Time</span>&nbsp;<span class="hardkey">5</span>&nbsp;<span class="hardkey">Please</span>.</p>
+
+<p>What is: "Time 15 Time Time 5"? If you have a look at your&nbsp;Command Line Feedback it reads: "Fade 15 Delay 5". This means that you told the desk to delay the trigger of the cue with 5 seconds after you press the "Go" key (and then fade using 15 seconds - but you probably guessed that).</p>
+
+<p>With the "Time" command we can assign many different times. A command like: "Time 20 Time 15 Time 10 Time 5" is translated by the desk to: "Fade 20 DownFade 15 Delay 10 DownDelay 5".&nbsp;</p>
+
+<p>The last cue we are going to make is a blackout. And we do that with only six button presses:&nbsp;<span class="hardkey">If</span>&nbsp;<span class="hardkey">Please</span>&nbsp;<span class="hardkey">.</span>&nbsp;<span class="hardkey">.</span>&nbsp;<span class="hardkey">Store</span>&nbsp;<span class="hardkey">Please</span>. That was 6 cues.</p>
+
+<p>Clear your programmer.</p>
+
+<p>It was hopefully fast and painless.</p>
+
+<p>&nbsp;</p>
+
+<p>The <a href="key_08_edit_a_sequence.html">next page</a> we are going to make some changes to the sequence.</p>
+
+		
+	</body>
+</html>

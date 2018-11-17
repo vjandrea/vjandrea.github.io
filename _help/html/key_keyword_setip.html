@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>SetIP Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="SetIP Keyword, Set IP, SetIP" />
+	</head>
+	<body>
+		
+		
+		<h1>SetIP Keyword</h1>
+		
+		<p>To execute keyword&nbsp;SetIP type <strong>SetIP</strong> into the command line.</p>
+
+<h2>Description</h2>
+
+<p>The SetIP keyword changes the IP address of the Ethernet interfaces of the console or station.</p>
+
+<p>If SetIP is used standalone, the command line feedback window lists the available Ethernet interfaces with their IP addresses.</p>
+
+<p>A grandMA2 console has two network interfaces, <strong>eth0</strong> and <strong>eth1</strong>, which are on the back of the console labeled as <strong>Ethernet 1</strong> and <strong>Ethernet 2</strong>.</p>
+
+<div class="important"><strong>Important:</strong><br />
+To apply the changed IP address, a reboot is necessary.</div>
+
+<div class="tip"><strong>Hint:</strong><br />
+Another way to change the IP address of the Ethernet-interfaces of the console or station is, press <span class="hardkey">Setup</span> I tap <span class="softkey">MA Network Configuration</span>&nbsp; I column<strong> IP ETHERCON 1(ETH0) </strong>or<strong> IP ETHERCON 2 (ETH1)</strong>. For more information see <a href="key_network_set_ip_onpc.html">Networking - Set the IP address in onPC</a>.&nbsp;</div>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">SetIP [network interface] [IP address] / [option] = [option value]</span></p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available options to the SetIP keyword in the command line feedback window, type in the command line</p>
+
+<div class="cl_input">[Channel]&gt; SetIP /?</div>
+
+<p>The SetIP keyword has the following options.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Shortcut</th>
+			<th scope="col">Option Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>mask</td>
+			<td>m</td>
+			<td>e.g. 255.0.0.0</td>
+			<td>Sets the subnet mask of the Ethernet adapter.</td>
+		</tr>
+		<tr>
+			<td>dhcp</td>
+			<td>not available</td>
+			<td>no option value</td>
+			<td>Enables DHCP for the Ethernet adapter.</td>
+		</tr>
+		<tr>
+			<td>gateway</td>
+			<td>not available</td>
+			<td>e.g. 192.168.0.1</td>
+			<td>Sets the default gateway for the Ethernet adapter.</td>
+		</tr>
+		<tr>
+			<td>noconfirm</td>
+			<td>nc</td>
+			<td>no option value</td>
+			<td>Suppress the SetIP confirmation pop-up.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Example:</h2>
+
+<p>&nbsp;&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; SetIP eth0 192.168.0.5</div>
+
+<p>&nbsp;Sets the IP address of the first Ethernet interface.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;SetIP&nbsp;eth0 /DHCP</div>
+
+<p>Activates DHCP client which takes over the IP address&nbsp;automatically from the server.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; SetIP eth1 2.0.0.10 /mask=255.0.0.0</div>
+
+<p>Sets IP address and network mask for the second Ethernet interface.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; SetIP</div>
+
+<p>Lists available Ethernet interfaces along with their IP addresses in the command line feedback window.</p>
+
+<p>&nbsp;</p>
+
+<div class="important"><strong>Important:</strong><br />
+Do not use DHCP&nbsp;on eth1, unless you are a skilled network operator.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<p>For more information on what DHCP is see the <a href="key_glossary.html">Glossary</a>.&nbsp;</p>
+
+<p>For more information on how to use DHCP see <a href="key_network_dhcp.html">Using DHCP in MA devices</a>.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

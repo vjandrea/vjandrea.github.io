@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Messages Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Messages keyword, messages - keyword, messages - list, messages - delete" />
+	</head>
+	<body>
+		
+		
+		<h1>Messages Keyword</h1>
+		
+		<p>To get the Messages keyword in the command line, type <strong>Messages </strong>in the command line.</p>
+
+<h2>Description</h2>
+
+<p>With the Messages keyword you can</p>
+
+<ul>
+	<li>list messages in the command line feedback window.</li>
+	<li>export messages as a messages.xml file.</li>
+	<li>delete messages from the message center, for example, from previous show files.</li>
+</ul>
+
+<p>For more information to export files, see <a href="key_ei_export_commandline.html">general export function</a>.</p>
+
+<p>The Messages keyword is an object keyword.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">[Function] Messages / Condition = [Condition] [Operation Syntax] [Condition Value]</span></p>
+
+<h2>Conditions</h2>
+
+<p>The Messages keyword can only be used with the option <strong>condition</strong>. The short cut for condition is <strong>cnd</strong>.</p>
+
+<p>The following table displays the supported condition values.</p>
+
+<div class="important"><strong>Important:</strong><br />
+String comparison with wild cards are possible. Values are case-insensitive.</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="height:222px; width:410px">
+	<thead>
+		<tr>
+			<th scope="col">Condition</th>
+			<th scope="col">Condition Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>"new", "unread"</td>
+			<td>'true', 'false', 'yes', 'no'</td>
+		</tr>
+		<tr>
+			<td>"time" (= message receive time)</td>
+			<td>'YYYY-MM-DDThh:mm:ss', 'YYYY-MM-DD', 'hh:mm:ss'<br />
+			<br />
+			When the date is used standalone, the time will be set to 00:00:00, for example, 2016-03-20T00:00:00.<br />
+			<br />
+			When the time is used standalone, the date of today will be set, for example, 2016-03-20T12:05:00.</td>
+		</tr>
+		<tr>
+			<td>"sender"</td>
+			<td>message sender user profile name</td>
+		</tr>
+		<tr>
+			<td>"station"</td>
+			<td>
+			<p>message sender station IP + type</p>
+			</td>
+		</tr>
+		<tr>
+			<td>"msg"</td>
+			<td>message</td>
+		</tr>
+		<tr>
+			<td>"type" (= message type)</td>
+			<td>'Info', 'Warning', 'Alert', 'Error'</td>
+		</tr>
+		<tr>
+			<td>"cat" (= message category)</td>
+			<td>'General', 'Power', 'Network', 'Show', 'Chat', 'CITP', 'RDM',</td>
+		</tr>
+		<tr>
+			<td>"subcat" (= message subcategory)</td>
+			<td>'Backup Server', 'Blind', 'CITP Traffic', 'DMX Tester Output', 'Exec CLI', 'Filter', 'Highlight', 'IP Conflict', 'Macro', 'Masters', 'Missed Stations', 'Network', 'Parameters', 'Parked', 'Patch', 'Power', 'Preview','RDM Alert','Session', 'Solo', 'Stage', 'Timecode(MIDI)', 'Timecode(SMPTE)', 'Unassigned Ports', 'World', 'Global Autofix', 'Exec. Time', 'Prog. Time', 'Rate 1', 'Speed 1', 'Default Go', 'RDM Warning'</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The following table displays the supported operation syntax via command line.</p>
+
+<div class="important"><strong>Important:</strong><br />
+If you use operation syntax, the operation has to be surrounded by spaces.<br />
+"condition1 = 'conditionvalue1'"</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="height:218px; width:410px">
+	<thead>
+		<tr>
+			<th scope="col">Operation</th>
+			<th scope="col">Syntax</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>and</td>
+			<td>"and", "&amp;"</td>
+		</tr>
+		<tr>
+			<td>or</td>
+			<td>"or", "I"</td>
+		</tr>
+		<tr>
+			<td>not</td>
+			<td>"not", "!"</td>
+		</tr>
+		<tr>
+			<td>greater<br />
+			(only for condition time and type)</td>
+			<td>"&gt;"</td>
+		</tr>
+		<tr>
+			<td>less<br />
+			(only for condition time and type)</td>
+			<td>"&lt;"</td>
+		</tr>
+		<tr>
+			<td>greater or equal<br />
+			(only for condition time and type)</td>
+			<td>"&gt;="</td>
+		</tr>
+		<tr>
+			<td>less or equal<br />
+			(only for condition time and type)</td>
+			<td>"&lt;="</td>
+		</tr>
+		<tr>
+			<td>equal<br />
+			(only for condition time and type)</td>
+			<td>"="</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>List all messages in the command line feedback window, with the condition type and condition value alert.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; List Messages /cnd = "type = 'alert'"</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>&nbsp;Export all warning, alert, and error messages before 12:45 as a messages.xml.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Export Messages /cnd="(type &gt;= 'warning' or time &lt;= '12:45:00') and !(new = 'true')"</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Delete all alert messages from the message center.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Delete Messages /condition="type = 'alert'"</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Release Notes - Version 3.4.0.2</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="release notes 3.4.0.2" />
+	</head>
+	<body>
+		
+		
+		<h1>Release Notes - Version 3.4.0.2</h1>
+		
+		<p><a href="#Important Information for Updating">Important Information for Updating</a></p>
+
+<p><a href="#Release">Fixed Bugs and Improved Functionality</a></p>
+
+<p><a href="#Appendix">Appendix</a></p>
+
+<p><a href="#KnownLimitations">Known Limitations</a></p>
+
+<p>&nbsp;</p>
+
+<p>You will find the latest system requirements for several products on <a href="http://www.malighting.com">www.malighting.com</a></p>
+
+<hr />
+<h2><a id="Important Information for Updating" name="Important Information for Updating"></a>Important Information for Updating</h2>
+
+<p><strong>Update dimMA system:</strong><br />
+If you would like to update the dimMA system from any version below 7.x, contact your MA dealer or MA directly for any update information. If you use grandMA2 along with dimMA solutions, get in touch with us.&nbsp;A console update requires an MA NDP (= Network Dimmer Processor) update and vice versa. We are happy to assist you.</p>
+
+<p><strong>Update grandMA2 onPC and MA 3D:</strong><br />
+The current versions of grandMA onPC and MA 3D require at least Windows® 7. Microsoft® .NET Framework (4.0) will be installed on your computer.</p>
+
+<p><strong>Update MA&nbsp;VPU</strong><br />
+If you would like to update the MA&nbsp;VPU&nbsp;basic or the MA&nbsp;VPU&nbsp;light from any version to v3.2 or higher, at least one screen and one mouse has to be connected to the MA&nbsp;VPU.</p>
+
+<p><strong>Update MA Network Switch</strong><br />
+If you would like to update the MA Network Switch in v3.1 or v3.2 to v3.3 or a subsequent version, execute the display reset after the update has been installed. As soon as Booting is displayed on the display of the MA Network Switch after the update:</p>
+
+<ol>
+	<li>Disconnect the power.</li>
+	<li>Press and hold the yellow menu button on the left side of the display.</li>
+	<li>While holding the button power up the MA Network Switch again.</li>
+	<li>As soon as Booting appears on the display of the MA Network Switch release the button.</li>
+</ol>
+
+<p>To execute a fallback on v3.3 or a subsequent version in v3.1 or v3.2, proceed in the same manner.</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<h2><a id="Release" name="Release"></a>Fixed Bugs and Improved Functionality</h2>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Fixed - Speed recognition of 10 GBit/s ethernet connections.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Cloning presets to a fixture of a different fixture type could add color attributes to the position preset, for example.</td>
+		</tr>
+		<tr>
+			<td>Fixed - PSR discards No Parameter flag of fixtures.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Crash during show download.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Cue info of a locked sequence can be modified.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Layout view: Visualization drop down menu increases when loading from default.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Appearance of a cue part should inherit the color of the parent.</td>
+		</tr>
+		<tr>
+			<td>Fixed- Fixture Sheet/Layout View show incorrect sequence preset marker after taking values in the programmer.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Symbol features color stays black if release value is stored in the same cue.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Fixtures without defined Highlight values neither follow Blind nor do they respect Solo.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Moving a layout in the layout pool clears layout views referencing this layout.</td>
+		</tr>
+		<tr>
+			<td>Improved - Unifying the color display of fixture sheet thumbnails, layout view, and color picker.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Crash when trying to execute Auto-Create Presets while not having enough free preset pools items left.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Stage view tilts a different fixture in case one of the selected fixture does not have a Pan axis.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Moving Stage markers will also update effects. For example, circle effects around stage markers.</td>
+		</tr>
+		<tr>
+			<td>Improved - Cloning of color wheels.</td>
+		</tr>
+		<tr>
+			<td>Improved - Cloning of MixColors when having fixtures with different amount of MixColor attributes.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Pan/Tilt offset is lost during PSR.</td>
+		</tr>
+		<tr>
+			<td>Fixed - XYZ and Pan/Tilt values cannot be active at the same time in programmer any longer.</td>
+		</tr>
+		<tr>
+			<td>Improved - Locked plugins are cannot be edited.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Macros with all lines disabled show play symbol.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Export of Gobo bitmaps.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Crash when editing preset in tracking sheet.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Crash inside the tracking sheet options.</td>
+		</tr>
+		<tr>
+			<td>Fixed-&nbsp;Assign Effect x /lowvalue=y is not affected by effect editor window any longer.</td>
+		</tr>
+		<tr>
+			<td>Fixed - MA Network configuration edit of currently focused grid cell.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Command line feedback when triggering CMD remotes via remote input.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Import and export of timecode Go Cue X events.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Crash when using Oops inside the Network Config.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Lasso selection in combination with right mouse click in grids.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Editing an existing Channel ID suggests to use the Fixture ID instead.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Assigning "Empty button function" by using the command "Assign Empty Executor 1 thru 10".</td>
+		</tr>
+		<tr>
+			<td>Fixed - Update of Agenda events when editing the agenda from the slave desk.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Edit DMX Universe Test output column shows unexpected "Choose Profile" dialog.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Oops key does not clear CMD filled remote settings.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Focus frame reset when changing layers in Patch and Fixture Schedule.</td>
+		</tr>
+		<tr>
+			<td>Improved - CAN Firmware 2.67 with improved fader touch sensitivity.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2><br />
+MA web remote</h2>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col" style="vertical-align:middle">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="vertical-align:middle">Fixed - Next button can stop working.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle">Fixed - Double click on iOS devices zooms into the surface.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle">Fixed - Feature and Attribute buttons in the Wheel view do not interact with the command line.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle">Improved - To control the console with the web remote, the web remote always requires the user to login.</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle">Fixed - Web remote shows unexpected bounce effect when using Apple iOS Safari 11.3 or later.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2><br />
+MA xPort&nbsp;Nodes</h2>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col" style="vertical-align:middle">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="vertical-align:middle">Added - Network adapter gateway address can be set via web interface.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>MA Network Switch</h2>
+
+<table border="1" cellpadding="0" cellspacing="0" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col" style="vertical-align:middle">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="vertical-align:middle">Added - Support for grandMA3</td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle">Added - SNMP support</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>MA onPC</h2>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Fixed - Fader position recognition of onPC wings during startup.</td>
+		</tr>
+		<tr>
+			<td>Fixed - Unlock grandMA2 onPC by pressing Shift+Ctrl+F</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Fixed - Delete token stays in command line longer than expected.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<hr />
+<p>&nbsp;</p>
+
+<h3><a id="Appendix" name="Appendix"></a>Appendix</h3>
+
+<div class="warning">Downdating&nbsp;the MA Network Switch from v3.3 or higher to older version will reset the configuration to factory defaults. It is possible to backup the configuration before the downdating and restore it afterwards.&nbsp;</div>
+
+<div class="warning">Using the Bitmap Fixture in sequences with several cues causes the bitmap fixture to restart the playback with every cue the bitmap fixture is programed in. If the bitmap fixture is to be used in a sequence with several cues, we suggest programing it in single cue sequences and call these sequences within the master sequence with cue links.</div>
+
+<div class="warning">Import of all kinds of XML-files is only possible if the files were exported from the same or an older grandMA2 version.</div>
+
+<div class="warning">If a World is edited while a user has entered this specific world, the changes are not applied to the user. The user has to change to a different world to see the changes of the world.</div>
+
+<div class="warning">RDM: Connecting 2 outputs of a grandMA2 System with one cable can cause trouble in RDM.</div>
+
+<div class="warning">Down dating to grandMA2&nbsp;release v3.0.0.5 and previous versions requires a factory reset (Format and Install). Please backup your show files before down dating.</div>
+
+<div class="warning">Inserting the command "store /remove" or pressing [store][cue][2] and select [remove] in the pop-up will remove the whole attribute with all (!!) its layers of fixtures having any value or effect layer of this attribute active in programmer. It can be filtered to only remove values, value timings or effects by using the buttons in the stored encoder bar. To remove only specific layers, for example only individual effect fade, the operator needs to open the calculator for these layers and select "remove" in the calculator. Afterwards, the operator needs to update the cue, or has to use store /merge to remove the specific layers.</div>
+
+<div class="warning">If multiple fixtures are selected with a lasso in the layout view, the snap grid settings are applied to interpolate small position differences of fixture icons. The order of selection is always made inside of one snap grid cell first. Afterwards following the succession, line by line in the direction of the lasso movement.</div>
+
+<div class="warning">The network switch IGMP Snooping functionality has to be switched off in order to be able to update MA 2Port Nodes.</div>
+
+<div class="warning">A grandMA1 compatibility mode is no part of grandMA2 console software 3.0 and subsequent versions. If&nbsp;grandMA1 compatibility mode is needed, grandMA2 consoles and MA NPUs have to be down dated to grandMA2 v2.9.1.1</div>
+
+<div class="warning">The MA-Net2 protocol has changed to support the 8Port Node devices. All MA devices need a new network streaming protocol in the 2.9 software. Once updated to the correlating version to grandMA2 v2.9, 2Port, 4Port, 8Port, NSP 4Port Node and the NDP will no longer work in a session with an older network streaming protocol (e.g.,&nbsp;grandMA2 v2.8). Down dating MA 2Port Nodes or NSP running in 4Port Node Mode to be v2.8 compatible is only possible via grandMA1 v 6.801. All other devices can be down dated via USB or windows installer only.</div>
+
+<div class="warning">Exec Time can be used for Executor buttons and Executor Faders. The new Executor option "Ignore Exec Time" has been added. If this option is enabled, the referring executor uses its own off time instead of the Exec Time Fader Timing. Show files stored in&nbsp;grandMA2 v2.9.1 and previous versions are converted. This option is then enabled in all fader executors. Executor option defaults are valid for fader and button executors. If storing new fader executors, these executors listen to Exec Time by default.</div>
+
+<div class="warning">Fixture type preset reference contains values only. It is not possible to add any fade, delay or effect data to fixture type preset references.</div>
+
+<div class="warning">ASCII show import supports Strand, Transtechnik and ADB ASCII show files.</div>
+
+<div class="warning">A CITP connection is not possible when running CITP sender and CITP receiver at the same computer.</div>
+
+<div class="warning">The Pixel Mapper of an MA&nbsp;VPU&nbsp;works best if the resolution X of the output can be divided by 8.</div>
+
+<div class="warning">Lua&nbsp;5.3 is implemented in grandMA2&nbsp;v3.1 or subsequent versions.&nbsp;LuaSocket&nbsp;is approved for&nbsp;Lua 5.1 only.Therefore, not all functions of LuaSocket are supported within Lua 5.3.</div>
+
+<div class="important">Following syntax can be used to switch off faders only or buttons only of current page or of all pages except the current page:
+<ul>
+	<li><strong>Off Executor 1 thru 100</strong>&nbsp;- This switches off all faders of current page.</li>
+	<li><strong>Off Executor 101 thru 240</strong>&nbsp;- This switches off all buttons of current page.</li>
+	<li><strong>Off Executor 1 thru 100 Page Thru - $faderpage</strong>&nbsp;- This switches off all faders of all pages except the current page.</li>
+	<li><strong>Off Executor 101 thru 240 Page Thru - $buttonpage</strong>&nbsp;- This switches off all buttons of all pages except current the current page.</li>
+</ul>
+</div>
+
+<div class="important">Addressing executors via command line has been improved to provide support for addressing by name or number. This can be used when sending playback commands to specific executors or when storing to a specific executor, sequence or cue for example. All existing cue links and macros of show files stored with former grandMA2 versions will be converted as far as possible. Please check cue links and macros of existing shows when loading them the first time with this version. Some cue links and macros may have to be adjusted. When creating new macros or cue links or editing existing ones, the new syntax as described below has to be used.
+<ul>
+	<li>Go Exec "exec name" - starts executor with specified name on current page.</li>
+	<li>Go Exec "exec number" - starts executor with specified number on current page.</li>
+	<li>Go Exec "*"."exec name" - starts executor with specified name on all pages.</li>
+	<li>Go Exec "*"."exec number" - starts executor with specified number on all pages.</li>
+	<li>Go Exec "page name"."exec name" - starts executor with specified name on specified page.</li>
+	<li>Go Exec "page name"."exec number" - starts executor with specified number on specified page.</li>
+	<li>Go Exec "page number"."exec name" - starts executor with specified name on specified page.</li>
+	<li>Go Exec "page number"."exec number" - starts executor with specified number on specified page.</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+<hr />
+<h3><a id="KnownLimitations" name="KnownLimitations"></a>Known Limitations</h3>
+
+<ul>
+	<li>Pan/Tilt offsets should not be set to higher values than the fixture type provides due to its physical limitations. Setting values out of the physical range can affect the correct visualization in the stage view of the grandMA2 and MA 3D.</li>
+	<li>Active dimmer values given from the desk do not cause the MA VPU to send its merge defaults for the color attribute. This may cause an unexpected output if only the dimmer of a fixture is controlled by the desk. To avoid this and to gain full control, just set the color attribute actively in the programmer. Or store the color information to an executor which is set to a higher priority than the pixel mapper output. Do not forget to switch off this executor if the output of the pixel mapper is to be active again.</li>
+	<li>If using the Set button in the web remote, the command line default will be changed to MATricks.</li>
+	<li>At the initial start after the installation or the update of the MA VPU application, the end user license agreement is shown. The MA VPU application will not start, until the end user license agreement is confirmed. If you are using a VPU Plus, the end user license agreement is shown at the internal touch display. If you are using a MA VPU basic or MA VPU light, the end user license agreement is shown at the first external DVI-output - so please make sure you have a display and a mouse attached to the MA VPU basic or MA VPU light.</li>
+	<li>Ma-Net1 is not supported for MA 2Ports Version 1.77 or higher.</li>
+	<li>MA onPC command wing DMX input is supported for the ports "DMX In" and "DMX out A" only. The port "DMX out B" can only be used as DMX out!</li>
+	<li>Before loading show files stored with grandMA2&nbsp;<strong>v2.7.x</strong>&nbsp;the first time with grandMA2 v2.9.x, attribute Colormix4 and 5 and Colordim4 and 5 of self-made fixture types have to be manually adjusted to fulfill the color specification. Amber has to be Colormix 4 invert or Colordim 4 without invert, and White has to be Colormix 5 invert or Colordim 5 without invert. Otherwise, color information of these fixture types will be lost after loading show file with v2.9.</li>
+	<li>The feature name for ColorDim/ColorMix has changed into MixColor. Macros using one of these feature names have to be adjusted.</li>
+	<li>Known limitation when loading show files stored with&nbsp;<strong>v2.8.x</strong>&nbsp;for the first time in v2.9
+	<ul>
+		<li>Special Masters have a new data structure in grandMA2 software.
+		<ul>
+			<li>All Special Master custom labels will be reset to MA default labels</li>
+			<li>Assignment of 100mm faders will be reset to default.</li>
+			<li>Macros referring to special masters have to be adjusted and have to use the new naming and numbering of special masters.</li>
+		</ul>
+		</li>
+		<li>Macros referring to relative values have to be adjusted according to new relative/absolute syntax.</li>
+		<li>User profiles exported to USB drives using v2.8 and previous versions have to be manually moved from folder importexport to user_profile folder in order to import these profiles using grandMA2 v2.9 and subsequent versions.</li>
+	</ul>
+	</li>
+	<li>MA 4Port Nodes and MA 8Port Nodes have to be updated to v1.0.9 or subsequent versions to be compatible with grandMA2 v2.9. MA 2Port Nodes have to be updated to 1.77 or subsequent versions in order to be compatible to grandMA2 v2.9.</li>
+	<li>Channel set labels of fixture types have to be unique to be visible and accessible in calculator. E.g., if channel sets of Attribute Shutter are closed, open, open, open, only one open is visible in the calculator. Changing channel set labels to closed, open, open(2), open(3), results in all channel sets being visible in the calculator.</li>
+	<li>Astronomical clock always calculates time according to standard time zone. Additional summer times are not recognized and cannot be adjusted manually when using sunset, dusk, dawn, and sunrise in the agenda.</li>
+	<li>Bitmap fixtures can be applied to physical parameters only. Virtual parameters such as a virtual dimmer or XYZ attributes are not supported.</li>
+</ul>
+
+		
+	</body>
+</html>

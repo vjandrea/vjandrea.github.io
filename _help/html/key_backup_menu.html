@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Using the Backup Menu</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="backup, save show, save, file server, backup options, auto save, quick save, show - save" />
+	</head>
+	<body>
+		
+		
+		<h1>Using the Backup Menu</h1>
+		
+		<p>The Backup Menu is where show files are managed. It is also here shows are saves and loaded.</p>
+
+<h2>What is show file management</h2>
+
+<p>Show file management is the handling of show files. Shows can be saved internally in the console, and there is also the option to save on USB sticks and file servers. Being able to save the show and load it again is a vital part of modern lighting consoles.</p>
+
+<p>Show files can also be deleted to make more room on the hard drive or just to clean the console.</p>
+
+<p>A show file can only be moved forward. A show saved on a USB stick that was programmed in a previous version can be loaded in a newer version. If the show is then re-saved on the stick in this new version, then it cannot be taken back to the old software. If this is important then it is needed to load the show and save it with a new name. Then the old version is not saved as the new version and it can still be accessed by an older version.</p>
+
+<h2>Show file content</h2>
+
+<p>The show files contain all the data needed to run the show.</p>
+
+<p>This includes all the Users and User Profiles in the show.</p>
+
+<p>It also contains any 3D models that are used in MA 3D.&nbsp;</p>
+
+<p>If MA VPUs (= Video Processing Unit) are used, then the programming of the MA VPU&nbsp;is of cause store in the show, but the Media Files are not. Make sure they are backed up on an external device - just in case.</p>
+
+<p>&nbsp;</p>
+
+<h2>The backup menu and the different tabs</h2>
+
+<p>The Backup Menu can be opened by pressing the <span class="hardkey">Backup</span> key or using the dedicated command:</p>
+
+<div class="cl_input">[Channel]&gt; Menu "Backup"</div>
+
+<p>The Backup Menu is organized in two section. The top section is for manual show file management. The bottom part is the Backup Options.</p>
+
+<p>This is what it could look like:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_backup_v3-3.png" />
+<figcaption><em>Backup Menu</em></figcaption>
+</figure>
+
+<p>The top part have a title bar that shows the file name and saved date of the current show. It also shows the current software version.</p>
+
+<p>There is also the button that can be used to move the menu to a different screen and finally the button to close the menu.</p>
+
+<p>Below this there are different tabs. There is always minimum three called "Internal", "Demoshows" and "Templates". There might be more. Each software version installed will have its own tab. This allows the option to load a show from a previous version. It is not possible to save a show from a newer software version in one of the tabs from previous versions.</p>
+
+<p>If a USB stick is connect to the console/onPC, then it will get its own tab. Select this tab will change the default storage drive to the USB stick. Read the <a href="key_backup_menu_usb_stick.html">Using a USB stick</a>&nbsp;to learn more about specific USB stick handling.&nbsp;</p>
+
+<p>If a file server is added to the system, then this will also get its own tab. This tab can be selected to save or load shows using the storage space on the server. Read the <a href="key_backup_menu_file_server.html">Setting up a file server</a>&nbsp;to learn more about server setup.&nbsp;</p>
+
+<p>The selected tab is then the selected "drive" and the location where shows will be saved. The selected drive can also be selected using the command line - it is a command called <span class="syntax">SelectDrive</span> or just SD - read more about it <a href="key_keyword_selectdrive.html">here</a>. &nbsp;</p>
+
+<h3>Internal</h3>
+
+<p>This tab is the hard drive in the console or onPC.&nbsp;</p>
+
+<p>If you are working on an onPC solution, then the <span class="syntax">SelectDrive</span>&nbsp;command can be used without setting a drive number to see the storage location in the computer.</p>
+
+<p>The internal drive can do everything except ASCII Show Read.</p>
+
+<p>If the console is updated then the current Internal tab is made a tab with the version number.</p>
+
+<div class="restriction">A full install that formats the drive will delete all show&nbsp;files and remove all previous version tabs.</div>
+
+<h3>Demoshows</h3>
+
+<p>The demo show tab is a read only tab. It is only possible to load shows from the demo tab. It is possible to do a Partial Show Read from the shows in this folder.</p>
+
+<p>If the console is updated, then the shows in this folder will be overwritten.</p>
+
+<h3>Templates</h3>
+
+<p>The templates tab functions as the&nbsp;Demoshows&nbsp;with the exception that updating the console software will not overwrite the shows in the tab. A format and install still deletes the shows in this tab!</p>
+
+<p>The idea behind this tab is that a place that have basically the same rig but do many shows, can copy a show with the patch and basic setup in this folder. This can then be loaded and stored as a new show in the Internal tab. Thus protecting the basic show from accidental changes. It is only possible to copy the shows into this tab using a <a href="key_network_ftp.html">FTP connection</a>.</p>
+
+<h3>Server tab</h3>
+
+<p>If a working connection is set up to a file server, then an extra tab with the defined name will appear. This functions as the internal tab.</p>
+
+<p>This tab is only visible on the console that is the master in the session.</p>
+
+<div class="restriction">grandMA2 onPC as Master does not support server backup</div>
+
+<p>Read <a href="key_backup_menu_file_server.html">here</a> for more about setting up a File Server.</p>
+
+<h3>USB tabs</h3>
+
+<p>When a compatible USB stick is connected, then it gets its own tab named after the name of the USB stick.&nbsp;</p>
+
+<p>It works as the internal tab with the addition that it is possible to do an ASCII Show Read.</p>
+
+<p>Doing a Quick Save will store the show on the USB stick <strong>and</strong> on the Internal drive.</p>
+
+<p>Read <a href="key_backup_menu_usb_stick.html">here </a>for more info about USB sticks and what advice and restrictions there might be.</p>
+
+<h3>Version tabs</h3>
+
+<p>Previous versions installed on the console or computer will have their own tab. Shows can be loaded and delete in these tabs.</p>
+
+<p>&nbsp;</p>
+
+<h2>Backup Options</h2>
+
+<p>The backup options allows access to setup a file server and activate Auto Save.</p>
+
+<p>The server setup can be complicated, so it has it own help topic - please read about it <a href="key_backup_menu_file_server.html">here</a>.&nbsp;</p>
+
+<h3>Auto Save</h3>
+
+<p>Auto Save can be set up to automatically store show file after a certain amount of time.&nbsp;</p>
+
+<p>The default setting is "Off". The other options are 15, 30, 60 and 120 minutes.</p>
+
+<p>If auto save is activated - by selecting a time interval - then a count down can be seen next to the label.</p>
+
+<p>When the count down reaches Zero, then it will save the show on the selected drive/tab. If a tab is selected that does not allow for saving, then it will save in the Internal drive.</p>
+
+<p>Read the following pages to read about the different operations that can be done in the tabs.</p>
+
+		
+	</body>
+</html>

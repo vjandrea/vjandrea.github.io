@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>TakeControl Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="TakeControl Keyword, TakeControl, Take Control" />
+	</head>
+	<body>
+		
+		
+		<h1>TakeControl Keyword</h1>
+		
+		<p>To go to the TakeControl keyword, type <strong>TakeControl </strong>in the command line or use the shortcut <strong>Ta</strong>.</p>
+
+<h2>Description</h2>
+
+<p>TakeControl is a keyword used if multiple users are in a session.</p>
+
+<p>The TakeControl keyword, takes the exclusive control of channels or attributes from fixtures, for the current user profile.</p>
+
+<p>All other users can not start these fixtures or channels anymore as playback. The fixtures or channels are still controllable in the programmer.</p>
+
+<p>The user who executes the TakeControl command has only the control about playbacks with the Takecontrol fixtures. The control about all other playbacks is lost.</p>
+
+<figure class="caption"><img alt="" src="../../img/window_fixture-sheet-takecontrol-cmd_v3-2.png" />
+<figcaption><em>Fixture Sheet with controllable (gray font) and not controllable (dark blue font) attributes from playbacks</em></figcaption>
+</figure>
+
+<p>For more information about the system colors, see <a href="key_ws_colors.html">Colors</a>.</p>
+
+<p>To drop the control of the fixtures or channels back, use the <a href="key_keyword_dropcontrol.html">DropControl keyword</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">TakeControl [fixture-list]</span></p>
+
+<p><span class="syntax">TakeControl [channel-list]</span></p>
+
+<p><span class="syntax">TakeControl [sequence-list]</span></p>
+
+<h2>Example</h2>
+
+<p>Take the exclusive control of fixture 1 through 10 for the current user profile. All other fixtures are not controllable from playbacks anymore.</p>
+
+<div class="cl_input">[Channel]&gt; TakeControl Fixture 1 Thru 10</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

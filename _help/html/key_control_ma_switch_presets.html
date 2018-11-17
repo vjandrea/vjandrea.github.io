@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Edit presets of the MA Network Switch</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Presets" />
+	</head>
+	<body>
+		
+		
+		<h1>Edit presets of the MA Network Switch</h1>
+		
+		<p>It is useful to apply presets to ports for a higher network performance or for safety reasons, e.g. to block Telnet.</p>
+
+<p>A preset contains collection of filters. For more information about filter see the <a href="/Page/Network/MA_network_switch/en/3.1">MA Network Switch manual</a>.</p>
+
+<p>Presets are used to allow or to block the selected output.</p>
+
+<p>If a preset is set to allow (= green), the network packets matching the filters in the preset are allowed. All other network packets not matching the filters of this preset, will be blocked.<br />
+If a preset is set to block (= red), the network packets matching the filters in the presets are blocked. All other network packets not matching the filters of this preset, will be allowed.</p>
+
+<div class="important"><strong>Important:</strong><br />
+Presets are applied in the outbound as well as in the inbound network traffic of the specific physical connector.</div>
+
+<p>There are seven predefined presets available:</p>
+
+<ul>
+	<li>MA-Net2</li>
+	<li>dot2-Net</li>
+	<li>Art-Net</li>
+	<li>MA-Remote</li>
+	<li>MA-Net1</li>
+	<li>grandMA2</li>
+	<li>sACN</li>
+</ul>
+
+<p><strong>Requirement:</strong> <a href="key_control_ma_switch_add.html">Added MA Network Switch to the network configuration</a>.</p>
+
+<p>To edit presets:</p>
+
+<div class="important"><strong>Important:</strong><br />
+If manual filters are assigned to a port an assigned preset will delete the previous assigned filter from the port.</div>
+
+<ol>
+	<li>&nbsp;Open the MA Network Configuration.<br />
+	- Press <span class="hardkey">Setup</span>, and tap under <strong>Network</strong> <span class="softkey">MA Network Configuration</span>.<br />
+	The MA Network Configuration window opens.</li>
+	<li>Tap at <span class="softkey">Network Switch</span>.
+	<figure class="caption"><img alt="" src="../../img/menu_ma-network-configuration_network-switch_v3_2.png" />
+	<figcaption><em>MA Network Configuration - Network Switch</em></figcaption>
+	</figure>
+	</li>
+	<li>Tap at a cell in the row of the MA Network Switch you like to edit and tap <span class="softkey">Edit Preset</span>.<br />
+	The <strong>Set Switch Presets pop-up</strong> opens.
+	<figure class="caption"><img alt="" src="../../img/popup_set-switch-presets_v3_2.png" />
+	<figcaption><em>Set Switch Presets pop-up</em></figcaption>
+	</figure>
+	</li>
+	<li>Navigate to the to be edited port.<br />
+	To block the preset press the screen encoder once until the background of the preset cell is red.<br />
+	To allow the preset only press the screen encoder twice until the background of the preset cell is green.</li>
+	<li>Press <span class="hardkey">Please</span> or tap <span class="softkey">Please</span>.</li>
+</ol>
+
+<p>The preset is assigned to the port and saved in the startup configuration. The <strong>filter icon</strong>&nbsp;<img alt="" src="../../img/icon_filter_small_v3-2.png" /> is visible in the port cell and on the front end display of the MA Network Switch.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

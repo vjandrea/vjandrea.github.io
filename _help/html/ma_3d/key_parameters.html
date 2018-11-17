@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Parameters</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Parameters" />
+	</head>
+	<body>
+		
+		
+		<h1>Parameters</h1>
+		
+		<p>Parameters can be added to the names of objects to set further properties of the object.&nbsp;</p>
+
+<p>Example: The object name 'Test_XAP' is a pan-axis.&nbsp;</p>
+
+<p>A parameter block must start with '_X' followed by the (sub) parameters without separators as shown in the following table:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Parameter</th>
+			<th>Sub-Parameter</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>V&nbsp;</td>
+			<td>-&nbsp;</td>
+			<td>Available for user. The Object can be manipulated by the user. Per default the top object in the tree structure can always be manipulated by the user, sub objects not.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>N&nbsp;</td>
+			<td>-&nbsp;</td>
+			<td><strong>N</strong>ot available for the user. Object cannot be manipulated by the user. (Can only be used for sub objects.)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>D&nbsp;</td>
+			<td>-&nbsp;</td>
+			<td><strong>D</strong>elete: object will not be imported.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>A&nbsp;</td>
+			<td>-&nbsp;</td>
+			<td><strong>A</strong>xis (also see: <a href="key_axes.html">Axes</a>): object will be transformed to a movement axis. The parameter is only valid in association with one of the following sub parameters. The sub parameter specifies the type of axis.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>P&nbsp;</td>
+			<td><strong>P</strong>an axis&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>T&nbsp;</td>
+			<td><strong>T</strong>ilt axis&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>R&nbsp;</td>
+			<td><strong>R</strong>oll&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>X&nbsp;</td>
+			<td>Shift (<strong>X</strong>&nbsp;axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Y&nbsp;</td>
+			<td>Shift (<strong>Y</strong>&nbsp;axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Z&nbsp;</td>
+			<td>Shift (<strong>Z</strong>&nbsp;axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>U&nbsp;</td>
+			<td>Scale (X axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>V&nbsp;</td>
+			<td>Scale (Y axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>W&nbsp;</td>
+			<td>Scale (Z axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>J&nbsp;</td>
+			<td>Rotation (round X axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>K&nbsp;</td>
+			<td>Rotation (round Y axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>L&nbsp;</td>
+			<td>Rotation (round Z axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>1&nbsp;</td>
+			<td>Axis of&nbsp;<strong>1</strong>. barndoor&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>2&nbsp;</td>
+			<td>Axis of&nbsp;<strong>2</strong>. barndoor&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>3&nbsp;</td>
+			<td>Axis of&nbsp;<strong>3</strong>. barndoor&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>4&nbsp;</td>
+			<td>Axis of&nbsp;<strong>4</strong>. barndoor&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>B&nbsp;</td>
+			<td>Barndoor Assembly&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>G&nbsp;</td>
+			<td>Continuous rotation round (X axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>H&nbsp;</td>
+			<td>Continuous rotation round (Y axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>I&nbsp;</td>
+			<td>Continuous rotation round (Z axis)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>C&nbsp;</td>
+			<td><strong>C</strong>lamp Rotation axis of the clamp&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>A&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>1</strong>&nbsp;position</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>5&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>1</strong>&nbsp;angle&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>D&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>1</strong>&nbsp;rotation&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>E&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>2&nbsp;</strong>position&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>6&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>2</strong>&nbsp;angle&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>F&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>2</strong>&nbsp;rotation&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>M&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>3</strong>&nbsp;position</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>7&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>3</strong>&nbsp;angle&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>N&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>3</strong>&nbsp;rotation&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>O&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>4</strong>&nbsp;position&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>8&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>4</strong>&nbsp;angle&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>S&nbsp;</td>
+			<td>Shaper blade&nbsp;<strong>4</strong>&nbsp;rotation&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>9&nbsp;</td>
+			<td>Shaper blade assembly rotation&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Q&nbsp;</td>
+			<td>Beam angle (Zoom)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>S&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><strong>S</strong>unshade type: specifies how the object casts a shadow or how gobos are shown on the object.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>N&nbsp;</td>
+			<td><strong>N</strong>one: has no influence on the object. Neither the beam is affected nor gobos are projected on the object. For example the object is a lens of a fixture. The lens does not balk the beam, and no gobos are projected on the lens. The lens is fixed in the case so it doesn’t cast a shadow if it is hit by an external beam.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>R&nbsp;</td>
+			<td><strong>R</strong>egular: the object casts a shadow and gobos are projected on the object. Default setting if nothing else is parameterized.</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>X&nbsp;</td>
+			<td>E<strong>x</strong>clude own beam: compared to other fixtures the object behaves like option ‚R' and compared to the own source of light like option 'N’. This parameter should be set for example for the body of moving heads and the clamp, meaning the parts that are never lighted by the own beam. This simplifies the rendering and avoids the casting of a shadow by the own beam.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>G&nbsp;</td>
+			<td><strong>G</strong>host (Currently not implemented): the object casts a shadow and gobos are projected on the object. The object itself is not visible, only if it is hit by a beam. For example an LED panel consisting of several LEDs with one body. The LEDs can be excluded from the shadow via parameter 'N’. The body for the LEDs has the parameter 'G’ for the common shadow. Note that color mixing will only work correctly if the diffuse color of the ghost object and of the covered objects is the same.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>B&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><strong>B</strong>eam: marks the origin of the beam. (also see: <a href="key_beam-of-light-cone.html">Beam of Light</a>)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>LD</td>
+			<td>&nbsp;</td>
+			<td>Marks the beam output of the cone frustum.</td>
+		</tr>
+		<tr>
+			<td>LC</td>
+			<td>&nbsp;</td>
+			<td>Marks the frustum where the beam is cut.</td>
+		</tr>
+		<tr>
+			<td>I&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Diffuse&nbsp;<strong>I</strong>nking *: extension parameter for other materials. The color specifies the ratio of the diffuse color to the fixture color. White means: the diffuse color gets brighter by 100% of the fixture color.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>E&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><strong>E</strong>missive Color *: extension parameter for other materials. Specifies the color/texture of the object’s self shine.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>J&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>Emissive Inking *: extension parameter for other materials. The color specifies the ratio of the emissive color to the fixture color. White means that the emissive color gets 100% brighter with the fixture color.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>C</td>
+			<td>&nbsp;</td>
+			<td><strong>C</strong>hildren Sub controls, to be placed in MA 3D below the object of a model. Other sub objects in MA 3D will be inserted below this item. Used for moving paths to create sub objects below an axis.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>MD&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><strong>M</strong>odify Model /&nbsp;<strong>D</strong>ouble Faces: this can be used to make both sides of a plane visible without doubling the faces inside the 3d modeling application. Also it can be used to import a bad model with incorrect normals. (But this will let to performance penalties because there will be created unnecessary faces / vertices. Anymore it can result in visible edges at rounded surfaces if the direction of the normals flips inside.) Example: Plane_XMD - This plane is visible from both sides.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>* This parameter can only be used for materials. The material with the parameter extends the other material.<br />
+For example 'Lens_XJ’ describes the emissive inking color for the material (without parameter) with the same name 'Lens’. The extended material must not be assigned to an object. This detour is necessary because the modeling software does support this functionality.</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Part Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Part keyword, part - move, part - store, part - delete" />
+	</head>
+	<body>
+		
+		
+		<h1>Part Keyword</h1>
+		
+		<p>To get the Part keyword in the command line, press <span class="hardkey">Cue</span> <span class="hardkey">Cue</span> (= Part).</p>
+
+<p>You can also type <strong>Part</strong> or the shortcut <strong>P</strong> in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The Part keyword is an object keyword to segment cues in parts.</p>
+
+<p>Parts are useful to assign and edit different timings of groups of fixture parameters.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax"><strong>[Function] Part </strong>[ID]</span></p>
+
+<h2>Example</h2>
+
+<ul>
+	<li>To create a second part of cue 3 for the selected executor, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Store Cue 3 Part 2</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To move part 2 of cue 2 at part 3 of cue 2 for the selected executor, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Move Cue 2 Part 2 At Cue 2 Part 3</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To delete part 2 of cue 1 for the selected executor, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Delete Cue 1 Part 2</div>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The choose delete cue part method pop-up opens.</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_choose-delete-cue-part-method_v3-2.png" />
+<figcaption><em>Choose delete cue part method pop-up</em></figcaption>
+</figure>
+
+<p>To move the fixture or channel values to the main cue tap, <span class="softkey">move values to default cue part</span>.<br />
+Timings will be deleted.</p>
+
+<p>To delete the part with all values tap, <span class="softkey">delete values of cue part</span>.</p>
+
+<p>The part is deleted.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

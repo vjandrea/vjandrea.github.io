@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Local settings</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="local settings, language, DMX - if alone, release notes, desklock, desk light, desk lamp, screen intensity" />
+	</head>
+	<body>
+		
+		
+		<h1>Local settings</h1>
+		
+		<p>The local settings are located in the&nbsp;<strong>Setup I Console I&nbsp;Local Settings</strong>.</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_setup_local-settings_v3-3.png" />
+<figcaption><em>Edit local settings</em></figcaption>
+</figure>
+
+<hr />
+<h2>Default Language</h2>
+
+<p>It is not possible to change this setting, as the console, at the moment, only supports English language.&nbsp;</p>
+
+<hr />
+<h2>Network DMX if alone</h2>
+
+<p>When this is "On", the console will output DMX&nbsp;over network when only one desk (as master) is in the session.</p>
+
+<div class="important"><strong>Important</strong><br />
+This setting can conflict with other console (as master), sending out DMX in the network.</div>
+
+<hr />
+<h2>Example</h2>
+
+<p>In the following example, 3 consoles are in a session, connected with one switch to manage MANet&nbsp;on the first ethernet&nbsp;port, and another one to manage Art-Net on ethernet port 2.&nbsp;All the consoles have <strong>Network&nbsp;DMX&nbsp;if alone</strong> enabled.</p>
+
+<p>If the switch that distribute MANet&nbsp;fails, all 3 consoles will be "Alone" in the network, become Master and will send out Art-Net. This will make a conflict in the fixtures because they will receive Art-Net&nbsp;from 3 different sources. To avoid this conflict, make sure&nbsp;that only one of the consoles have <strong>Network&nbsp;DMX&nbsp;if alone</strong> enabled. This will make sure that when the consoles are "Alone" in the network, only the console with <strong>Network&nbsp;DMX&nbsp;if alone</strong> will send out Art-Net.</p>
+
+<hr />
+<h2>Show release notes on start</h2>
+
+<p>Turn <strong>Show Release Notes on Start</strong> "On" or "Off", to see the release notes on startup.</p>
+
+<hr />
+<h2>Flashing error LED on wrong fader position</h2>
+
+<p>Turn <strong>Flashing error LED on wrong fader position</strong> "On" or "Off" to let a red LED flash, if the fader is in a wrong position.</p>
+
+<div class="important"><strong>Important:</strong><br />
+This function is only available on a grandMA2 ultra-light&nbsp;and a grandMA2 onPC with a wing.&nbsp;On a grandMA2 ultra-light it relates the red LEDs under the faders. In the grandaMA2 onPC it relates the LEDs in the keys over the faders.</div>
+
+<hr />
+<h2>Exec CLI</h2>
+
+<p>Turn <strong>Exec CLI</strong> ​(Command Line Interaction) "On" or "Off" to let the Command Line interact with the executors.</p>
+
+<p>In the following &nbsp;example <strong>Exce CLI</strong> is "Off".</p>
+
+<p>If <span class="hardkey">Select</span> is pressed, followed by an&nbsp;<strong>Executor button</strong>, this will NOT select the executor, but perform the action assigned to the button.</p>
+
+<hr />
+<h2>Default Go, Goback, Pause CLI</h2>
+
+<p>Turn&nbsp;<strong>Default Go, Goback, Pause CLI</strong>&nbsp;"On" or "Off" to let the Command Line interact with the big&nbsp;<span class="hardkey">Default Go</span>, <span class="hardkey">Goback</span> and <span class="hardkey">Pause</span>&nbsp;keys.</p>
+
+<p>In the following &nbsp;example&nbsp;<strong>Default Go,&nbsp;Goback, Pause CLI</strong>&nbsp;is "Off".</p>
+
+<p>If a macro is edited and <span class="hardkey">Default Go</span> is pressed, the system will NOT enter DefaultGo in the macro-line, but execute the next cue in the selected executor.</p>
+
+<hr />
+<h2>Intensity&nbsp;Btn&nbsp;Background</h2>
+
+<p>The background light of the keys on the console can be set. Follow these steps:</p>
+
+<ol>
+	<li>Tap the green square in the <strong>Intensity Btn Background</strong> area.</li>
+	<li>Tap the intensity as a number between 0 and 79. 0 is no light and 79 is full. &nbsp;</li>
+</ol>
+
+<hr />
+<h2>Intensity&nbsp;Btn&nbsp;Highlight</h2>
+
+<p>The highlight light of the keys on the console can be set. Follow these steps:</p>
+
+<ol>
+	<li>Tap the green square in the&nbsp;<strong>Intensity&nbsp;Btn&nbsp;Highlight</strong>&nbsp;area.</li>
+	<li>Tap the intensity as a number between 0 and 255. 0 is no light and 255 is full. &nbsp;</li>
+</ol>
+
+<hr />
+<h2>Intensity Exec LED</h2>
+
+<p>The background light of the executors on the console can be set. Follow these steps:</p>
+
+<ol>
+	<li>Tap the green square in the&nbsp;<strong>Intensity Exec LED</strong>&nbsp;area.</li>
+	<li>Tap the intensity as a number between 0 and 255. 0 is no light and 255 is full. &nbsp;</li>
+</ol>
+
+<hr />
+<h2>Intensity Desk Lamp</h2>
+
+<p>The desklight on the console can be set. Follow these steps:</p>
+
+<ol>
+	<li>Tap the green square in the&nbsp;<strong>Intensity Desk Lamp</strong>&nbsp;area.</li>
+	<li>Tap the intensity as a number between 0 and 255. 0 is no light and 255 is full. &nbsp;</li>
+</ol>
+
+<hr />
+<h2>Intensity 9 Inches</h2>
+
+<p>The backlight of the screens on the console can be set. Follow these steps to set the backlight of the 9-inch screens:</p>
+
+<ol>
+	<li>Tap the green square in the&nbsp;<strong>Intensity&nbsp;9-inch</strong>&nbsp;area.</li>
+	<li>Tap the intensity as a number between 0 and 255. 0 is dark and 255 is bright. &nbsp;</li>
+</ol>
+
+<hr />
+<h2>Intensity 15 Inches</h2>
+
+<p>The backlight of the screens on the console can be set. Follow these steps to set the backlight of the 15-inch screens:</p>
+
+<ol>
+	<li>Tap the green square in the&nbsp;<strong>Intensity&nbsp;15-inch</strong>&nbsp;area.</li>
+	<li>Tap the intensity as a number between 0 and 255. 0 is dark and 255 is bright. &nbsp;</li>
+</ol>
+
+<div class="important"><strong>Important:</strong><br />
+The<strong> Intensity</strong> functions are not available on a grandMA2 onPC.&nbsp;</div>
+
+<hr />
+<h2>Desklock&nbsp;background</h2>
+
+<p>It is possible to lock the console, so no faders and keys can be used, by pressing <strong>Pause</strong> on the keyboard or press and hold <span class="hardkey">MA</span> and press <span class="hardkey">Fix</span>. <strong>Desk Locked </strong>appears on the screen<strong>.</strong>&nbsp;To unlock the console, press <strong>Pause&nbsp;</strong>or press and hold&nbsp;<span class="hardkey">MA</span>&nbsp;and press&nbsp;<span class="hardkey">Fix</span>&nbsp;again. The background of the desklock&nbsp;screen can be set to either <strong>Black</strong>, <strong>Image Pool Picture</strong> or <strong>Current Desk UI</strong></p>
+
+<ul>
+	<li><strong>Black</strong>&nbsp;will let the background be black.</li>
+	<li><strong>Image Pool Picture</strong> opens the Image Pool for the current show file, to select one of these to be the background.</li>
+	<li><strong>Current Desk UI</strong>&nbsp;leaves the screens as they are, but places a red Desk Locked sign above the content.</li>
+</ul>
+
+		
+	</body>
+</html>

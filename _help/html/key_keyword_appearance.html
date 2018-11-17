@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Appearance keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Appearance keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>Appearance keyword</h1>
+		
+		<p>You can change the frame color of pool objects and the background color of cues with the <strong>Appearance </strong>keyword.</p>
+
+<div class="important"><strong>Important:</strong><br />
+<strong>Appearance</strong> is used directly on objects. Thus, changing the color in all user profiles.</div>
+
+<p>To execute this keyword press <span class="hardkey">Assign</span>&nbsp;<span class="hardkey">Assign</span> <span class="hardkey">Assign</span>, type <strong>Appearance </strong>or the shortcut <strong>Ap </strong>into the command line.</p>
+
+<p>To reset assigned colors repeat the appearance command and select color pop-up&nbsp;<strong>Reset&nbsp;</strong>in the edit, then tap <strong>Please</strong>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Appearance [Object-list]</span></p>
+
+<p><span class="syntax"><strong>Appearance [Object-list] At [Source-object]</strong></span></p>
+
+<h2>Options</h2>
+
+<p>To see a list of all options of the keyword Appearance in the command line feedback window, type the following into the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Appearance /?</div>
+
+<p>The keyword Appearance has the following options:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Shortcut</th>
+			<th scope="col">Option value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>reset</td>
+			<td>r</td>
+			<td>no option value</td>
+			<td>Resets appearance.</td>
+		</tr>
+		<tr>
+			<td>color</td>
+			<td>no shortcut</td>
+			<td>Gel name from the Swatch Book in the color picker, e.g., medium amber; or hex value (000000-FFFFFF)</td>
+			<td>Sets color appearance.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>red</td>
+			<td>r</td>
+			<td>0-100</td>
+			<td>Sets red component of the color appearance (0 by default).</td>
+		</tr>
+		<tr>
+			<td>green</td>
+			<td>g</td>
+			<td>0-100</td>
+			<td>Sets green component of the color appearance (0 by default).&nbsp;</td>
+		</tr>
+		<tr>
+			<td>blue</td>
+			<td>b</td>
+			<td>0-100</td>
+			<td>Sets blue component of the color appearance (0 by default).&nbsp;</td>
+		</tr>
+		<tr>
+			<td>hue</td>
+			<td>h</td>
+			<td>0-360</td>
+			<td>Sets hue of the color appearance (saturation and brightness 100 by default).&nbsp;</td>
+		</tr>
+		<tr>
+			<td>saturation</td>
+			<td>s</td>
+			<td>0-100</td>
+			<td>Sets saturation of the color appearance (hue 0 by default; brightness 100 by default).</td>
+		</tr>
+		<tr>
+			<td>brightness</td>
+			<td>br</td>
+			<td>0-100</td>
+			<td>Sets brightness of the color appearance (saturation and hue 0 by default).&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Example: 1 - Change Frame Color of a Single Object</h3>
+
+<p>Assign preset object 1 a red frame in the preset pool.</p>
+
+<p>1. Press <span class="hardkey">Assign</span> <span class="hardkey">Assign</span> <span class="hardkey">Assign </span> (=Appearance) and tap preset 1 in the preset pool .</p>
+
+<p>The Edit Color pop-up opens.</p>
+
+<p>2. Select a red color and tap <strong>Please</strong>.</p>
+
+<p>Preset object 1 has a red frame around it.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+Executors display the appearance of objects assigned. To view the appearance of objects on executors, open <strong>Playback big</strong>. For more information see <a href="key_exec_on_screen.html#playback_big">Executors on the screens</a>.&nbsp;</div>
+
+<h2>Example: 2 - Change Frame Color of Several Objects</h2>
+
+<p>Assign group object 1 thru 5 a blue frame in the group pool.</p>
+
+<p>1. Press <span class="hardkey">Assign</span> <span class="hardkey">Assign</span> <span class="hardkey">Assign</span> (=Appearance) <span class="hardkey">Group</span> <span class="hardkey">1</span> <span class="hardkey">Thru</span> <span class="hardkey">5</span> <span class="hardkey">Please</span>.</p>
+
+<p>The Edit Color pop-up opens.</p>
+
+<p>2. Select a blue color and tap <strong>Please</strong>.</p>
+
+<p>Group objects 1 thru 5 have a blue frame around them.</p>
+
+<h2>Example: 3 - Change Background Color of Cues</h2>
+
+<p>Change the background color of cue 1 of the selected executor. For more information see <a href="key_cs_renumber_cues.html#cue_color">change cue color</a>.</p>
+
+<div class="important"><strong>Important:</strong><br />
+Cue color columns have to be enabled in the option menu.&nbsp;</div>
+
+<p>1. Press <span class="hardkey">Assign</span> <span class="hardkey">Assign</span> <span class="hardkey">Assign</span> (=Appearance) <span class="hardkey">Cue</span> <span class="hardkey">1</span> <span class="hardkey">Please</span>.</p>
+
+<p>The Edit Color pop-up opens.</p>
+
+<p>2. Choose the color and tap <strong>Please</strong>.</p>
+
+<p>Cue 1 of the selected executor has a new background color.&nbsp;</p>
+
+<h2>Example: 4 - Cue Background Color same as Group Color</h2>
+
+<p>Cue 1 is to have the same color as group 2.</p>
+
+<p>Press <span class="hardkey">Assign</span> <span class="hardkey">Assign</span> <span class="hardkey">Assign</span> (=Appearance) <span class="hardkey">Cue</span> <span class="hardkey">1</span> <span class="hardkey">At</span> <span class="hardkey">Group</span> <span class="hardkey">2</span> <span class="hardkey">Please</span>.</p>
+
+<p>Cue 1 has the same color as group 2.</p>
+
+<h2>Example: 5 - Use Command Line Only</h2>
+
+<p>Assign the All preset pool (0) object 1 a red frame using the command line only.</p>
+
+<p>Type in the command line:</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;Appearance Preset 0.1 /h=0 /s=100 /br=50</div>
+
+<p>&nbsp;</p>
+
+<p>Press <span class="hardkey">Please</span>.</p>
+
+<p>- or -</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;​Appearance Preset 0.1 /r=100 /g=0 /b=0</div>
+
+<p>&nbsp;</p>
+
+<p>Press <span class="hardkey">Please</span>.</p>
+
+<p>Pool object 1 has a red frame around it.</p>
+
+<h2>Example: 6 – Assign the Appearance from Source Object to Destination Object</h2>
+
+<p>Assign the appearance of one macro to another.</p>
+
+<p>Type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Appearance Macro 2 At Macro 13</div>
+
+<p>Press <span class="hardkey">Please</span>.</p>
+
+<p>&nbsp;Macro 2 receives the same appearance as macro 13.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

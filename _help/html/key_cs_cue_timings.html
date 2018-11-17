@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Cue timings</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="cue timing, fade time, delay time" />
+	</head>
+	<body>
+		
+		
+		<h1>Cue timings</h1>
+		
+		<p>Cue timing is about the stored values transition from one cue to the next.</p>
+
+<p>There are several levels of timing that can be relevant for a values transition time.</p>
+
+<p>There are different timing levels. They are:</p>
+
+<ul>
+	<li><strong>General Cue Timing</strong></li>
+	<li><strong>Preset Type Timing</strong></li>
+	<li><strong>Individual Timing</strong></li>
+	<li><strong>Rate</strong></li>
+	<li><strong>Executor Time</strong></li>
+</ul>
+
+<p>There is also manual cross fading. This overwrites any timing. Read more about cross fading in the <a href="key_cs_playback.html#crossfade">Playing back Cues topic</a>.</p>
+
+<p>&nbsp;</p>
+
+<h2>General Cue Timing</h2>
+
+<p>This is the general timing columns that can be seen in the <a href="key_cs_cue_sequence.html">Sequence Executor Sheet</a>.</p>
+
+<p>These timings have the lowest priority. If a value has a different Preset Type Timing or an Individual Timing then they have a higher priority.</p>
+
+<p>They are:</p>
+
+<ul>
+	<li><strong>Fade:</strong><br />
+	This is the time used by all attributes and dimmer values going "up" in value. It can also be called "InFade".</li>
+	<li><strong>OutFade:</strong><br />
+	This is time used by dimmer values going "down" in value. This only effects Dimmer values. The default for this is "InFade" - automatically making it the same as the "Fade" value.</li>
+	<li><strong>Delay:</strong><br />
+	This is the time used to wait before executing the "Fade". It can also be called "InDelay".</li>
+	<li><strong>OutDelay:</strong><br />
+	This is the time used to wait before executing the "OutFade". This only effects Dimmer values.The default for this is "InDelay" - automatically making it the same as the "Delay" value.</li>
+	<li><strong>Snap Percent:</strong><br />
+	This is the percent number used to control when the "Snap" is performed. Read more about <a href="#snap_percent">Snap Percent</a> at the bottom of this topic.</li>
+</ul>
+
+<p>The defaults are a user setting and can be changed in the <span class="hardkey">Setup</span> -&gt; <span class="softkey">User</span> -&gt; <span class="softkey">Defaults</span> -&gt; <span class="softkey">Sequence Defaults</span>.</p>
+
+<p>&nbsp;</p>
+
+<h2>Preset Type Timing</h2>
+
+<p>Each preset type has two columns in the Sequence Executor Sheet. One is <strong>Fade</strong> the other is <strong>Delay</strong>.</p>
+
+<p>These times will will be used by all changing the values of that preset type. Overwriting the General Cue Timings for that Preset Type.</p>
+
+<div class="important"><strong>Important:</strong><br />
+Dimmer values changing to a lower value are not effected by the ""Fade Dimmer" time. They are controlled by the "OutFade".</div>
+
+<p>The default value for these are "Cue" making the automatically the same as the General Cue Timings.</p>
+
+<p>The defaults are a user default and this can be changed in the <span class="hardkey">Setup</span> -&gt; <span class="softkey">User</span> -&gt; <span class="softkey">Defaults</span> -&gt; <span class="softkey">Sequence Defaults</span>.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2>Individual Timing</h2>
+
+<p>Each individual attribute can have a special individual fade and/or delay time. This is called individual time.</p>
+
+<p>There are two columns in the Sequence Executor Sheet called <strong>I.Fade</strong> and <strong>I.Delay</strong>, they display the range if the individual times - the lowest and the highest time.</p>
+
+<p>If there are individual times stored then the background of the <strong>Fade</strong> or the <strong>Delay</strong> columns will have a green or orange color. This is a visual indicator that there are some individual times stored.</p>
+
+<h3>Storing Individual Timing</h3>
+
+<p>Individual times are usually stored together with active values in the programmer.</p>
+
+<p>The Encoder Toolbar should look like this when working with values:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_encoder-toolbar_value_v3_3.png" />
+<figcaption><em>Encoder Toolbar - Value Layer</em></figcaption>
+</figure>
+
+<p>Here in the Encoder toolbar there are three buttons in the center of the top row called: Value, Fade, and Delay.</p>
+
+<p>They control if the encoders below the buttons are used to set a value or to set an individual time. They change between different layers.</p>
+
+<p>An attribute needs to have values stored in the cue where the individual time is stored. The time can be stored at the same time as the value, but can also be added (merged) into the cue after the values is stored.</p>
+
+<p>To get the fade or delay times into your programmer, you need to select the layer you want to work with. You can tap the buttons in the Encoder Toolbar or you can press the <span class="hardkey">Time</span> key to toggle between the layers.</p>
+
+<p>When the correct layer is selected then you can use the encoders to set a time or you can use the keys to type a time - pay attention to your command line input.</p>
+
+<p>This is what the Encoder Toolbar looks like when Pan and Tilt have 2 seconds as individual fade time in the programmer</p>
+
+<figure class="caption"><img alt="" src="../../img/img_encoder-toolbar_fade_active-values_v3_3.png" />
+<figcaption><em>Encoder Toolbar - Fade Layer with active fade times</em></figcaption>
+</figure>
+
+<p>When the individual time is in the programmer then it needs to be stored like any other value.</p>
+
+<p>&nbsp;</p>
+
+<p>Depending on what is stored with individual times, please consider if using <a href="key_cs_store.html">Part Cues</a> might be a better solution for you.</p>
+
+<p>&nbsp;</p>
+
+<h2><a id="rate_fader" name="rate_fader"></a>Rate Fader</h2>
+
+<p>All executors have a Rate Fader. This fader might not be assigned to a physical fader but it is still there. For details about this please have a look at the <a href="key_exec.html">Executors section</a>.</p>
+
+<p>A Rate fader is used to modulate or dynamically adjust the stored times. It does not change the stored times, it simply adjust the time to be faster or slower.&nbsp;</p>
+
+<p>When the time is adjusted by the Rate fader then the time displayed in the Sequence Executor Sheet is also visually adjusted. There is an asterisk symbol in front of the time to show you that the time is adjusted. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/window_sequence-executor-sheet_rate-adjusted_v3-3.png" />
+<figcaption><em>Sequence Executor Sheet with adjusted times</em></figcaption>
+</figure>
+
+<p>The default value for the Rate fader is "1:1". This means that times will not be adjusted. If the rate is changed then the stored time is divided by the value of the rate - this includes the individual times.</p>
+
+<p>In the image above the stored fade time for cue 1 is "1". The Rate is set to "2". The result is 1 divided by 2 equals 0.5.</p>
+
+<p>Moving the Rate fader above "1:1" will make the rate time larger and the result is that the times are faster. Moving the Rate below the "1:1" will make the rate time smaller than 1 and the result is that the cue times are slower.</p>
+
+<p>The Rate fader can be reset to "1:1" by typing:</p>
+
+<div class="cl_input">[Channel]&gt; Rate 1</div>
+
+<p>Or by having the "Rate1" function assigned to one of the associated executor keys.</p>
+
+<p>&nbsp;</p>
+
+<h2>Exec Time faders</h2>
+
+<p>The "Exec Time" or "Executor Time" fader can be used to override the stored times in the cues. It is a fader visible in the lower right corner of screen 2 (unless you are on a grandMA2 onPC with the "CmdWing Bar" turned on). It can also be assigned to a physical fader - read about it in the <a href="key_adv_exec_spec_master.html">Special Masters topic</a>.</p>
+
+<p>If the Exec Time fader is On, then all the stored cue timing is ignored and the time set on the Exec Time fader is used instead. The default range for the fader is 0 seconds to 10 seconds. The maximum is a user setting and it can be changed in <span class="hardkey">Setup</span> -&gt; <span class="softkey">User</span> -&gt; <span class="softkey">Settings</span>. It it called "Max. Exec Time".</p>
+
+<p>The Exec Time fader also has a "Manual XFade" function. This will allow you to use the move from one end position to the other as the timing for the cue change.</p>
+
+<p>Exec Time ignores any individual times. The Rate Fader is effecting the Exec Time, except when doing the Manual XFade.</p>
+
+<p>It is possible to activate <strong>Ignore Exec Time</strong> in the options for each Executor - see the <a href="key_adv_exec_options.html">Executor Options topic</a>. This will exclude the executor from being effected by the Exec Time.</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<h2><a id="snap_percent" name="snap_percent"></a>Snap Percent</h2>
+
+<p>Some attributes are defined as "Snap" attributes in the Fixture Type definition. This means that the attribute will not fade from one value to the next but it will instantly change to the new value. This could be Gobo wheels, Prism In/Out, Mode channels, or any other attribute where fading is not desired.</p>
+
+<p>The Snap Percent is a percent number that defines when in the cue fade these attributes shall perform the Snap.</p>
+
+<p>The default is 0% and this value is hidden in the Sequence Executor Sheet. This value means that the Snap will be performed when 0% of the fade time is executed - immediately when the cue is triggered.</p>
+
+<p>If the Snap Percent is set to 100% then the Snap will be performed when all fade times in the cue is done - at the very end of the fade. This includes the time of individual fades!</p>
+
+<p>The Snap Percent can be set to anything between 0% and 100%, allowing you to choose when the Snap is performed.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

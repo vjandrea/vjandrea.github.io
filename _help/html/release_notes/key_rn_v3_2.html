@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Release Notes - Version 3.2</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="release notes version 3.2" />
+	</head>
+	<body>
+		
+		
+		<h1>Release Notes - Version 3.2</h1>
+		
+		<p>New functions and features in detail:</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>How to:</strong>
+
+	<ul>
+		<li>To activate the RDM the user has to switch RDM on globally. It is possible to do so in Setup/Console/Global Settings or in Setup/Show/Patch &amp; Fixture Schedule/RDM Devices.</li>
+		<li>It is possible to switch the RDM off and on separately for every universe in the universe pool or in Setup/Show/Patch Only(Live)/DMX list.</li>
+		<li>It is now possible for the user to do the first steps in the new RDM Sheet. The new RDM sheet lists all fixtures discovered per RDM. The RDM sheet shows all RDM information. The user changes the RDM parameters for single fixtures here(e.g. DMX start address, etc.) by editing the corresponding cell. The RDM sheet shows sensor values also.</li>
+		<li>All discovered RDM fixtures are displayed in Setup/Patch &amp; Fixture Schedule/RDM Devices and can be matched to the fixtures of the grandMA2 patch via the match to fixture function on the bottom. The button identify activates the identify mode of the selected RDM device in the lighting rig. This helps the operator to match RDM fixtures with fixtures in the patch.</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>New commands for RDM:</strong></p>
+
+<ul>
+	<li>New command RDMSetParameter
+	<ul>
+		<li>RDMSetParameter &lt;PID&gt; &lt;Value&gt;/UID=&lt;UID&gt; /multipatch=&lt;multipatch&gt;</li>
+		<li>PID - can be the name, as IDENTIFY_DEVICE or a hex number, e.g. 1000.</li>
+		<li>Value - e.g. 200 if PID is DMX_START_ADDRESS, DMX address of Fixture will be changed to 200; Value could not be specified for such PIDs as FACTORY_DEFAULTS.</li>
+		<li>UID - for sending message to specific device.</li>
+		<li>Multi Patch - 0 = for all multi patch, 1.. = for specific multi patch fixture index.</li>
+		<li>If this command is entered at a connected console, the master will get the command remote for each UID.</li>
+		<li>RDMSetParameter works also with the current selection.</li>
+		<li>Supported PIDs:
+		<ul>
+			<li>FACTORY_DEFAULTS</li>
+			<li>LANGUAGE</li>
+			<li>RESET_DEVICE</li>
+			<li>DISPLAY_INVERT</li>
+			<li>DMX_PERSONALITY</li>
+			<li>SENSOR_VALUE</li>
+			<li>REAL_TIME_CLOCK</li>
+			<li>COMMS_STATUS</li>
+			<li>CLEAR_STATUS_ID</li>
+			<li>DEVICE_LABEL</li>
+			<li>IDENTIFY_DEVICE</li>
+			<li>DMX_START_ADDRESS</li>
+			<li>PAN_INVERT</li>
+			<li>TILT_INVERT</li>
+			<li>DISPLAY_LEVEL</li>
+			<li>DEVICE_HOURS</li>
+			<li>LAMP_HOURS</li>
+			<li>LAMP_STRIKES</li>
+			<li>RECORD_SENSORS</li>
+			<li>LAMP_STATE</li>
+			<li>LAMP_ON_MODE</li>
+			<li>DEVICE_POWER_CYCLES</li>
+			<li>PAN_TILT_SWAP</li>
+			<li>POWER_STATE</li>
+			<li>PERFORM_SELFTEST</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>New command RDMInfo
+	<ul>
+		<li>RDMInfo &lt;Channel/Fixture x&gt;</li>
+		<li>RDMInfo opens a pop-up with the actual RDM information for the selected Channel or Fixture.</li>
+		<li>Channel/Fixture has to be matched to a RDM Fixture for this feature.</li>
+	</ul>
+	</li>
+	<li>New Command RDMAutoMatch
+	<ul>
+		<li>RDMAutoMatch &lt;Object&gt;</li>
+		<li>If no Object is set, the current selection will be used.</li>
+		<li>Possible objects are: Channel, Fixture, Fixture Type, RDMFixture Type, Group, Sequence, Cue, Executor, Preset(only selective), Selection.</li>
+		<li>To get the IDs for the objects enter the RDMFixture Types cd RDM_Data/RDM_Fixture_Types into the command line.</li>
+		<li>Rules for RDMAutoMatch:
+		<ul>
+			<li>MA Fixture and RDM Fixture have to have the same DMX address.</li>
+			<li>MA Fixture Type and the RDM Fixture have either no or the same RDMFixture Type ID.</li>
+			<li>MA Fixture Type has to have the same DMX footprint as the RDM Fixture.</li>
+			<li>All sub-fixtures of the MA Fixture have to be in the current World and Filter.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>New command RDMUnmatch
+	<ul>
+		<li>RDMUnmatch &lt;Object&gt;</li>
+		<li>Removes the match between the selected fixture and its RDM fixture.</li>
+	</ul>
+	</li>
+	<li>New command RDMAutoPatch
+	<ul>
+		<li>RDMAutoPatch &lt;Object&gt;</li>
+		<li>Sets via RDM the DMX start address of the physical Fixture to the address of the patched MA2 Fixture.</li>
+		<li>To use this command the user has to manually match the MA2 Fixture with an RDM Fixture in the Setup/Show/Patch and Fixture Schedule.</li>
+	</ul>
+	</li>
+	<li>New command RDMSetPatch
+	<ul>
+		<li>RDMSetPatch &lt;DMX address&gt;</li>
+		<li>Changes the RDM DMX address.</li>
+		<li>Works with current selection.</li>
+		<li>This command is a shortcut for the command RDMSetParameter DMX_START_ADDRESS x</li>
+		<li>Available options are: multi patch, UID.</li>
+		<li>Multi patch: sets RDM DMX address of a specific multi patch device.</li>
+		<li>UID: changes RDM DMX address of a specific UID.</li>
+	</ul>
+	</li>
+	<li>New command RDMList
+	<ul>
+		<li>RDMList &lt;Object&gt;</li>
+		<li>RDMList generates a list of RDM data in MA2 system. If no object is specified, all RDM data is taken.</li>
+		<li>Available options are: filename, multi patch, UID.</li>
+		<li>filename(e.g. filename=data): exports the data into a text file named data.txt in temp folder.</li>
+		<li>Multi patch: lists RDM data of a specific multi patch device.</li>
+		<li>UID: lists RDM data of a specific UID.</li>
+	</ul>
+	</li>
+	<li>RDM macros are also available in the predefined macros pool.</li>
+</ul>
+
+<p><strong>New sheets and functions for RDM</strong></p>
+
+<ul>
+	<li>RDM alerts and RDM warnings:
+	<ul>
+		<li>If there are RDM notifications for a fixture, fixture sheet and layouts have indicators for RDM Alerts(red) and Warnings(yellow).</li>
+		<li>RDM notifications depend on the type parameter(e.g. LAMP_STATE, DMX_PERSONALITY, etc.) or the sensor(temperature, fan speed, e.g.).</li>
+		<li>The user decides whether it is an RDM Alert or RDM Warning for each notification.</li>
+		<li>RDM Alerts and Warnings are also shown in the Message Center. An RDM symbol appears in the area of the Message Center of the Command line.</li>
+		<li>RDM Alerts and Warnings can be set to Status(Message-Center-Area in the command line) and/or pop-up.</li>
+		<li>All RDM icons in Universe pool turn red if RDM is disabled in Global Settings.</li>
+	</ul>
+	</li>
+	<li>It is possible to export and import RDM information(including ESTAId, DeviceModelId, SoftwareVersionId and DmxPersonalityId) and notifications with the Fixture Type.</li>
+	<li>Added RDM button in Edit fixture pop-up.</li>
+	<li>Implemented RDM filters for fixture sheet and channel sheet, layouts and masks.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>New bitmap fixture</strong>
+
+	<ul>
+		<li>How to:
+		<ul>
+			<li>To choose an image or video change to video preset type and turn the encoder of attribute image to switch through the images of the image pool.</li>
+			<li>Creating a rectangle in a layout opens the edit rectangle dialog.</li>
+			<li>The content played back will be resized to the rectangle as the rectangle provides the aspect ratio for the bitmap fixture.</li>
+		</ul>
+		</li>
+		<li>New features for bitmap fixture implemented:
+		<ul>
+			<li>Some sample images and videos for bitmap fixtures are available in the bitmap folder.</li>
+			<li>Limitation of the image pool is a total of 100MB and has a maximum size of 64MB for a single object.</li>
+			<li>There are two ways of using the bitmap fixture with images: enter At and image into the command line or press At and tap an image in the image pool.</li>
+			<li>There are two ways of using the bitmap fixture with layouts also: enter At and layout into the command line or press At and tap at a layout in the layout pool.</li>
+			<li>If the At mode for the layout pool is active, tapping a layout sets the layout for the bitmap fixture. If the select mode for the layout pool is active, tapping a layout shows the layout in the layout view.</li>
+			<li>Support of PNG Alpha.</li>
+			<li>Added Z position attribute. Z pos only works within the same priority, e.g. programmer or LTP or HTP, etc. When mixing programmer Z pos with Z pos of an HTP playback will not work properly.</li>
+			<li>Speed control for playing back videos.</li>
+			<li>Added play modes for bitmap effects: play loops endlessly. Play Once will play clip one time, and stop with the last frame. Play Once Off plays clip one time, and fade out with the last frame.</li>
+			<li>Improvements for rendering the Content at the Fixtures. The issue was that Pixels were not positioned correctly or colors were fading out at the borders.</li>
+			<li>Rotation function added: Rotation, Rotation Center X and Rotation Center Y.</li>
+		</ul>
+		</li>
+		<li>Implemented modes for bitmap effects:
+		<ul>
+			<li>Dim is default for only dimmer fixtures; RGB is default for fixtures with RGB.</li>
+			<li>Additional modes are possible: RGB+Dim, and presets (All, Dimmer, Position, Gobo, Color, Beam, Focus, Control, Shapers and Video).</li>
+			<li>"Black and white presets"(VP1 and VP2) can also be chosen for the preset modes in the bitmap fixture.</li>
+			<li>The number adjusted for VP1 and VP2 refers to the corresponding preset of the chosen preset type.</li>
+		</ul>
+		</li>
+		<li>Added 100 channel sets for images and outputs to the bitmap Fixture Type.</li>
+	</ul>
+	</li>
+	<li><strong>Internal time code generator</strong>
+	<ul>
+		<li>Implemented internal timecode generator.</li>
+		<li>A timecode generator can be configured with edit TimecodeSlot X for every timecode slot.</li>
+		<li>To start, stop or pause the generator uses the commands Go TimecodeSlot X, Pause TimecodeSlot X or Off TimecodeSlot X</li>
+		<li>The timecode generator can also operate within the clock view.</li>
+	</ul>
+	</li>
+	<li><strong>Light mode and web remote for MA xPort node</strong>
+	<ul>
+		<li>The light mode for MA xPort nodes changes the intensity of the display.</li>
+		<li>The light mode changes between black (dark) and full.</li>
+		<li>Web remote for xPortNodes implemented. Connect with a browser to the IP of the xPortNode.</li>
+		<li>Password for login is admin.</li>
+		<li>It is possible for the user to change all the settings in the MA network configuration and via web remote.</li>
+	</ul>
+	</li>
+	<li><strong>Split up exec CLI into 2 options</strong>
+	<ul>
+		<li>Exec CLI affects executors only .</li>
+		<li>Default Go, Goback, Pause CLI affects the default Go+, Go- and Pause key of the 100mm faders.</li>
+		<li>Both options can be changed separately in Setup - Console - Local Settings.</li>
+	</ul>
+	</li>
+	<li><strong>Improved preset workflow</strong>
+	<ul>
+		<li><strong>Storing and updating presets</strong>
+		<ul>
+			<li>Set update menu settings and defaults for presets, effects and cues individually.</li>
+			<li>Store and update presets are separated from store defaults. Defaults for updating the presets are in the update menu.</li>
+			<li>Define defaults for store in the store options. To open this dialog hold the store button for two seconds.</li>
+			<li>Define defaults for update in the update dialog. Press highlighted update button to open this dialog.</li>
+		</ul>
+		</li>
+		<li><strong>Improved cloning rules</strong>
+		<ul>
+			<li>New cloning rules:
+			<ul>
+				<li>The clone destination decides if the new data is global or selective.</li>
+				<li>It is possible to clone from fixture to fixture, from fixture to Fixture Type, from Fixture Type to fixture or from Fixture Type to Fixture Type.</li>
+				<li>Cloning to Fixtures adds selective data.</li>
+				<li>Cloning to Fixture Types adds global data.</li>
+			</ul>
+			</li>
+			<li>Examples:
+			<ul>
+				<li>Example 1: Preset contains global data for Fixture Type 1(fixture 1 is of Fixture Type 1, fixture 11 is of Fixture Type 2).
+				<ul>
+					<li>Cloning fixture 1 to fixture 11 creates selective data for fixture 11.</li>
+					<li>Cloning fixture 1 at Fixture Type 2 creates global data for Fixture Type 2. Fixtures of Fixture Type use this preset.</li>
+					<li>Cloning Fixture Type 1 at Fixture Type 2 creates global data for Fixture Type 2.</li>
+				</ul>
+				</li>
+				<li>Example 2: Preset contains selective Data for Fixture 1.
+				<ul>
+					<li>Cloning fixture 1 to fixture 11 creates selective data for fixture 11.</li>
+					<li>Cloning fixture 1 at Fixture Type 2 creates global data for Fixture Type 2.</li>
+					<li>Cloning Fixture Type 1 at Fixture Type 2 does not create new data as there is no global data for Fixture Type 1 that could be cloned.</li>
+				</ul>
+				</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<div class="tip"><strong>Note:</strong><br />
+It is redundant to clone universal preset data. Therefore, it is not listed here.</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>Improved time code as cue trigger</strong>
+
+	<ul>
+		<li>It is now possible to use time code as cue trigger.</li>
+		<li>Change cue trigger to time code.</li>
+		<li>Start time code record with [Record] Executor X.</li>
+		<li>[MA]+[Store] is the shortcut for [Record].</li>
+		<li>Go the cues to get the actual time code as trigger time.</li>
+		<li>Stop time code record with [Record] Executor X.</li>
+		<li>Using the [Record] command only, executes time code record for the main executor.</li>
+	</ul>
+	</li>
+	<li><strong>Special dialogs for shapers, border, keystone of VPU fixtures</strong>
+	<ul>
+		<li>New shaper dialogs for shapers, border, keystone for VPU fixtures.</li>
+	</ul>
+	</li>
+	<li><strong>Web remote</strong>
+	<ul>
+		<li>Playback view</li>
+		<li>Executor sheet</li>
+		<li>Preset pools are now available.</li>
+		<li>Added fade layers, delay layers and output layers for sheets.</li>
+	</ul>
+	</li>
+	<li><strong>Delete command for messages from message cente</strong>
+	<ul>
+		<li>Supported fields for conditions:'
+		<ul>
+			<li>"subcat" 'Message Center'??? Dominik will ask Dima???</li>
+		</ul>
+		</li>
+		<li>General rules:
+		<ul>
+			<li>All operations have always to be surrounded by spaces, e.g. "field1 = 'value1'"</li>
+			<li>Values must be inside single quotes: 'value'</li>
+			<li>For "type" relations are following: 'Info' &lt; 'Warning' &lt; 'Alert' &lt; 'Error'</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p><strong>Fixed bugs and improved functionality</strong></p>
+
+<ul>
+	<li>Fixed - Changed button label "Abort Command" to "Cancel Command" in CITP menu.</li>
+	<li>Fixed - Option direct action has no function in layout options.</li>
+	<li>Fixed - Message boxes are not correctly displayed with the option for all or only actual screen.</li>
+	<li>Fixed - Preview always shows super priority per fixture.</li>
+	<li>Fixed - Focus of select MIB pop-up is out of view.</li>
+	<li>Fixed - Wrong labels for priorities in the off-menu.</li>
+	<li>Fixed - Wrong font size for readout button in effect line editor.</li>
+	<li>Fixed - Selection in tracking sheet only shows wrong fixtures when stepping through the selection.</li>
+	<li>Fixed - After loading old show files a stored help view can appear as empty.</li>
+	<li>Fixed - Some Clay Paky fixtures have wrong gobo index rotation values.</li>
+	<li>Fixed - sACN only analyses packets with start code 0 for input.</li>
+	<li>Fixed - Crash when sending thousands of commands via telnet.</li>
+	<li>Fixed - Color wheel color is also shown in layout objects of visualization type filled.</li>
+	<li>Fixed - Virtual keyboards for text input fields in the layout pop ups missing.</li>
+	<li>Fixed - PSR Prepare wizard shows not correct amount of fixtures when using option merge others.</li>
+	<li>Fixed - Assign options field mode for group masters does not show in the field border, that it has more than 2 options.</li>
+	<li>Fixed - onPC crashes when cloning the same fixtures on a x64-computer.</li>
+	<li>Fixed - Loading a show file with a selected surface will switch off some executor faders.</li>
+	<li>Fixed - Endless loop when opening a pop up while pressing tab-key.</li>
+	<li>Fixed - 2Port Node: If 2Port node is in art net mode, and the art net sender disappears the last frame is hold forever.</li>
+	<li>Fixed - Looping of macros is not working. Goto has to be used to jump directly to a specific macro line.</li>
+	<li>Fixed - Command line shows not, if the user is in EditSetup(Patch &amp; Fixture Schedule) or in LiveSetup(Patch only). Command line default(e.g. Channel or Fixture) is now replaced while being in one of these two setups with the correct identifier. All command line operations can still be executed. For selecting e.g. fixtures, the user has to enter the Fixture manually into command line as in the setup is no command line default available.</li>
+	<li>Fixed - Seq- mask without function.</li>
+	<li>Fixed - Image pool importer shows question mark if file could not be imported.</li>
+	<li>Fixed - Import and Export of Pages does not work for all playback options.</li>
+	<li>Fixed - Colors for preset-type timings are wrong.</li>
+	<li>Fixed - Thumbnails for Image-Pool is set to small by default.</li>
+	<li>Fixed - Sorting of Layers in Patch &amp; Fixture Schedule is wrong.</li>
+	<li>Fixed - Crash when importing Sequence xml files with corrupt data.</li>
+	<li>Fixed - UpdateFirmware does not show correct informations.</li>
+	<li>Fixed - Crash when opening diagnostics pop-up and desk is out of memory.</li>
+	<li>Fixed - Knocking in fixtures does not use a applied filter.</li>
+	<li>Fixed - Assigned Effects are shown as running after Off Page command.</li>
+	<li>Fixed - Better error message in system monitor, if wheel slot has no media image.</li>
+	<li>Fixed - Selection only-mask is not working in Tracking Sheet.</li>
+	<li>Fixed - Web remote: Users with user-right none can see playbacks.</li>
+	<li>Fixed - Blind- and Preview-mode clear programmer after store or update.</li>
+	<li>Fixed - System monitor will bring an error message, if content can't be played back.</li>
+	<li>Fixed - Replace Fixture 1 with Fixture 2 fails.</li>
+	<li>Fixed - Export and Import Page does not handle all executor options.</li>
+	<li>Fixed - Replace without value replaces the default.</li>
+	<li>Fixed - Dimmer values of some Martin- and SGM-Fixtures.</li>
+	<li>Fixed - Record-command does not work as toggle.</li>
+	<li>Fixed - Crash when loading a show-file with empty patch lines.</li>
+	<li>Added - Limitation of Image-Pool: In total 100MB, maximum size of single object is 64MB.</li>
+	<li>Fixed - Pasting a cue will create cue with same cue number.</li>
+	<li>Fixed - Default Sequence Options are not recalled correct.</li>
+	<li>Fixed - Default link value can't be changed with middle mouse button in tracking sheet.</li>
+	<li>Added - Disabled macro lines will be shown in red in edit macro mode.</li>
+	<li>Fixed - Executors with width &gt;2 show priority correct.</li>
+	<li>Fixed - Encoder Grouping for barn doors in new shows.</li>
+	<li>Fixed - Updating a global preset with store mode selective and Original Content Only is changing global values.</li>
+	<li>Fixed - Copy Executor-pop up has no Merge-button.</li>
+	<li>Fixed - Sequence option Cue Zero Extract is not executed, when Cue Zero is already on.</li>
+	<li>Fixed - Update-files are deleted after install.</li>
+	<li>Fixed - Release and Default values are not exported correctly in Sequences.</li>
+	<li>Fixed - Desk lock prevents screen saver to start.</li>
+	<li>Fixed - Inverting Pan and/or Tilt is not possible, if more than 1 Pan/Tilt-attribute is in the show.</li>
+	<li>Fixed - Session Collision-dialog provides too many buttons, if both masters are in different subnets.</li>
+	<li>Fixed - Missing number-column in CITP Network Configuration.</li>
+	<li>Fixed - Renamed Layout Selection-button to Select Layout.</li>
+	<li>Fixed - After disabling remote-input, the state of the remote is not reset.</li>
+	<li>Fixed - Move Screen-command does not work.</li>
+	<li>Fixed - SearchResult is not working as command filter.</li>
+	<li>Fixed - Fade is not correct, if a sequence is overtaking values from the programmer.</li>
+	<li>Fixed - Oops is switched on, of Oops-List will be opened.</li>
+	<li>Fixed - Oops is possible in DMX Patch dialog.</li>
+	<li>Fixed - Crash in year view of Agenda.</li>
+	<li>Fixed - Changing a running template effect does not refresh output.</li>
+	<li>Fixed - Macro state is not displayed on Executors.</li>
+	<li>Fixed - Crash when trying to apply a DMX profile.</li>
+	<li>Fixed - Storing multiple views can freeze the screen.</li>
+	<li>Fixed - Changing Effect-parameters of running selective effects in the programmer restart the effects.</li>
+	<li>Fixed - Crash when doing PSR initialize.</li>
+	<li>Fixed - Rotation of Bitmap Fixture has impact on changing position.</li>
+	<li>Fixed - Wrong ranges in FixtureTypes.</li>
+	<li>Fixed - PSR does not copy infos.</li>
+	<li>Fixed - Exporting pages does not export playback- and input-filters.</li>
+	<li>Fixed - Crash when creating additional presets.</li>
+	<li>Fixed - 3D Objects are not sorted by Fixture ID.</li>
+	<li>Fixed - Goto messes up fade times, when values are tracked from part cues.</li>
+	<li>Fixed - Crash when executing GoBack with a macro.</li>
+	<li>Fixed - Go works not for macro lines, if timing is disabled.</li>
+	<li>Fixed - Encoder tool-bar for editing a Layout does not reopen after changing to PresetType encoder tool-bar and back.</li>
+	<li>Fixed - Using form Release in an effect, does not apply the correct values.</li>
+	<li>Fixed - Changing running Effects in a network environment.</li>
+	<li>Fixed - MSC over Ethernet is always sending MSC at the session master.</li>
+	<li>Fixed - Web remote: Pop-ups can be canceled by pressing escape-key or close-button.</li>
+	<li>Fixed - World symbol disappears in the Message Center after show upload.</li>
+	<li>Added - At command for Gel, e.g. At Gel "Lee"."Mauve" or At Gel 7."126" or At "Lee".61. Also added a new predefined macro called "Gel".</li>
+	<li>Fixed - Web remote: All Views doesn't remember their last scroll position when coming back from a pop-up.</li>
+	<li>Fixed - Using Release as Effect form is destroying cue values.</li>
+	<li>Fixed - Web remote: Store-pop-up does not appear.</li>
+	<li>Fixed - Not all element-options of layout-elements are exported.</li>
+	<li>Fixed - Creating a new xPortNode in MA Network Configuration shows only 4 ports.</li>
+	<li>Fixed - Effect playback can be out of sync after inviting a NPU into session.</li>
+	<li>Fixed - Presets can't be deleted if it was imported and Fixture Type is missing.</li>
+	<li>Fixed - Moving Exec Pages is not transferred in the network.</li>
+	<li>Fixed - Playbacks are not switched off, if Fixture Type has values in the programmer.</li>
+	<li>Fixed - Crash when changing Fixture Type of a Fixture via command line.</li>
+	<li>Fixed - Internal Art-Net-routing is not working.</li>
+	<li>Fixed - HSI visualization is not working.</li>
+	<li>Fixed - Overlay-Attribute is now a child of Gobo-Feature.</li>
+	<li>Fixed - Disabled macro lines have to be skipped by pressing Go, if Wait is set to Go.</li>
+	<li>Fixed - Priority of effects assigned to an executor cannot be changed via command line.</li>
+	<li>Fixed - Parameter and Sensor-buttons are merged into RDM Info-button in RDM devices-window.</li>
+	<li>Fixed - Resetting multi patch fixtures does not work in stage view.</li>
+	<li>Fixed - Deleting layout elements is not possible after changing IDs.</li>
+	<li>Fixed - Fixture Type-macros are not listed in a Fixture Type in command line.</li>
+	<li>Fixed - Wrong values in calculator for ColorRGB when using CMY readout.</li>
+	<li>Fixed - pop-up when copying Executor 1 at 2 has too much options.</li>
+	<li>Fixed - Not all Sequence-options are streamed correct in the network.</li>
+	<li>Fixed - LampOn-Function Set is labeled as Closed.</li>
+	<li>Fixed - Extended possible physical range for Fixture Types from -40000 to +40000</li>
+	<li>Fixed - Recording Macros won't record pressing Executors.</li>
+	<li>Fixed - Loading a show in MA 3D won't disconnect the station of the session.</li>
+	<li>Fixed - Desklock-options shows always Images, also if option is set to black or current screen.</li>
+	<li>Fixed - Unmatch-button is always available.</li>
+	<li>Fixed - RDM is enabled for all Universes for older show files.</li>
+	<li>Fixed - RDM-ID-pop-up has only 1 Close-Button.</li>
+	<li>Fixed - pop-up for creating new Notification is in the wrong place.</li>
+	<li>Added - Preset-mode Button in Update-Menu for updating Presets.</li>
+	<li>Fixed - Focus is set wrong in RDM Devices-window when closing a pop-up.</li>
+	<li>Added - RDM Parameters can be set in RDM View.</li>
+	<li>Fixed - Minor Bugs with Buttons in RDM-Match-Dialog.</li>
+	<li>Fixed - PMArea-keyword has no options listed.</li>
+	<li>Fixed - RDM-Devices window is not updated, when open.</li>
+	<li>Added - Iris Pulse Open, Iris Pulse Close and Iris Pulse Random is now visualized.</li>
+	<li>Fixed - Only RDM DMX Footprint is changed, when changing RDM Fixture Type.</li>
+	<li>Fixed - MA Network Config: IP-column is now sorted by default.</li>
+	<li>Fixed - Bitmap Fixture uses own timebase and not the one of the video.</li>
+	<li>Fixed - Infos of Macros is not completely shown in grid view of Macro-Pool.</li>
+	<li>Fixed - Web remote: Auto-Scroll in Sequence Executor Sheet.</li>
+	<li>Fixed - Web remote: Improved texts for too many connections and disabled remote login.</li>
+	<li>Fixed - Improved Import Images-pop-up for better use with Screen-Encoder and Please-key.</li>
+	<li>Fixed - Calculators on Encoders when editing a Layout.</li>
+	<li>Fixed - Programmer of different User in multi-user-environment is also cleared, if user clears his programmer , when XYZ is used.</li>
+	<li>Fixed - Bug with Search &amp; Replace.</li>
+	<li>Fixed - Bitmap Fixture is updated live, if arrangement of Fixtures in Layout is changed, while using a Bitmap Fixture.</li>
+	<li>Fixed - Crash when entering Network Protocols-menu.</li>
+	<li>Fixed - Web remote: Faders are updated too slow.</li>
+	<li>Fixed - BPM has no Function-Buttons in Master-Section.</li>
+	<li>Fixed - Crash when using multi patch fixtures with Bitmap Fixture.</li>
+	<li>Fixed - Stored fader positions are recalled correctly, if faders at position 0 were moved.</li>
+	<li>Fixed - Universe column in RDM-Sheet is not fixed anymore.</li>
+	<li>Fixed - Crash when deleting Image, while a Bitmap Fixture is it using.</li>
+	<li>Fixed - Web remote: Lasso selection outside Fixture-Sheet can make it non operable.</li>
+	<li>Fixed - Wrong conversion of Group names.</li>
+	<li>Fixed - Zoom for Bitmap Fixture works now correct.</li>
+	<li>Fixed - Preview in Import Image-Dialog is not working.</li>
+	<li>Fixed - Network for Art-Net is calculated wrong.</li>
+	<li>Fixed - Fixture Types are labeled correct in all views.</li>
+	<li>Fixed - Wrong output when updating a cue while a fade is still running.</li>
+	<li>Fixed - Assign Model x at Item3D is not working.</li>
+	<li>Fixed - Flickering of Action Buttons.</li>
+	<li>Fixed - Shuffle selection order for effect is not updating a effect running in the programmer.</li>
+	<li>Fixed - Z-Parameter for Bitmap Fixture is not working.</li>
+	<li>Fixed - Scroll- and focus-position in Universe-Pool in sheet-style is wrong after show upload.</li>
+	<li>Fixed - Navigation in Import Image-dialog is limited after importing images from a USB-Stick.</li>
+	<li>Fixed - RDM Devices-dialog is not updated, User has to leave and reenter it for updates, if new RDM-Fixtures were detected.</li>
+	<li>Fixed - Import Image-dialog is not importing all Images when using multi selection.</li>
+	<li>Fixed - Edit Fixture showed wrong data.</li>
+	<li>Fixed - Default form for effects changed back to Sinus.</li>
+	<li>Fixed - Wrong coordinates for new elements in existing Layouts.</li>
+	<li>Fixed - Multi User Access Conflict when trying to unblock a Cue.</li>
+	<li>Fixed - Behavior of Exec CLI and Default Go, Goback and Pause-CLI.</li>
+	<li>Fixed - Wrong place for RDM-Icon in Layout-Objects.</li>
+	<li>Fixed - Importing Sequence can cause a crash.</li>
+	<li>Added - Title-Button Edit Mode in Setup-Mode of Layouts got more options.</li>
+	<li>Fixed - Warning in diagnostics if Fixture Type has only a fine or ultra-channel.</li>
+	<li>Fixed - Crash when editing a DMX-Profile via command line.</li>
+	<li>Fixed - New default order for columns in RDM-Sheet.</li>
+	<li>Fixed - Edit RDM-ID shows only UID of last detected RDM-Fixture.</li>
+	<li>Fixed - Attribute Encoder grouping for ColorHSB.</li>
+	<li>Fixed - Crash when trying to assign a new function to buttons of Master-Section.</li>
+	<li>Fixed - Users with user right Preset can't update Presets.</li>
+	<li>Fixed - Single Shot-state is correctly transmitted within the network.</li>
+	<li>Fixed - Several Fixture Types that were generated wrong.</li>
+	<li>Fixed - Command Assign Camera X/Fixture="FixtureName" is not working.</li>
+	<li>Fixed - RDM Match to MA Fixture-dialog reacts not on press of screen encoder.</li>
+	<li>Fixed - RDM Devices-dialog shows sometimes wrong RDM DMX footprint in filtered view.</li>
+	<li>Fixed - Multi patch of Fixtures without class is not possible.</li>
+	<li>Added - Save to Default and Load from Default-Buttons for RDM-Sheet.</li>
+	<li>Fixed - Fixture Types can't be stored in Cues anymore.</li>
+	<li>Fixed - Changing pool colors are not visible immediately.</li>
+	<li>Fixed - Reset Settings for Pools is not working correct.</li>
+	<li>Fixed - Assigning DMX-Profiles to virtual channels is possible.</li>
+	<li>Fixed - Web remote: Pressing Connect-Button will logout from Web remote.</li>
+	<li>Fixed - New Carallon Library, v12 implemented.</li>
+	<li>Fixed - Shaper position of VL1000&amp;VL1100 in MA 3D.</li>
+	<li>Fixed - DMX-Tester is not releasing in network.</li>
+	<li>Fixed - Link Effect to Rate-Option for Executors is not set correctly.</li>
+	<li>Fixed - Web remote: Pressing escape stays in Edit Preset-mode at Web remote.</li>
+	<li>Fixed - DMX Remotes with type programmer are not changed if within a DMX frame more than 512 channels are changed.</li>
+	<li>Fixed - Visualization of illegal ranges for From/To DMX-values in Diagnostics-dialog.</li>
+	<li>Fixed - Command Update Cue thru with applied filter will reset filter after updating first cue.</li>
+	<li>Manually arranged Features(columns) in the Fixture-Sheet are now stored within the View.</li>
+	<li>Fixed - Sound-Input for grandMA2 replay unit (RPU).</li>
+	<li>Fixed - Color Dialog does not follow selected Feature, if Fixture has ColorRGB and HSB.</li>
+	<li>Added - Copy and Move Cue-Parts.</li>
+	<li>Fixed - Updating Setup is destroying Cue-data.</li>
+	<li>Fixed - Focus is not set to Off-Menu, if it is opened.</li>
+	<li>Added - If Arrange is used, the new arrangement will be placed in the center of the current view in the layout.</li>
+	<li>Fixed - If any User is in Edit Setup, the Patch To-Functionality of the DMX-Tester can also be used.</li>
+	<li>Fixed - XML object files of future grandMA2-Versions can be imported into same or older versions.</li>
+	<li>Fixed - Import of media from a USB-Stick will create an invalid object.</li>
+	<li>Fixed - Crash if the creating of the current logged in User and User-Profile is oopsed.</li>
+	<li>Fixed - Info for Macros is not transmitted in the network.</li>
+	<li>Fixed - Column-width for user created Attributes is not saved with the view.</li>
+	<li>Fixed - Follow-function in Stage-View is not working correct.</li>
+	<li>Fixed - Crash when importing a special User-Profile into a new show.</li>
+	<li>Fixed - Storing selective data into a Universal-Preset will store Universal- and Global-data.</li>
+	<li>Fixed - Moving Executors can cause the old Fader to stay on top.</li>
+	<li>Fixed - Replaced MASTERINTENSITY-Attributes with DIM and RED/GREEN/BLUEMASTER with COLORRGB1/2/3.</li>
+	<li>Fixed - Changed DMX-Refresh to 1.06sec(sACN, etc.)</li>
+	<li>Added - /gateway-option for SetIP-command.</li>
+	<li>Fixed - Physical range for Gobo Index is limited to 0°-45°.</li>
+	<li>Added - grandMA2 supports now up to 8 Patch-Breaks.</li>
+	<li>Fixed - Over-style for paths is replaced by Medium-style.</li>
+	<li>Fixed - Oopsing a selection results in un-selectable Fixtures or Groups.</li>
+	<li>Fixed - Aborting Macros will show their status correctly and restart it, if the User executes it again.</li>
+	<li>Fixed - xPortNodes: IP of second interface(eth0.1) is not generated correctly when doing a Full Install.</li>
+	<li>Added - Empty-Keyword for assigning Empty to executor buttons.</li>
+	<li>Fixed - Removed Mirror-Button in Edit Effect line Phase.</li>
+	<li>Added - Web remote for xPort-Nodes. Password is admin.</li>
+	<li>Fixed - Wrong sorting of Direct Access-Shortcuts in Setup/Console/Edit Keyboard Shortcuts.</li>
+	<li>Fixed - Title bars of onPC show wrong label "Display X". Changed to "Screen X".</li>
+	<li>Removed - Keyboard_Shortcuts.xml, predefined.xml is used.</li>
+	<li>Fixed - Crash when Info-Cue-pop-up is open and user tries to Label the Executor.</li>
+	<li>Fixed - Indicators in Wing and Monitor Setup are not updated, after grandMA2 FaderWing is disconnected.</li>
+	<li>Fixed - Oops title bar relabeled from Multi-Ooops to Oops.</li>
+	<li>Fixed - Relabeled RDM address to RDM DMX address.</li>
+	<li>Added - World-Indicator in Setup/Show/AutoCreate.</li>
+	<li>Added - DHCP-Support in MA xPortNode.</li>
+	<li>Fixed - Some Fixture Types duplicate Fixture-Macros when changing setup.</li>
+	<li>Fixed - Crash when editing Presets, if Fixture Type is initialized wrong.</li>
+	<li>Fixed - Better scaling and resolution calculation for Bitmap Effects.</li>
+	<li>Fixed - Selective All-Presets can be converted to global after changing Setup.</li>
+	<li>Added - New global variable SHOWFILE.</li>
+	<li>Fixed - Plugins will not create Multi-User-Access-Conflicts.</li>
+	<li>Fixed - Allowed : as character for labels.</li>
+	<li>Fixed - Unified Scrollbar-Labels in View-Options.</li>
+	<li>Fixed - Removed the word "Mode" at the end of every entry in Groupmaster-drop-down.</li>
+	<li>Fixed - Changed name "Powerfailure" to "Power Failure" in Message Center.</li>
+	<li>Fixed - Changed "Enable Marker" to "Marker" in Sheet-Options.</li>
+	<li>Fixed - LUA: gma.gui.confirm freezes the desk.</li>
+	<li>Fixed - LUA: gma.import()-Function is broken.</li>
+	<li>Fixed - Crash when importing ASCII-Files of non-supported Desks.</li>
+	<li>Fixed - Resized Setup/User/Settings/Trackball Rotation Dialog to provide enough space for title label.</li>
+	<li>Fixed - Relabeled Value times to Value Times in Command Filter.</li>
+	<li>Fixed - Relabeled different variations of Groupmaster into Group Master in the whole UI.</li>
+	<li>Fixed - Command line Names for DMX Nodes, NDP Dimmer, etc. in NetConfig is broken. cd "DMX Nodes" does not work.</li>
+	<li>Fixed - Position of vertical Scrollbar is not stored inside the View.</li>
+	<li>Added - Web remote: Added Page label in Playback-View.</li>
+	<li>Fixed - Update Please is not working with Sequences on locked Executors.</li>
+	<li>Fixed - Crash: When changing in Assign-Menu to Options via hard key U2, if Select Fader Function-pop-up is open.</li>
+	<li>Fixed - U is not shortcut for Update anymore.</li>
+	<li>Improved - Oops-Handling of 3D-Items in Edit Setup.</li>
+	<li>Fixed - Changing label for Objects in Image-Pool Sheet-Style is not possible.</li>
+	<li>Fixed - Crash: When leaving Setup, if another User in the Session has opened a Goto-pop-up.</li>
+	<li>Fixed - Crash: When enabling "Only Selected" in DMX-View, if using Multi-Instance-Fixtures.</li>
+	<li>Fixed - Content of selected USB-Stick is not shown when opening Import Plugin-Dialog.</li>
+	<li>Fixed - Crash: If Off is enabled, Attributes in Select Effect Attribute-pop-up are deselected, and Off-Key is pressed again.</li>
+	<li>Added - Auto-Option added for Store to use the PresetScope.</li>
+	<li>Added - Columns for RDM and Info in Universe-Pool Sheet Style.</li>
+	<li>Fixed - MA NSP DMX In is missing in 4Port-Mode.</li>
+	<li>Fixed - onPC has problems to interact correctly between Shapers-special dialog and Preset Type-Bar.</li>
+	<li>Fixed - Renamed Cmd Delay to CMD Delay in Sequence Executor Sheet.</li>
+	<li>Fixed - If focus is not on first screen when starting onPC Return-key events or scrolling with mouse wheel can be lost.</li>
+	<li>Fixed - Copying Pool Objects to a range-destination will freeze the desk.</li>
+	<li>Fixed - Auto update of single Fixture-Groups is not done, when ID or Fixture-name is changed.</li>
+	<li>Fixed - Removed X-&amp;Y-Options for Update.</li>
+	<li>Fixed - Removed useless Options for Storelook.</li>
+	<li>Fixed - Preset Type-Timings are not manipulated, if a Rate-Master is used.</li>
+	<li>Fixed - Outgoing telnet-commands don't have carriage return and line feed at the end of the command.</li>
+	<li>Fixed - Park Channel X at Full does not work.</li>
+	<li>Fixed - Lasso-Selection in Timecode-Editor can exceed windows boundaries.</li>
+	<li>Fixed - Web remote: Store + tapping a Pool-Object does not work.</li>
+	<li>Fixed - Web remote: Loading a show while connected with Web remote can cause a crash.</li>
+	<li>Fixed - Web remote: Problems with Login.</li>
+	<li>Fixed - Fixture-Library: Fixture Types with FOCUS2 and FOCUS3-Attributes have wrong default values.</li>
+	<li>Fixed - Desk crashes when Telnet-connection is closed too early.</li>
+	<li>Fixed - Crash when doing a LayoutSelection in combination with Off-command.</li>
+	<li>Fixed - Edit MAtricks show Single X and Y input fields.</li>
+	<li>Fixed - Removed horizontal scrollbar for DMX-sheet.</li>
+	<li>Fixed - Function Sets of Fixture Types that have the same names as default functions(Off, Remove, Release, etc.), will not call the Function Sets.</li>
+	<li>Fixed - Sound Form 6 and 7 are not called correctly in the calculator.</li>
+	<li>Fixed - Loss of performance with 2 external FullHD-Screens.</li>
+	<li>Fixed - Edit Cue: Cue numbers dialog rounds numbers.</li>
+	<li>Fixed - Issues with external Touch screens: Acer T232HLAbmjjz.</li>
+	<li>Fixed - DMX Nodes-Tab Session/Network-column is to small.</li>
+	<li>Added - Additional Desklock with MA + Fix for consoles.</li>
+	<li>Fixed - Update global Preset.</li>
+	<li>Fixed - X-Keys are not lit up, if a Sequence is stored on it.</li>
+	<li>Fixed - Auto-created-Flag(#) for Presets is still shown, if Presets are imported over Auto-created-Presets.</li>
+	<li>Fixed - ASCII import matches Fixtures to the wrong Fixture Types.</li>
+	<li>Improved - Handling of illegal characters.</li>
+	<li>Fixed - Crash when editing a fixture position column containing fixtures without body.</li>
+	<li>Fixed - Channel Sheet-Options: Channel Sort is labeled as Fixture Sort.</li>
+	<li>Verified - MA grandMA2 onPC &amp; MA 3D are tested with Windows 10.</li>
+	<li>Fixed - Split Xfade for non-tracking Sequences is not working.</li>
+	<li>Fixed - MSC is not sending Cue number when executing GoBack.</li>
+	<li>Fixed - MSC does not support all Pages and Executors.</li>
+	<li>Fixed - Mounting a FTP-Server fails sometimes.</li>
+	<li>Cleanup - pop-ups for Crashme- and No Parameters-pop-ups adjusted.</li>
+	<li>Fixed - Store Cues into free cue numbers shows wrong Store-pop-up.</li>
+	<li>Fixed - CITP thumbnail exchange fails in special circumstances if there are no elements in the folder on the server.</li>
+	<li>Fixed - The width of the navigation-area is not adjustable in the Help-View.</li>
+	<li>Fixed - Crash when using Executors above 220.</li>
+	<li>Improved - Better text for UpdateSoftware-pop-up.</li>
+	<li>Fixed - Park DMX 1.1 Thru will freeze the desk for some seconds.</li>
+	<li>Added - Implemented Carallon Library v11.6.</li>
+	<li>Fixed - Shaper Special Dialog: shaper rotation does not work with values below zero.</li>
+	<li>Fixed - Assert Effect transitions are not working.</li>
+	<li>Fixed - Crash when importing XML-files.</li>
+	<li>Fixed - Empty Executors can be fixed in some circumstances.</li>
+	<li>Fixed - New Show: Clear Time Config does not reset the Date&amp;Time-options to default.</li>
+	<li>Added - Info-Column per Network Protocol implemented.</li>
+	<li>Changed - Network Control and MA Network Config: Station name is now labeled as Hostname.</li>
+	<li>Network Control: If Text is longer than cell, ... is showed at the end of the cell.</li>
+	<li>Added - Useless Effect functions for the actual Effect-Form are grayed out.</li>
+	<li>Fixed - Bug with onPC: Effect Pool Object didn't update the label when renaming.</li>
+	<li>Fixed - PresetScope changed by user are now stored with the show file.</li>
+	<li>Fixed - Flickering of Multi-Width-Executors when refreshing the Page.</li>
+	<li>Fixed - onPC shows in timecode-encoder bar the full timecode ID.</li>
+	<li>Fixed - Removed all entries of Rate16 in the UI.</li>
+	<li>Fixed - Assigning Effects on Executors.</li>
+	<li>Fixed - Options for some function keywords.</li>
+	<li>Fixed - Continuous enumeration of Cha-/Fix-IDs repaired.</li>
+	<li>CleanUp - Wheel Mode and Wheel Resolution changed to Dimmer Wheel Mode and Dimmer Wheel Resolution.</li>
+	<li>Fixed - Interaction between Encoder-Settings-pop-up and User-Settings for Dimmer Wheel improved.</li>
+	<li>Fixed - DMX [Please] brings DMX-key-word back to command line as default.</li>
+	<li>Fixed - Redraw-Bug: Gobo-Thumbnails are not updated in Gobo-Preset-Pool when entering a world.</li>
+	<li>CleanUp - Encoder Settings pop-up-Text got alignment is improved.</li>
+	<li>Fixed - Command line-Options for Clone missed /noconfirm.</li>
+	<li>Fixed - W as shortcut for World was broken.</li>
+	<li>Added - Warning for Universe-Pool implemented if Pool-Object should overwrite another.</li>
+	<li>CleanUp - Sheet Options: Layer Mask-dropdown was labeled with Select Select Layer Mask.</li>
+	<li>CleanUp - Execs without a Fader-Function don't show a "0" as fader value anymore.</li>
+	<li>Fixed - Improved Preset mode handling: Cloning "deleted" Universal-Indicator of Presets.</li>
+	<li>CleanUp - Removed Follow-column in Oops-Menu.</li>
+	<li>Fixed Crash: Cloning of sub-fixture.</li>
+	<li>Fixed - Layout-View: If too many objects were too big, not all objects could be rendered - &gt; white objects.</li>
+	<li>Fixed - NDP: Session is not slowed down if NDP is in Session.</li>
+	<li>Fixed - Clone FT at FT failed.</li>
+	<li>Added - AutoCreate HSB-Presets: Sort option for HSB implemented.</li>
+	<li>Fixed - Timers are not counting down to zero when using a value with fractions of seconds.</li>
+	<li>Fixed - Assigned Effects remember their Priority-Settings.</li>
+	<li>Fixed - Executor were trigged instead of Effect Pool-Object.</li>
+	<li>Fixed - X-Keys Button back-light is wrong when using User-keys.</li>
+	<li>Fixed - JPG were not correctly imported.</li>
+	<li>Fixed - Bitmap effects didn't work properly with 32bit Bitmaps.</li>
+	<li>Added - Implemented new Desk Lock-Screen-Functions: Lock with black screen, Lock and show background of desk, Lock with User-Image.</li>
+	<li>Fixed - Info View: Options-pop-up cannot be closed with Escape-Key.</li>
+	<li>Fixed - Selective effect editor calculator is not updating programmer output when played back in programmer.</li>
+	<li>Fixed - onPC-Key "Encoder Settings" uses the layout of the Encoder-key of the desk(Nipple-Button).</li>
+	<li>CleanUp - Command line Feedback is relabeled to Command Line Feedback.</li>
+	<li>Fixed - Several Out of Memory-Crashes.</li>
+	<li>Changed - GrandMaster &amp; B.O. renamed to GrandMaster &amp; Misc Keys.</li>
+	<li>Fixed - Thumbnail-default in Preset-Pools is "No thumbnails".</li>
+	<li>Fixed - Help View: Size of navigation area is not changeable.</li>
+	<li>Fixed - FTP-Server allows anonymous-user to log in &amp; mget is not possible.</li>
+	<li>Fixed - Edit + Macro assigned on a X-Key fires Macro.</li>
+	<li>Fixed - All U-Buttons are flashing when only pressing one U-Key.</li>
+	<li>Fixed - Littlight renamed to Desk Lamp.</li>
+	<li>Fixed - Preview: Part-Encoder is labeled different in Encoder-Bar and Encoder-Bar-View.</li>
+	<li>Changed - Language column text alignment is center.</li>
+	<li>Fixed - Sequence Editor View has grid cell gradient.</li>
+	<li>Fixed - Default PresetScope is Selective for all Preset Types.</li>
+	<li>Fixed - Low Prio-Merge when cloning Color-Presets.</li>
+	<li>Fixed - Better BPM handling for SoundToLight.</li>
+	<li>Fixed - Minor UI improvements in MA Network Control: Hostname instead of Station name; Cells with larger text show "..."</li>
+	<li>Fixed - Bug with importing timecode-shows stored in 3.0</li>
+	<li>Fixed - Fixture macros don't generate waste in the Fixture Types anymore.</li>
+	<li>Fixed - Crash when exporting an User profile.</li>
+	<li>Improved - Command line-Options for a lot of commands.</li>
+	<li>Fixed - Individual PresetScope is not lost any longer.</li>
+	<li>Improved - Effect Editor calculator is updating the programmer output, while played back in programmer.</li>
+	<li>Fixed - MFade shows now correct OFF-Time.</li>
+	<li>Fixed - Crash when deleting Fixture Layers.</li>
+	<li>Fixed - Crash when updating running Effects.</li>
+	<li>Fixed - Color transformed data is not lost anymore when cloning.</li>
+	<li>Added - Info column in Network Protocols per Protocol-Entry.</li>
+	<li>Improved - Better handling of Prism-Attributes in Fixture Types.</li>
+	<li>Fixed - Cue Zero Extract is converted correctly.</li>
+	<li>Added - Programmer Sync with executing Top.</li>
+	<li>Fixed - Effect Pool Objects are updated after label, if Effect Pool and Effect Editor are displayed on the same screen.</li>
+	<li>Fixed - Some crashes with PSN</li>
+	<li>Added - Stage View Position Calculator has now an "+/-"-Key.</li>
+	<li>Fixed - Timers are now counting always to zero.</li>
+	<li>Fixed - Help interaction of Command Filter-View</li>
+	<li>Fixed - It's now possible to use the Previous/Next-Buttons in Edit Fixture again.</li>
+	<li>Fixed - Cell width in Edit Fixture is saved.</li>
+	<li>Fixed - Parked Preset Types are now shown correctly.</li>
+	<li>Fixed - Crash when using DMX-Sheet-Option "Only Selected" and XYZ-mode.</li>
+	<li>Fixed - Better Handling of Store ViewButton, when a View is assigned to the ViewButton.</li>
+	<li>Fixed - Individual ChannelType Color and Minimum DMX Time are not lost after reimport.</li>
+	<li>Improved - Better displaying of DX-values in DMX-Sheet while using BlindEdit- or Preview-Mode.</li>
+	<li>Improved - Better handling of Effect cells, which can't be used with the actual chosen form.</li>
+	<li>Improved - grandMA2 Pixel Mapper-View: improved user interface.</li>
+	<li>Improved - Crashlogcopy writes crash-log directly to the USB-Stick, ejecting it, is not required anymore in this case.</li>
+	<li>Added - Store View-options supports now more screens, e.g. Store View 22 /SCREEN=2,3,4,6.</li>
+	<li>Fixed - Swop kills only dimmer effects.</li>
+	<li>Fixed - Sequence Executor Sheet shows now the same duration time as a Mini Executor progress bar.</li>
+	<li>Fixed - Chat Messages does not appear on the sending station anymore.</li>
+	<li>Fixed - VPU icons are now visualized in the Video Preset-Pool.</li>
+	<li>Fixed - Presets created from Preset Reference.</li>
+	<li>Improved - Individual Timings in the Sequence Sheet are now editable per Cue Part.</li>
+	<li>Improved - Auto-naming of Presets.</li>
+	<li>Fixed - Flickering of Multi-Width-Executors, when calling the same Page again.</li>
+	<li>Fixed - Smart View does not jump back to first line.</li>
+	<li>Fixed - Touch sensitive Faders are reacting to the "Playback Big"-View.</li>
+	<li>Fixed - Linking Cues to timecode events after import of timecode-show.</li>
+	<li>Fixed - Merging of Remove-Values in Presets.</li>
+	<li>Fixed - Problems when naming Forms duplicated from the default ones.</li>
+	<li>Added - Command line support for No Master, Speed- and Rate-Master in Effects: Assign Effect x/SpeedGroup="No Master"; Assign Effect x/SpeedGroup="Speed Y"; Assign Effect x/SpeedGroup="Rate Z";"</li>
+	<li>Fixed - Storing an Effect out of Programmer will save also the chosen Form.</li>
+	<li>Fixed - Selection Only in Tracking Sheet.</li>
+	<li>Fixed - Partial Show Read (PSR) for Forms.</li>
+	<li>Fixed - ProgramTime X-Fade also works with ClearAll.</li>
+	<li>Fixed - grandMA2 Pixel Mapper-View: Rulers are optimized for bigger dimensions.</li>
+	<li>Fixed - IfOutput for Effects only selects Dimmers above 0.</li>
+	<li>Fixed - Extract Preset works also with LAYER=EffectLow/EffectHigh.</li>
+	<li>Added - VPU supports now 16 Cameras.</li>
+	<li>Fixed - Color transformation works now with at least one Color-Component.</li>
+	<li>Fixed - Remote DMX input works also for Special Masters.</li>
+	<li>Fixed - Crash when deleting Multi-Width-Executors.</li>
+	<li>Fixed - Embedded Presets with no active data are not shown in the Update-List.</li>
+	<li>Improved - Better Calculator-limits in the Sequence Executor-Sheet.</li>
+	<li>Fixed - Midi Show Control(MSC) Set Fader supports more than the first Page.</li>
+	<li>Fixed - Prohibited editing Position and Rotation of sub-fixture, if the Instance is locked.</li>
+	<li>Fixed - Color-picker Link Encoder works now.</li>
+	<li>Fixed- Conversion Bug of show files 2.[0-6]</li>
+	<li>Fixed - Color conversion in Cues after exchange of Fixture Types.</li>
+	<li>Fixed - Sunset/Dusk times are reversed.</li>
+	<li>Fixed - Deleting an Effect will not start an assigned one.</li>
+	<li>Fixed - Crash when deleting a fixed Multi-Width-Executor.</li>
+	<li>Fixed - XYZ support in BlindEdit.</li>
+	<li>Fixed - Goto + a cue in a Sequence Executor Sheet, will execute the command for the shown Executor.</li>
+	<li>Fixed - Setup/User/Windows Setting/Presets/ will show now also buttons for Sheet Style, Font and Call-Mode.</li>
+	<li>Fixed - Timecode-show now stops, when Option "When Ending Stop" is chosen.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>MA 3D</strong></p>
+
+<ul>
+	<li>Coordinate input fields got labels.</li>
+	<li>Fixtures without DMX-controllable blade and zoom, can have now properties for blade and zoom in 3D. Use new 3D-Model Conventional-Source Four.</li>
+	<li>MA 3D has now a better rendering of beams with and without using prism.</li>
+	<li>Stage Markers are working in Stage View and 3D.</li>
+	<li>Reset selected Object has now an Undo-Function.</li>
+	<li>Maximum Beam length increased by factor 10.</li>
+	<li>Fixed - 3D: Some 3D models have wrong textures.</li>
+	<li>Fixed - 3D: Progress bar is not showing current state while show download.</li>
+	<li>Fixed - 3D: Replacing 3D model with a custom one will cause wrong model orientation.</li>
+	<li>Fixed - 3D: Clearing programmer is not removing a gobo wheel spin from the render engine.</li>
+	<li>Fixed - 3D: Crash while session download if show contains video textures.</li>
+	<li>Fixed - 3D: UV mapping of some predefined objects is wrong.</li>
+	<li>Fixed - 3D: Ranges for manual blades, barndoors, zoom, etc. are wrong.</li>
+	<li>Fixed - 3D: Optimize column-function works not correct.</li>
+	<li>Added - 3D: Visualization of CTO, CTC and CTB. The user has to make sure, to add the correct physical values to the FixtureType.(e.g. a color temperature of 3000K is a physical value of 3000).</li>
+	<li>Fixed - Beam angle is correct rendered, when using prism.</li>
+	<li>Fixed - When scaling a 3D model, the beam size will not be scaled.</li>
+	<li>Fixed - Moving Items in Object-list via drag'n'drop mixes up the object order.</li>
+	<li>Fixed - Some 3D Models are not working correct.</li>
+	<li>Fixed - Coordinates of Cameras are not reset-able with "Reset selected Objects"-Button.</li>
+	<li>Fixed - MA 3D-Menu shortcuts only shown in English.</li>
+	<li>Fixed - Reset Selected Objects-function is not working.</li>
+	<li>Fixed - MA 3D Truss elements are not aligned correctly when using correct numeric positions values.</li>
+	<li>Fixed - Loop-back device is always present.</li>
+	<li>Fixed - Selection Bar in Camera/Camera Movement-Menu does not disappear anymore.</li>
+	<li>Fixed - 3D shows also Network Interface, if no network cable is plugged in.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong>MA VPU&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></p>
+
+<ul>
+	<li>At the initial start after the installation or the update of the VPU-application, the end user licence agreement is shown. The MA VPU application will not start, until the end user licence agreement is confirmed. If you are using a VPU Plus, the end user licence agreement is shown at the internal touch display. If you are using a VPU basic or VPU light, the end user licence agreement is shown at the first external DVI-output - so please make sure you have a display and a mouse attached to the VPU Basic or VPU Light. At the end user licence agreement the user has the choice to install additional third party codecs, which can be used at the new Hap-Converter.</li>
+	<li>Added a 64-bit version of the VPU application:
+	<ul>
+		<li>Setup file contains the 64-bit and 32-bit binaries.</li>
+		<li>The 64-bit application will automatically be installed, if you are running a 64-bit OS.</li>
+		<li>MA VPU Setup now installs the Main Concept 32-bit and 64-bit MPEG-2 Demo Decoder in accordance to the operation system. If you own a licensed version of the Main Concept Decoder and you are running the VPU application on a Media PC with a 64-bit OS, you need to install the Main Concept 64-bit MPEG-2 Decoder Pack manually.</li>
+	</ul>
+	</li>
+	<li>MA VPU now supports playback of video clips using the Hap-Codec:
+	<ul>
+		<li>Hap is an open-source GPU accelerated video codec.</li>
+		<li>The main benefits of Hap are:
+		<ul>
+			<li>Increased performance</li>
+			<li>Playback of clips with a resolution higher than 1920x1080</li>
+		</ul>
+		</li>
+		<li>Support of alpha-transparency:
+		<ul>
+			<li>There are 3 formats of Hap-Clips: Hap1, HapQ and HapAlpha</li>
+			<li>Hap1: Good quality, higher compression, smaller files, higher CPU load, less hard-disk load</li>
+			<li>HapQ: Best quality, lower compression, bigger files, less CPU load, higher hard-disk load</li>
+			<li>HapAlpha: support of Alpha-channel</li>
+			<li>To convert a media-clip to Hap, the resolution in both dimensions must be a multiple of 4. Important: If you are using the Hap Quicktime codec to encode media clips with tools like e.g. After Effects, we strongly recommend to use version 8. Hap Clips created with the Hap Quicktime codec version 9 are not supported and can not be played back.</li>
+			<li>If the additional third party codecs are not installed, Hap can only be played back from an avi-container. If the additional third party codecs are installed, Hap can be played back from an avi- and a mov-container.</li>
+		</ul>
+		</li>
+		<li>Added the Hap Converter:
+		<ul>
+			<li>The new built in Hap Converter allows to convert clips from MPEG2 to Hap or from Hap to Hap, if the additional third party codecs are not installed.</li>
+			<li>If the additional 3rd party codecs are installed, content with various formats can be converted to Hap.</li>
+			<li>Additional third party codecs can not be used to play back media content, but only to convert files to Hap.</li>
+			<li>Supported additional video-codecs are: H.264, H.265, MPEG-4, Apple ProRes (without support of alpha channel), Quicktime Animation (with support of alpha channel), Theora and VP8.</li>
+			<li>Supported additional audio-codecs are: AAC, AC3, Flac, Opus and Vorbis.</li>
+			<li>Supported additional media-containers are: flv, mkv, mov, m4v, mp4, ogg and webm.</li>
+			<li>If you go to the Content Editor-Tab, the Hap Converter will be shown at the docking frame.</li>
+			<li>The Hap Conversion Options are:
+			<ul>
+				<li>"Auto convert new Content" - If the check box is enabled, all content, which is inserted to the show will be converted to the options given.</li>
+				<li>"Delete Source after Conversion" - If the check box is enabled, the source file will be deleted after the conversion is done.</li>
+				<li>"Compress": If the check box is enabled, the clip will be additionally compressed, which results in a smaller file size with a variable bitrate. If the check box is disabled, the clip will not be additionally compressed, which results in a bigger file size with a constant bitrate.</li>
+				<li>"Overwrite": Files with the same filename will be overwritten by the converter, if the check box is enabled.</li>
+				<li>"Format": You can choose between Hap1, HapQ, HapAlpha and Auto. If you choose "Auto", a MPEG2 File will be converted to Hap1. If the source is a Hap-File, its format will not be changed during conversion.</li>
+				<li>"Change Resolution": If enabled, you can define the resolution of the resulting clip. Also there is the option to keep the ratio of the source.</li>
+				<li>The converted Hap-file will be in the same directory of the hard disc as the source file.</li>
+				<li>"Start Conversion": This button starts the conversion of the selected clips. Files can be selected within the Content Editor or the Browser of the Hap Converter. So you are able to convert clips, which are not added to the show.</li>
+				<li>Selected Content State (left of the Hap Conversion Options) shows the attributes of a selected media file and also works with a multi selection of media files.</li>
+				<li>The tab "Job-queue" at the Hap Converter shows the queue of the conversion jobs and additional information of the actually running job. There are also three buttons, which belongs to the jobqueue:
+				<ul>
+					<li>"Pause": Pauses the Converter.</li>
+					<li>"Delete": Deletes the jobs, that are selected. This only deletes the conversion-job, but will not delete the file itself or will remove the file from the show.</li>
+					<li>"Top Priority": If you press this button, the selected jobs will be set to the top position of the queue.</li>
+				</ul>
+				</li>
+				<li>Converter jobs are not saved to the show file, but locally on the VPU. If you shutdown or restart the VPU, the jobs will not get lost. This offers the advantage, that you can use the Converter standalone. Status messages of the Hap Converter can be found at the Info dialog of the Dialog Docking Frame. There is also a new filter option "Converter". The Converter is automatically paused during Showmode.</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<div class="tip"><strong>Note:</strong><br />
+To convert a media-clip to Hap, the resolution in both dimensions must be a multiple of 4.</div>
+
+<ul>
+	<li>Improved the Content Editor:
+	<ul>
+		<li>Channel sets now show a small icon, which indicates if a video clip is Hap1, HapQ, HapAlpha or MPEG.</li>
+		<li>Sound files now will be tagged with a small sound-icon.</li>
+		<li>Channel sets now show additional information of the Hap Converter.</li>
+		<li>There is a progress bar, which shows the state of the conversion.</li>
+		<li>The small number shows the actual position of the conversion-job in the queue of the Converter.</li>
+		<li>The "+" gives you the option to set a conversion-job to top priority.</li>
+		<li>The pause-button pauses the Converter. The Converter can be (re-)started by pressing the play-button.</li>
+		<li>An conversion-job can be deleted by pressing the button, that shows a "trash-bin".</li>
+		<li>Files and folders now can be inserted to the show by drag and drop from the browser below the Hap Converter.</li>
+		<li>Content Preview at the Content Editor now supports alpha-transparency.</li>
+	</ul>
+	</li>
+	<li>Pixel Mapper:
+	<ul>
+		<li>Pixel Mapper Priority: It is now possible to set a priority for each output of the Pixel Mapper. The Pixel Mapper priority is quite simpler than executor priority. If there is a equal or higher priority for a fixture coming from the desk, the Pixel Mapper sets its output for these fixtures to black. So the desk gets full control about the fixture. The Pixel mapper Priority can be set at the Output Options at the Pixel Mapper Editor of the VPU and the VPU Pixel Mapper View of the desk. A fade-in-time and fade-out-time can be set by a new attribute called "PM-Fade", which can be found at the preset-type "Control" of the VPU Camera-Fixure. The fadetime can be set between 0 and 10 seconds. The default value is 0 seconds.</li>
+		<li>Pixel mapper output by Art-Net and sACN now supports Unicast.</li>
+		<li>Pixel mapper network statistic now shows tries per cycle and count of universes send per cycle.</li>
+		<li>Delete hard key now also works to delete fixtures at the VPU Pixel Mapper View in the desk. For this reason the delete soft key has been removed from the Pixel Mapper View.</li>
+		<li>Pixel Mapper Art-Net/sACN-start universe: It is now possible to remap the patch of a Pixel Mapper Output. Therefore a new start universe can be defined at the options of the Pixel Mapper Output. Art-Net/sACN Start is set for the lowest universe used in this Pixel Mapper Output. If Art-Net/sACN-Start is set to "Original", the patched universes from the grandMA2 are used.</li>
+		<li>Pixel mapper Output by Art-Net and sACN now supports Unicast.</li>
+		<li>Added Title button to change the arrangement of the view at the VPU Pixel Mapper View of the desk.</li>
+	</ul>
+	</li>
+	<li>New VPU Fixture Types implemented:
+	<ul>
+		<li>VPU Layer: Added attributes for routing to camera 9-16.</li>
+		<li>Added channel-sets for virtual inputs 9-16.</li>
+		<li>Changed values for VPU play modes.</li>
+		<li>VPU Camera: added pixel mapper fade time</li>
+		<li>added field of view</li>
+		<li>added camera rotation</li>
+	</ul>
+	</li>
+</ul>
+
+<p>The new fixture type may not be compatible with existing shows. If you have replaced the VPU layer fixture type of your existing show with the new one, please make sure to run the new predefined macro "Replace VPU play modes" once to convert the play mode values.</p>
+
+<ul>
+	<li>Updated VPU demo show, VPU new show and VPU teaser show.</li>
+	<li>MA VPU now supports 16 cameras. Also 16 virtual out- and inputs are supported now.</li>
+	<li>DHCP: Network configuration of a VPU now supports DHCP. If DHCP is enabled, the VPU tries to get its IP address from a DHCP-server in the network. If there is no DHCP-server present, but DHCP is activated, the VPU sets an IP address within the APIPA-Range (169.254.x.y).</li>
+	<li>File -&gt; Make a Screen-shot: Use this to make a screen shot of the outputs. The screen shots are saved to C:\Users\MA\Documents - you can get to this directory by the VPU-Browser.</li>
+	<li>Added Special Dialogs to the desk for improved and comfortable handling of Border (VPU-Layer), Softedge and Keystone (VPU-Camera).</li>
+	<li>Show-mode also disables FPS in full screen.</li>
+	<li>Filters at Docking frame -&gt; Info are arranged in alphabetical order.</li>
+	<li>Delete-key of an attached keyboard now works as a shortcut to delete files at the browser.</li>
+	<li>GUI now indicates if there is no Pixel Mapper-Output, because the Pixel Mapper is globally disabled at the Global VPU Settings.</li>
+	<li>A Fixture Layer can now be assigned to a VPU via the command line or a Macro: The command at cd Netconfig/VPU is: Assign &lt;ID&gt;/Layer=Name with &lt;ID&gt;=ID of the VPU and Name=Name of the Fixture Layer you want to assign. The Name needs to be in \", if the name contains blanks.</li>
+	<li>Delay for Outputs: It is now possible to set a delay for every DVI- and Pixel Mapper-Output of a VPU. These delays can be set separately for every output to align the outputs in time, if there are different signal run times between the output of the VPU and e.g. your projectors or LED-walls. Delay for the DVI-outputs can be set at the Display-Settings between 0 and 15 frames with regard to the refresh rate of your DVI-outputs. Delay for the Pixel Mapper can be set at the options of every output between 0 and 8/30 seconds. An audio delay can be set at the Main Options between 0 and 15 frames with regard to the refresh rate of the DVI-outputs.</li>
+	<li>Camera-Rotation and FOV: The VPU Camera-Fixture now supports camera-rotation. Two kinds of rotation are possible. First option is to rotate the Camera around its own centerpoint and the second option is to rotate the Camera around the centerpoint of the 3D space of the VPU. Also the Field of view (FOV) of the VPU Camera Fixture now can be adjusted.</li>
+	<li>Improved support for running VPU on Windows 8 and Windows 8.1.</li>
+	<li>Windows 10: MA VPU now supports more than one output. However the performance is decreased due to limitations of Windows 10, if more than one output is used. In this case a pop-up will appear.</li>
+	<li>Improved Memory-Graph in Dialog Docking Frame</li>
+	<li>Implemented functionality for un-installing the VPU application at "Programs and Features" of the Windows Control Panel.</li>
+	<li>Un-installing of the VPU application now also deletes the related folder at the Windows Start-Menu.</li>
+</ul>
+
+<p>Fixed MA VPU bugs and improved functionality</p>
+
+<ul>
+	<li>Fixed - Graphical View at the VPU Pixel Mapper View will not be zoomed far out anymore, if you leave "Areas and Outputs" after you have changed the focus to another area.</li>
+	<li>Fixed - Same Virtual Output can't be assigned to more than one Output of the Pixel Mapper at the same time anymore.</li>
+	<li>Fixed - A Warper Mesh will not be shown displaced anymore on the 2nd or 3rd Output, if this Output is running on another resolution than the first.</li>
+	<li>Fixed - Adjusted the default values for the size of Warper Meshes to make them more pixel accurate. The default is now 1 through e.g. 1920 (was 0 through e.g. 1920)</li>
+	<li>Fixed - "Toggle Warper GUI"-shortcut now also works, if the focus is not at the mesh view.</li>
+	<li>Fixed - Invalid file names at "Save Show as" and "Export Function Blocks" cause a crash.</li>
+	<li>Fixed - Fixture Layer-selection of a VPU is not properly updated after a show-download or if a new show is loaded at the VPU.</li>
+	<li>Fixed - Ratio of SDI-Inputs is wrong.</li>
+	<li>Fixed - A Layer will not shrink to half height anymore, if it is set to @native and Position, Rotation or Scale is changed.</li>
+	<li>Fixed - Moving fixtures at the Pixel Mapper-Setup will not cause played back videos to get out of sync anymore.</li>
+	<li>Fixed - Inserting content to a show doesn't cause other VPUs in the same session to crash anymore.</li>
+	<li>Fixed - A hostname of a desk longer than 23 characters won't cause a crash of the VPU anymore.</li>
+	<li>Fixed - A channel set will not be duplicated anymore but moved, if it is moved by drag and drop to another content slot at the Content Editor.</li>
+	<li>Fixed - Moving a content folder to another slot by drag and drop is working again at the Content Editor.</li>
+	<li>Fixed - Fixed a bug, where the alpha channel of a png was not shown transparent during a Single Layer Transition.</li>
+	<li>Fixed - Deleting a large number of channel functions at the same time, does not cause other VPUs in the Session to crash anymore.</li>
+	<li>Fixed - Position-animation-Z if the Layer flies towards the camera.</li>
+	<li>Fixed - The length of a sound file now will be shown correctly at the Content Editor.</li>
+	<li>Fixed - A bug related to alpha transparency and the effects Ascii, Scratch, Luma Key, Luma Key Black and Luma Key White.</li>
+	<li>Fixed - The effect SBlur not working properly on the Camera.</li>
+	<li>Image Animation on a Layer does not run twice as fast anymore, if an effect is used on the Camera.</li>
+	<li>Fixed Warping Mesh was not shown at the Warper.</li>
+	<li>VPU does not freeze anymore, if you try to shut it down at the internal display, while the VPU-Settings are opened at the external GUI.</li>
+	<li>Fixed a bug if Function Blocks were imported after the Standard-Slot (Slot 0) was deleted.</li>
+	<li>Fixed a crash which occurred, if a fixture was deleted, which was added to an old Pixel Mapper setup. Also fixtures can't be stored to an old Pixel Mapper anymore.</li>
+	<li>Channel Functions and Channel Sets with an index higher than 255 will not be created anymore, if there are dropped more directories or files to the Content Editor than there are free slots left.</li>
+	<li>Different fixture types with same Long name will not appear as same Fixture anymore, if they are added to the Pixel Mapper.</li>
+	<li>Graphical View at the VPU Pixel Mapper View will not be zoomed far out anymore, if you leave "Areas and Outputs" after you have changed the focus to another area.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>Appendix:</strong></p>
+
+<div class="warning">RDM: Connecting 2 Outputs of a grandMA2-System with one cable can cause trouble in RDM.</div>
+
+<div class="warning">&nbsp;A Fixture needs to be re-patched, if the Fixture Type is exchanged with a similar one, which has a different patch-order of the instances.</div>
+
+<div class="warning">&nbsp;Down-dating to grandMA2 Release v3.0.0.5 and earlier requires a Factory reset (Format and Install). Please backup your show files before down-dating.</div>
+
+<div class="warning">&nbsp;Inserting the command "store /remove" or pressing [store][cue][2] and select [remove] in the pop-up will remove the whole attribute with all (!!) its layers of fixtures having any value or effect layer of this attribute active in programmer. It can be filtered to only remove values, value timings or effects by using the buttons in the stored encoder bar. To remove only specific layers, for example only individual effect fade, the operator needs to open the calculator for these layers and select "remove" in the calculator. Afterwards the operator needs to update the cue, or has to use store /merge to remove the specific layers.</div>
+
+<div class="warning">&nbsp;When multiple fixtures are selected with a lasso in the layout view, the snap grid settings to interpolate small position differences of fixture icons are respected. The selection order will always be made inside of one snap grid cell first, afterwards line by line in the direction of the lasso movement.</div>
+
+<div class="warning">&nbsp;The network switch IGMP Snooping functionality has to be switched off in order to be able to update MA 2Port nodes.</div>
+
+<div class="warning">&nbsp;A grandMA1 compatibility mode is no part of grandMA2 console software 3.0 and later. When grandMA1 compatibility mode is needed, grandMA2 consoles and MA NPUs have to be down-dated to grandMA2 v2.9.1.1.</div>
+
+<div class="warning">&nbsp;The MA-Net2 protocol has changed to support the 8Port Node devices. All MA devices need a new network streaming protocol with the 2.9 software. Once updated to the correlating version to grandMA2 v2.9, 2Port, 4Port, 8Port, NSP 4Port Node and the NDP will no longer work in a session with an older network streaming protocol (e.g. grandMA2 v2.8). Down-dating MA 2Port Nodes or NSP running in 4Port Node Mode to be v2.8 compatible is only possible via grandMA1 v 6.801. All other devices can be down-dated via USB or windows installer only.</div>
+
+<div class="warning">Exec Time can be used for Executor buttons and Executor Faders. The new Executor option "Ignore Exec Time" has been added. When this option is enabled, the referring executor will use its own off time instead of the Exec Time Fader Timing. Show files stored with grandMA2 v2.9.1 and earlier will be converted. All Fader executors will have this option enabled. Executor option defaults are valid for fader and button executors. When storing new fader executors, these executors will listen to Exec Time by default.&nbsp;</div>
+
+<div class="warning">&nbsp;Fixture type preset reference contains values only. It is not possible to add any fade, delay or effect data to fixture type preset references.​</div>
+
+<div class="warning">ASCII show import supports Strand, Transtechnik and ADB ASCII show files.&nbsp;</div>
+
+<div class="warning">&nbsp;A CITP connection is not possible when running CITP sender and CITP receiver at the same computer.</div>
+
+<div class="tip">&nbsp;Following syntax can be used to switch off faders only or buttons only of current page or of all pages except current page:
+<ul>
+	<li><strong>Off Executor 1 thru 100</strong>&nbsp;- This switches off all Faders of current page.</li>
+	<li><strong>Off Executor 101 thru 240</strong>&nbsp;- This switches off all Buttons of current page.</li>
+	<li><strong>Off Executor 1 thru 100 Page Thru - $faderpage</strong>&nbsp;- This switches off all Faders of all pages except current.​</li>
+	<li><strong>Off Executor 101 thru 240 Page Thru - $buttonpage</strong>&nbsp;- This switches off all Buttons of all pages except current.</li>
+</ul>
+</div>
+
+<div class="tip">
+<p>Addressing executors via command-line has been improved to provide support for addressing by name or number. This can be used when sending playback commands to specific executors or when storing to a specific executor, sequence or cue for example. All existing cue links and Macros of show files stored with former grandMA2 versions will be converted as far as possible. Please check cue links and Macros of existing shows when loading them the first time with this version. Some cue links and Macros may have to be adjusted. When creating new Macros or cue links or editing existing ones, the new syntax as described below has to be used.&nbsp;</p>
+</div>
+
+<ul>
+	<li>Go Exec "exec name" - start executor with specified name on current page</li>
+	<li>Go Exec "exec number" - start executor with specified number on current page</li>
+	<li>Go Exec "*"."exec name" - start executor with specified name on all pages</li>
+	<li>Go Exec "*"."exec number" - start executor with specified number on all pages</li>
+	<li>Go Exec "page name"."exec name" - start executor with specified name on specified page</li>
+	<li>Go Exec "page name"."exec number" - start executor with specified number on specified page</li>
+	<li>Go Exec "page number"."exec name" - start executor with specified name on specified page</li>
+	<li>Go Exec "page number"."exec number" - start executor with specified number on specified page</li>
+</ul>
+
+<p><strong>Known Limitations</strong></p>
+
+<div class="restriction">
+<ul>
+	<li>If using the Set-button in the Web remote, the command line default will be changed to MATricks.</li>
+	<li>At the initial start after the installation or the update of the VPU-application, the end user licence agreement is shown. The MA VPU application will not start, until the end user licence agreement is confirmed. If you are using a VPU Plus, the end user licence agreement is shown at the internal touch display. If you are using a VPU basic or VPU light, the end user licence agreement is shown at the first external DVI-output - so please make sure you have a display and a mouse attached to the VPU Basic or VPU Light.</li>
+	<li>Ma-Net1 is not supported for MA 2Ports Version 1.77 or higher.</li>
+	<li>MA onPC command wing DMX input is supported for the ports "DMX In" and "DMX out A" only. The port "DMX out B" can only be used as DMX out!</li>
+	<li>Before loading show files stored with grandMA2&nbsp;<strong>v2.7.x</strong>&nbsp;the first time with grandMA2 v2.9.x, attribute Colormix4 and 5 and Colordim4 and 5 of self-made fixture types have to be manually adjusted to fulfill the color specification. Amber has to be Colormix 4 invert or Colordim 4 without invert, and White has to be Colormix 5 invert or Colordim 5 without invert. Otherwise, color information of these fixture types will be lost after loading show file with v2.9.</li>
+	<li>The Feature name for ColorDim/ColorMix has changed into MixColor. Macros using one of these feature names have to be adjusted.</li>
+	<li>Known limitation when loading show files stored with&nbsp;<strong>v2.8.x</strong>&nbsp;for the first time in v2.9
+	<ul>
+		<li>Special Masters have a new data structure in grandMA2 software.
+		<ul>
+			<li>All Special Master custom labels will be reset to MA default labels</li>
+			<li>Assignment of 100mm faders will be reset to default.</li>
+			<li>Macros referring to special masters have to be adjusted and have to use the new naming and numbering of special masters.</li>
+		</ul>
+		</li>
+		<li>Macros referring to relative values have to be adjusted according to new relative/absolute syntax.</li>
+		<li>User profiles exported to USB drives using v2.8 and earlier have to be manually moved from folder importexport to user_profile folder in order to import these profiles using grandMA2 v2.9 and later.</li>
+	</ul>
+	</li>
+	<li>4Port and 8Port Nodes have to be updated to v1.0.9 or later to be compatible with grandMA2 v2.9. 2-Port Nodes have to be updated to 1.77 or later in order to be compatible to grandMA2 v2.9.</li>
+	<li>Channelset labels of fixture types have to be unique to be visible and accessible in calculator. E.g.: If channel sets of Attribute Shutter are closed, open, open, open, only one open is visible in the calculator. Changing channel set labels to closed, open, open(2), open(3), will result in all channel sets being visible in the calculator.</li>
+	<li>Astronomical clock always calculates time according to standard time zone. Additional summer times are not recognized and cannot be adjusted manually when using sunset, dusk, dawn, and sunrise in the agenda.</li>
+</ul>
+Bitmap fixtures can be applied to physical parameters only. Virtual parameters like a virtual dimmer or XYZ-attributes are not supported.</div>
+
+		
+	</body>
+</html>

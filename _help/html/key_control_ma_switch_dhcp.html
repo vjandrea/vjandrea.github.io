@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Enable DHCP client for the MA Network Switch</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="DHCP client - enable, DHCP" />
+	</head>
+	<body>
+		
+		
+		<h1>Enable DHCP client for the MA Network Switch</h1>
+		
+		<p>If the network is equipped with a DHCP server enable the DHCP client of the switch for it to receive automatically an IP address from the DHCP server.</p>
+
+<p>The previous assigned IP address will be used if there is no DHCP server available.</p>
+
+<p><strong>Requirement:</strong> <a href="key_control_ma_switch_add.html">Added MA Network Switch to the network configuration</a>.</p>
+
+<ol>
+	<li>Open the MA Network Configuration.<br />
+	- Press <span class="hardkey">Setup</span>, and tap under <strong>Network</strong> <span class="softkey">MA Network Configuration</span>.<br />
+	The MA Network Configuration window opens.</li>
+	<li>Tap at <span class="softkey">Network Switch</span>.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/menu_ma-network-configuration_network-switch_v3_2.png" />
+<figcaption><em>MA Network Configuration - Network Switch</em></figcaption>
+</figure>
+
+<ol start="3">
+	<li>Tap and hold the cell in the column DHCP client enabled until <strong>Yes </strong>is displayed.</li>
+</ol>
+
+<p>The DHCP client is enabled. The DHCP settings are saved in the startup configuration.</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_ma-network-configuration_network-switch_dhcp-yes_v3_3.png" />
+<figcaption><em>MA Network Configuration - Network Switch - DHCP yes</em></figcaption>
+</figure>
+
+<p>The column IP ETHERCON 1(ETH0) displays the used DHCP IP address. The column IP ETHERCON 1(ETHO.1) displays the default IP address of the MA Network Switch.</p>
+
+<p>If DHCP is on, the MA Network Switch is reachable only with the DHCP IP address.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+You can also enable the DHCP client by using the command line.<br />
+- Change the destination of the command line to <span class="syntax">NetConfig/Network Switch 8</span>. For more information see <a href="key_keyword_changedest.html">ChangeDest keyword</a>.<br />
+- Type in the command line <span class="syntax">Assign 1 / DHCPclientenabled = "Yes"</span>.<br />
+The DHCP client of the NetworkSwitch 1 is enabled.</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

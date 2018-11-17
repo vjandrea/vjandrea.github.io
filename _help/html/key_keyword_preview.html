@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Preview Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Preview, Preview Cue" />
+	</head>
+	<body>
+		
+		
+		<h1>Preview Keyword</h1>
+		
+		<p>To go to the Preview keyword, press <span class="hardkey">Prvw</span>.</p>
+
+<p>You can also type <strong>Preview</strong> in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The Preview keyword creates a preview of the programmed output without having an actual DMX output.</p>
+
+<p>Preview loads the given cue or part in Previeweditor and enables this editor. (PreviewEdit On)</p>
+
+<p>If no cue is given, the current cue of the selected executor will be used.</p>
+
+<p>The Preview keyword is a function keyword.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+If the console is in the preview editor, the <span class="hardkey">Prvw</span> key is blinking and the title bar from the sheets changes into red.</div>
+
+<div class="tip"><strong>Hint:</strong><br />
+To leave the preview editor, press <span class="hardkey">Esc</span> or <span class="hardkey">Off</span> <span class="hardkey">Prvw</span> or <span class="hardkey">Prvw</span> <span class="hardkey">Prvw</span> on the console.</div>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Preview [cue-object] / [option] = [option value]</span></p>
+
+<p><span class="syntax">Preview [part-object]</span></p>
+
+<p><span class="syntax">Preview Next </span></p>
+
+<p><span class="syntax">Preview Previous </span></p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available options to the preview keyword, type in the command line</p>
+
+<div class="cl_input">[Channel]&gt; Preview /?</div>
+
+<p>The preview keyword has the following options.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option Shortcut</th>
+			<th scope="col">Option Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>add</td>
+			<td>not available</td>
+			<td>False, True</td>
+			<td>Additional preview playback.</td>
+		</tr>
+		<tr>
+			<td>autoupdate</td>
+			<td>au</td>
+			<td>False, True</td>
+			<td>Every programmer value updates automatically.</td>
+		</tr>
+		<tr>
+			<td>keepselection</td>
+			<td>ks</td>
+			<td>False, True</td>
+			<td>Keeps selection when entering preview.</td>
+		</tr>
+		<tr>
+			<td>keepprogrammer</td>
+			<td>kp</td>
+			<td>False, True</td>
+			<td>Keeps programmer content when entering preview.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Load cue 5 from the selected executor in the preview editor.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Preview Cue 5</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Load cue 5, part 2 of the selected executor in the preview editor.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Preview Cue 5 Part 2</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Load current cue of executor 3 in the preview editor.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Preview Executor 3</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

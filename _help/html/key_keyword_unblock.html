@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Unblock Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Unblock Keyword, Unblock, Unblock Cue, Unblock Default Values" />
+	</head>
+	<body>
+		
+		
+		<h1>Unblock Keyword</h1>
+		
+		<p>To go to the Unblock keyword, type <strong>Unblock </strong>in the command line or use the shortcut <strong>UB</strong> / <strong>Unb</strong>.</p>
+
+<h2>Description</h2>
+
+<p>The unblock keyword convert blocked values in cues (displayed white) into tracking values (displayed magenta).</p>
+
+<p>If the selected executor is on, the unblock keyword will be applied for the current cue of selected executor.<br />
+If the selected executor is off, the unblock keyword will be applied for all cues of the selected executor.</p>
+
+<p>If unblock does not contain any selection-list, all fixtures will be used.</p>
+
+<p>If unblock does not contain any attribute-list, all attributes will be used.</p>
+
+<p>Unblock is a function keyword.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Unblock [Object-list] If [Selection-list] If [Attribute-list] / [Option]</span></p>
+
+<h2>Options</h2>
+
+<p>The following table displays the available Unblock options.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Shortcut</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>defaultvalues</td>
+			<td>dv</td>
+			<td>Removes the default values.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Unblock all values after programming from the selected executor. The selected executor is off.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Unblock</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Unblock all values from the current cue. The selected executor is on.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Unblock</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Unblock all values from feature position, fixture 1 in cue 3.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Unblock Cue 3 If Fixture 1 If Feature "Position"</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Unblock all default values from sequence 1.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Unblock Sequ 1 /dv</div>
+
+		
+	</body>
+</html>

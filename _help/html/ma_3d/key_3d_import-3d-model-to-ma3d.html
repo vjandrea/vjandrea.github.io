@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Import 3D Model to MA3D</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="3D import model" />
+	</head>
+	<body>
+		
+		
+		<h1>Import 3D Model to MA3D</h1>
+		
+		<h2>Import 3D Models into MA 3D</h2>
+
+<h3>Open MA 3D</h3>
+
+<figure class="caption"><img alt="" src="../../../img/ma_3d/3d_media-database.png" />
+<figcaption>Media Database</figcaption>
+</figure>
+
+<p><br />
+In the Media Database (View - Media Database Window) you can find all 3D objects ordered in a hierarchical structure. Types of fixtures are located in the corresponding folder. All fixtures of the type Head Mover are located in the folder "Head Mover".</p>
+
+<h2>Open the Import Tool</h2>
+
+<ol>
+	<li>Open the import tool the menu entry ‘File – Import – Import 3D Model’.</li>
+	<li>Select ‘Import 3D Model’.</li>
+	<li>Select the 3D file ‘Vari-Lite_VL1000.3ds’ you have created.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../../img/ma_3d/3d_model-in-media-database-file_1.png" />
+<figcaption>The Import 3D Models tool</figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<h3>Entering 3D Model Properties</h3>
+
+<p>When import is done an .xml description file is generated and stored in the folder parallel to the .3ds file. For example ‘Vari-Lite_VL1000.import.xml’.<br />
+This file is only created once during the first initation of the import. The unique model key will be only generated in this step.<br />
+If the file already exists, the importer uses the data from this file to fill out the following fields:</p>
+
+<figure class="caption"><img alt="" src="../../../img/ma_3d/3d_properties.png" />
+<figcaption>Properties dialog</figcaption>
+</figure>
+
+<p>Fill out the property fields of the model.</p>
+
+<p>Mandatory fields are:</p>
+
+<ul>
+	<li>Category - places the model within the hierarchic structure of models</li>
+	<li>Device Manufacturer and Name - finds the correct model in case of variant spelling</li>
+	<li>Device Class - assigns the right parameters</li>
+	<li>Model Priority - prioritization in the selection of a model. Higher numbers are more likely to be prioritized see also <a href="key_assigning-of-models-to-fixture-types.html">Assigning of 3D models to fixture types</a></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h3>Preview Image</h3>
+
+<ol>
+	<li>Generate a significant preview image of the fixture position in the preview window.</li>
+	<li>Save the image as… (Browse to the folder of the .3ds file) parallel to your model. Use the model's name e.g., ‘Vari-Lite-VL1000.png.</li>
+</ol>
+
+<p><img alt="" src="../../../img/ma_3d/3d_preview.png" /><br />
+&nbsp;</p>
+
+<p>Save the 3D Model</p>
+
+<p>To save the 3D model as grandMA Media file, use the save function ‘File’ -&nbsp;‘Save’ e.g., ‘test.gmamedia’.</p>
+
+<figure class="caption"><img alt="" src="../../../img/ma_3d/3d_media-database2.png" />
+<figcaption>Media databse with the created 3D model</figcaption>
+</figure>
+
+<p>The fixture is now saved in the media database in the category Fixtures/Head Mover. The image is displayed as a thumbnail.</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>SearchResult Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="SearchResult keyword, world - search result" />
+	</head>
+	<body>
+		
+		
+		<h1>SearchResult Keyword</h1>
+		
+		<p>To get the SearchResult keyword in the command line, press and hold <span class="hardkey"><img alt="ma" src="../../img/ma_1.png" /></span> + <span class="hardkey">Group</span> <span class="hardkey">Group</span> (= SearchResult).</p>
+
+<p>You can also type <strong>SearchResult</strong> or the shortcut <strong>SR </strong>in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The SearchResult keyword opens the&nbsp;world search result after an executed search command. The search result world includes only the fixtures or channels from the last search command.</p>
+
+<figure class="caption"><img alt="" src="../../img/window_fixture-sheet-search-result_v3-2.png" />
+<figcaption><em>Fixture Sheet World Search Result</em></figcaption>
+</figure>
+
+<p><br />
+To close the SearchResult world, select another world in the world pool.</p>
+
+<p>To select all fixtures from the last search command, use the<span class="syntax"> SelFix SearchResult</span>.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+You can also use the <span class="softkey">Selfix Search Result</span> button and/or the <span class="softkey">World Search Result</span> button in the title bar of the search result pop-up.</div>
+
+<p>The SearchResult keyword is a function keyword.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">SearchResult</span></p>
+
+<p><span class="syntax">SelFix SearchResult</span></p>
+
+<p><span class="syntax">Search [object-list] If SearchResult</span></p>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Opens the search result world with the fixtures from the last search command.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; SearchResult</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Select only the fixtures from the last search result.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; SelFix SearchResult</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Search in the last search result for fixtures with the attribute green at 20.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Search Fixture Thru Attribute "G" At 20 If SearchResult</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

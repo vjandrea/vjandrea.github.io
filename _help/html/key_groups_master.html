@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Group Master on Executors</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="group master, positive group master, group master - positive, negative group master, group master - negative, additive group master, group master - additive" />
+	</head>
+	<body>
+		
+		
+		<h1>Group Master on Executors</h1>
+		
+		<p>Groups can be assigned to Executors and be used as group masters.</p>
+
+<p>The idea is that you create the group in the pool and this group can be assigned to an executor with a fader.</p>
+
+<p>The fader can then be used to set a limit of the groups dimmer output. There is also a special mode that allows you to use the fader to produce dimmer output. Read about the different modes below.</p>
+
+<p>When a fixture is limited then the Fixture/Channel ID and Name gets a lavender background color. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_group-master_fixture-sheet-limited-fixtures_v3_2.png" />
+<figcaption><em>A Fixture sheet with fixtures limited by a Group Master</em></figcaption>
+</figure>
+
+<p>The two limiting Group Masters (positive and negative modes) works as relative masters - not maximum masters.</p>
+
+<p>This means that if a fixture is told to be at 50% by a cue and is limited by a Group Master by 50%, then the output from the fixture is 25%: 50% of 50%.</p>
+
+<p>&nbsp;</p>
+
+<h2>Assigning a group to an Executor</h2>
+
+<p>There are several ways to assign a group to an executor.</p>
+
+<h3>Using the keys</h3>
+
+<p>If you want to assign group number 1 at executor 3 on page 2 then you need to press the following keys:</p>
+
+<p><span class="hardkey">Assign</span> <span class="hardkey">Group</span> <span class="hardkey">1</span> <span class="hardkey">At</span> <span class="hardkey">Exec</span> <span class="hardkey">2</span> <span class="hardkey">.</span> <span class="hardkey">3</span> <span class="hardkey">Please</span></p>
+
+<h3>Using the Screens</h3>
+
+<p>When we say using the screens, we cannot just use the touch screens - it a combination of keys and screens.</p>
+
+<p>Have a group pool visible. Press the <span class="hardkey">Assign</span> key, then the group in the group pool, and then any of the keys associated with the executor where you want the group master.</p>
+
+<h3>Using the assign menu</h3>
+
+<p>You can also open the <strong>Assign Menu</strong> for the executor and use that to assign a group.</p>
+
+<p>Tap the area on the mini executor view (at the bottom of screen 3 and 4) marked red in this picture:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_mini-executor-assign-menu_alternate_v3_2.png" />
+<figcaption><em>Mini executor with open Assign Menu</em></figcaption>
+</figure>
+
+<p>This will open the Assign Menu on one of the screens (default is screen 1) -&nbsp; read more about the Assign Menu <a href="key_exec_assign.html">here</a>.</p>
+
+<p>Make sure the <strong>Function</strong> part of the Assign Menu is visible by tapping <span class="softkey">Function</span> on the right side of the menu - or possible pressing <span class="hardkey">U1</span> if the menu is on screen 1.</p>
+
+<p>In the lower right side of the view you&nbsp; will find a button called <span class="softkey">Group Master</span> - tap this or press the <span class="hardkey">X8</span> key (if it is on screen 1).</p>
+
+<p>This will list all the available groups on the right side of the menu. Here you can select the group you want to assign.</p>
+
+<p>When you are done you can close the <strong>Assign menu</strong> by tapping the <span class="softkey">X</span> in the upper right corner.</p>
+
+<p>&nbsp;</p>
+
+<h2>Group master modes</h2>
+
+<p>The group masters can have three different modes. They are called <strong>Positive</strong>, <strong>Negative</strong>, and <strong>Additive</strong>.</p>
+
+<p>When a group is assigned to an Executor, then open the Assign Menu and look at the <strong>Options</strong> part of it. You can change to it by tapping the <span class="softkey">Options</span> button on the right side of the menu - or possible by pressing the <span class="hardkey">U2</span> key if the menu is on screen 1.</p>
+
+<p>In this menu there is only one button called "Mode". Tapping this will open the <strong>Select Group Master Mode pop-up</strong>:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-group-master-mode_v3-2.png" />
+<figcaption><em>Select Group Master Mode pop-up</em></figcaption>
+</figure>
+
+<p>Here you can select what mode the Group Master should use.</p>
+
+<h3>The difference between Positive and Negative Group Masters</h3>
+
+<p>The only situation where the two modes have an effect is when there is an overlap of fixtures in several Group Masters.</p>
+
+<p>A Positive Group Master works by a "highest takes precedence" principle. This means that a fixture will be allowed to output light it is allowed by any one of several Group Masters.</p>
+
+<p>This is what the <strong>Mini Executor</strong> looks like with a positive Group Master assigned - notice the "P" in the top center part:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_mini-executor_group-master_positive_v3_2.png" />
+<figcaption><em>Positive Group Master - Mini Executor</em></figcaption>
+</figure>
+
+<h3>Positive example</h3>
+
+<p>We have two Group Masters. One has fixture 1 and 2. The other has fixture 2 and 3.</p>
+
+<p>All three fixtures are told to be at 100% by the programmer or a cue. Both Group Masters are at 100%.</p>
+
+<p>If you limit the first Group Master (the one with 1 + 2) then you are only limiting fixture 1 because fixture 2 is allowed in the second Group Master.</p>
+
+<p>&nbsp;</p>
+
+<p>A Negative Group Master works by a "lowest takes precedence" principle.&nbsp; This means that a fixture will be limited in outputting light if it is limited in any of several Group Masters.</p>
+
+<p>This is what the <strong>Mini Executor</strong> looks like with a negative Group Master assigned - notice the "N" in the top center part:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_mini-executor_group-master_negative_v3_2.png" />
+<figcaption><em>Negative Group Master - Mini Executor</em></figcaption>
+</figure>
+
+<h3>Negative example</h3>
+
+<p>We have two Group Masters. One has fixture 1 and 2. The other has fixture 2 and 3.</p>
+
+<p>All three fixtures are told to be at 100% by the programmer or a cue. Both Group Masters are at 100%.</p>
+
+<p>If you limit the first Group Master (the one with 1 + 2) then you are limiting both fixture 1 and 2 even though fixture 2 is allowed in the second Group Master.</p>
+
+<p>&nbsp;</p>
+
+<h3>Additive Group Master</h3>
+
+<p>The last mode is the Additive Group Master. This mode gives values to the fixtures in your group. So they do not need to have a values from cues or the programmer.</p>
+
+<p>So turning up the master will give the fixtures the corresponding output.</p>
+
+<p>If the fixture already has a value, then the Group Master will not take affect before the Master goes above that value.</p>
+
+<p>This is what the <strong>Mini Executor</strong> looks like with an additive Group Master assigned - notice the white arrow in the top center part:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_mini-executor_group-master_additive_v3_2.png" />
+<figcaption><em>Additive Group Master - Mini Executor</em></figcaption>
+</figure>
+
+<p>When a fixture gets a value from an additive Group Master, then it gets a small white arrow next to ID number and a darker lavender background color. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_group-master_fixture-sheet-additive-value_v3_2.png" />
+<figcaption><em>Fixtures with values from an Additive Group Master</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<h2>Locate a Group Master</h2>
+
+<p>You can use the Locate command to find a Group Master for a group. The locate function will only find (and change page to) the first location for the group.</p>
+
+<p>For example if you want to find the group master for group number 3, then you can write the following command:</p>
+
+<div class="cl_input">[Channel]&gt; locate group 3</div>
+
+<p>This will change to the page where the Group Master is and the middle part of the Mini Executor will look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_mini-executor_group-master_located_v3_2.png" />
+<figcaption><em>Located Group Master - Mini Executor</em></figcaption>
+</figure>
+
+<p>To exit the locate function, you will need to execute the locate command without anything specified. Read more about the <a href="key_keyword_locate.html">locate command here</a>.</p>
+
+<p>&nbsp;</p>
+
+<h2><a id="group_master_view" name="group_master_view"></a>Group Master view</h2>
+
+<p>A better way the see or find your Group Masters might the <strong>Masters Window</strong> or the temporary <strong>Masters view</strong>.</p>
+
+<p>They provide an overview off all the group masters in the show.</p>
+
+<p>They are described in the <a href="key_adv_exec_master_window.html">Masters Window topic</a>.</p>
+
+		
+	</body>
+</html>

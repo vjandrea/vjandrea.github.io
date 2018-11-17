@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Editing a sequence</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="quick start guide - edit sequence" />
+	</head>
+	<body>
+		
+		
+		<h1>Editing a sequence</h1>
+		
+		<p>Now we are going to make some changes to the sequence.</p>
+
+<h2>Make a "Follow"</h2>
+
+<p>We would like to change cue 3 to automatically run when cue 2 is done.</p>
+
+<p>Look at the Sequence Executor Sheet. Each cue have its own row in the sheet. The columns are the different properties a cue can have. It is not the <strong>content</strong> in the cue, but the <strong>cue</strong> properties.</p>
+
+<p>The trig column is the one that governs how the cues are triggered. We need to change the setting for cue number 3.&nbsp;You do this by right-clicking with the mouse (or pressing Edit and then tap) on the screen where it says "Go" in the "Trig" column in the row for cue 3.</p>
+
+<p>This gives you a small pop-up with the following choices: Go, Time, Follow, Sound, BPM, Timecode. Select <span class="softkey">Follow</span> by clicking or tapping it.</p>
+
+<p>Now when cue 2 is done, the desk automatically activates the fade to cue 3.</p>
+
+<h2>Changing the cue names</h2>
+
+<p>Let us change the cue names. You know how to do this, so here is a table with the new names:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Cue Number:</th>
+			<th>Name:</th>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>Behind Curtain</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>With Curtain Up</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Build</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Darker</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>Cold</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>B.O.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>If you need to, then expand the "name" column in your&nbsp;Sequence Executor Sheet, so you can see the entire names.</p>
+
+<h2>Updating a cue</h2>
+
+<p>Let us imagine that we got a lighting designer who has changed his mind. He wants 5% more on the group called "LX 1 Warm" in cue 3. Go to cue 3:&nbsp;<span class="hardkey">Goto</span>&nbsp;<span class="hardkey">3</span>&nbsp;<span class="hardkey">Time</span>&nbsp;<span class="hardkey">0</span>&nbsp;<span class="hardkey">Please</span>.</p>
+
+<p>What happened? We went to a cue and activated the executor. And now there is a yellow frame around cue 3 in the Sequence Executor Sheet. To go to cue 3 you only need to write "Goto 3 Please". We added "Time 0". This ignores the fade times stored in the cue and we do not have to wait for the cue to fade in. It does not change the stored fade time.</p>
+
+<p>Let us continue:&nbsp;<span class="hardkey">Group</span>&nbsp;<span class="hardkey">2</span>&nbsp;<span class="hardkey">At</span>&nbsp;<span class="hardkey">+</span>&nbsp;<span class="hardkey">5</span>&nbsp;<span class="hardkey">Please</span>.</p>
+
+<p>Now the 'Update' button lights up. This means you can update the active cue. Press&nbsp;<span class="hardkey">Update</span>&nbsp;and without worrying about anything press the <span class="hardkey">U3</span> key (or where it says: <span class="softkey">Tracking Update</span>) so the button changes to "Update Cue Only". Now press the&nbsp;<span class="hardkey">X6</span>&nbsp;key (or where it says <span class="softkey">Update Cue</span>) to update the cue.</p>
+
+<p>To exit the cue and deactivate the sequence you need to press the top button above executor fader 1 - in the onPC you could open the Executor view and tap where it says "Off" above executor 1.</p>
+
+<h2>Editing the times</h2>
+
+<p>Let us change some of the times in the cue list. This is how your times should end up:</p>
+
+<table>
+	<tbody>
+		<tr>
+			<th>Fade</th>
+			<th>Out Fade</th>
+			<th>Delay</th>
+			<th>Out Delay</th>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>&nbsp;</td>
+			<td>3</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>25</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>10</td>
+			<td>&nbsp;</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Look at the&nbsp;Sequence Executor&nbsp;Sheet. Right click on the cells and type in the new value either on "the calculator" pop-up on the screen, the buttons on your console, or using the keyboard. If a cell is empty then it can be a zero time or in the case of the "OutFade" it is actually the same as the (In)fade. If the in and out fade is the same then you do not need to specify an outfade - only when there is a difference. It is the same with&nbsp;in and out delay.</p>
+
+<p>The final result should look like this:</p>
+
+<figure class="caption"><img alt="" src="../../../img/grandma2_quick_start_guide/qsg_08_edit-a-sequence_final-seq-exec-sheet_v3-3_1.png" />
+<figcaption><em>The Sequence Executor Sheet with new timings</em></figcaption>
+</figure>
+
+<p>Try pressing the big 'Go+' key to see how your channels react to the different times. You find this in the "Masters" section on the right side of your onPC.</p>
+
+<p>Press:&nbsp;<span class="hardkey">Backup</span>&nbsp;<span class="hardkey">Backup</span>&nbsp;(as double-clicking a mouse button). This is the fast way to store your show (with the same name).</p>
+
+<p>&nbsp;</p>
+
+<p>On the <a href="key_09_add_moving_lights.html">next page</a> we are going to look at adding some moving lights.</p>
+
+		
+	</body>
+</html>

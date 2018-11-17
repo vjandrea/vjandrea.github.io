@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Use Predefined Effects</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="predefined effects, effects - low value, low value - effects, high value - effects, effects - high value, effects - speed, speed - effects, phase, width effects, effects - width, attack - effects, decay - effects, interleave - effects, effects - form, form - effects, effects - direction, direction - effects, blocks - effects, effects - blocks, single shot - effects" />
+	</head>
+	<body>
+		
+		
+		<h1>Use Predefined Effects</h1>
+		
+		<p>The simplest way to use effects in the grandMA2 is to work with predefined effects.&nbsp;</p>
+
+<p><strong>Requirement:</strong></p>
+
+<ul>
+	<li>Apply fixtures in the <strong>Patch &amp; Fixture Schedule</strong>.<br />
+	For more information on patching see <a href="key_patch_add_fixtures.html">Adding fixtures to your show</a>.</li>
+	<li>Import predefined effects.<br />
+	For more information on how to import effects see <a href="key_ei_export_gui.html">Import via user interface</a>.&nbsp;</li>
+</ul>
+
+<p>To apply the predefined effects:</p>
+
+<ol>
+	<li>Select fixtures in the fixture sheet.</li>
+	<li>Tap anywhere in the <strong>user-defined area</strong>.&nbsp;</li>
+	<li><a id="open_effect_pool" name="open_effect_pool"></a>The pop-up <strong>Create Basic Window</strong> opens.&nbsp;</li>
+	<li>Next, tap <span class="softkey">Pools</span>.&nbsp;</li>
+	<li>Then, tap <span class="softkey">Effects</span>.&nbsp;</li>
+	<li>The pool with predefined effects opens.&nbsp;</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/window_predefined-effect-pool_v3-3.png" />
+<figcaption><em>Predefined effect pool</em></figcaption>
+</figure>
+
+<ol start="7">
+	<li>Tap an effect in the effect pool.</li>
+	<li>The effect has successfully been applied to the fixtures that were selected.</li>
+</ol>
+
+<div class="tip"><strong>Hint:</strong><br />
+It is also possible to add single predefined effects to the pool.</div>
+
+<p>To do so:</p>
+
+<ol>
+	<li>Press <span class="hardkey">Edit</span> and tap an empty cell in the pool with predefined effects.</li>
+	<li>An empty effect editor opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_empty-effect-editor_v3-3.png" />
+<figcaption><em>Empty effect editor</em></figcaption>
+</figure>
+
+<ol start="3">
+	<li>Tap <span class="softkey">Load Predefined</span>&nbsp;on the right of the window and the pop-up <strong>Select Predefined Effect</strong> opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-predefined-effect_v3-3.png" />
+<figcaption><em>Pop-up – select predefined effect</em></figcaption>
+</figure>
+
+<ol start="4">
+	<li>To add an effect, tap a name in the pop-up.</li>
+	<li>The <a href="#effect_editor">effect editor opens</a> and the effect is now displayed in the pool.</li>
+</ol>
+
+<hr />
+<h2>Edit a Predefined Effect</h2>
+
+<p>To edit a predefined effect:</p>
+
+<ol>
+	<li>Press <span class="hardkey">Edit</span> and then tap an effect in the effect pool.<br />
+	-or-<br />
+	&nbsp;Use the command line entering for example:</li>
+</ol>
+
+<div class="cl_input">[Channel]&gt; Edit Effect 1</div>
+
+<ol start="2">
+	<li><a id="effect_editor" name="effect_editor"></a>The <strong>Effect Editor</strong> opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_effect-editor_v3-3.png" />
+<figcaption><em>Pop-up – effect editor</em></figcaption>
+</figure>
+
+<hr />
+<h2>Columns in the Effect Editor</h2>
+
+<p>The effect editor contains the following columns and buttons:</p>
+
+<ul>
+	<li><strong>QTY:</strong><br />
+	The column <strong>QTY</strong> stands for quantity.&nbsp;<br />
+	<a id="template_effect" name="template_effect"></a>If it is set to <strong>None</strong>, it is a template effect.</li>
+</ul>
+
+<p><a id="create_template" name="create_template"></a>To set the mode:</p>
+
+<ol>
+	<li>Select fixtures in the fixtures sheet.</li>
+	<li>Tap <span class="softkey">Take Selection</span>.</li>
+	<li>This template effect is now a selective effect.<br />
+	To turn the selective effect back to a template effect:<br />
+	Press <span class="hardkey">Clear</span> and tap <span class="softkey">Take selection</span>.&nbsp;</li>
+</ol>
+
+<div class="important"><strong>Important:</strong><br />
+The following columns are all edited a similar manner, except for tapping different columns.</div>
+
+<ul>
+	<li><strong>Interleave:</strong><br />
+	Defines the fixtures that are to use the effect. Interleave only works in selective effects.&nbsp;</li>
+</ul>
+
+<p><a id="edit_columns" name="edit_columns"></a>To set the interleave:</p>
+
+<ol>
+	<li>Press <span class="hardkey">Edit</span> and tap a cell or tap and hold a cell in the column <strong>Interleave</strong>.&nbsp;</li>
+	<li>The pop-up <strong>Select Interleave</strong> opens.&nbsp;</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-interleave_predefined-effects_v3-3.png" />
+<figcaption><em>Pop-up – select interleave</em></figcaption>
+</figure>
+
+<ol start="3">
+	<li>Now, select the interval in which the effect is to run.</li>
+</ol>
+
+<ul>
+	<li><strong>Attrib:</strong><br />
+	Displays which attribute is used in the effect line.</li>
+</ul>
+
+<ol>
+	<li>To change the attribute, tap the corresponding column.</li>
+	<li>The pop-up <strong>Select Effect Attribute</strong> opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-effect-attributes_v3-3.png" />
+<figcaption><em>Pop-up – select effect attribute</em></figcaption>
+</figure>
+
+<ol start="3">
+	<li>Tap an attribute and then tap <span class="softkey">Confirm</span>.&nbsp;</li>
+	<li>The effect lines now have the selected attribute.</li>
+</ol>
+
+<ul>
+	<li><strong>Mode:</strong><br />
+	The column mode corresponds to the effect <a href="key_effects.html#effect_modes">modes absolute and relative</a>.</li>
+</ul>
+
+<p>It is also possible to change the mode in the column via the button <span class="softkey">Line Absolute</span>:<br />
+To toggle the button to <span class="softkey">Line Relative</span>, tap <span class="softkey">Line Absolute</span> and vice versa.</p>
+
+<ul>
+	<li><strong>Form:</strong><br />
+	Displays all 23 forms of predefined effects.&nbsp;</li>
+</ul>
+
+<p>To apply a form:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li>The pop-up <strong>Select Form</strong> opens.&nbsp;</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-form_predefined-effects_v3-3.png" />
+<figcaption><em>Pop-up – select form</em></figcaption>
+</figure>
+
+<ol start="4">
+	<li>To take over the form automatically into the editor, tap a form.</li>
+	<li>The fixtures now run in an effect that was selected.&nbsp;</li>
+</ol>
+
+<div class="important"><strong>Important:</strong><br />
+Both, rate and speed set the speed of an effect.</div>
+
+<ul>
+	<li><strong>Rate:</strong><br />
+	Rate represents the factor of &nbsp;speed.&nbsp;<br />
+	The default setting is Rate 1 which corresponds to 60.0 BPM.</li>
+	<li><strong>Speed:</strong><br />
+	Speed represents the unit of the speed in BPM, hertz or seconds.&nbsp;</li>
+</ul>
+
+<div class="tip"><strong>Hint:</strong><br />
+Set the default of the unit of speed in <span class="hardkey">Setup</span> – <span class="softkey">User</span>&nbsp;– <span class="softkey">Settings</span> – <span class="softkey">Speed Mode</span>.&nbsp;</div>
+
+<p>Apply rate and speed:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li>The calculator opens.&nbsp;</li>
+	<li>Set the rate or speed and tap <span class="softkey">Please</span>.&nbsp;</li>
+	<li>The value is now applied.</li>
+</ol>
+
+<div class="important"><strong>​Important:</strong><br />
+It is sufficient to set either rate or speed, since the modes adjust to each other.&nbsp;</div>
+
+<ul>
+	<li><strong>Speed Group:</strong><br />
+	Links an effect to rate or the speed master.</li>
+</ul>
+
+<div class="important"><strong>Important:</strong><br />
+Using the effect on a speed master overwrites the speed set in an executor. For more information on the speed in an executor see <a href="key_adv_exec_spec_master_speed.html">Advanced Executor Functionality – Speed masters</a>.&nbsp;</div>
+
+<p>To set a speed group:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li>The pop-up <strong>Select Speed / Rate Master</strong> opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-speed-rate-master_effects_v3-3.png" />
+<figcaption><em>Pop-up – select speed / rate master</em></figcaption>
+</figure>
+
+<ol start="4">
+	<li>Select the speed group.&nbsp;</li>
+	<li>The group is now applied.&nbsp;</li>
+</ol>
+
+<ul>
+	<li><strong>Dir:</strong><br />
+	Dir displays the direction of the effect.&nbsp;</li>
+</ul>
+
+<p>To select the direction:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li>The pop-up <strong>Select Dir </strong>opens.&nbsp;</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-dir_effects_v3-3.png" />
+<figcaption><em>Pop-up – select direction</em></figcaption>
+</figure>
+
+<ol start="4">
+	<li>To apply the direction, select one.&nbsp;</li>
+	<li>The direction is now applied.&nbsp;</li>
+</ol>
+
+<p>It is also possible to change the direction of an effect by tapping the button <span class="softkey">Direction Forward</span>. To toggle between the directions, tap the button accordingly.&nbsp;</p>
+
+<ul>
+	<li><strong>Low Value:</strong><br />
+	Sets the lowest point an effect reaches.</li>
+	<li><strong>High Value:</strong><br />
+	Sets the highest point an effect reaches.&nbsp;</li>
+</ul>
+
+<p>To set the low and the high values:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li>The calculator opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_calculator_low-values_effects_v3-3.png" />
+<figcaption><em>Calculator – low values</em></figcaption>
+</figure>
+
+<ol start="4">
+	<li>Set the value or tap a preset on the right of the calculator and then tap <span class="softkey">Please</span>.&nbsp;</li>
+	<li>The value is now set.&nbsp;</li>
+</ol>
+
+<div class="tip"><strong>Hint:</strong><br />
+It is also possible to set a range of values in <strong>Low Value</strong> and <strong>High Value</strong>.<br />
+1. Type in the calculator the value starting the range.<br />
+2. Tap <span class="softkey">Thru</span>.<br />
+3. Then type the second value ending the range.</div>
+
+<ul>
+	<li><strong>Phase:</strong><br />
+	Displays the time setting that single fixtures use within an effect.&nbsp;<br />
+	Phase is distributed among the number of fixtures.&nbsp;</li>
+</ul>
+
+<p>To set the phase:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li>The calculator <strong>Edit EffectLine Phase</strong> opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_calculator_phase_effect_v3-3.png" />
+<figcaption><em>Pop-up – phase</em></figcaption>
+</figure>
+
+<ol start="4">
+	<li>Set the degrees in the numeric pad or tap the buttons on the right of the calculator.</li>
+	<li>The phase is now applied.&nbsp;</li>
+</ol>
+
+<ul>
+	<li><strong>Width:</strong><br />
+	Sets the width of an effect.</li>
+</ul>
+
+<div class="important"><strong>Important:</strong><br />
+Width is not applied with the form Chase.&nbsp;</div>
+
+<p><strong>Example:</strong></p>
+
+<p>If you set the width of the form Pwm&nbsp;to 20 %, this percentage is displayed as the high value and the residual 80 % display the low value.</p>
+
+<p>To set the width:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li><a id="width_calculator" name="width_calculator"></a>The calculator opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_calculator_edit-width_effects_v3-3.png" />
+<figcaption><em>Pop-up – edit width</em></figcaption>
+</figure>
+
+<ol start="4">
+	<li>Set the value and tap <span class="softkey">Please</span>.</li>
+	<li>The value set is now applied to the effect.</li>
+</ol>
+
+<ul>
+	<li><strong>Attack:</strong><br />
+	Appears quickly and outfades the values.</li>
+</ul>
+
+<p><a id="set_attack" name="set_attack"></a>To set the attack:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li>The <a href="#width_calculator">same calculator</a> as in editing the width opens.</li>
+	<li>Set the value and tap <span class="softkey">Please</span>.&nbsp;</li>
+	<li>The value is now applied to the effect.</li>
+</ol>
+
+<ul>
+	<li><strong>Decay:</strong><br />
+	Appears quickly and infades the values.&nbsp;</li>
+</ul>
+
+<p>Set the decay in the same manner as the <a href="#set_attack">attack</a>.&nbsp;</p>
+
+<p>Both, Attack and Decay display fade in and fade out times.&nbsp;</p>
+
+<div class="important"><strong>Important:</strong><br />
+It is possible to apply <strong>Attack </strong>and <strong>Decay </strong>for the forms Random, Pwm and Chaser.</div>
+
+<ul>
+	<li><strong>Groups:</strong><br />
+	Phases are divided corresponding the number of groups.&nbsp;</li>
+</ul>
+
+<p>To set the number of groups:</p>
+
+<ol>
+	<li>Tap the corresponding column.<br />
+	-or-<br />
+	Tap <span class="softkey">0 Groups</span> at the bottom of the effect editor.&nbsp;</li>
+	<li><a id="groups_calculator" name="groups_calculator"></a>The calculator opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_calculator_edit-groups_effects_v3-3.png" />
+<figcaption><em>Pop-up&nbsp;– edit groups</em></figcaption>
+</figure>
+
+<ol start="3">
+	<li><a id="groups" name="groups"></a>Set the number of groups and tap <span class="softkey">Please</span>.</li>
+	<li>The number set is applied to the effect.</li>
+</ol>
+
+<ul>
+	<li><strong>Blocks:</strong><br />
+	Blocks collaborate with Phase. Fixtures next to each other execute the same phase.&nbsp;</li>
+</ul>
+
+<p>To set the number of blocks:</p>
+
+<ol>
+	<li>Tap the corresponding column.<br />
+	-or-<br />
+	Tap <span class="softkey">0 Blocks</span> at the bottom of the effect editor.&nbsp;</li>
+	<li>The same calculator as in <strong><a href="#groups_calculator">Groups</a> </strong>opens.&nbsp;</li>
+	<li>To proceed see numbers <a href="#groups">3 and 4</a> in <strong>Groups</strong>.&nbsp;</li>
+</ol>
+
+<ul>
+	<li><strong>Wings:</strong><br />
+	The Phase is applied starting outwards and moving inwards.&nbsp;</li>
+</ul>
+
+<p>To set the number of wings:</p>
+
+<ol>
+	<li>Tap the corresponding column.<br />
+	-or-<br />
+	Tap <span class="softkey">O Wings</span> at the bottom of the effect editor.</li>
+	<li>To proceed see numbers <a href="#groups">3 and 4</a> in <strong>Groups</strong>.&nbsp;</li>
+</ol>
+
+<div class="important"><strong>Important:</strong><br />
+There is an exception to the cycle of wings. In Pan effects which consist of 2 wings, one of the wings is inverted. Hence, fixtures run towards each other.&nbsp;</div>
+
+<ul>
+	<li><strong>Single Shot:</strong><br />
+	Displays one execution of effects.</li>
+</ul>
+
+<p>To set a single execution of an effect:</p>
+
+<ol>
+	<li>Tap the corresponding column.</li>
+	<li>The cell now displays&nbsp;<strong>Yes </strong>and the button <span class="softkey">Single Shot</span> is enabled (highlighted in yellow).<br />
+	-or-<br />
+	To disable the single execution, tap the button <span class="softkey">Single Shot</span> at the bottom of the effect editor.</li>
+	<li>To disable the single execution, tap and hold the cell displaying <strong>Yes </strong>or tap the button <span class="softkey">Single Shot</span>.&nbsp;</li>
+</ol>
+
+<hr />
+<h2>Buttons in the Effect Editor</h2>
+
+<p>This paragraph deals with buttons contained in the effect editor and their corresponding functions:</p>
+
+<ol>
+	<li>Add an new attribute to an effect, tap <span class="softkey">New</span> in the column <strong>QTY </strong>and then tap <span class="softkey">Add</span>.<br />
+	-or-<br />
+	Tap <span class="softkey">Add</span> in the lower left corner of the effect editor and the pop-up <strong>Select Effect Attribute </strong>opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-effect-attributes_v3-3.png" />
+<figcaption><em>Pop-up – select effect attribute</em></figcaption>
+</figure>
+
+<ol start="2">
+	<li>Select the attribute you would like to add to the effect line.&nbsp;</li>
+	<li>Then, tap <span class="softkey">Confirm</span>.<br />
+	A new attribute is now applied to the effect line.</li>
+	<li>To delete effect lines, tap <span class="softkey">Delete</span>.</li>
+	<li>Display all fixtures that are assigned to an effect line.<br />
+	To do so, tap <span class="softkey">Show Selection</span>.<br />
+	&nbsp;If fixtures are selected, this button is enabled. If it is a template effect, it is grayed out.</li>
+	<li>To randomly rearrange the execution of an effect, tap <span class="softkey">Shuffle Selection</span>.<br />
+	The succession of the effect changes every time you tap the button.<br />
+	This button is enabled if fixtures were selected in the effect.</li>
+	<li>To take over the current MAtricks&nbsp;settings into an effect line, tap <span class="softkey">Take&nbsp;MAtricks</span>.</li>
+	<li>Then, select the display of the values.<br />
+	To display the the values for relative values in the effect line, tap <span class="softkey">Val. Readout Low/High</span> to toggle it to <span class="softkey">Val. Readout Center/Size</span>.<br />
+	To set the readout of values automatically so it adjust to the values, tap to toggle to <span class="softkey">Val. Readout Auto</span>.<br />
+	Relative effects are then automatically readout as Center/Size and absolute effects as high and low values.</li>
+	<li>To remove effects that deviate from the majority of the effects in an effect line, tap <span class="softkey">Remove Individuals</span>.</li>
+</ol>
+
+<p>For more information on the keyword see <a href="key_keyword_removeindividuals.html">RemoveIndividuals</a>.</p>
+
+<h3><a id="remove_individuals" name="remove_individuals"></a>Example:</h3>
+
+<ol>
+	<li>Select 10 fixtures in the fixture sheet.</li>
+	<li>Apply the effect cosine to 8 of the fixtures.&nbsp;</li>
+	<li>Then apply the effect sinus to the residual fixtures.</li>
+</ol>
+
+<p>If you create two different effects in the programmer and store them into the effect pool, they are displayed in a dusky pink in the effect editor.</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_effect-editor_remove-individuals_v3-3.png" />
+<figcaption><em>Effect editor displaying individual values</em></figcaption>
+</figure>
+
+<p>If you tap Remove Individuals, a warning appears.</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_warning-remove-individuals_effects_v3-3.png" />
+<figcaption><em>Warning pop-up – remove individuals</em></figcaption>
+</figure>
+
+<p>To close the pop-up, tap <span class="softkey">Cancel</span> or <img alt="" src="../../img/icon_close_small_v3-2.png" />&nbsp;in the upper right corner of the pop-up.&nbsp;</p>
+
+<p>To remove the individual settings, tap <span class="softkey">Ok</span>.&nbsp;</p>
+
+<div class="important"><strong>Important:</strong><br />
+Removing the individual settings modifies the effect.</div>
+
+<ol start="10">
+	<li>Label the effect:<br />
+	-Tap <span class="softkey">Label</span> on the right of the editor.<br />
+	-The calculator opens.<br />
+	-Type the name and press <span class="softkey">Please</span>.<br />
+	-The effect is now labeled.&nbsp;</li>
+	<li>Edit the effect line:<br />
+	-Select an effect line in the effect editor.<br />
+	-Tap <span class="softkey">Edit Effect Line</span>.<br />
+	-The <strong>Effect Line Editor</strong> opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_effect-line-editor_v3-3.png" />
+<figcaption><em>Pop-up – effect line editor</em></figcaption>
+</figure>
+
+<div class="important"><strong>Hint:</strong><br />
+It is also possible to select and deselect the attributes on the right of the effect line editor, right below the&nbsp;<img alt="" src="../../img/icon_close_small_v3-2.png" />.&nbsp;</div>
+
+<ul>
+	<li>To deselect the effect line, tap the button.</li>
+	<li>To select it, tap the button once again.</li>
+</ul>
+
+<p><strong>Form:</strong><br />
+Displays the graphic representation of the form in an effect.&nbsp;</p>
+
+<p><strong>Attack and Decay:</strong><br />
+Modifies the form of the effect with the help of faders.&nbsp;</p>
+
+<ul>
+	<li>To modify the form of the effect, tap and move the faders in the columns <strong>Attack </strong>or <strong>Decay </strong>accordingly.&nbsp;</li>
+</ul>
+
+<p>The faders on the right of <strong>Form</strong>, <strong>Attack </strong>and <strong>Decay </strong>represent the values of <strong>Low</strong>, <strong>High</strong>, <strong>Speed</strong>, <strong>Phase </strong>and <strong>Width</strong>.&nbsp;</p>
+
+<ul>
+	<li>To set the values, tap and move the faders in the corresponding columns accordingly.</li>
+</ul>
+
+<p>It is also possible to set the values via a calculator:</p>
+
+<ol>
+	<li>Tap a heading, for example <strong>Low</strong>.</li>
+	<li>The calculator opens.&nbsp;</li>
+	<li>Type the value and tap <span class="softkey">Please</span>.&nbsp;</li>
+	<li>The values have been set via the calculator.</li>
+</ol>
+
+<p><strong>Align:</strong><br />
+Sets the range of a value.&nbsp;</p>
+
+<ol>
+	<li>To define the range of a value, tap <span class="softkey">Align</span> below the corresponding fader.&nbsp;</li>
+	<li>The fader divides into two.</li>
+	<li>Set the range by moving the faders that were divided.&nbsp;</li>
+	<li>To select a preset, tap <span class="softkey">Align</span> once more.&nbsp;</li>
+	<li>The button is now toggled to <span class="softkey">Preset</span>. For more information on effects that use presets see <a href="key_effects_effect_using_presets.html#effect_preset">Create an effect that uses presets</a>.&nbsp;</li>
+	<li>Tap <span class="softkey">Preset</span> to toggle the button back to <span class="softkey">Align</span>.&nbsp;</li>
+</ol>
+
+<p>To close the effect line editor, tap&nbsp;<img alt="" src="../../img/icon_close_small_v3-2.png" />&nbsp;in the upper right corner.&nbsp;</p>
+
+<h2>&nbsp;</h2>
+
+		
+	</body>
+</html>

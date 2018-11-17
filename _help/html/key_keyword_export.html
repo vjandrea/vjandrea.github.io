@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Export Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Export keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>Export Keyword</h1>
+		
+		<p>To get the Export&nbsp;keyword in the command line type <strong>Export&nbsp;</strong>or the shortcut <strong>Exp </strong>in the command line.</p>
+
+<h2>Description</h2>
+
+<p>Export is a function keyword to transfer data from the show file to the libraries in the console.</p>
+
+<p>If no filename is entered to the keyword, one .xml file will be created for each object in object list, with file names generated based on object name/properties.</p>
+
+<p>The Export keyword writes to the current selected hard drive. For export to an USB stick select it at the Backup Menu, or type "selectdrive 4" in the command line - 4 is for the first USB stick.</p>
+
+<p>For commonly exported object types, the files will be organized in folders according to object type, e.g. Effect-folder, Macro-folder, FixtureType (library-folder). Object types without a dedicated folder will be placed in the importexport folder.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Export [Object-list] ["filename"] / [option] = [option value]</span></p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available options to the Export keyword in the command line feedback window, type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Export /?</div>
+
+<p>The Export keyword has the following options.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Shortcut</th>
+			<th scope="col">Option Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>condition</td>
+			<td>cnd</td>
+			<td>See <a href="key_keyword_messages.html">messages keyword</a>.</td>
+			<td>See <a href="key_keyword_messages.html">messages keyword</a>.</td>
+		</tr>
+		<tr>
+			<td>noconfirm</td>
+			<td>nc</td>
+			<td>no option value</td>
+			<td>Suppress the confirmation pop-up.</td>
+		</tr>
+		<tr>
+			<td>overwrite</td>
+			<td>o</td>
+			<td>no option value</td>
+			<td>Replaces existing file in the folder.</td>
+		</tr>
+		<tr>
+			<td>path</td>
+			<td>p</td>
+			<td>for example "/data/ma/actual/gma2/ImportExport"</td>
+			<td>Specifies the path for the to be exported file.</td>
+		</tr>
+		<tr>
+			<td>schema</td>
+			<td>not available</td>
+			<td>no option value</td>
+			<td>Exports MA .xml schema definition.</td>
+		</tr>
+		<tr>
+			<td>style</td>
+			<td>&nbsp;</td>
+			<td>html, csv, default (= xml with style sheet for timecode, messages, sequence, fixture, layer, and layers)</td>
+			<td>Specifies the style of the exported file.</td>
+		</tr>
+		<tr>
+			<td>transform</td>
+			<td>t</td>
+			<td>no option value</td>
+			<td>Transforms the file into the defined style.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To create an .xml file labeled mymacros in the macro folder with macro 1 thru 10, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Export Macro 1 Thru 10 "MyMacros"</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To create an .xml file labeled based on Effectname in the effect directory with effect 1, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Export Effect 1</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

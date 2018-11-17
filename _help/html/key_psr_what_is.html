@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>What is Partial Show Read (PSR)</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="partial show read, PSR" />
+	</head>
+	<body>
+		
+		
+		<h1>What is Partial Show Read (PSR)</h1>
+		
+		<p>The Partial Show Read (PSR) is a function that allows you to load or import elements from one show into another.</p>
+
+<p>The following elements can be imported from the source show:</p>
+
+<ul>
+	<li>Macros</li>
+	<li>Presets</li>
+	<li>Filters</li>
+	<li>Groups</li>
+	<li>Effects</li>
+	<li>Sequences</li>
+	<li>Timers</li>
+	<li>Executors and ExecutorPages</li>
+	<li>Layouts</li>
+</ul>
+
+<p>Partial Show Read respects the worlds. This means that elements will only be imported if the selected world allows to do so.</p>
+
+<p>If objects imported need other elements, these elements are also imported. For example, if a sequence uses presets, these presets are automatically imported as well.</p>
+
+<p>&nbsp;</p>
+
+<p>PSR is a two-step process. First, the two shows are compared and it is chosen which fixtures from the two shows need to be used. It is also possible to choose the 3D environment and the fixtures´ 3D positions.</p>
+
+<p>After the prepare phase, it is possible to open the PSR menu and choose the elements that are to be imported.</p>
+
+<p>Store the source show in the same version number as the destination show.</p>
+
+<p>If you load a previous version, a warning pop-up appears:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_psr-prepare-not-possible_v3-3.png" />
+<figcaption><em>Warning pop-up</em></figcaption>
+</figure>
+
+<p>To save the show, please load the source show and store it in the latest version.</p>
+
+<p>Import single executors or entire executor pages.</p>
+
+<hr />
+<h2>Limitations</h2>
+
+<ul>
+	<li>Special Master cannot be imported.</li>
+	<li>Executors with a width exceeding 1 will only be imported correctly if the entire executor page is imported.</li>
+</ul>
+
+<p>The current Partial Show Read cannot be done on a station that is in a session. Please leave the session before doing the Partial Show Read.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>
