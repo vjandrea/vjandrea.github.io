@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html manifest="ma2remote.appcache">
+  <head>
+    <meta charset="utf-8"/>
+    <title>MA Webremote</title>
+    <link rel="stylesheet" type="text/css" href="./css/generic.css" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta http-equiv="Cache-control" content="public">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0"/>
+    <link rel="apple-touch-icon" href="images/appicon.png"/>
+    <link rel="shortcut icon" href="images/appicon.png"/>
+  </head>
+  <body>
+    <script type="text/javascript" src="./js/start.js"></script>
+
+    <div class="main">
+        <div class="header">
+            <div class="header-left">
+                <div class="header-left-top"></div>
+                <div class="header-left-bottom"></div>
+            </div>
+            <div class="header-right top-right-button">
+                 <div class="commandbutton">
+                    <div class="buttonContent">
+                        <div class="text content">Wheels</div>
+                    </div>
+                </div>
+                <embed data-rel="popup-window-sign" class="popupWindowSign" type="image/svg+xml" src="./images/popupWindowSign.svg"></embed>
+            </div>
+        </div>
+
+        <div id="body" class="middle page-content">
+            <div class="middle-inner page-content-inner">
+                <div class="middle-left"></div>
+                <div class="middle-center">
+                    <div class="middle-center-top page-top-buttons button-container"></div>
+                    <div class="middle-center-bottom">
+                        <div class="middle-center-bottom-inner main-content"></div>
+                    </div>
+                </div>
+                <div class="middle-right">
+                    <div class="wheel dimmer-wheel">
+                        <div class="commonWheelHolder wheelHolder">
+                            <div class="wheelStripe">
+                                <div class="wheelStripeInner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom footer"></div>
+    </div>
+
+    <div id="disconnectedPanel">Disconnected from console</div>
+    <div class="selectionOverlay"></div>
+
+    <div class="debug"></div>
+
+    <script type="text/javascript" src="./js/main.js"></script>
+
+    </body>
+</html>
