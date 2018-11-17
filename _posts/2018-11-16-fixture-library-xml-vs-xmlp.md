@@ -40,5 +40,5 @@ What appears as `MA DATA?` in the `cat` output is actually a 19 bytes header:
 
 ````
 4D 41 20 44 41 54 41 00 02 00 05 03 FD 05 00 00 EF BB BF
-M  A     D  A  T  A                 ˝	        Ô  ª  ø
+M  A     D  A  T  A                 ˝           Ô  ª  ø
 ````
