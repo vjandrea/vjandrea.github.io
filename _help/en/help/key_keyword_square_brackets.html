@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Square Brackets [ ] Character</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="square brackets [ ] character, [ ] square brackets character" />
+	</head>
+	<body>
+		
+		
+		<h1>Square Brackets [ ] Character</h1>
+		
+		<p>To enter square brackets [ ] into the command line press <span class="hardkey">[</span> or <span class="hardkey">]</span>.</p>
+
+<h2>Description</h2>
+
+<p>Square brackets [ ] are used in macros. For more information see <a href="key_macro.html">macros</a>.</p>
+
+<p>Using square brackets in macros sets a conditional expression which has to have the solution "True" to be able to execute the following commands. The expression takes user defined variables and logical operators.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="height:90px; width:250px">
+	<tbody>
+		<tr>
+			<td>a==b</td>
+			<td>a equals b</td>
+		</tr>
+		<tr>
+			<td>a&gt;b</td>
+			<td>a greater than b</td>
+		</tr>
+		<tr>
+			<td>a&lt;b</td>
+			<td>a less than b</td>
+		</tr>
+		<tr>
+			<td>a&lt;=b</td>
+			<td>a less than or equals b</td>
+		</tr>
+		<tr>
+			<td>a&gt;=b</td>
+			<td>a greater than or equals b</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="important"><strong>Important:</strong><br />
+The two arguments&nbsp;a and b are treated as text strings and not as numbers –&nbsp;character by character.&nbsp;For example&nbsp;"61" is considered to be greater than "599",&nbsp;as 6 is greater than 5.</div>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To turn off page 3 only if $myvar equals 5, type into the macro line:</li>
+</ul>
+
+<p><span class="syntax">[$myvar==5]<strong>Off Page </strong>3</span></p>
+
+<hr />
+<ul>
+	<li>To goto Cue 1 if $var is less than 5, and goto Cue 35 if $var is greater or equals 5, type into the macro line:</li>
+</ul>
+
+<p><span class="syntax"><strong>Goto </strong><strong>Cue </strong>[$var&lt;5]1 [$var&gt;=5]35</span></p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

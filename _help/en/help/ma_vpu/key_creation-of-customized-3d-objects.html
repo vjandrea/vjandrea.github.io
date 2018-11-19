@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Creation of customized 3D Objects</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Creation, of, customized, 3D, Objects" />
+	</head>
+	<body>
+		
+		
+		<h1>Creation of customized 3D Objects</h1>
+		
+		<p>3D objects can be created with 3D CAD programs. Please note, that the amount of polygons affects the performance because for each polygon the projection has to be calculated. The lower the number of polygons the better is the frame rate.</p>
+
+<p>MA VPU supports the following formats for 3D objects:</p>
+
+<ul>
+	<li><strong>x</strong>&nbsp;- DirectX file format</li>
+	<li><strong>3ds</strong>&nbsp;- Format for drawing 3 dimensional objects will be supported in future</li>
+</ul>
+
+<p>Note the following regulations:</p>
+
+<ul>
+	<li>The orientation of the object should fit</li>
+	<li>Normals have to be organized correctly</li>
+	<li>UV coordinates for the textures have to be setup correctly</li>
+</ul>
+
+<p>The following example shows the creation of a cylinder with the 'Cinema 4D’ (Copyright by MAXON Computer GmbH) software.</p>
+
+<table style="height:2850px">
+	<tbody>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do1.png" /></td>
+			<td>Insert an object of type 'Cylinder’</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do2.png" /></td>
+			<td>Set the orientation to 'Y+’. For a correct visualization in MA VPU Z is the depth, Y the vertical and X the horizontal axis.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do3.png" /></td>
+			<td>Make the object editable.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do4.png" /></td>
+			<td>Select not used polygons…</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do5.png" /></td>
+			<td>and delete them.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do6.png" /></td>
+			<td>Set the visibility of normals on.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do7.png" /></td>
+			<td>Copy the object…</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do8.png" /></td>
+			<td>and reverse the normals of the copy.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do9.png" /></td>
+			<td>Select both cylinder objects and connect them to one new cylinder.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do10.png" /></td>
+			<td>The old cylinder objects can be deleted.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_cinema4dobjectexample9.png" /></td>
+			<td>Now you can see two objects with normals in both directions.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do11.png" /></td>
+			<td>Check the orientation of the resulting object.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do12.png" /></td>
+			<td>Insert a new material for the texturing.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do13.png" /></td>
+			<td>Assign an image to the texture and the material to the object.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do14.png" /></td>
+			<td>Adjust the texture mapping parameter.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do15.png" /></td>
+			<td>Assign the UV coordinates for the texture mapping.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_coc3do16.png" /></td>
+			<td>Export the object to Direct 3D format.<br />
+			Objects created in this way can be added to the Channel Set via the context menu in the '3D Objects view with the right mouse button.</td>
+		</tr>
+		<tr>
+			<td><img alt="" src="../../../img/ma_vpu/vpu_cinema4dobjectexample19.png" /></td>
+			<td><strong>Note:&nbsp;</strong>At the export-options of newer releases of Cinema4D, you need to switch off “Save Templates” in order to make the 3D-object visible at the VPU.</td>
+		</tr>
+	</tbody>
+</table>
+
+		
+	</body>
+</html>

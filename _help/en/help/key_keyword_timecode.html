@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Timecode Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Timecode Keyword, Timecode, Go Timecode, Record Timecode" />
+	</head>
+	<body>
+		
+		
+		<h1>Timecode Keyword</h1>
+		
+		<p>To get the Timecode keyword in the command line, press <span class="hardkey">Macro</span> <span class="hardkey">Macro</span> (= Timecode).</p>
+
+<p>You can also type <strong>Timecode </strong>in the command line or use the shortcut <strong>TC</strong>.</p>
+
+<h2>Description</h2>
+
+<p>The Timecode keyword, select the timecode by default.</p>
+
+<p>With the Timecode keyword, you can</p>
+
+<ul>
+	<li>store</li>
+	<li>play (go)</li>
+	<li>record</li>
+	<li>edit</li>
+	<li>label</li>
+	<li>assign</li>
+	<li>rewind (top)</li>
+</ul>
+
+<p>timecode shows.</p>
+
+<p>The Timecode keyword, is an object keyword.</p>
+
+<p>For more information, see <a href="key_timecode.html">Timecode</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">[Function] Timecode [ID] </span></p>
+
+<p><span class="syntax">Assign Timecode [ID] / [Parameter] = [Parameter Value]</span></p>
+
+<h2>Parameter</h2>
+
+<p>The following table displays the assignable parameters by using the <a href="key_keyword_assign.html">Assign keyword</a>.</p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Name</td>
+			<td>"Timecode show name"</td>
+			<td>Assign the timecode show name.</td>
+		</tr>
+		<tr>
+			<td>Slot</td>
+			<td>"Intern" (-1), "Link Selelcted" (0), "1", "2", "3", "4", "5", "6", "7", "8"</td>
+			<td>Assign the timecode show to a timecode slot.</td>
+		</tr>
+		<tr>
+			<td>Length</td>
+			<td>0s to 255h59m58.96s</td>
+			<td>Assign the timecode show length in total.</td>
+		</tr>
+		<tr>
+			<td>Offset</td>
+			<td>0s to 255h59m58.96s</td>
+			<td>Assign an offset to the timecode show, to move the entire timecode show forward.</td>
+		</tr>
+		<tr>
+			<td>Runs</td>
+			<td>"Endless Repeat" (0),<br />
+			"No Repeat" (1),<br />
+			2..1000</td>
+			<td>
+			<p><strong>Only for timecode shows syncing to the internal clock.</strong><br />
+			Assign, if the timecode show runs:</p>
+
+			<ul>
+				<li>Endless (Endless Repeat)</li>
+				<li>Once and stop (No Repeat)</li>
+				<li>A specific number of times (number between 2 and 1000)</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>SwitchOff</td>
+			<td>"Playbacks Off",<br />
+			"Keep Playbacks"</td>
+			<td>Assign,&nbsp; if the playbacks running during a timecode show:
+			<ul>
+				<li>Turns off (Playbacks Off)</li>
+				<li>Stays on (Keep Playbacks)</li>
+			</ul>
+
+			<p>when the timecode show turns off.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>StatusCall</td>
+			<td>"On", "Off"</td>
+			<td>
+			<p>Assign, if the timecode show will:</p>
+
+			<ul>
+				<li>Sync with the timecode signal instantly (on)</li>
+				<li>Execute the signal when they are reached (off)</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>TimeUnit</td>
+			<td>"1/100 Seconds", "24 FPS", "25 FPS", "30 FPS"</td>
+			<td>Assign the time unit for the graphic display mode.</td>
+		</tr>
+		<tr>
+			<td>WhenEnding</td>
+			<td>"Stop", "Pause"</td>
+			<td>
+			<p><strong>Only for timecode shows syncing to the internal clock.</strong><br />
+			Assign what happens when the timecode show runs out of recorded time.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>WhenStopping</td>
+			<td>"Do Nothing", "Rewind"</td>
+			<td>Assign what happens when the timecode show is stopped.</td>
+		</tr>
+		<tr>
+			<td>AutoStart (only available with external timecode slot)</td>
+			<td>"Off", "On"</td>
+			<td><strong>Only available when syncing to an external source.</strong><br />
+			If a timecode signal is received, the timecode show switches from the off mode into the play mode.</td>
+		</tr>
+		<tr>
+			<td>User Bits</td>
+			<td>0 .. FFFFFFFF, 0 .. 4294967296</td>
+			<td><strong>Only available when syncing to an external source.</strong><br />
+			Assign user bits in hex or decimal, to transmit several kinds of information, e.g. a second Timecode Stream. So several incoming Timecode Streams can be discerned.</td>
+		</tr>
+		<tr>
+			<td>Info</td>
+			<td>"Information Text"</td>
+			<td>Assign additional information.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Store new timecode show 2 in the timecode pool.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Store Timecode 2</div>
+
+<hr />
+<ul>
+	<li>Record executor action for timecode show 2.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Record Timecode 2</div>
+
+<figure class="caption"><img alt="" src="../../img/img_pool-object-record-timecode_v3-2.png" />
+<figcaption><em>Pool Object Record&nbsp;Timecode</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<hr />
+<ul>
+	<li>Play timecode show 2.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Go Timecode 2</div>
+
+<figure class="caption"><img alt="" src="../../img/img_pool-object-go-timecode_v3-2.png" />
+<figcaption><em>Pool Object Go&nbsp;Timecode</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<hr />
+<ul>
+	<li>Rewind timecode show 2.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Top Timecode 2</div>
+
+<hr />
+<ul>
+	<li>Label timecode show 2 in the timecode pool. The Enter Name for Timecode pop-up opens.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Label Timecode 2</div>
+
+<figure class="caption"><img alt="" src="../../img/popup_enter-name-for-timecode_v3-2.png" />
+<figcaption><em>Enter Name for&nbsp;Timecode&nbsp;pop-up</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<hr />
+<ul>
+	<li>Assign timecode show 1 the timecode slot 3.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Assign Timecode 1/Slot = 3</div>
+
+<p>Timecode slot 3 is assgined to timecode show 1.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

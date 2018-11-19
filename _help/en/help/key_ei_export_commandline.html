@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Export by using command line</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Export by using command line" />
+	</head>
+	<body>
+		
+		
+		<h1>Export by using command line</h1>
+		
+		<p>It is possible to use the <strong>Command&nbsp;Line</strong> to export all objects. For more information about the keyword and syntax, see the <a href="key_keyword_export.html">Export keyword</a>&nbsp;topic.</p>
+
+<p>&nbsp;</p>
+
+<h2>Example 1</h2>
+
+<p>The&nbsp;<strong>Command Line</strong>&nbsp;syntax to export group 1 thru 4 to a file named Front_groups.xml</p>
+
+<div class="cl_input">[Channel]&gt; Export Group 1 &nbsp;Thru 4 "Front_groups"</div>
+
+<h2>Example 2</h2>
+
+<p>The <strong>Command Line</strong> syntax to export a&nbsp;User Profile&nbsp;named Designer and overwrite the existing&nbsp;Designer.xml file</p>
+
+<div class="cl_input">[Channel]&gt; Export UserProfile "Designer" /Overwrite</div>
+
+<p>&nbsp;</p>
+
+<h2>Export objects to a USB stick</h2>
+
+<p>To export objects to a USB stick, in this example a color, &nbsp;a USB stick has to be plugged in the console or onPC. A Command Line Feedback window has to be open.</p>
+
+<h3>Steps:</h3>
+
+<ol>
+	<li>To find the drive to export the objects to, type "SelectDrive" in the Command Line. The Command Line Feedback displays a list of the available&nbsp; drives.</li>
+	<li class="cl_input">[Channel]&gt; SelectDrive</li>
+	<li>Select the USB stick (it might be number four), typing "SelectDrive 4". Drive number 4 is now the default drive.</li>
+	<li class="cl_input">[Channel]&gt;&nbsp;SelectDrive&nbsp;4</li>
+	<li>Export the color named cyan.</li>
+	<li class="cl_input">[Channel]&gt; export preset 4 "Cyan"</li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

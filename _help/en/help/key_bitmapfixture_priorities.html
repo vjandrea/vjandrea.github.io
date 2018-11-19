@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Priorities for bitmap effects</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="priorities - bitmap effects, bitmap effects - priorities, bitmap effects - priorities, LTP prioritiy - bitmap effects, high prioritiy - bitmap effect" />
+	</head>
+	<body>
+		
+		
+		<h1>Priorities for bitmap effects</h1>
+		
+		<p>When working with bitmap effects in the programmer and in playbacks attention should be paid to the following priorities:</p>
+
+<ol>
+	<li>Bitmap effects always have the lowest priority within a level of priorities.&nbsp;<br />
+	Level of priorities are:<br />
+	- Super<br />
+	- Swp<br />
+	- HTP<br />
+	​- High<br />
+	- LTP<br />
+	- Low</li>
+	<li>Bitmap effects are only visible within a sequence&nbsp;– <strong>cue list:</strong><br />
+	- When the fixtures, which are running the bitmap effects, have no values and no effect values on the attributes in use.</li>
+</ol>
+
+<p>For more information on priorities in general see <a href="key_adv_exec_options.html">executor options</a>.&nbsp;</p>
+
+<h2>Example:</h2>
+
+<p>If a dimmer value is saved in a cue for Fixture 1, the bitmap effect can only be used for Fixture 1 in the following cue when the dimmer value is released.</p>
+
+<p>For more information on how to release see <a href="key_cs_what_is_tracking.html">What is tracking</a>.&nbsp;</p>
+
+<p><strong>This is a visual explanation of the example by means of illustration for Fixture 1:</strong></p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Tracking cue list</th>
+			<th scope="col">Dimmer</th>
+			<th scope="col">Explanation</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cue 1</td>
+			<td><strong>––––––</strong></td>
+			<td>
+			<p>Bitmap effect operates</p>
+
+			<p>Fixture 1 (dimmer)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>cue 2</td>
+			<td>100</td>
+			<td>
+			<p>Value overwrites</p>
+
+			<p>Fixture 1 (dimmer)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>cue 3</td>
+			<td>(R)</td>
+			<td>
+			<p>Value is released,</p>
+
+			<p>thus the bitmap effect from cue 1 or a new bitmap effect</p>
+
+			<p>is visible&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

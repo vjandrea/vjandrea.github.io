@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Using groups when programming</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="using groups, using names" />
+	</head>
+	<body>
+		
+		
+		<h1>Using groups when programming</h1>
+		
+		<p>When some groups have been created, then they can be used during programming.</p>
+
+<p>&nbsp;</p>
+
+<p>Groups are shortcuts to select fixtures.</p>
+
+<p>There is no reference to the group stored anywhere. This means that if the group is changed after being used, then it will not affect the stored cues.</p>
+
+<p>&nbsp;</p>
+
+<p>The work flow is to tap a group in the pool, give it some values, and then maybe storing the values.</p>
+
+<p>&nbsp;</p>
+
+<h2>Using names or numbers</h2>
+
+<p>Groups can be accessed by their names or numbers.</p>
+
+<p>If group number 7 is named <strong>My Lights</strong>, then it is possible to use the command line and write</p>
+
+<p><span class="syntax">Group 7 at 50</span> or <span class="syntax">g "My Lights" at 50</span> ("g" is the command shortcut for group).</p>
+
+<p>If there are more groups called <strong>My Lights</strong> then all the groups with that name will get the value.</p>
+
+<p>Capital letters are ignored. So <strong>My Lights</strong> and <strong>my lights</strong> are considered the same.</p>
+
+<p>&nbsp;</p>
+
+<p>It is possible to use an asterisk as a joker. Let us imagine that there are three groups called <strong>Wash 1</strong>, <strong>Wash 2</strong> and <strong>Wash 3</strong>.</p>
+
+<p>If all three groups needs to get 50%, then all is needed is to write <span class="syntax">g wash* at 50</span>.</p>
+
+<p>&nbsp;</p>
+
+<p>In the last example we did not need the quotation marks. They are needed if the name have a space in it. But if an asterisk is used then quotation is not needed, even though the resulting groups actually have a space in their names.</p>
+
+<p>The asterisk can also be used in front of the name. If there are several groups with the word <strong>cold</strong> in the name and all of them needs to go to 60, then write the following <span class="syntax">g *cold* at 60</span>.</p>
+
+		
+	</body>
+</html>

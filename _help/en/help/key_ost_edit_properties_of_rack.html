@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Edit Properties of a Rack</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="properties of a rack - edit" />
+	</head>
+	<body>
+		
+		
+		<h1>Edit Properties of a Rack</h1>
+		
+		<p>You can edit the properties of racks.&nbsp;</p>
+
+<p><strong>Requirement:</strong></p>
+
+<ul>
+	<li>Add MA NDPs to the network configuration</li>
+</ul>
+
+<p>For more information see <a href="key_network_session_add_device.html">Adding devices to your session</a>.&nbsp;</p>
+
+<ul>
+	<li>Open <strong>MA Dimmer Network</strong></li>
+</ul>
+
+<p>For more information on how to open the <strong>MA Dimmer Network</strong> see <a href="key_ost_network_dimmer.html">Network dimmer</a>.&nbsp;</p>
+
+<ol>
+	<li>
+	<p><a id="rack_properties" name="rack_properties"></a>To edit the properties of a rack, press <span class="hardkey">Edit</span> and tap a rack. The window <strong>Rack Properties</strong> opens.</p>
+	</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/popup_rack-properties_network-dimmer_v3-3.png" />
+<figcaption><em>Rack Properties</em></figcaption>
+</figure>
+
+<p>The upper sections <strong>Controlled by</strong> and <strong>Status</strong> cannot be edited. They solely display data such as:</p>
+
+<ul>
+	<li>Name of the NDP</li>
+	<li>IP of the NDP</li>
+	<li>If NDP is in session</li>
+	<li>Voltage</li>
+	<li>Current</li>
+	<li>Power</li>
+	<li>A total of the three-phase alternating current</li>
+	<li>Temperature of the rack</li>
+</ul>
+
+<div class="important"><strong>Important:</strong><br />
+The lower section displaying the merge mode, data slots and input config can be edited.</div>
+
+<ol start="2">
+	<li>To edit the merge mode, tap the button displayed below Merge Mode.<br />
+	-The <strong>pop-up Select Slot Mode</strong> opens.&nbsp;
+
+	<figure class="caption"><img alt="" src="../../img/popup_select-slot-mode_network-dimmer_v3-3.png" />
+	<figcaption><em>Select merge mode</em></figcaption>
+	</figure>
+	<br />
+	-Select a mode.</li>
+</ol>
+
+<hr />
+<h2>Merge Modes</h2>
+
+<ul>
+	<li><strong>HTP</strong><br />
+	​Connects both slots. If both slots are active, the slot which values are higher takes precedence.​</li>
+</ul>
+
+<p>​​</p>
+
+<ul>
+	<li><strong>LTP</strong><br />
+	Uses both slots. If both slots are active, the slot which values were modified the last takes precedence.&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>1-Only</strong><br />
+	Only uses Slot 1.&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>Only-2</strong><br />
+	Only uses Slot 2.&nbsp;</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>1-Over-2</strong><br />
+	Connects both slots. However, Slot 1 has the higher priority. That is, in case there is a valid signal on Slot 1 (no matter the type), the NDP&nbsp;ignores the signal on Slot 2. If there is no signal on Slot 1 or if the NDP detects a faulty signal on Slot 1, the NDP automatically starts to use Slot 2.&nbsp;</li>
+</ul>
+
+<hr />
+<ol start="3">
+	<li>To edit a slot, tap the button displayed below Data Slot 1 and Data Slot 2.<br />
+	-The <strong>pop-up Slot Properties</strong> opens.
+
+	<figure class="caption"><img alt="" src="../../img/popup_slot-properties_network-dimmer_v3-3.png" />
+	<figcaption><em>Adjust slot properties</em></figcaption>
+	</figure>
+	<br />
+	-To select a source type, tap the drop-down box and tap the corresponding protocol in the list.<br />
+	-To select a source mode, tap the drop-down box and tap a source mode in the list.<br />
+	-To enter a patch address, type into the green input field or tap the <img alt="" src="../../img/icon_plus_small_v3-2.png" />&nbsp;and the calculator opens.</li>
+	<li>Now, tap <span class="softkey">Please</span>.</li>
+</ol>
+
+<p>The properties of the slot are now applied.&nbsp;</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+-To enable 1024 channels for the configuration patch, select <strong>Double Universe</strong> in the Source Mode and <strong>DMX</strong> in the Source Type.&nbsp;DMX In 1 and 2 of the NDP&nbsp;are used in one slot.<br />
+-If you select <strong>Art-Net, MA-Net2 or sACN</strong>&nbsp;in the Source Type and <strong>Double</strong> <strong>Universe</strong> in the Source Mode, specify the two universes individually.&nbsp;</div>
+
+<ol start="5">
+	<li>To edit universes, tap the button displayed below Input Config.<br />
+	-The <strong>pop-up Input Properties</strong> opens.
+
+	<figure class="caption"><img alt="" src="../../img/popup_input-properties_network-dimmer_v3-3.png" />
+	<figcaption><em>Edit universes</em></figcaption>
+	</figure>
+	<br />
+	-To edit the universes in Line 1 and Line 2, tap the <img alt="" src="../../img/icon_minus_v3-2.png" />&nbsp;or <img alt="" src="../../img/icon_plus_v3-2.png" />&nbsp;or type in the green input field using the keyboard.<br />
+	-If you have selected Art-Net as the source type, define which Art-Net universe is used. To do so, tap the Input Config and the <strong>pop-up Art-Net Input Properties</strong> opens.
+
+	<figure class="caption"><img alt="" src="../../img/popup_artnet-input-properties_network-dimmer_v3-3.png" />
+	<figcaption><em>Adjust the input properties of Art-Net&nbsp;</em></figcaption>
+	</figure>
+	<br />
+	-Adjust subnet and ID.&nbsp;</li>
+</ol>
+
+<div class="tip"><strong>Hint:</strong><br />
+-Subnet defines the upper 4bits&nbsp;of the Art-Net address. If you enter 0 in subnet, 1 is defined. If you enter 1, 2 is defined.<br />
+-ID defines the lower 4bits&nbsp;of the Art-Net address. Entering numbers works the same as in subnet.</div>
+
+<ol start="6">
+	<li>After you have edited the properties of the rack, save the settings.<br />
+	-Tap <span class="softkey">Save</span> on the right of the window and the <strong>pop-up Save Rack Configuration opens</strong>.
+
+	<figure class="caption"><img alt="" src="../../img/popup_save-rack-configuration_network-dimmer_v3-3.png" />
+	<figcaption><em>Save the configuration</em></figcaption>
+	</figure>
+	<br />
+	-The current rack is marked in a light brown color.<br />
+	-To save the settings of the current rack, tap <span class="softkey">Save</span>.<br />
+	-To cancel the process, tap <span class="softkey">Cancel</span> or <img alt="" src="../../img/icon_close_small_v3-2.png" />&nbsp;in the upper right corner of the pop-up.</li>
+</ol>
+
+<div class="tip"><strong>Hint:</strong><br />
+Configurations are saved on the desk ending in&nbsp;<strong>*.rack</strong>. They can either be saved on the internal drive or a USB stick, hence they are not saved in the show file.&nbsp;</div>
+
+<ol start="7">
+	<li>To delete a rack, tap <span class="softkey">Delete</span>.&nbsp;</li>
+</ol>
+
+<div class="important"><strong>Important:</strong><br />
+Racks can only be deleted if they are not in use or those that just have been created "offline" without the NDP&nbsp;controlling it.&nbsp;</div>
+
+<ol start="8">
+	<li>To select the next or the previous rack, tap <img alt="" src="../../img/icon_previous_v3-3.png" />&nbsp;or <img alt="" src="../../img/icon_next_v3-3.png" />.&nbsp;</li>
+	<li>To create a rack, tap <span class="softkey">New</span> and the <strong>pop-up Select Rack Number</strong> opens.
+	<figure class="caption"><img alt="" src="../../img/popup_select-rack-number_network-dimmer_v3-3.png" />
+	<figcaption><em>Select rack number</em></figcaption>
+	</figure>
+	<br />
+	-Select the rack number and edit the newly created rack as described in <a href="#rack_properties">Rack Properties</a>.</li>
+	<li>To load an existing rack, tap <span class="softkey">Load</span> and the <strong>pop-up Load Rack Configuration opens</strong>.
+	<figure class="caption"><img alt="" src="../../img/popup_load-rack-configuration_network-dimmer_v3-3.png" />
+	<figcaption><em>Load an existing rack</em></figcaption>
+	</figure>
+	<br />
+	-Select the drive in the drop-down below the heading.<br />
+	Tap to select a rack and tap <span class="softkey">Open</span>.</li>
+</ol>
+
+<div class="tip"><strong>Hint:</strong><br />
+It is possible to load racks from an internal drive and previous software versions.</div>
+
+<p>The rack is configured and the settings are applied.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

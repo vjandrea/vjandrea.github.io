@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>EndSession Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="EndSession keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>EndSession Keyword</h1>
+		
+		<p>To get the EndSession keyword in the command line type <strong>EndSession </strong>or the shortcut <strong>EndS </strong>in the command line.</p>
+
+<h2>Description</h2>
+
+<p>EndSession is a function keyword to end a session for all session members. The EndSession keyword disconnects all linked devices in the session. It is not possible to join an ended session again.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">EndSession / [noconfirm]</span></p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available options to the EndSession keyword in the command line feedback window, type in the command line</p>
+
+<div class="cl_input">[Channel]&gt; EndSession /?</div>
+
+<p>The EndSession keyword has the following options.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Shortcut</th>
+			<th scope="col">Option Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>noconfirm</td>
+			<td>nc</td>
+			<td>no option value</td>
+			<td>Suppresses confirmation pop-up.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To end the session for all session members with a confirmation pop-up type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; EndSession</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To end the session directly without a confirmation pop-up type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; EndSession /noconfirm</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

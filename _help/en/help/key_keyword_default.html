@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Default Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Default keyword, default values" />
+	</head>
+	<body>
+		
+		
+		<h1>Default Keyword</h1>
+		
+		<p>To execute the keyword <strong>Default </strong>press and hold <span class="hardkey"><img alt="ma" src="../../img/ma_1.png" /></span> +&nbsp;<span class="hardkey"> . </span>.</p>
+
+<p>You can also type <strong>Default </strong>or the shortcut <strong>D</strong> into the command line.</p>
+
+<h2>Description</h2>
+
+<p>The Default keyword sets the given attributes for the fixture or channel selection to default values. If no attribute list is given, all attributes of fixture or channel selection will be set to their default values.</p>
+
+<p>If <strong>individual default values</strong> for the fixture or channel are set in the edit menu, the individual default value will be used.<br />
+If only <strong>general default values</strong> for the fixture or channel are set in the Patch and Fixture Schedule, the general default values will be used.</p>
+
+<p>You can also use the <span class="softkey">Default Link</span> in the calculator. For more information, see <a href="key_ws_calculator.html">Calculator</a>.</p>
+
+<p>Default values are displayed in the fixture or channel sheet in brackets.</p>
+
+<figure class="caption"><img alt="" src="../../img/window_fixture-sheet-default-values_v3-2.png" />
+<figcaption><em>Fixture sheet color default values</em></figcaption>
+</figure>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Default </span></p>
+
+<p><span class="syntax">Fixture [Fixture ID] Default PresetType [PresetType Number]</span></p>
+
+<p><span class="syntax">Channel [Channel ID] Default PresetType "PresetType Name"</span></p>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Set pan and tilt of the fixture selection to their default values.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Default PresetType "Position"</div>
+
+<hr />
+<ul>
+	<li>&nbsp;Set all attributes of fixture 1 to their default values.</li>
+</ul>
+
+<div class="cl_input">&nbsp;[Channel]&gt; Fixture 1 Default</div>
+
+		
+	</body>
+</html>

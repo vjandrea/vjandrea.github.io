@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>VPU - Pixel Mapper Grid View</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="VPU, Pixel Mapper, Grid, View" />
+	</head>
+	<body>
+		
+		
+		<h1>VPU - Pixel Mapper Grid View</h1>
+		
+		<p>Via the tab 'Grid View’ you can switch to the Grid View of the Pixel Mapper:</p>
+
+<figure class="caption"><img alt="Pixel Mapper Editor - Grid View" src="../../../img/ma_vpu/vpu_pmgrv_2.png" />
+<figcaption>Pixel Mapper Editor - Grid View</figcaption>
+</figure>
+
+<p>This view offers an overview about all used fixtures of the selected output.<br />
+Most values can be edited directly in the grid. Vales which can not be edited are displayed in light grey.<br />
+Selected fixtures are displayed with an orange background. Patch collisions are indicated and marked&nbsp;<strong>red</strong>.</p>
+
+<p>You can use common functions like:</p>
+
+<p><strong>Multiselection</strong>: select first row while pressing &lt;Shift&gt; and select last row (still hold &lt;Shift&gt;)--&gt; all rows inbetween are selected.<br />
+Select or deselect several rows by pressing Ctrl. Press F2 for editing a value and all selected values will take over the new value.<br />
+Selecting multiple values can also be done by using the rubberband, means to lasso a certain area.<br />
+The edit control (to type in the value) can be opened by a left mouse click on a selected value.<br />
+Holding &lt;Ctrl&gt; while lassoing (selecting) values allows toggling the selection.<br />
+The selection of several rows (multiselection) is marked by green frames.<br />
+All green highlighted values&nbsp;values of the same column will take over the new value.</p>
+
+<p><strong>Export- Import to Excel:</strong>&nbsp;You can Export or Import the panels to an Excel (.csv) file via the context menu</p>
+
+<p><strong>Copy &amp; Paste from an Excel Sheet</strong>:<br />
+Note: you can only do this on a Media PC or on a external PC running the VPU Software. Only the Name of the fixture, PosX, PosY and Rot can be manipulated.<br />
+If you want to use the functionality in combination with a VPU, this external PC has to be in a session with the VPU or the same showfile that you just edited.<br />
+It has to be uploaded to the VPU afterwards. Create an Excel sheet or Tab separated .txt file that fits the options in the VPU change all cells to the desired values:</p>
+
+<figure class="caption"><img alt="Spreadsheet" src="../../../img/ma_vpu/vpu_excelsheet1.png" />
+<figcaption>Excel Spreadsheet</figcaption>
+</figure>
+
+<p>Copy these settings to the clipboard by pressing CTRL + C (only values shall be selected, not the headline, numerical values comma or Tab separated, so e.g. only values like “2,3” are valid.<br />
+Open the VPU software; go to the grid view in the pixel mapper mode.<br />
+Select the row, where you want to insert new values:</p>
+
+<figure class="caption"><img alt="Pixel Mapper editor - Grid view" src="../../../img/ma_vpu/vpu_excelsheet2.png" />
+<figcaption>Pixel Mapper editor - Grid view</figcaption>
+</figure>
+
+<p>Right click into the grid view and select “Paste”. The result looks like this:</p>
+
+<figure class="caption"><img alt="Pixel Mapper editor - Grid view" src="../../../img/ma_vpu/vpu_excelsheet3_2.png" />
+<figcaption>Pixel Mapper editor - Corrected Grid view after pasting</figcaption>
+</figure>
+
+<p>You can change Name, PosX, PosY und Rot of the panel. If you select e.g. only PosX in the Excel Sheet (and copy that into the clipboard), then set the marker in the cell from where you want to change the values and you paste this information into the VPU software, only these values will be overwritten. So selected copy paste is possible as well.</p>
+
+<div class="tip"><strong>Hint</strong>:<br />
+If no real keyboard is connected you can use the on screen keyboard to enter values into the grid.<br />
+Therefore do a right mouse click into the grid.</div>
+
+		
+	</body>
+</html>

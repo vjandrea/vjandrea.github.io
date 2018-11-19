@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Release Notes - Version 2.4</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="release notes version 2.4" />
+	</head>
+	<body>
+		
+		
+		<h1>Release Notes - Version 2.4</h1>
+		
+		<h2>Release Notes - Version 2.4.3.2</h2>
+
+<p>released 2011-11-22</p>
+
+<p>&nbsp;</p>
+
+<div class="important"><strong>Important:</strong>
+
+<ul>
+	<li>Release version 2.3 of grandMA2 divorced values and effect values! Therefore older show files might not be 100% compatible. Therefore please check your show file with the new version before using it live!</li>
+	<li>If you would like to update your dimMA system from any version below 6.x please contact your MA-dealer or MA direct for any update information. Should you be using grandMA2 in connection to our dimMA solutions, please get in touch with us, since a console update will now require a NDP update and vice versa. We are happy to assist you.</li>
+	<li>The current versions of onPC and 3D require minimum Windows® XP with Service Pack 3 (Microsoft® .NET Framework (4.0) will be installed on your computer, if not already installed).</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+<h2>Main feature overview:</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Preview</li>
+	<li>Cue Zero</li>
+	<li>Default Reference</li>
+	<li>Temporary Pool Views</li>
+	<li>Maximum Program Time and Exec Time can be defined per user.</li>
+	<li>Random functions</li>
+	<li>Info View</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Bugfix Release - Version 2.4.3.2</h2>
+
+<p>released 2011-11-22</p>
+
+<ul>
+	<li>Knockin of values into programmer takes the output values, if there are only values to knockin. If there are values and effects to knockin, the cue content will be knocked, disregarding the current executor fader position.</li>
+	<li>Deleting an effect line of a multi-line effect will not change the selection of the other lines any more.</li>
+	<li>The Small stage view inside the Bitmap effect editor has been fixed.</li>
+	<li>Handling of Cue Zero when updating a cue in Preview has been fixed.</li>
+	<li>Orange progress bar display at the sequence executor sheet has been fixed.</li>
+	<li>Further improvements of ASCII Show Read regarding 16bit channels, toggle/go and effect priority.</li>
+	<li>Triggering macros with programmer commands using Midi Show Control (MSC) doesn't crash the desk any more.</li>
+	<li>Importing sequences or effects from older versions doesn't crash the desk any more.</li>
+	<li>Network Timing improvements of MA-Net2. Especially for networks with NDPs.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Bugfix Release - Version 2.4.1.2</h2>
+
+<p>released 2011-09-29</p>
+
+<ul>
+	<li>Cue zero extract mode has been fixed.</li>
+	<li>Remote popup bug fixed.</li>
+	<li>Pressing store preview does not crash the desk any more.</li>
+	<li>Deleting the last cue of a sequence will not ask for cue only any more.</li>
+	<li>Reserved DMX In merge mode has been removed.</li>
+	<li>HTP Exectutor Preview Bug has been fixed.</li>
+	<li>CanBus Firmware update to version 1.36.</li>
+	<li>Crash fixed, when deleting an effect while this effect was displayed at the effect overview.</li>
+	<li>It is possible to store or update an selective effect at a cue with an already stored stomp or release.</li>
+	<li>Effect Default setting have been changed. The user setting effect default relative/absolute has been exchanged by the following settings.
+	<ul>
+		<li>Absolute effect as default for Dimmer, Color and any wheels.</li>
+		<li>Relative as default for anything else.</li>
+		<li>Relative effects default start with center value of zero when a new effect line is created in the effect editor.</li>
+		<li>Effect Release has been converted to a effect form.</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2>Release - Version 2.4.0.2</h2>
+
+<p>released 2011-09-08</p>
+
+<p>&nbsp;</p>
+
+<h2>New functions and features in detail</h2>
+
+<ul>
+	<li><strong>PreviewEdit</strong>
+
+	<ul>
+		<li>PreviewEdit mode is very similar to working in normal Live mode, but without any programmer actions or Store/Update actions affecting the output on stage.</li>
+		<li>What is the difference between EditBlind and PreviewEdit? EditBlind is only a second programmer not affecting the output at all. EditBlind will not show you any cue transitions or effects. Whilst PreviewEdit will start a preview playback which behaves like a normal playback beside the fact that there will be no output on stage. The advantage of using EditBlind is a particularly lower usage of performance resources compared to PreviewEdit.</li>
+		<li>Fixture- , channel- and stage- views as well as a 3D logged in with the same user are following the "Preview Edit". In "Preview Edit"-Mode the title bars in all views are kept in red. Sequence-, tracking- or content- sheets display a preview (and turn to the red title bar) only when either the Mode "Link Selected" together with Preview for the selected sequence - or the Mode "Link last Go" is enabled. When selecting the Mode "Not linked" a Preview is only displayed when an assigned Executor is called. 3D follows Preview only when enabled the option "Follow into Preview" (located inside 3D's tools menu).</li>
+		<li>When in sequence- or tracking sheet the title bar is displayed in red the previewed Cue is indicated by a red frame, too. In case the displayed sequence is identical with the selected sequence the current Cue (going Live) is indicated by a yellow frame. In Preview Mode the fixture- and channel- views mask all values but the content of the Preview Cue which are displayed in Cue colors. Tracked values coming from former Cues are displayed in magenta. Even a Cue involves several Parts initially the complete Cue is displayed. Using the Part Cue Encoder allows to highlight single Parts in Cue colors while all other Parts are displayed in magenta.</li>
+		<li>Hitting the <span class="hardkey">Preview</span> button will bring the Preview keyword into the command line and opens the Preview Encoder Bar.</li>
+		<li>How to enter Preview Mode:
+		<ul>
+			<li><span class="hardkey">Preview</span><span class="hardkey">Please</span> or softbutton Preview Selected will enter PreviewEdit mode for all parts of the CURRENT cue of the selected executor or the next cue if this executor is not active.</li>
+			<li><span class="hardkey">Preview</span><span class="hardkey">Next</span> will enter PreviewEdit mode for all parts of the next cue of the current executor (Selected Executor in live mode, PreviewExecutor in PreviewEdit-mode)</li>
+			<li><span class="hardkey">Preview</span><span class="hardkey">Previous</span> will enter PreviewEdit mode for all parts of the previous cue</li>
+			<li><span class="hardkey">Preview</span><span class="hardkey">Cue</span><span class="hardkey">5</span> will enter PreviewEdit mode for all parts of cue 5 of the selected executor.</li>
+			<li><span class="hardkey">Preview</span><span class="hardkey">Cue</span><span class="hardkey">3</span><span class="hardkey">executor</span><span class="hardkey">3</span> will enter PreviewEdit mode for all parts of cue 3 of the executor 3.</li>
+		</ul>
+		</li>
+		<li>Hitting the <span class="hardkey">Preview</span> button twice while in PreviewEdit mode will leave the PreviewEdit mode.</li>
+		<li>Hitting the <span class="hardkey">Preview</span> button twice while not in PreviewEdit mode will recall the PreviewEdit mode with the state it has been left before.</li>
+		<li>Keeping the <span class="hardkey">Preview</span> button pressed allows selecting more than one Executor. The Preview merge the result. Only the last selected will be displayed in Cue colors</li>
+		<li>Pushing and releasing the <span class="hardkey">Preview</span> button and than selecting an Executor resets all former Previews and displays just the one selected in Cue colors</li>
+		<li><span class="hardkey">OFF</span><span class="hardkey">Preview</span> turns off the Preview for the last chosen Executor and switches back to Live Mode</li>
+		<li><span class="hardkey">ESC</span> switches back to Live Mode without turning off the Preview Playbacks</li>
+		<li>Hitting a playback command button like Go+ or Top and the Preview button afterwards while in PreviewEdit mode, will execute the referring command for the current previewed sequence with cue timing and follow cues.</li>
+		<li>Hitting <span class="hardkey">Assign</span> <span class="hardkey">Time</span> <span class="hardkey">x</span> <span class="hardkey">Preview</span> changes the fade time of the current previewed cue to x seconds.</li>
+		<li>New Preview Encoder Bar:
+		<ul>
+			<li>The new Preview Encoder Bar pops up every time the preview key is hit.</li>
+			<li>The buttons <span class="hardkey">Preview Previous</span> and <span class="hardkey">Preview Next</span> switch to the previous or next cue of the sequence which is currently previewed. If there is no previewed sequence the buttons will activate preview for the selected executor (without Cuetiming) .</li>
+			<li>The button <span class="hardkey">Preview selected</span> switches to the current cue of the selected sequence or, if not active, to the first cue of the selected sequence.</li>
+			<li>If <span class="hardkey">AutoUpdate </span> is activated, all changes will automatically update the currently previewed cue. A alternating flashing edit and update button will indicate this mode.</li>
+			<li>If <span class="hardkey">Cue Only</span> is activated in addition to <span class="hardkey">AutoUpdate</span>, the automated update will be done cue only.</li>
+			<li>If <span class="hardkey">Keep Selection</span> is active, the programmer will keep its selection, when entering the PreviewEdit mode.</li>
+			<li>If <span class="hardkey">Keep Programmer</span> is active, the content of the live programmer will be copied to the preview programmer when entering the PreviewEdit mode.</li>
+			<li>Using the left "Sequence" Encoder allows to scroll thru the sequence pool. While scrolling only the one in focus will be previewed while the former will be closed. Touching into the Seq. field above the encoder opens a window to select from all sequences. Again the former selected sequence will be closed.</li>
+		</ul>
+
+		<div class="warning">Keep Programmer and AutoUpdate are not allowed to be activated at the same time. When activating one of these, the other will be turned off.
+		<p>Keep Selection and Keep Programmer are only used, when entering the PreviewEdit mode. The preview programmer will never be copied to the live programmer.</p>
+
+		<p>It is not possible to use the blind hardkey while PreviewEdit mode is active.</p>
+		</div>
+
+		<p>&nbsp;</p>
+		</li>
+		<li>Preview Playback button in the Off Menu
+		<ul>
+			<li>When the Preview Playback button is activated (located bottom left inside the Off Menu) only the enabled Preview Playbacks will be displayed. As usual single Playbacks can be switched off.</li>
+			<li>When Preview Playback is activated the Everything Off button only switches off Preview Playbacks. Live Playbacks will not be touched.</li>
+		</ul>
+		</li>
+	</ul>
+
+	<div class="important">
+	<ul>
+		<li>In Preview Mode Trigger Follow and Trigger Times will not be executed except playback commands like &gt; GO PreviewExecutor &lt; are used.</li>
+		<li>In Preview Mode Cue commands (CMD) will not be executed.</li>
+		<li>Unless re-entering the saved state of Preview, Preview Mode uses the world, which has been used live last. Changing the world while in Preview Mode will not change the live world when leaving the Preview Mode.</li>
+	</ul>
+	</div>
+	</li>
+	<li><strong>"Default value"</strong> button in the calculator has been replaced by a <span class="hardkey">Default link</span> button: This button will basically work as a preset and provide a link to the fixture default values, which can be changed in the setup or when editing the fixture. To get the hard default values like in earlier versions, you have to extract (refer to extract in the help) the default link afterwards.
+	<p>The "Default Link" values are marked by bracketed values in all sheets.</p>
+	</li>
+	<li><strong>Cue Zero</strong>
+	<p>Cue Zero is an option in the sequence executor Assign Menu. Cue Zero is an automatically created cue containing a link to default values of attributes. Cue Zero cannot be modified manually. A Cuelist with activated Cue Zero will start at the first cue after Cue Zero. This cue provides default values when starting the sequence and provides the missing default data when moving or copying cues.</p>
+
+	<ul>
+		<li><span class="hardkey">Cue Zero Off</span>: Cue Zero will not be created and Cue zero will be deleted Cue Only.</li>
+		<li><span class="hardkey">Cue Zero On</span>: Cue Zero will be created and will contain default values for all attributes used by this sequence.</li>
+		<li><span class="hardkey">Cue Zero Dimmers Only</span>: Cue Zero will be created and will contain default values for dimmer attributes only.</li>
+		<li><span class="hardkey">Cue Zero All</span>: Cue Zero will be created and will contain default values for all attributes of fixtures that have any of its attributes stored in the sequence.
+		<p>&nbsp;</p>
+		</li>
+		<li>In addition to the default value reference, the cue zero will also include a stomp for every attribute that is using an effect in that sequence.</li>
+		<li>"Cue Zero extract" will extract the default link and store hard values of the current fixture defaults into Cue Zero.</li>
+		<li>Switching off "Release First Step" is not possible in combination with cue zero on or cue zero all.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+
+	<div class="important">
+	<p>There will be NO "CUE ZERO" in a "Non-Tracking-sequence"</p>
+
+	<p>Sequences with only one CUE will NOT have a "CUE ZERO"</p>
+
+	<p>The "CUE ZERO" cannot be selected nor edited nor updated.</p>
+	</div>
+	</li>
+	<li><strong>Temporary Pool Views</strong>
+	<ul>
+		<li>can be accessed via macro/commandline "menu object". e.g. "menu View" or via hardkeys. Both hardkeys have to be pressed at the same time. Possible pools are:
+		<ul>
+			<li><span class="hardkey">List</span>+<span class="hardkey">View</span></li>
+			<li><span class="hardkey">List</span>+<span class="hardkey">Effect</span></li>
+			<li><span class="hardkey">List</span>+<span class="hardkey">Page</span></li>
+			<li><span class="hardkey">List</span>+<span class="hardkey">Macro</span></li>
+			<li><span class="hardkey">List</span>+<span class="hardkey">sequence</span></li>
+			<li><span class="hardkey">List</span>+<span class="hardkey">Group</span></li>
+		</ul>
+		</li>
+		<li><span class="hardkey">ESC</span> closes the view</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li><strong>Template show file folder</strong>:
+	<p>This folder is a read only folder. Show files cannot be stored inside this folder from the consoles user interface. Users can save show files in this folder only by using a FTP connection. When connected to the console using a FTP client, the template show file folder can be found at /ma/templateshows. The purpose of this new folder is to allow the user to create his own show file templates and protect them against any overwriting. Even a software update will not overwrite this folder. The only exception is a full install.</p>
+
+	<div class="important">As the new template folder is the third tab in the backup menu, the drive number of backup servers and usb stick connected to the console will be increased by one. Macros using commands like "selectdrive 3" or "sd 3" need to be corrected respectively.</div>
+
+	<p>&nbsp;</p>
+	</li>
+	<li><strong>"Info" - View</strong>
+	<ul>
+		<li>With the current implementation the Info view window lists only the Sequence Cue info. The selection of one particular sequence depends on the activated button Link Selected or Link last Go in the title bar.</li>
+		<li>Cue numbers and names are displayed in green Letters. The current Cue will be displayed in yellow letters.</li>
+	</ul>
+	</li>
+	<li>New command<strong> Info</strong>
+	<ul>
+		<li>Any console object which can be labeled is able to hold an information text, e.g. fixtures, sequences, cues, presets.</li>
+		<li>New commands for setting and reading Information of objects:
+		<ul>
+			<li>Info [object] "Information" to store Information to an object.</li>
+			<li>Info [object] to read the stored Information in the command line response</li>
+		</ul>
+		</li>
+		<li>Example:
+		<ul>
+			<li>The command &gt;Info Sequence 3 "This is the Information of sequence 3"&lt; will add the quoted text as Information to Sequence 3.</li>
+			<li>The command &gt;Info Sequence 3&lt; or &gt;Info Sequence Thru&lt; will list the Information of sequence 3 or of all sequences in the command line response.</li>
+		</ul>
+		</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>New <strong>Odd/Even Channel ID MATricksFilter</strong> function for filtering a selection by odd or even Channel/Fixture ID. The filter will always refer to the Channel ID, in case there is no channel ID it will refer to the fixture ID. This filter may also be accessed by the commands MaTricksFilter "Off"(Shortcut: MF 0), MaTricksFilter "OddId" (Shortcut MF 1) and MaTricksFilter "EvenID" (Shortcut: MF 2)
+	<p>&nbsp;</p>
+	</li>
+	<li><strong>New command line commands and options in the Tools menu</strong>
+	<ul>
+		<li><strong>CircularCopy</strong>
+		<p>The CircularCopy function does a filtered move of values through a selection. The movement can be performed forwards or backwards. Forwards means, that the values of each fixture is moved to the next fixture of selection. CircularCopy can be filtered by applying the At Filter.</p>
+		</li>
+		<li>Circular copy can be accessed
+		<ul>
+			<li>by typing the command &gt;CircularCopy +1&lt; or &gt;CircularCopy -1&lt; or using the shortcut &gt;cc +1&lt; and &gt;cc -1&lt;</li>
+			<li>by entering the new circularcopy section inside the tools menu. The At Filter may also be accessed by softkey from the tools menu.</li>
+		</ul>
+		</li>
+		<li><strong>Random functions</strong>
+		<ul>
+			<li>Using ShuffleSelection: one can randomly change the order of the current selection.</li>
+			<li>Using ShuffleValues: one can randomly change the assignment of the values in respect to the selected fixtures.</li>
+		</ul>
+		</li>
+		<li><strong>New function Flip:</strong> one can point a moving head to the same position with different Pan and Tilt values.</li>
+		<li>ShuffleSelection, ShuffleValues and Flip can be accessed
+		<ul>
+			<li>by typing the command: ShuffleSelection, ShuffleValues, Flip</li>
+			<li>by entering the new Random Function section of the tools menu.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>Maximum Program and Exec Time can be defined by the user. The settings can be found at /Setup/User/Settings.</li>
+	<li>Multi-Touchscreen can be switched on/off by pressing the nipple button and hit the "Enable Multitouchscreen"/"Disable Multitouchscreen" button in the lower right corner of the internal screens.</li>
+	<li>Active additive group masters are indicated in the Channel and Fixture Sheet by a white arrow up.</li>
+	<li>New sequence executor option setting "CMD Disable". With this setting, the CMD column of the sequence is deactivated and will not be executed.</li>
+	<li>Fixture library has been updated to Carallon lib 7.5.</li>
+	<li>Sheet headlines have been reworked and can be customized. There is a new tab in the sheet options to select the headline buttons, the sheet should display.</li>
+	<li>Sheet masks can be switched On/Off by the new Mask button in the sheet headlines. Watch out for the ghost!</li>
+	<li>sACN improvments
+	<ul>
+		<li>Setup/network/network protocols/sACN menu (similar to Art-Net setup): It is possible to add more lines (by pushing the Add button). Inputs and Outputs can be configured as usual.</li>
+		<li>It is possible select the new sACN Protocol ACN E1.31 in the Protocol column. It is listed as: "Draft 10/2008".</li>
+	</ul>
+
+	<div class="important">Limitation: A maximum of 10 lines can be used for Inputs, each addressing just 1 DMX Universe.</div>
+	</li>
+	<li>New option "React to Dimmer" inside the "Edit Fixture Types" menu. Using this option allows to limit an attribute value by applying a linear or inverse limitation controlled by the attribute dimmer. Example: Provided that a fan attribute has a default of 80% and is linear linked to a dimmer attribute. As a result the fan will be controlled in accordance to the dimmer value. If the dimmer value is at 100% the fan will run at 80%. If the dimmer is at 50% the fan will run at 40%. If the fan attribute and the dimmer value are inverse linked the fan would run at 100% when the dimmer value is 0. When the dimmer is set to 100% the fan value would be 80%.</li>
+	<li>Using the command "List Agenda" lists all entries of the agenda in the command view (similar to the options menu agenda view).</li>
+	<li>By using the command "Assign <em>function</em> At Fader x.x.x" "Assign <em>function</em> At Executor x.x.x" it is possible to assign functions e.g. master or rate to executor faders without using the assign menu.</li>
+	<li>The command "List Executor x.y" lists all settings from the assign menu of one executor in the command view which are not directly assigned in the sequence. It is possible to change those settings via the command line (e.g. by using macros). Example: The command "assign Executor 1.1 /cmdDisable=1" suppresses the execution of Cue commands (CMD).</li>
+	<li>New option for Cue colors (channel and fixture sheet options): Off/On/My Executor
+	<ul>
+		<li>Off: All Cue values are displayed with yellow letters.</li>
+		<li>On: The selected sequence values are displayed in Cue colors.</li>
+		<li>My Executor: Displays in Cue colors only Executors started with user profile used on my console - Executors started by others are grayed out.</li>
+	</ul>
+	</li>
+	<li>New Stomp button in the effect overview headlines. This Button will add a stomp to the programmer for all attributes used by effects of this section.</li>
+	<li>New exec button functionality, hitting the exec key twice will enter the keyword "SpecialMaster" at the command line.</li>
+	<li>Edit FixtureType menu: setting or removing a DMX fine address will automatically adjust the corresponding "functions of channel". If the range of the "functions of channel" is not corresponding to the DMX address settings, the line will have a red background and a warning will be given at the diagnostics screen.</li>
+	<li>Edit cue X: Handling of the "Update Last Object" dialog has been changed. It is possible to abort this dialog without leaving the edit mode now. Same for all other edit object commands.
+	<ul>
+		<li><span class="hardkey">OK</span> will update the edited object.</li>
+		<li><span class="hardkey">Cancel</span> will end the edit mode without updating the edited object.</li>
+		<li><span class="hardkey">X</span> will close the dialog and stay in the edit mode.</li>
+	</ul>
+	</li>
+	<li>Tracksheet performance improved for huge show files.</li>
+	<li>Changing the command line default, e.g. "Fixture Please" is also possible by macro now.</li>
+	<li>Button Executor Goback and Goto functions will use the exec time, if set to cue timing by the show settings.</li>
+	<li>MATricks Pool elements can be merged or overwritten.</li>
+	<li>New command &gt;Menu "CR"&lt; or &gt;Menu "CommandLineResponse"&lt; will pop up a temporary command line response window.</li>
+	<li>New feature at the Edit Timecode View: The table in the text view mode has a new column timing overwrite.
+	<ul>
+		<li>If this column is empty, the command of this line will be executed with their normal timing setting. Off will use off timing, go will use cue timing, goto will use the settings from Setup/Show/Playback + MIB Timing ...</li>
+		<li>If this column is not empty all other fade and delay timings will be ignored and the referring command of this line will use the timing overwrite time. As a result of this, all Parts of a cue will be called simultaneously.</li>
+	</ul>
+	</li>
+	<li>New DMX Universe Pool.Can be found at the pools tab of the create basic window pop-up.
+	<ul>
+		<li>The letters in the first line of each icon indicate the status of DMX universe.
+		<ul>
+			<li>A blue P indicates parked DMX adresses.</li>
+			<li>A red R indicates Requested = off.</li>
+			<li>A red G indicates DMX universe granted =off.</li>
+			<li>The white letter shows DMX IN merge mode (no letter = none, H=HTP, Lo = LoTP).</li>
+		</ul>
+		</li>
+		<li>
+		<ul>
+			<li>The small green square in the second line displays changing DMX output.</li>
+			<li>The second line also displays the valid DMX In sources (DMX In, ArtNet, Streaming ACN). Maximum 2 different Input sources are allowed per universe.</li>
+		</ul>
+		</li>
+		<li>White font color of the universe name indicates at least one address of this universe is used by a fixture/channel.</li>
+		<li>DMX universes can be labeled using command line &gt;Label DMX Universe X &lt; or using the DMX Universe pool.</li>
+		<li>A DMX universe can be edited using the command &gt;Edit DMXUniverse X&lt; or hitting <span class="hardkey">Edit</span> and touching a DMX pool object afterwards.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>It is possible to use Partial Show Read again. Console has to be in Standalone Mode to enable Partial show Read.</li>
+	<li>Partial Show Read tree view shows the names of all objects.</li>
+	<li>Partial Show Read ("PSR") should not muddle object IDs any more, if the target object is empty.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Fixed Bugs and improved functionality</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Single group masters show their correct name in the Mini executor view and the group master overview now.</li>
+	<li>Oopsing group selection was not always displayed correctly in the group pool.</li>
+	<li>Programmer effect rate wheels and encoders cannot be turned into a virtual negative any more.</li>
+	<li>Store Cue X /merge executor Y generates a new sequence if executor Y is empty.</li>
+	<li>Sheets don't lose their horizontal scroll position any more when changing layers.</li>
+	<li>Oops also works for Default and Highlight presets again.</li>
+	<li>When moving Cues, oops that move and then press go does not crash the desk any more.</li>
+	<li>Off selection will redraw the programmer encoder bar.</li>
+	<li>The problem with redrawing the display when moving a range of executors and Oops afterwards has been fixed.</li>
+	<li>The command "At Cue X" will respect the selection, the At Filter and the MATricks.</li>
+	<li>Effect Editor: Form encoder changes the form of the first line only, if more than one line has been selected</li>
+	<li>Storing presets obey the Store Filter, even if the Preset Filter is switched off</li>
+	<li>Create basic window popup buttons are sorted in alphabetic order now. The only exception is the preset tab, which is sorted by presettype numbers.</li>
+	<li>Improvement: The assigned timing to the command "goFast" ( &gt;&gt;&gt; ) will be displayed in the sequence view while the command is executed.</li>
+	<li>Crash removed: "Move Executor 2 + 3 at 1" (moves executor to already allocated targets) doesn't lead to a crash anymore.</li>
+	<li>Midi note remote inputs can control executors with assigned group masters and other non user profile related special masters. E.g. Program and Exec time are user profile related and cannot be controlled via midi.</li>
+	<li>Executor assign menu option "MIB always" can be stored as user default.</li>
+	<li>ARTNET IN is only possible at the network interface eth1(console ethernet port 2). It is not possible any more to use ethernet port 1 as ARTNET IN port.</li>
+	<li>Changing the effect size don't alter effect center any more. If the range of center or size are exceeded, a warning will be given above the corresponding encoders.</li>
+	<li>Patching of fixtures with more than 3 modules and multiple instances has been fixed.</li>
+	<li>MIB late functionality bug fixed, when the last cue in front of the cue with MIB has been deleted, MIB late was not working any more.</li>
+	<li>Copying with overlapping source and target ranges does not crash the desk any more.</li>
+	<li>When moving or copying objects, the original spacing between the source objects will only be kept, when copying cues. e.g.
+	<ul>
+		<li>copy cue 3 + 6 at cue 13 will copy cue 3 at cue 13 and cue 6 at cue 16 if there is no other cue in between.</li>
+		<li>but copy preset 1.3 + 1.6 at 1.13 will copy preset 1.3 at preset 1.13 and preset 1.6 at preset 1.14.</li>
+	</ul>
+	</li>
+	<li>Import of a single layer will also import the DMX Adresses.</li>
+	<li>Editing a Default or Highlight preset will bring the values from the preset into the programmer.</li>
+	<li>The MIB indicator (*) also be displayed correctly for Part Cues.</li>
+	<li>The command &gt; Goto Cue X Fade t &lt; is respecting the snap time settings.</li>
+	<li>Black and Flash is also possible for Rate Masters.</li>
+	<li>Goto/Load Popup has been resized and displays the active cue.</li>
+	<li>Manual entered timecode events can be undone by using oops.</li>
+	<li>Assigning a new sequence at an executor with an already assigned sequence will not reset the executor options any more.</li>
+	<li>X-Key layout at the running effects overview improved.</li>
+	<li>NPUs shut down properly and should not stop at the OS console.</li>
+	<li>Drop down dialogs at external screens are controllable by the internal mouse.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Appendix</h2>
+
+<p>&nbsp;</p>
+
+<div class="warning">The command "store /remove" or pressing [store][cue][2] and the select [remove] in the pop-up will remove the whole attribute with all (!!) its layers for fixtures having any value or effect layer of this attribute active in programmer. It can be filtered to only remove values, value timings or effects by using the buttons in the stored encoder bar. To remove only specific layers, for example only individual effect fade, the operator needs to open the calculator for these layers and select "remove" in the calculator. Afterwards the operator needs to update the cue, or has to use store /merge to remove the specific layers.</div>
+
+<div class="warning">Selecting multiple fixtures with a lasso in the layout view is respecting the snap grid settings to interpolate small position differences of fixture icons. The selection order will always be made inside of one snap grid cell first, afterwards line by line in the direction of the lasso movement.</div>
+
+<p>&nbsp;</p>
+
+<h2>Known Limitations</h2>
+
+<p>&nbsp;</p>
+
+<div class="important">
+<ul>
+	<li>Show file Conversion from Version 2.2 and earlier:The speed of an selective effect, stored in a cue, will not be brought correct into programmer, if the cue gets edited and the default speed of the effect in the pool is not 60 BMP.</li>
+	<li>ASCII show import supports Strand ASCII show files only.</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

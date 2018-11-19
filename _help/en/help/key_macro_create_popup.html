@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Create pop-ups in macros</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="macro - create pop-up" />
+	</head>
+	<body>
+		
+		
+		<h1>Create pop-ups in macros</h1>
+		
+		<p>Sometimes it can be very useful to create macros that can collect user input while running.</p>
+
+<p>A macro can create a pop-up that prompts the user for input. The macro will halt and wait for the user to type the input before continuing.</p>
+
+<p>Pop-ups are created by the use of parentheses.</p>
+
+<p>The text inside the parentheses are used as text prompted to the user, while the response entered by the user will replace the parentheses and the prompting text.</p>
+
+<div class="important"><strong>Important:</strong><br />
+When you are using pop-ups to assign text to variables, you should use quotes inside the parentheses: <span class="syntax">("What address?")</span> but when using pop-ups for commands and numbers, do not use quotes inside the parentheses:<span class="syntax"> (Which Fixture ID?)</span>.</div>
+
+<p>&nbsp;</p>
+
+<h2>Example 1:</h2>
+
+<p>We want a macro that selects the fixture patched to a specific DMX address. The macro should ask the user for a universe number and the DMX address. This is done using two prompts - one for each user input.</p>
+
+<p>Since we are asking for numbers, the text put in the parentheses cannot be in quotes - the console would interpret it as text instead of numbers.</p>
+
+<p>The macro looks like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_macro_create-popup_macro-line_v3_3.png" />
+<figcaption><em>Edit macro pop-up with macro line</em></figcaption>
+</figure>
+
+<p>When running the macro, the console first prompts for the universe number:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_macro_create-popup_prompt-1_v3_3.png" />
+<figcaption><em>First prompt of the macro - asking for universe number</em></figcaption>
+</figure>
+
+<p>After the user types the number and finishes with Please/Enter, then it asks for the DMX address:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_macro_create-popup_prompt-2_v3_3.png" />
+<figcaption><em>Second prompt of the macro - asking for DMX address</em></figcaption>
+</figure>
+
+<p>Processed, the macro executes the command. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_macro_create-popup_result_v3_3.png" />
+<figcaption><em>Command line feedback of the macro</em></figcaption>
+</figure>
+
+<h3>Example 2:</h3>
+
+<p>We want a macro that we can use to login as a different user. We want to be prompted for the user name and password. In this macro we choose to store the user input in variables. All users needs a password for this macro to work.</p>
+
+<p>This is the macro:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">No.</th>
+			<th scope="col">CMD</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>SetVar $my_user=("What User do you want to login?")</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>SetVar $my_password=("What is the password?")</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Login $my_user $my_password</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>SetVar $my_password=</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Notice that we store the user input as text.</p>
+
+<p>The fourth macro line removes the my_password variable. Otherwise the password would have been readable by anyone.</p>
+
+<p>It can often be a good idea to treat the user input as text. This for instance allows for the use of names instead of just numbers.</p>
+
+<p>&nbsp;</p>
+
+<p>See more examples in the <a href="key_macro_examples.html">Example macros topic</a>.</p>
+
+		
+	</body>
+</html>

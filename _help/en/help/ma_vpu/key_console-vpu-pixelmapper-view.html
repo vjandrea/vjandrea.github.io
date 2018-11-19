@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Console - VPU Pixel Mapper View</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Console, VPU, Pixelmapper, View" />
+	</head>
+	<body>
+		
+		
+		<h1>Console - VPU Pixel Mapper View</h1>
+		
+		<p>The VPU Pixel Mapper can be configured in the grandMA2 desk too.</p>
+
+<p>A visual representation of the Pixel Mapper editor of the VPU is implemented in the grandMA2 console:</p>
+
+<p>Create a new window in Other / VPU Pixel Mapper View. This window looks very similar to the window in the VPU.<br />
+Only the library tab is missing. To work with this window, you can do the following:<br />
+Areas and Outputs can be created, deleted, and edited as known from the VPU.<br />
+To store fixtures and channels into an existing Pixel Mapper Output, select them, press <span class="hardkey">Store</span> and click into the area of your chosen output.<br />
+If fixtures or channels have been selected, you can also use</p>
+
+<div class="cl_input">[Channel]&gt; store PM 1.2 /axis=+X+Z</div>
+
+<p>&nbsp;<br />
+to store into Area 1, Output 2 with the Axis +X +Z.<br />
+All parameters of each Pixel Mapper Area / Output can be controlled by the command line, too.<br />
+Use "cd PM" to get to the Pixel Mapper containers in the root.<br />
+Pixel Mapper setups can also be copied or deleted. They can also be merged via command-line. E.g.</p>
+
+<div class="cl_input">[Channel]&gt; copy PM 1.1 at 1.2 /merge</div>
+
+<p>The following example shows 10 LED Tiles arranged on a 1 x 1 meter square:</p>
+
+<figure class="caption"><img alt="" src="../../../img/ma_vpu/vpu_pixelmapper_view1_1.png" />
+<figcaption><em>VPU Pixel Mapper View - Graphical View</em></figcaption>
+</figure>
+
+<p>After the Fixtures have been inserted into the Pixel Mapper, they can be selected by a rubber-band, moved and rotated, just as in the VPU Pixel Mapper editor.<br />
+Use the top-line buttons <span class="softkey">select</span> / <span class="softkey">move</span> to change mouse behavior.<br />
+To allow editing, activate the <span class="softkey">Setup</span> button in the headline of the window.<br />
+Also the encoder bar can be used to change these values.</p>
+
+<p>The Grid View shows the numerical representation of the mapped fixtures:</p>
+
+<figure class="caption"><img alt="" src="../../../img/ma_vpu/vpu_pixemapper_view2_1.png" />
+<figcaption><em>VPU Pixel Mapper View - Grid View</em></figcaption>
+</figure>
+
+<p>The grid mode shows all the options of each panel (the abstraction of fixtures and channels in the Pixel Mapper Editor) in a tabular view.<br />
+Values can also be edited here, too. To send the data via MA-Net2, select the protocol in the options of the Output and enable the Pixel Mapper Main Render flag.<br />
+A maximum of 256 universes can be send, and all 3 protocols share the same amount.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+So e.g. you can send 200 universes of MA-Net2, 20 Universes Art-Net and 36 Universes sACN.<br />
+MA-Net2 is put out on Ethernet1, sACN and Art-Net are put out on Ethernet 2(on a VPU).<br />
+To send the Pixel Mapper data back into the console, no additional Ethernet cable is required.</div>
+
+		
+	</body>
+</html>

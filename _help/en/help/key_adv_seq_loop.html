@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Looping cues</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="cues - looping, Ltime, Lcount, Loop BreakingGo" />
+	</head>
+	<body>
+		
+		
+		<h1>Looping cues</h1>
+		
+		<p>Cues can be looped. They can loop indefinitely or loops can be limited by time or number of loops.</p>
+
+<p>In the <a href="key_cs_cue_sequence.html">Sequence Executor Sheet</a> there are three columns that control looping. They are: <strong>Loop</strong>, <strong>Ltime</strong>, and <strong>Lcount</strong>.</p>
+
+<p>Editing a cell in the Loop column will open a Select Loop Destination pop-up. It could look like this (if you have five cues):</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_select-loop-destination_v3-3.png" />
+<figcaption><em>Select Loop Destination pop-up</em></figcaption>
+</figure>
+
+<p>Here it is possible to select the cue that should be looped to next. It is possible to loop to a cue that has a higher cue number that the cue where you set the loop. This will result in jumping ahead in the cue list. The <strong>[No Loop]</strong> option removes any loop information. If loops are assigned using the command line then setting the loop value to <strong>none</strong> will remove the loop.</p>
+
+<p>If the selected cue is before the cue where the loop is set, then it will jump back to the previous cue.</p>
+
+<p>Then the next trigger will activate the loop and jump. When a loop is active, then the frame around the active cue is changed from yellow to magenta. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/window_sequence-executor-sheet_loop-active_v3-3.PNG" />
+<figcaption><em>Sequence Executor Sheet - Active loop</em></figcaption>
+</figure>
+
+<p>If nothing is defined in the Ltime and Lcount cells with the loop number, then it will loop indefinitely.</p>
+
+<p>The <strong>Ltime</strong> allows you to set a time where the loop should be active. The time will start a count down when the loop is activated the first time. When the time reaches 0 then the looping is disabled and the next trigger will run the cue <strong>after the cue where the loop is defined </strong>- no matter what the current active cue is. In the example above it would run cue 3 as the next cue.</p>
+
+<p>The <strong>Lcount</strong> allows you to set a number of times the loop should happen. The count will start when the loop is activated the first time. The the count reaches 1 and the looping triggering cue is reached then it will loop one final time and passing the cue again will disable the loop and continue with the following cue.</p>
+
+<p>&nbsp;</p>
+
+<p>If both an Ltime and Lcount is set then it is the one that first reaches 0 that defines when the loop is disabled.</p>
+
+<p>&nbsp;</p>
+
+<p>Editing the Ltime and Lcount cell will open the Calculator. This is where you type the time or count number. There is also an option to select <strong>Indefinite</strong> -&nbsp; this will remove the value.&nbsp;</p>
+
+<p>If command line is used to set the Ltime and Lcount, then assigning <strong>-1</strong> will remove the value.</p>
+
+<p>&nbsp;</p>
+
+<h2>Loop BreakingGo</h2>
+
+<p>The Executors have an options called <strong>Loop BreakingGo</strong>. It can be found in the Options page of the Assign Menu - read more about it in the <a href="key_adv_exec_options.html">Executor Options topic</a>.</p>
+
+<p>When this is active, then a Go or Goto command will overrule the looping function and the cue after the loop will be called. All other triggers will keep the loop running.</p>
+
+<p>This can be a nice function for rehearsals or situations where you need the loop running until the executor is triggered again.</p>
+
+		
+	</body>
+</html>

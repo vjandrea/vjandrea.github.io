@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Macro Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Macro Keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>Macro Keyword</h1>
+		
+		<p>To go to the Macro keyword, press <span class="hardkey">Macro</span>.</p>
+
+<p>You can also type <strong>Macro </strong>in the command line or the shortcut <strong>Ma</strong>.</p>
+
+<h2>Description</h2>
+
+<p>The Macro keyword is an object keyword access Macros.</p>
+
+<p>The default function for macro is <strong>Go +</strong>. This means calling macros without any function specified starts the macro.</p>
+
+<p>For more information, see <a href="key_macro.html">Macros</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax"><strong>[Function] Macro </strong>[ID]</span></p>
+
+<p><span class="syntax"><strong>[Function] Macro </strong>[Macro-pool]. [ID].[macro-line]</span></p>
+
+<p><span class="syntax">Assign Macro&nbsp;[Macro-pool]. [ID].[macro-line] / [Parameter] = [Parameter Value]</span></p>
+
+<h2>Parameter</h2>
+
+<p>The following table displays the assignable parameters for the <strong>macro object </strong>via the command line.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Name</td>
+			<td>"Macro name"</td>
+			<td>Assign the macro name.</td>
+		</tr>
+		<tr>
+			<td>CLI</td>
+			<td>"On", "Off"</td>
+			<td>Assign if the command line interacts with the macro or not.</td>
+		</tr>
+		<tr>
+			<td>Timing</td>
+			<td>"On", "Off"</td>
+			<td>Assign if the macro follows the timing or not.</td>
+		</tr>
+		<tr>
+			<td>Info</td>
+			<td>"Information Text"</td>
+			<td>Assign additional information to the macro object.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The following table displays the assignable parameters for the <strong>macro lines</strong> via the command line.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>CMD</td>
+			<td>"A valid command"</td>
+			<td>Assign the command executed by the macro line.</td>
+		</tr>
+		<tr>
+			<td>Wait</td>
+			<td>"Go", "Follow", "0.000 - 9999.000"</td>
+			<td>Assign a delay time or a go or follow after the macro line is executed.</td>
+		</tr>
+		<tr>
+			<td>Info</td>
+			<td>"Information Text"</td>
+			<td>Assign additional information to the macro line.</td>
+		</tr>
+		<tr>
+			<td>Disabled</td>
+			<td>"Yes", "No"</td>
+			<td>Assign if the macro line is disabled or not.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To start macro 5, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Macro 5</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To set the wait time of macro 3 line 4 to go, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Assign Macro 1.3.4 /wait="Go"</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To store a new empty macro 2, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Store Macro 2</div>
+
+		
+	</body>
+</html>

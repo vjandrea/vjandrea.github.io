@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Release Notes - Version 2.3</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="release notes version 2.3" />
+	</head>
+	<body>
+		
+		
+		<h1>Release Notes - Version 2.3</h1>
+		
+		<h2>Version 2.3 - released 2011-06-2</h2>
+
+<div class="important"><strong>Important:</strong><br />
+Updating to this release version 2.3 of grandMA2 the values and effect values are divorced! Therefore older show files might not be 100% compatible. Therefore please check your show file with the new version before using it live!<br />
+If you would like to update your dimMA system from any version below 6.x please contact your MA-dealer or MA direct for any update information. Should you be using grandMA2 in connection to our dimMA solutions, please get in touch with us, since a console update will now require a NDP update and vice versa. We are happy to assist you.<br />
+The current versions of onPC and 3D require minimum Windows® XP with Service Pack 3 (Microsoft® .NET Framework (4.0) will be installed on your computer, if not already installed).</div>
+
+<p>Main feature overview:</p>
+
+<ul>
+	<li>Values and effects are now separated from each other.</li>
+	<li>Values and effects have their own, separated Tracking.</li>
+	<li>Values and effects have their own, separated individual fade and delay timings.</li>
+	<li>Multidimensional effect forms.</li>
+	<li>New sheet layers and markers.</li>
+	<li>External touch screen integration for many touch screen types.</li>
+	<li>New encoder-bars.</li>
+	<li>Pool playbacks.</li>
+	<li>Store filter.</li>
+	<li>Individual fade and delay times are displayed in the executor sheet.</li>
+	<li>Further improvements on Strand Show file conversion.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Version 2.3.0.3 - released 2011-06-27</h2>
+
+<p>New functions and features in detail:</p>
+
+<ul>
+	<li>Renamed "universal effects" to "Effect Templates" .These effects are marked with a "T" inside the effect pool.</li>
+	<li>Effect Overview can be accessed using long press on the Effect hardkey</li>
+	<li>Effect Overview can be assigned as a view on a screen. In the option menu of that view, it can be assigned which types of running effects will be displayed .</li>
+	<li>
+	<div class="restriction">The effect needs to be stored in the effect pool first to be visible in the running effect overview. Cues with stored effect layers without an effect ID will not be displayed</div>
+	</li>
+	<li>Editing an effect template will automatically reapply the template for currently selected fixtures</li>
+	<li>
+	<div class="tip">To edit a Template blind, make sure to have none fixtures selected</div>
+	</li>
+	<li>Effect templates can be created using universal and/or global presets</li>
+	<li>Phase range has been extended to +/-2880 (= +/- 16 Pi)</li>
+	<li>New encoderbar added Effect Programmer encoderbar ("quick &amp; dirty" Bar): With activated "link encoder" option in the effect pool options, the bar appears when an effect is called from the pool or when the effect pool headline gets pressed. With deactivated "link encoder" option, the bar will only appear by pressing the effect pool headline. The Effect Programmer encoderbar edits active effect layers of all attributes or attributes of a specific effect for the selected fixtures in the programmer. The "select effect" button allows selecting for editing between ALL or a particular single effect. One can use the AT-Filter to filter the attributes, the Crazy Effect encoderbar is manipulating. The button "edit programmer"/"edit effect" toggles between "quick and dirty bar" and the edit effect bar and dialog.</li>
+	<li>New keyword: Stomp (MA+At)
+	<ul>
+		<li>Note: "Stomp" works similar to the "At" keyword, but suppresses additionally the running effects on this parameter, e.g.</li>
+		<li>"channel x at 50" takes only the value 50 in the programmer (potentially running effects -for example- from cues continue)</li>
+		<li>"channel x stomp 50" takes the value 50 and the effect form "stomp" in the programmer (but suppresses the effect).</li>
+		<li>"channel x stomp preset 1.1" takes the preset 1.1 and the effect form "stomp" in the programmer</li>
+		<li>The stomp command can be used with presettypes/features/attributes.</li>
+		<li>Fast access is possible using MA+At and the Presettype buttons of the encoderbar afterwards</li>
+		<li>"stomp presettype "Position"" without a selection will stomp all fixtures, that are currently using Position Effect parameters</li>
+		<li>"stomp presettype "Position"" with some fixtures selected will stomp the fixtures of the current selection, that are currently using Position Effect parameters</li>
+	</ul>
+	</li>
+	<li>A new sequence option in the assign menu: "Auto Stomp".
+	<ul>
+		<li>&nbsp;</li>
+	</ul>
+	</li>
+	<li>New keyword: Extract ( MA+At+At )
+	<ul>
+		<li>"Extract" works basically the same as the "At" keyword, but it will break any reference and apply hard values into programmer and suppresses the links to an effect or preset,</li>
+		<li>e.g. "Channel x At Preset 2.1" takes the link to the preset 2.1 into the programmer</li>
+		<li>"Channel x Extract Preset 2.1" takes the hard values stored in preset 2.1 into the programmer without any link to preset 2.1</li>
+		<li>"Channel x Extract Effect 1" takes the hard values out of effect 1 into programmer without any link to effect 1</li>
+		<li>"Fixture 2 Extract Fixture 1" selects fixture 2 and sets it to the hard values of fixture 1</li>
+		<li>"Group 3 Extract Cue 4" selects Group 3 and sets it to the hard values of Cue 4 "Extract Please" throws away the preset link of the current selection</li>
+	</ul>
+	</li>
+	<li>Multidimensional effect forms can be stored and edited in the form pool. They can be assigned to effects.
+	<ul>
+		<li>There are three ways to open the graph editor: 1. push "edit" and "form"; 2. push three times the "effect" button or 3. click with the right mouse button into the form pool.</li>
+		<li>Inside the graph editor new points can be created by "add point". Forms can be manipulated by moving those points. "add Graph" creates sub forms within a form. Editing a form while it is used by a fixture or running effect will automatically update the output. While editing an effect and selecting just one effect line a pop up menu will appear to allow a selection from possible sub forms. While editing an effect and selecting more than one effect line the related sub forms will be assigned in numerical order. Note 1: Using this new functionality allows to create form combinations for effects, e.g. combination of a ramp form to modulate the attribute tilt and a PWM form for the attribute dimmer will result in an effect so called "fly out".</li>
+		<li>Note 2: The predefined forms 1 to 18 in the form pool cannot be manipulated or deleted by the user. Predefined forms are displayed with a lock symbol in form pool.</li>
+		<li>Note 3: User created forms ( &amp;gt; Form 18) will be handled as presets. Changing a form will automatically update sequences, selective and template effects using this form. If a form is deleted, sequences and effects using this form will not function any more. Note 4: Subforms can also be used via "at", e.g. "At Form 18.2"</li>
+		<li>
+		<div class="restriction">Different from all other pools: The items in the form pool cannot be moved.</div>
+		</li>
+		<li>
+		<div class="restriction">Deleting a form will destroy all effects using this form without any warning.</div>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<ul>
+	</ul>
+	</li>
+	<li>Fade and delay time calculator have a new option: "remove" works for times similar to the former "basic", and will remove any individual timing when updated or merged to a cue.</li>
+	<li>New Executor Sheet columns: individual fade and individual delay In addition, the cue fade and cue delay columns get a green/orange background, if there are any individual times stored in this cue</li>
+	<li>By default all lines are selected when Effecte ditor is opened, to enable fast editing of all lines via the Encoderbar or the Multitouch effectline-editor.</li>
+	<li>Effects have their own fade and delay times. (new layer in sheets)
+	<ul>
+		<li>Effects in cues use by default cuetiming, or individual value fade/delay timing if available, or individual effect-fade/delay timing if available.</li>
+		<li>&nbsp;</li>
+	</ul>
+	</li>
+	<li>Effect Layers Attack and Decay are displayed in sheets
+	<ul>
+		<li>The fade in time "Attack", and the fade out time "Decay" are only available for the special Effect forms: Random, PWM and Chaser.</li>
+		<li>The values "Form", "Attack" and "Decay" will always be activated together inside the programmer. Even just changing an effect form inside the programmer "Attack" and "Decay" will be activated, too.</li>
+		<li>&nbsp;</li>
+	</ul>
+	</li>
+	<li>Effects do have a "default effect speed" which can be set. In this entry field one can also assign a speedmaster. Note: The default speed is used when an effect is assigned to an executor, is started as pool playback or brought into the programmer. Changing the speed of an effect, assigned to an executor will not change the default speed of this effect.</li>
+	<li>Calling a selective effect will bring the selective effect ID and its related speed as active layers into the programmer. If a rate master has been assigned to an effect line, the programmer -and after storing this to a cue, also the cue- will use this ratemaster. Note: If you knock out (deactivate) the rate before storing this into a cue, the effect will use the default speed of the sequence when the cue is recalled. It will not store the speed it was running with when the cue has been stored.</li>
+	<li>The edit effect dialog now has a new column: "Interleave". This column defines the selection gaps, e.g. "odd" or "even". Inside the direction column "dir" contains also the function "bounce" now.</li>
+	<li>Effects can be set to "absolute" or "relative" as default. (setup/user/defaults/effect defaults). This setting applies to the effect pool. In the special effect dialog and in the programmer this applies only if the effect form was selected first. The factory default is set to "relative" In sheets, a "R" or "A" in front of the Form ID in the Effect Layer Form indicates whether the effect is relative "R" or absolute "A"</li>
+	<li>New Button in Effect menu: "value readout" with the options "low/high" and "center/size" Note: The former "value1" and "value2" are renamed to "low" and "high" (which seems to be more intuitive)</li>
+	<li>Effect form calculator has new options: remove: Store a "remove"-value to a cue: The option will remove earlier stored effect forms release: Store a "release"-value to a cue: The option will release earlier stored effect forms in this cue stomp: Store the "stomp"-value to a cue: All effects will be suppressed (applies to ALL! executors).</li>
+	<li>New options for the effect phase calculator "0 thru 360", "0 thru -360", The "0 thru -360" can be used to change the direction of the pattern. This is necessary, as a sinus function, for example, will be executed mathematically correct from left to right per fixture. Nevertheless the resulting pattern on stage will look like a moving pattern from right to left, if the Phase is set to "0 thru 360". Changing the phase to "0 thru -360" will change the pattern direction to from left to right. (Same as grandMA series 1)</li>
+	<li>The attribute-encoder-linking (Link Single, Link Feature...) which is part of the General Encoderbar works now also for Low and High effect layers. Note: The attribute filter opens automatically if "Link defined" or "link defined active" is selected</li>
+	<li>New command line syntax: "IfOutput Effect X" will select all fixtures currently running Effect X "IfOutput Effect" will select all fixtures currently running any Effect. An additional "If Executor x", "If Sequence x" or "if Sequence x cue y" afterwards will filter the selection so that only fixtures used by this executor, Sequence or Cue and currently running an effect will be selected</li>
+	<li>Pool playbacks: It is possible to start sequences, selective effects directly from a pool without assigning them to an executor.
+	<ul>
+		<li>Press Go+ and then the wanted item in the pool. This will create a pool playback. This will behave as if the items had been assigned to an executor.</li>
+		<li>The hardkeys Go+ , Go- , Goto , Top , &gt;&gt;&gt; etc can also be used together with a running pool playback icon. Hitting the hardkey and afterwards the pool item will execute the chosen command.</li>
+		<li>Optional effect and sequence pools can be set to pool playback mode. The first touch of a pool object will start the pool playback of that object and will switch the icon to a mini executor icon with the same functionality as the mini executor icon has in the mini executor view above the executors.</li>
+		<li>With the option "direct action", every touch of a pool object will then execute the default single button executor assignment command (e.g. Go, Toggle, ...) on that item.</li>
+		<li>Pushing the assign hardkey and a running pool object afterwards will open the assign menu options to set the pool playback options for that effect, sequence or chaser.</li>
+		<li>Pool playbacks can be switched off using the Off hardkey and touching the pool item or using the Off menu (hit the off hardkey twice to enter the off menu)</li>
+		<li>With the new button "remember settings" in the Assign menu headline, it is possible to set the pool playback options for an effect, sequence or chase to the current settings of the same item assigned to a real executor.</li>
+		<li>his item is also listed in the off menu with the executor number 0.x.y. The first digit identifies the user (for pool playbacks: 0, in normal cases: 1). The second digit either identifies the network slot for pool playbacks, (exception: As a standalone console has no network slot the 2nd digit is set to 1), or the executor page in case of standard playbacks. For pool playbacks the third digit will be automatically assigned in the order of the call. For normal playbacks it represents the number of the executor. It is also possible to recall pool playbacks via the option "pool playback" from either the effect, bitmap effect or sequence pool. These sequences can also be manually switched off, paused, go+ or even updated from the programmer (e.g. Inside a sequence pool: Press the hard-key "top" followed by a sequence in the pool will go to the first cue in that sequence). Each additional press on sequence e.g. will perform a "Go+" by default. Any other operational instruction can be added together with a pool entry, just as with a regular executor.</li>
+		<li>Only one pool playback per Effect X / Sequence X is allowed. Pool playback effects, or effects assigned directly to an executor are colored in dark pink in the fixture / channel sheet. Pool playback effects, or effects assigned directly to an executor have a higher priority than sequence executors.</li>
+	</ul>
+	</li>
+	<li>Effects and chasers assigned to executors or started as pool playbacks use the default or individual On/Off timings [not working properly as of 2.3.0.3</li>
+	<li>New layout view option: "Pool Playback". If "pool playback" and "fast call" is activated in the Layout View Options, presets will be fast called; sequences and effects will create a pool playback.</li>
+	<li>All sheets have new dynamic markers:
+	<ul>
+		<li>Red = the value is active in the programmer (as before) (not available in tracking and content sheet).</li>
+		<li>White = the value is in the programmer (as before) (not available in tracking and content sheet)</li>
+		<li>Yellow = the value is called from a cue. Green = the individual fade time for a value is active in the programmer (as before).</li>
+		<li>Orange = the individual delay time for a value is active in the programmer (as before). Cyan = the value comes from a preset (as before).</li>
+		<li>Magenta = an effect is in use (channel and fixture sheet)/is stored (tracking and content sheet)</li>
+		<li>Magenta + red on the right side = the effect is active in the programmer (not available in tracking and content sheet).</li>
+		<li>Magenta + white on the right side = the effect is in the programmer (not available in tracking and content sheet).</li>
+		<li>Magenta + red + green = an individual fade time for the effect is active in the programmer.</li>
+		<li>Magenta + red + orange = an individual delay time for the effect is active in the programmer.</li>
+		<li>Grey = a profile is in use (as before)/(not available in tracking and content sheet). (only displayed in output layer - DMX)</li>
+		<li>Dark blue = The attribute is parked (as before)/(not available in tracking and content sheet). (only displayed in output layer - DMX.) Additionally: A small line marker means: This is a tracked value/effect A half width effect marker means: This is a stomp effect. Redesign of Programmer Encoderbar</li>
+	</ul>
+	</li>
+	<li>Sheets have a new layer control bar. The layers are now sorted in 3 general groups: "value layer", "effect layer" and "output layer". Channel and fixture sheets have additional output layers: "effect executor id", "effect seq. id" and " DMX ". Channel and fixture sheets have additional effect layer: "fade", "delay", "attack" and "decay". Note 1: the DMX layer shows also values altered by a profile (with an grey marker), and parked values (with an blue marker). Note 2: DMX values generated in the DMX-tester are displayed with a white background.</li>
+	<li>The layer in fixture and channel sheets have new dynamic markers: Red marker in value layer/effect layer = there is an active programmer value in the corresponding layer. White marker in value layer/effect layer = there is a programmer value in the corresponding layer. Blue marker in the output layers = an attribute is parked.</li>
+	<li>The layer in the tracking sheet has new markers: The value layer shows a yellow marker, when at least one value in the whole sequence was stored. The effect layer shows a magenta marker, when at least one effect in the whole sequence was stored.</li>
+	<li>The layers in the content sheet have new markers: The value layer shows a yellow marker, when at least one value in the displayed cue was stored The effect layer shows a magenta marker, when at least one effect in the displayed cue was stored.</li>
+	<li>The touchbuttons in the middle line of the encoder toolbar (align/activation/attribute) or in the store encoder toolbar (progr/selection/ask) are in swipe button style now. Keeping the touchbutton pressed, swipe the finger upwards. The pop-up opens to allow selections. The popup menu will also open by a long press.</li>
+	<li>Fade and delay times can be stored without values in cues if values already exist. Note 1: It is not allowed to store only a fade or delay time in an empty cue (a cue without values). Note 2: When you delete a value, the individual fade and delay timing will be deleted, too. Note 3: An effect uses a value-fade or value-delay only if a value is stored in this cue, too.</li>
+	<li>"Trigger is GO" as Executor Playback Option added. Pressing this key will switch on "Trigger is GO". The Sequence/Chaser can only be controlled by the GO button and will ignore Follow and Trigger times.</li>
+	<li>New button in the headline of sequence sheet, content sheet and tracking sheet: "Link encoders". Touching the sheet will only open sequence playback encoderbar when this option is activated.</li>
+	<li>3 new Filter options for the "At" filter: "Values", "Value times" and "Effects". These buttons are specifying what will be used for "At" command.</li>
+	<li>New colors in the channel and fixture sheets when working in the network: The values from playbacks controlled by another user are displayed in grey colors. Executor IDs and Value IDs are displayed by using the cue colors for background.</li>
+	<li>The executor sequence sheet has a new option in the "mode" column: "release". A cue with the "release" option switches the executor off when its cue time is completed. Note: "release" uses also the "executor off timing".</li>
+	<li>Better workflow with parts: The command "store part x" stores a partcue in the actual cue of the selected sequence. The command "store cue x part y" needs only one press to the button "cue" after the first "cue" press.</li>
+	<li>New Function: "Single digit value". (setup/user/settings) as it used to be in grandMA Series1. All numeric cue value inputs below ten will be multiplied by 10</li>
+	<li>The command: "channel x at y time z" brings the value "y" with the timing "z" live on stage and into the programmer) if the "program time" is switch on. Note: The program timing will be overwritten.</li>
+	<li>New Syntax: "At Remote 3" activates the current selection to the incoming values of the Remote-DMX-In Type Programmer in order to create a kind of snapshot.</li>
+	<li>DMX sheet: New buttons "link encoders" and "release all" in the headline. When the button "link encoders" is active, every touch in the DMX sheet, opens the DMX-tester encoder bar. A double click in the DMX sheet brings this address in the DMX-tester. The new "release all" button has the same function, as the button in the DMX-tester.</li>
+	<li>Auto shutdown popup (when power is lost with grandMA2 light or full-size only) has a new button "continue for 120 seconds". If you choose this option, the popup reappears after 120 seconds.</li>
+	<li>Setup/patch &amp; fixture schedule: Diagnostic report is now sorted by errors and warnings.</li>
+	<li>When saving big show files, the compression of the Show data will be done in the background. During this process the backup button will be blinking and there is a new progressbar indicating, while one can continue to work.</li>
+	<li>Console supports external touch screens (input-device-technologies only (e.g. APR-Technology from ELO is not supported by now)). External Touch screens need to be connected before powering up the console (no plug &amp; play). On first usage the operator needs to assign and calibrate the touchscreens (setup/console/screen options). The correct order: 1. If not detected automatically, the operator needs to set up the desired screen resolution. 2. Pushing the button "assign left touch screen" displays an identification bar on the screen the console supposed to be the left one. The operator needs to touch this screen within the time frame indicated by the identification bar. 3. Same procedure is required for the right touch screen. Known Limitation: After a software update, the external touch screens have to be reassigned and recalibrated.</li>
+	<li>3D default camera (grandMA 3D can follow it) can be changed via command line: e.g: change default camera of the first userprofile to the first camera: cd 31 (userprofiles) cd 1 (user default) Assign 16 /DefaultCamera=1</li>
+	<li>3D camera of stage view is fully controllable from the command line: e.g. set position, rotation and zoom (fov) of the first camera of the first userprofile: cd 31 cd 1 cd 16 Assign 1 /X=1.27 /Y=-4.32 /Z=3.93 /Rot.X=-21.41 /Rot.Y=0.0 /Rot.Z=22.58 /FOV=0.79</li>
+	<li>New columns and colors in MA network configuration: The column "name" shows the device-name. The column "memory" shows the complete and free memory of the devices. The color green shows that a network party is a session member. The color grey shows that a network party is present in network, but in no session. The color red shows that a network party is member of another session, when a version number is visible, or is not available in network, when no version number is visible.</li>
+	<li>The off menu (off off) now displays from which user profile an executor or an effect had been started, i.e., from which the latest go had been given. The new button "show only my playbacks" filters all running executors from other users. With this option activated, all other buttons in this menu will only affect the playbacks of the current user. Playbacks with colored background belong to the current user. Playbacks with black background belong to other users.</li>
+	<li>New option in the update sheet: "Executor called by me" Note: Filters the "cue Destinations"-display for Executors latest touched by me.</li>
+	<li>Timecode record has now a user selective mode. (setup/show/playback + MIB timing) Note: When "timecode record single user" is turned to "on" the executor playbacks will be recorded only from the user who switch the record button on.</li>
+	<li>New fade option for executors: the command line entry "Executor 1 At 50 Fade 5" will fade the executor 1 to 50% in 5 seconds.</li>
+	<li>Export/Import of effects includes the forms, used by these effects.</li>
+	<li>Export function for user Command syntax: Export user &lt;range&gt; &lt;file_name&gt; &lt;please&gt; &lt;range&gt; - can be: [Nummer]; [Nummer_first] Thru [Number_Last];</li>
+	<li>Import function for user. Command syntax: Import &lt;file_name&gt; at user &lt;Number&gt;</li>
+	<li>Export/import function for userprofile Example: Export Userprofile 5 "filename" Export Userprofile "Tom" "filename" Import "filename" at Userprofile 2</li>
+	<li>Export/import function for layout Export Layout 10 "filename" Import "filename" at layout 10</li>
+	<li>Export/import function for executor and page Export page 5 "filename" Import "filename" at page 7</li>
+	<li>Export/import function for presets Export preset 2.13 "filename" Import "filename" at preset 2.15</li>
+	<li>16 special Rate masters added.</li>
+	<li>A warning appears when one tries to delete a profile which is in use.</li>
+	<li>Store options gets new button: "Store Filter". Press and hold the store button to enter the store options. A new button "filter" appears in the top right corner of the frame. This allows filtering to be used when storing items (presets, features, attributes, effect times and effect values). Works similar to the AT-filter.</li>
+	<li>
+	<div class="restriction">"Clear all" reset this filter except you save the entries as default.</div>
+	</li>
+	<li>
+	<div class="restriction">The store filter also affects the update function. If you deactivate the effect layers in the store filter, you will not be able to update effect layers either.</div>
+	</li>
+	<li>Store bar has new filter buttons for fast access to the most important store filter options Pushing the "Store Filter" button will open the store filter at screen 1 The store filter button is highlighted, if the filter is set to anything else than all. The button "values", "value times" and "effects" have the same functionality as the have inside the store filter. They define whether values, timing and/or effects will be stored.</li>
+	<li>Store command. There are new options in command line: "store /source=&lt;source type&gt;". Source type could be: "prog", "output" or "dmxin" "store /useselection=&lt;selection type&gt;". (Short name: "/use" ) Selection type could be: "active", "Allforselected", "Activeforselected", or "all". "store /values" means that only values will be stored. (Short name "/v" ) "store /valuetimes" means that only value times will be stored. (Short name "/t" ) "store /effects" means that only effects will be stored. (Short name "/ef" ) If in the command line several command filter options are used (/values, /valuetimes /effects) then they will be mixed. e.g. "store /v /ef" means that value and effect data will be stored. Note: The option "/filter" got renamed to "/presetfilter" (short name "/pf" )</li>
+	<li>New ways to toggle activation of channels, fixtures, or groups individually. Double press on group button toggles attribute activation of grouped fixtures in programmer Command line: Entering [Channel]/[Fixture]/[Group] [1] [Please] twice toggles activation of Channel/Fixture/Group 1</li>
+	<li>New keyword: DmxUniverse (push the "channel" button 3x) Syntax: Park DmxUniverse 5 Unpark DmxUniverse 5</li>
+	<li>Groupmaster Overview can be accessed using a long press of the Group hardkey. The group masters can be selectively, depending on their kind (positive, negative, additive) set to 0 or 100. Inside the overview every group master can be changed individually. Pressing on the headline of a group master makes the executor page jump to where the group master is assigned. The group master overview can also be assigned as a view (create basic window / other).</li>
+	<li>Setup / Show / Patch &amp; Fixture Schedule: Fixture Wizard will auto open every time a new layer is generated.</li>
+	<li>MIB Indicator (*) is back.</li>
+	<li>Autosave function has been changed: Autosave only saves the show file at a defined interval, if the show file has been changed since the last saved show file version.</li>
+	<li>If the focus is at the patch column it is possible to use the numeric pad for editing.</li>
+	<li>If a macro line can be executed by "go" it can be executed reversely by "go-".</li>
+	<li>New command line help function lists command combinations e.g. "store /?" lists all command combinations for the store command in the command line. Additional examples: "copy /?" "delete /?" "assign /?" "loadshow /?"</li>
+	<li>If the option "fixture sort" is activated and there are more fixtures selected than visible in the fixture sheet, stepping through the selection using "next" or "previous" will scroll the fixture sheet to have the current selection visible at the screen.</li>
+	<li>Many menus can be called directly via command line or macro. Example: "menu &gt;"menu name"&lt;" will toggle the called menu "menu &gt;status&lt; &gt;"menu_name"&lt;" will set the menu to the specified status, status could be: "on", "off" or "toggle". The command "menu /?" list the current menu list names. Example: the command " menu "groupmaster" " switches the group master overview on and off.</li>
+	<li>The Layout view shows dimmer values of the selected sequence in cue colors.</li>
+	<li>Stage View: Fixtures can be deselected using the minus("-")- hardkey and touch the fixture to be deselected in the stage view.</li>
+	<li>The selected sequence section at screen 2 shows the executor page of the selected executor.</li>
+	<li>A light-blue number in the sequence pool shows the number of executors using this sequence.</li>
+	<li>A button in the Smart View is marked with an "m" (=merged), if more than one fixture type has a Channelset with that name.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Fixed Bugs and improved functionality</p>
+
+<ul>
+	<li>User passwords will be hidden while typed in.</li>
+	<li>User passwords are case sensitive now. Administrator password is "admin"</li>
+	<li>MIB will not be executed, if dimmer values &gt;0 or dimmer effects are running formerly only dimmer values prevented MIB</li>
+	<li>Setup Full Access: Fixture sort by number has been fixed.</li>
+	<li>Sequence Flash Button is not overwriting an assigned Playback Master anymore.</li>
+	<li>DMX Tester -&gt; Park and UnPark Current have been changed to Park and Unpark Selection of DMX Tester.</li>
+	<li>Calculator buttons "Half" and "Double" multiply correctly if more than one fixture is selected</li>
+	<li>Two commands have received a new Shortcut: s - store ; sh - Shutdown;</li>
+	<li>When a channel has a default value &gt;0, htp cues work correct now.</li>
+	<li>Edit timecodebar does not crash the desk anymore</li>
+	<li>It's forbidden (and the console prevents it now) to make changes in "live access", while another desk in the session is in state "full access" already. (Before: the "live access" desk crashed when the "full access" desk leaves the "full access" state with "save")</li>
+	<li>Deleting the last cue of a sequence with the Delete button from the keyboard in edit sequence does not crash the desk anymore</li>
+	<li>External desk inputs (DMX/midi remotes) will still operate even when the desk is locked.</li>
+	<li>Store/Merge for a range of cues is working again even when the cue range is not linear. (1,3,4,7,9..)</li>
+	<li>Off time for executors is working now correctly with follow cues.</li>
+	<li>Moving a chaser doesn't reset direction and loop settings to default anymore.</li>
+	<li>Content Distribution will not crash the console anymore if the user presses Oops after the distribution took place.</li>
+	<li>50% values (127:128) lock into the one (127) or the other state (128) and do not jump anymore for long cue fadetimes.</li>
+	<li>When moving a cue to a new cue list position located between two other cues, and Oops this action, will no longer result to a confusion of the numbering of the cue list.</li>
+	<li>The command fixture at fixture considers now also effect values which are coming from an effect executor.</li>
+	<li>Colors in Preset pool: When a preset has a fade or delay timing additional to a value, the value is displayed now with a yellow marker. (before it was red).</li>
+	<li>Agenda: Entries in the week view are back.</li>
+	<li>NPU: Workload representation has now a 100% grid.</li>
+	<li>Playback bar: State of playback buttons in the playback bar in now correct.</li>
+	<li>Stage view and grandMA 3D support 4 color wheels (before 2)</li>
+	<li>Timecode show: after deleting a cue the referring event is assigned to "No Cue".</li>
+	<li>Partial show read evaluates about wheels and mode dependencies.</li>
+	<li>The "off timing" (setup/show/playback + MIB timing) works now also with the function "toggle" for executors.</li>
+	<li>OffOnOverwritten is no longer recorded as "off-event" in timecode shows.</li>
+	<li>Bug fixed: HTP-Cue at executor with values below default value increased the output value</li>
+	<li>Selection of a bigger number of fixtures in the Layout view does not crash the desk any more.</li>
+	<li>PWM Effect: No more "blips" if effect was running in reverse mode.</li>
+	<li>FTP Access to grandMA1 folder at grandMA2 hardware has been fixed.</li>
+	<li>Delete an All Preset in the Layout View using GUI has been fixed.</li>
+	<li>Store with Source DMX-In stores the virtual dimmer with 100% as soon as one of the related CMY-channels is stored with a value &gt;0.</li>
+	<li>It is not allowed any more to patch Multi Instance fixtures across DMX universe borders.</li>
+	<li>Patch Dialog is not auto closed anymore before all fixtures are patched.</li>
+	<li>Patch Dialog: Pressing the screen encoder or please opens the calculator.</li>
+	<li>Renaming a fixture will automatically reset the related subfixture names.</li>
+	<li>The "Use Value" Section got renamed to "Use selection".</li>
+	<li>When a timecode sequence is recorded, only manual key presses and fader moves are stored. A "release" in the mode option of a cue is not handled as a recorded event any more. The same is true now for manual set release times of executors (the release will be no longer recorded).</li>
+	<li>Fixture library has been updated to Carallon Version 7.3</li>
+	<li>Auto generated groups are broadcasted correctly to all session members.</li>
+	<li>MIB and AE (assert effect) are not usable with non-tracking sequences and are deactivated for this sequences in the executor sheet.</li>
+	<li>Content Sheet: Size of the name and the number column can be stored in views.</li>
+	<li>Status views can be assigned with different font sizes at the same time.</li>
+	<li>Scrolling fast through the desk help files is not crashing the desk any more.</li>
+	<li>Merging setups using Partial Show Read Initialize is still possible.</li>
+	<li>Backup menu: Load "userprofiles" from a showfile, overwrites the existing user and all userprofiles. Note: A normal "load show data" without userprofiles, merges userprofiles. Notes regarding the NEW Effect-handling:</li>
+</ul>
+
+<h2>Bugfix Release 2.3.1.1 - released 2011-07-27</h2>
+
+<ul>
+	<li>It is possible to enter fade and delay times in seconds, minutes and hours with the calculator.</li>
+	<li>Groupmasters can be set with fade time. Example: Executor 1 is a Groupmaster. CMD: Executor 1 at 100 Fade 5 will bring executor 1 to 100% in 5 seconds</li>
+	<li>Deactivate button is back in the calculator.</li>
+	<li>Console help search function has been improved</li>
+	<li>Speed- and Ratemaster can be paused.</li>
+	<li>Improved renumbering for copying cues, cues with negative range will get a step width +1 if possible. Example: copy cue 5+3 at cue 7 will copy cue 5 at cue 7 and cue 3 at cue 8 (if cue 8 does not exist)</li>
+	<li>Sequence assign menu speed factor setting has been fixed</li>
+	<li>Release values can be set to normal values using the encoders again.</li>
+	<li>Moving or deleting an executor will not start other executors any more.</li>
+	<li>Groupmaster overview shows also names of single fixture groups now.</li>
+	<li>Crash fixed when entering the Agenda option menu</li>
+	<li>At filter popup will not close any more, if another user is using a grandMA remote.</li>
+	<li>Pools don't loose keyboard focus any more after labeling pool objects</li>
+	<li>It is possible to oops while in setup/live or full access</li>
+	<li>improved programmer update function, when editing effect templates</li>
+	<li>Crash fixed, when moving or copying cues and oopsing this afterwards.</li>
+	<li>Using update or store /merge will not start effects stored in later cues in the current cue any more.</li>
+	<li>Analog, Midi and DMX Remote for button executors can be used at any page, not just current page again.</li>
+	<li>When adding lines in the DMX-In Remote view, the screen will not jump to the first row any more.</li>
+	<li>Users with Userrights "Preset" or "Playback" are not allowed to overwrite existing effects or macros, when importing new ones.</li>
+	<li>It is possible to use the command "Extract Effect x" for selective effects and effect templates now</li>
+	<li>Switching of Effect Pool Playbacks will respect the exec time.</li>
+	<li>When assigning a selective effect to an executor, the effect will use the default off-time.</li>
+	<li>If you want to set a individual off time for that executor, please use the effect playback bar.</li>
+	<li>As it is not possible to start effect templates as pool playback, they are darken, when effect pool is switched to playback mode.</li>
+	<li>Oops is possible for Highlight and Default Presets as well.</li>
+	<li>Improved conversion of Show files, stored with version 2.2.0.13 and earlier.
+	<ul>
+		<li>Effects from show files, stored with version 2.2.0.13 or earlier will be converted to run the same direction as when they have been stored in the previous version.</li>
+		<li>Release Values and Effects will be converted correctly.</li>
+		<li>Tracking Sheet views with activated AutoScroll converted from older show files will autoscroll again.</li>
+	</ul>
+	</li>
+</ul>
+
+<h2>Appendix</h2>
+
+<div class="tip">How to use 'Speed' and 'Rate' in Sequences 1. All cue fade times can be modified in relation to their programmed timings (faster if rate &gt; 1, slower if rate &lt; 1) by using a rate fader assigned to a sequence executor or the rate encoder of the sequence playback bar. If the option "Effect Speed" in the assign menu is enabled, the rate fader modifies the speed of effects stored in cues, too. When turning off the executor the rate fader switches back to its default value (1:1), allowing setting up a new rate value before turning the executor back on again. 2. A speed fader assigned to a sequence executor relates only to the speed of the effects stored in this cue. When a sequence executor is carried out as a chaser the speed fader also controls the speed of the chaser. When turning off the executor of a sequence the speed fader switches back to its default value (60BPM/1Hz/1sec). When a sequence executor is carried out as a chaser the speed fader doesn't switch back to default. 3. Consequently: When a rate fader and a speed fader is assigned to a sequence executor the rate fader controls the fade times between cues while the speed fader is in charge for the effects (Provided the option "Effect speed" inside the assign menu is turned off). 4. There's no difference when assigning rate master and speed master instead of individual rate and speed faders beside the exception that they won't reset to default when switching of the executors. Notes regarding the removing of layers and attributes in cues.</div>
+
+<div class="restriction">The command "store /remove" or pressing [store][cue][2] and the select [remove] in the popup will remove the whole attribute with all (!!) its layers for fixtures having any value or effect layer of this attribute active in programmer. It can be filtered to only remove values, value timings or effects by using the buttons in the stored encoder bar. To remove only specific layers, for example only individual effect fade, the operator needs to open the calculator for these layers and select "remove" in the calculator. Afterwards the operator needs to update the cue, or has to use store /merge to remove the specific layers.</div>
+
+<h3>Known limitations:</h3>
+
+<ul>
+	<li>Partial Show Read has been disabled in the current version. Merging setups using Partial Show Read Initialize is still possible.</li>
+	<li>It is not possible to store or update an selective effect at a cue with an already stored stomp.<br />
+	Workaround:
+	<ul>
+		<li>The stomp has to be removed from the cue first.</li>
+		<li>Then it is possible to store or update an selective effect at that cue.</li>
+	</ul>
+	</li>
+	<li>Show file conversion from Version 2.2 and earlier:The speed of an selective effect, stored in a cue, will not be brought correct into programmer, if the cue gets edited and the default speed of the effect in the pool is not 60 BMP.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>View Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="View keyword, view - store, view - call" />
+	</head>
+	<body>
+		
+		
+		<h1>View Keyword</h1>
+		
+		<p>To get the View keyword in the command line, press <span class="hardkey">View</span> or type <strong>View</strong> in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The view keyword calls views on a screen.</p>
+
+<p>With the option <strong>/screen</strong> you select</p>
+
+<p>on which screen the view will be called</p>
+
+<p>- or -</p>
+
+<p>which screens will be stored in a view.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">View [ID]</span></p>
+
+<p><span class="syntax">View [ID] / screen = [ID]</span></p>
+
+<p><span class="syntax">View [ID] / [option] = [option value]</span></p>
+
+<h2>Options</h2>
+
+<p>The following table displays the assignable options along with the <a href="key_keyword_assign.html">Assign keyword</a>.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Name</td>
+			<td>View name, e.g. "Stage Extern".</td>
+		</tr>
+		<tr>
+			<td>Info</td>
+			<td>Additional information to the view, e.g. "all I need".</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>Call view 2 from the view pool on that screen where it is stores from.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; View 2</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Call view 5 on screen 2.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; View 5 /screen = 2</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Store the content of screen 2, 3, and 4 at view object 5.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Store View 5 /screen = 234</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Assign view 2 the name Stage Extern.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Assign View 2/name = "Stage Extern"</div>
+
+		
+	</body>
+</html>

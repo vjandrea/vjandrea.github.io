@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Create user profiles and users</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="user profile, user, user rights" />
+	</head>
+	<body>
+		
+		
+		<h1>Create user profiles and users</h1>
+		
+		<p>The user system is divided into two different parts - The User and the User Profile.</p>
+
+<p>A User have a User Profile assigned. Many Users can have the same User Profile assigned. Each User have their own programmer and can have different selected elements (Executors, Worlds, Filters, and so on). But if they use the same User Profile, then the Users share the Views and View Button assignment and a lot of other settings.</p>
+
+<h2>User &amp; Profiles Setup</h2>
+
+<p>The User &amp; Profiles Setup is where you control the Users and the User Profiles. It can be opened by pressing <span class="hardkey">Setup</span> and then <span class="softkey">User &amp; Profiles Setup</span> in the Console section.</p>
+
+<p>Or by typing <span class="syntax">Menu UserProfiles</span> in the command line.</p>
+
+<p>This is what it look like:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_user-profiles_v3-3.png" />
+<figcaption><em>User &amp; Profiles Setup</em></figcaption>
+</figure>
+
+<p>This menu offers a lot of information and some possibilities. But the main purpose of this menu is to create Users and User Profiles.</p>
+
+<p>The main part of this menu is separated into two sections. The top section is about the <strong>User</strong> and the bottom part is about the <strong>User Profile</strong>.</p>
+
+<p>The general background color rule applies here. A cell with a black background cannot be edited. Gray background allows you to edit the cell content.</p>
+
+<p>There are two Users and one User Profile that is in all shows and cannot be delete or changed. It is the Administrator and Guest users.</p>
+
+<p>When a User is logged in, then some settings are locked and cannot be changed and if changes are made to a user that is logged in, then that user might need to login again before the changes are applied.</p>
+
+<p>In the title bar you can see what user is currently logged in on the station you are standing or sitting in front (in the image above is "administrator").</p>
+
+<h3>Button explanation</h3>
+
+<p>There is a set of buttons at the bottom of the menu. They change depending on what is selected. This is a short description of them:</p>
+
+<ul>
+	<li><strong>Add [Profile/User]</strong> - This will create a new user or user profile (depending where the focus last was).</li>
+	<li><strong>Delete [Profile/User]</strong> - This will delete the selected user or user profile (the one with the white frame).</li>
+	<li><strong>Cut [Profile/User]</strong> - This will move the selected user or user profile in the clipboard - ready to be pasted somewhere.</li>
+	<li><strong>Copy [Profile/User]</strong> - This will make a copy of the selected user or user profile into the clipboard - ready to be pasted somewhere.</li>
+	<li><strong>Paste [Profile/User]</strong> - This will paste the user or user profile from the clipboard to the selected location.</li>
+	<li><strong>Import [Profile/User]</strong> - This allows you to import a previously exported user profile.</li>
+	<li><strong>Export [Profile/User]</strong> - This will export the selected user profile. A pop-up might appear asking where it should be exported: the internal memory or to any detected USB sticks.</li>
+	<li><strong>Login</strong> - Pressing this button will login the station with the user selected in the User list.</li>
+</ul>
+
+<h3>Column explanation</h3>
+
+<p>Each of the two sections have some columns.</p>
+
+<p>This is a short explanation of the columns in the UserProfile section:</p>
+
+<ul>
+	<li><strong>No.</strong> - This is the profile number. It cannot be edited.</li>
+	<li><strong>Name</strong> - This is the name of the profile.</li>
+	<li><strong>Used</strong> - This is for information. Here you can see how many users have this profile assigned (read below).</li>
+	<li><strong>Logged In</strong> - Here you can see how many stations are currently logged in with a user with this profile.</li>
+	<li><strong>World</strong> - A world can be assigned to a User Profile. This will only allow access to the fixtures and attributes in this specific world. Read more below.</li>
+	<li><strong>Info</strong> - Here you can type some information text.</li>
+</ul>
+
+<p>This is a short explanation of the columns in the Users section:</p>
+
+<ul>
+	<li><strong>Name</strong> - This is the name of the user - this is the name used when logging in.</li>
+	<li><strong>Password</strong> - Passwords can be added to a User. This password needs to be type when logging in. Leave this empty if you do not want a password.</li>
+	<li><strong>UserProfile</strong> - All Users need to have one of the UserProfiles assigned. Editing this cell will open the <strong>Select User Profile</strong> pop-up.</li>
+	<li><strong>Rights</strong> - Here you can select the level of rights the user should have. Editing this cell will open the <strong>Select Rights</strong> pop-up. Please read the section below to learn more.</li>
+	<li><strong>Logged In</strong> - Here you can see how many stations are currently logged in with this user.</li>
+	<li><strong>Info</strong> - Here you can type some information text to the user.</li>
+</ul>
+
+<h3>User rights</h3>
+
+<p>There are seven different levels of user rights.</p>
+
+<p>When editing the Rights cell in a User, then you will get a small pop-up that lists the following users:</p>
+
+<ul>
+	<li><strong>Admin</strong> - This is full rights to change everything in the console, system and show.</li>
+	<li><strong>Setup</strong> - This will limit access to some of the elements in the console. The user cannot access the User &amp;&nbsp; Profile Setup! There are other console settings that can be accessed.</li>
+	<li><strong>Program</strong> - In this level the user cannot do major changes to the Fixture Schedule. It only gives access to the "Patch Only". Most programming operations can be done.</li>
+	<li><strong>Presets</strong> - This level allows to update existing presets. But the user cannot edit the cue content.</li>
+	<li><strong>Playback</strong> - This level allows to playback and run a programmed show. But the user cannot store anything.</li>
+	<li><strong>None</strong> - With this user right it is not allowed to use a programmer. The user is allowed to run executors and change views.</li>
+</ul>
+
+<p>You can only change the rights when the user is not logged in.</p>
+
+<h2>Assigning worlds to User Profiles</h2>
+
+<p>Assigning a world to a User Profile will limit the Users assigned to this User Profile to only use the assigned World. It is not possible for the user to change world.</p>
+
+<p>The default option is <strong>None</strong>. This means that the user is not limited.</p>
+
+<p>Editing a cell in the World column will open up a small <strong>Select World pop-up</strong>. This will list the None option and all the created worlds in the show file.</p>
+
+<p>Selecting the "Full 1" world will give the user access to every fixture and attribute, but the user is locked from changing world.</p>
+
+<p>Worlds can be assigned using the command line.</p>
+
+<p>To assign world number 4 to user profile number 3 use the following command:</p>
+
+<div class="cl_input">[Channel]&gt; Assign World 4 UserProfile 3</div>
+
+<p>&nbsp;</p>
+
+<h2>Create a new User Profile and a User</h2>
+
+<p>To create a new user with a new user profile you will need to do the following (you need to be logged in as a user with Admin rights):</p>
+
+<ol>
+	<li>Press the <span class="hardkey">Setup</span> key.</li>
+	<li>Tap the <span class="softkey">User &amp; Profiles Setup</span>.</li>
+	<li>Tap the cell with "New" in the lowest "<strong>UserProfiles</strong>" section - you might need to scroll down.</li>
+	<li>Tap the <span class="softkey">Add Profiles</span> button.</li>
+	<li>Change the Name of the user profile to something that makes sense.</li>
+	<li>Tap the cell with "New" in the top "<strong>Users</strong>" section - you might need to scroll down.</li>
+	<li>Tap the <span class="softkey">Add User</span> button.</li>
+	<li>Change the Name of the user to something that makes sense.</li>
+	<li>Add a password if you want one.</li>
+	<li>Select the User Profile you just created.</li>
+	<li>Change the user Rights if you need to.</li>
+	<li>Tap the <span class="softkey">Login</span> button if you want to login immediately as this new user.</li>
+</ol>
+
+		
+	</body>
+</html>

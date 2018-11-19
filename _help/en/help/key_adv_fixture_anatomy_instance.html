@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Instance Manager</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="instance manager, fixture - instances" />
+	</head>
+	<body>
+		
+		
+		<h1>Instance Manager</h1>
+		
+		<p>If you have arrived at this topic from a link without reading the previous topic, then please read <a href="key_adv_fixture_anatomy.html">Anatomy of a Fixture Type</a> first.</p>
+
+<p>The <strong>Instance Manager</strong> is used to add and arrange existing <strong>Modules</strong> to the fixture.</p>
+
+<p>It could look like this:&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_fixture-editor_instance-manager_v3-3.png" />
+<figcaption><em>Instance manager</em></figcaption>
+</figure>
+
+<p>There are buttons at the bottom to add or delete rows. The <span class="softkey">Diagnostics</span> button opens a pop-up listing errors or warning regarding the instance setup.</p>
+
+<p>Each row is an instance of the modules. A simple fixture might only have one module and one instance. But if the fixture has multiple color control elements or LED pixels then there are often multiple instances.</p>
+
+<p>The instances need to be arranged physically between each other and there needs to be set a DMX start address offset.</p>
+
+<p>This is done by editing the columns in the instance manager. This is short description of the columns:</p>
+
+<ul>
+	<li><strong>No.</strong>:<br />
+	This is an auto generated number for the row. It cannot be edited.</li>
+	<li><strong>Module Type</strong>:<br />
+	Here the module is selected. Editing this cell opens a <strong>Select DMX Module pop-up</strong>. Here one of the modules can be selected and used for this instance.</li>
+	<li><strong>Patch</strong>:<br />
+	This is the DMX address offset based on the fixture start address. Often each module start with no DMX address offset and then the instances have the offset. This makes it a lot easier to create one LED pixel module that can be used for multiple LED instances where the DMX offset is set based on the fixture documentation.</li>
+	<li><strong>X</strong>, <strong>Y</strong>, and <strong>Z</strong>:<br />
+	The is the location of the instance in relation the center of the fixture. This is often used to position LED pixel instances in relation to each other. This is needed for correct visualization in MA 3D and in the Stage window.&nbsp;</li>
+	<li><strong>Locked</strong>:<br />
+	Enable if instance should not be individually movable, but move together with the other instance, keeping the relative distance between them.</li>
+</ul>
+
+		
+	</body>
+</html>

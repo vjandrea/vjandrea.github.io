@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>DeleteShow keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="DeleteShow keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>DeleteShow keyword</h1>
+		
+		<p><strong>DeleteShow </strong>is a function used to remove show files from hard drives.</p>
+
+<p>To execute this keyword type <strong>DeleteShow </strong>or the shortcut <strong>DeleteS </strong>into the command line.&nbsp;</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">DeleteShow [filename] </span></p>
+
+<p><span class="syntax">DeleteShow [filename] /noconfirm </span></p>
+
+<p><span class="syntax">DeleteShow [filename] /backup </span></p>
+
+<p><span class="syntax">DeleteShow [filename] /show </span></p>
+
+<h2>&nbsp;</h2>
+
+<h2>Options</h2>
+
+<p>To get a list of all options available for the keyword <strong>DeleteShow </strong>in the command line feedback window type the following into the command line.</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;DeleteShow /?</div>
+
+<p>The keyword <strong>DeleteShow </strong>has the following options:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Shortcut</th>
+			<th scope="col">Option value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>backup</td>
+			<td>b</td>
+			<td>no option value</td>
+			<td>Deletes backup files ending in .backup.</td>
+		</tr>
+		<tr>
+			<td>show</td>
+			<td>s</td>
+			<td>no option value</td>
+			<td>Deletes show files ending in .show.gz.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>noconfirm</td>
+			<td>nc</td>
+			<td>no option value</td>
+			<td>Suppresses confirmation pop-up.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>This function deletes show files on the currently selected hard drive. Use wildcards (*) in filename to delete multiple files. If /noconfirm option is included, the deletion of each file needs to be confirmed. To avoid constant confirmation add "nonconfirm" at the end of the command.</p>
+
+<h2>Example:</h2>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; DeleteShow /backup</div>
+
+<p>&nbsp;</p>
+
+<p>The corresponding shortcut</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; DeleteShow /b</div>
+
+<p>Deletes show file backups only (file ending .backup).</p>
+
+<h2>&nbsp;</h2>
+
+<div class="cl_input">[Channel]&gt; DeleteShow /show</div>
+
+<p>&nbsp;</p>
+
+<p>The corresponding shortcut</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; DeleteShow /s</div>
+
+<p>Deletes show files only (file ending .show.gz).</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

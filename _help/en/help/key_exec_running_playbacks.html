@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Looking at the active executors</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Looking at the active executors, RUnning Playbacks Window, Off Menu" />
+	</head>
+	<body>
+		
+		
+		<h1>Looking at the active executors</h1>
+		
+		<p>There are two ways to see all the active executors. They actually display all the "Playbacks". This means that they display everything that is currently actively doing something. So it displays running Sequences, Chaser, Effects, Macros, Timecode shows, Timers, and Plugins.</p>
+
+<p>&nbsp;</p>
+
+<h2><a id="off_menu" name="off_menu"></a>Off Menu</h2>
+
+<p>Tapping the <span class="hardkey">Off</span> key twice will open the <strong>Off Menu</strong>. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_off_v3-3.png" />
+<figcaption><em>Off Menu</em></figcaption>
+</figure>
+
+<p>The main part of this menu is an area with several tabs. Each tab represent one of the different types of playbacks. Each tab has a different color. After the name in the tap there might be a number in parentheses. This number is the amount of playbacks in that category. There is also a tab called "All". This will display all the different playbacks in one list. Each row on the list will have the same color as the tab color. This is to make it easy to distinguish the different types of playbacks in the list.</p>
+
+<p>The columns in the main part will vary depending on what tab is selected. The "All" tab displays all possible columns. They are:</p>
+
+<ul>
+	<li><strong>Exec</strong>:<br />
+	This is the executors number of the playback. Only relevant for Sequence, Chaser, and Effect.</li>
+	<li><strong>Priority</strong>:<br />
+	This displays the executor priority. Only relevant for Sequence and Chaser.</li>
+	<li><strong>Name</strong>:<br />
+	This is the name of the active playback.</li>
+	<li><strong>Type</strong>:<br />
+	This is only visible in the "All" tab. It tells what kind of playback it is.</li>
+	<li><strong>No.</strong>:<br />
+	This displays the number of the active playback.</li>
+	<li><strong>Cue Number</strong>:<br />
+	This will display the active cue number. This is only relevant for Sequence and Chaser.</li>
+	<li><strong>Cue Name</strong>:<br />
+	This will display the name of the active cue. This is only relevant for Sequence and Chaser.</li>
+	<li><strong>Profile</strong>:<br />
+	This is the name and number of the User Profile that has last activated the playback. Only relevant for Sequence, Chaser, and Effect.</li>
+</ul>
+
+<p>Around the main part, there are several buttons. Assuming this menu is on screen 1, then it is possible to use the X-keys and the U1 through U4 keys to execute various actions. It is also possible to tap the buttons on the screens.</p>
+
+<p>There are two types of buttons. There are "filter" buttons and there are "Off" buttons.</p>
+
+<p>The filter buttons are:</p>
+
+<ul>
+	<li><strong>Only My Playback</strong>:<br />
+	This will hide playbacks from the list that has been triggered by a different user profile.</li>
+	<li><strong>Only Preview Playbacks</strong>:<br />
+	This will hide playbacks that are not only running in the Previewer. The list will only display the playback running in previewers.</li>
+	<li><strong>Freeze Off Menu</strong>:<br />
+	This is not a filter. When this is deactivated, then a row will disappear when the playback is turned off. Activating the <span class="softkey">Freeze Off Menu</span> will make the row stay - it becomes empty when the playback is turned off.</li>
+</ul>
+
+<p>The Off buttons are:</p>
+
+<ul>
+	<li><strong>Off Pool Playbacks</strong>:<br />
+	This will turn off all the playbacks that are running the respective pools - so not running on a Fader Executor or a Button Executor.</li>
+	<li><strong>Off All Buttons</strong>:<br />
+	This will turn off all playbacks running on Button Executors.</li>
+	<li><strong>Off All Faders</strong>:<br />
+	This will turn off all playbacks running on Fader Executors.</li>
+	<li><strong>Everything Off</strong>:<br />
+	This will turn off every running playback and close the Off Menu.</li>
+	<li><strong>Off All [playback types]</strong>:<br />
+	At the bottom right side of the menu there are seven buttons. Each turn off each of the seven sections. For example <span class="softkey">Off All Sequences</span>, turns off all the running sequences.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2><a id="running_playbacks" name="running_playbacks"></a>Running Playbacks</h2>
+
+<p>A window similar to the Off Menu is called <strong>Running Playbacks</strong>. It can be made like any other window - using the <a href="key_windows.html">Create Basic Windows pop-up</a>. This window can be found in the <strong>Playbacks</strong> tab. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/window_running-playbacks_v3-3.png" />
+<figcaption><em>Running Playbacks window</em></figcaption>
+</figure>
+
+<p>The main part of this window looks like the <strong>Off Menu</strong> (see above). The difference is the buttons around the window are gone. Instead some of the functions can be added in the Title Bar. This can be changed in the options.</p>
+
+<h3>Options</h3>
+
+<p>The options can be accessed by tapping the yellow ball in the upper left corner.</p>
+
+<p>The options have two tabs. One is called <strong>Options</strong>, the other is <strong>Title Buttons</strong>.</p>
+
+<p>The title bar of the options has the options to store the settings as the new default, load the defaults settings, delete the window, and finally close the options pop-up.</p>
+
+<h3>The Options Tab</h3>
+
+<p>Here are the different options for the Running Playbacks window.</p>
+
+<ul>
+	<li><strong>Off Mode</strong>:<br />
+	Activating the Off Mode will change what happens if one of the rows are tapped. When this is active then tapping rows will turn off the tapped playback. This is mutually exclusive with <strong>Link Encoders</strong>.</li>
+	<li><strong>Only My Playbacks</strong>:<br />
+	This is the filter described in the Off Menu above.</li>
+	<li><strong>Only Preview Playbacks</strong>:<br />
+	This is also the filter described in the Off Menu above.</li>
+	<li><strong>Link Encoders</strong>:<br />
+	When this active, then selecting a row will display the relevant Encoder Toolbar. Here it is possible to control the playback. This is mutually exclusive with <strong>Off Mode</strong>.</li>
+	<li><strong>Show Info</strong>:<br />
+	This can add another column to the main part. It will add a Info column to all the tabs.</li>
+	<li><strong>Font</strong>:<br />
+	Here you can selected the font size. Tapping it will open a small <strong>Select Font pop-up</strong>. Here you can select a font size from size 10 through size 22.</li>
+</ul>
+
+<h3>The Title Buttons Tab</h3>
+
+<p>Here you can turn On or Off title bar buttons for all the options described above - except the font size.</p>
+
+		
+	</body>
+</html>

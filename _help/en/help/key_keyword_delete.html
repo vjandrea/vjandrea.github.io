@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Delete keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Delete keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>Delete keyword</h1>
+		
+		<p><strong>Delete </strong>is a function used to remove data from the show file.</p>
+
+<p>To execute this keyword type <strong>Delete </strong>or the shortcut <strong>Del </strong>into the command line.&nbsp;</p>
+
+<p>Delete is a function used to remove data from your show file. If the object itself cannot be removed, any assignment to the objects will be removed.</p>
+
+<p>If no object type or destination is given, the default object type for this function&nbsp;​​–&nbsp;Cue&nbsp;–​ is used.</p>
+
+<p>For more information see <a href="key_keyword_cue.html">Cue</a>.&nbsp;</p>
+
+<p>If a selection list filter is given, only specified fixtures are deleted from the object list.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Delete [Object-list] / [option] = [option value]</span></p>
+
+<p><span class="syntax">Delete [Object-list] [Selection-list filter]</span></p>
+
+<p>&nbsp;</p>
+
+<h2>Options</h2>
+
+<p>To get a list of all options available for the keyword <strong>Delete </strong>in the command line feedback window type the following&nbsp;into the command line:</p>
+
+<div class="cl_input">[Channel]&gt;&nbsp;Delete /?</div>
+
+<p>The keyword <strong>Delete </strong>has the following options:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Shortcut</th>
+			<th scope="col">Option value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>deletevalues</td>
+			<td>dv</td>
+			<td>no option value</td>
+			<td>Deletes values from cue if cue part is deleted.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>cueonly</td>
+			<td>co</td>
+			<td>no option value</td>
+			<td>Prevents changes to track forward.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>noconfirm</td>
+			<td>nc</td>
+			<td>no option value</td>
+			<td>Suppresses confirmation pop-up.</td>
+		</tr>
+		<tr>
+			<td>region</td>
+			<td>r</td>
+			<td>no option value</td>
+			<td>Deletes a region of elements in layout view.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>element&nbsp;</td>
+			<td>e</td>
+			<td>no option value</td>
+			<td>Deletes a certain element in layout view.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>condition</td>
+			<td>cnd</td>
+			<td>See <a href="key_keyword_messages.html">messages keyword</a>.</td>
+			<td>See <a href="key_keyword_messages.html">messages keyword</a>.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Examples</h2>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; Delete 7</div>
+
+<p>&nbsp;</p>
+
+<p>Deletes Cue 7 in the selected executor.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; Delete Messages</div>
+
+<p>Deletes all messages in the message center.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; Delete Group 3</div>
+
+<p>&nbsp;</p>
+
+<p>Deletes Group 3.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; Delete World 6</div>
+
+<p>&nbsp;</p>
+
+<p>Deletes World 6.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; Delete Fixture 4</div>
+
+<p>&nbsp;</p>
+
+<p>Unpatches fixture 4 (removes assigned DMX objects).</p>
+
+		
+	</body>
+</html>

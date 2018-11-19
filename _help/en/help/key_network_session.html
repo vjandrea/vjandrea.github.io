@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Session control</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="session, master, session speed, link speed, MA Network control" />
+	</head>
+	<body>
+		
+		
+		<h1>Session control</h1>
+		
+		<p>To connect MA devices you need to create a session.</p>
+
+<h2>MA Network Control</h2>
+
+<p>Sessions and Stations (consoles and onPC) relation to sessions are controlled in <strong>MA Network Control</strong> found in the Setup menu.</p>
+
+<p>It can be opened it by pressing <span class="hardkey">Setup</span> and then tap <span class="softkey">MA Network Control</span>.</p>
+
+<p>It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_ma-network-control_v3-2.png" />
+<figcaption><em>Menu MA-Net Control</em></figcaption>
+</figure>
+
+<p>The left side of this menu displays the different sessions in the network.</p>
+
+<p>There can be a maximum of 31 sessions. Each session needs a unique session number (between 1 and 31).</p>
+
+<p>There is always a line in the session control that "holds" the stations that are not currently in a session. This line is called <strong>Not connected</strong>.</p>
+
+<p>The right side of the menu lists the different stations that are in the session selected on the left side (including the "Not connected").</p>
+
+<h2>Master and Connected</h2>
+
+<p>In a session there is always one station that have the <strong>Master </strong>role. If there is more stations in the session, then the others will have the <strong>Connected</strong> role.</p>
+
+<p>The Master is the one that transmit DMX on the network. It is also the console that executes the commands that are triggered by the sequences. If you are using MIDI, then it is important to know that the Master is the one that will transmit the MIDI information, and the station that needs the MIDI signal.</p>
+
+<p>The Master is also the one that will upload the show file to new devices added to the network.</p>
+
+<p>The Master and the Connected stations are all equal members in the session any one can run cues and they share all the information. If you save the show on one station it is saved on all stations.</p>
+
+<p>If one session member changes the show while in a session, then all members will get the new show.</p>
+
+<h2>Station priorities</h2>
+
+<p>You can control what station gets the Master role using the <strong>Station Priority</strong> setting. If one station has the "High" priority, then this station will be the Master.</p>
+
+<p>There are four different priorities:</p>
+
+<ul>
+	<li><strong>Never:</strong><br />
+	A station with this priority will connect to a session, but it cannot create a session, and if it is the only station left then the session will end!</li>
+	<li><strong>Low:</strong><br />
+	A station with this priority will connect to a session. It will only be the Master if there is no one else with a higher priority.</li>
+	<li><strong>Normal:</strong><br />
+	This is the default priority.</li>
+	<li><strong>High:</strong><br />
+	In the ideal system you will have one station that have the high priority.</li>
+</ul>
+
+<p>It is only possible to change the priority when a station is not connected to a session.</p>
+
+<h2>Speed and Link Speed</h2>
+
+<p>The session list will display the session number, name, IP address of the master and a <strong>Speed</strong>. This speed can be Fast or Slow.</p>
+
+<p>A <strong>Fast</strong> session means that the session is running at maximum speed and data packets are sent as fast as possible and in burst.</p>
+
+<p>A <strong>Slow</strong> session means that data packets are being cued up and sent at a slower rate. Then older hardware (grandMA1 era) - with slower network cards - have a chance to keep up.</p>
+
+<p>The session speed is automatically changed if the master detects older hardware directly behind the network adapter and only when the station is switched on - when the first device is a gigabit switch, it is always fast. The only way to manually change the speed is to limit a Ethernet connection to 100Mbit in the switch or in the station.</p>
+
+<p>Each station also have a Link Speed column. Here it shows directly the Mbit speed connection for the station. You can change what the network card in the console is set to using the <a href="key_keyword_setnetworkspeed.html">SetNetworkSpeed command</a>.</p>
+
+<p>&nbsp;</p>
+
+<p>Please read the following pages to learn about creating sessions and adding more devices to the session.</p>
+
+		
+	</body>
+</html>

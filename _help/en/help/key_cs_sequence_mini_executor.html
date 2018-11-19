@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Sequence mini executor</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="mini executor - sequence, sequence mini executor" />
+	</head>
+	<body>
+		
+		
+		<h1>Sequence mini executor</h1>
+		
+		<p>When a sequence is assigned to an executor, the mini executor view is displaying relevant information.</p>
+
+<p>It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_mini-executor_sequence_v3_3.png" />
+<figcaption><em>Mini Executor - Sequences</em></figcaption>
+</figure>
+
+<p>The image above shows three fader executors with assigned sequences and one button executor with an assigned sequence.</p>
+
+<p>The yellow colored frame identifies&nbsp;that the executor has a sequence assigned. &nbsp;</p>
+
+<p>The mini executor is divided into three section: a top part, a middle part, and a lower part.</p>
+
+<h2>Top Part</h2>
+
+<p>There are two lines of information in the top part.</p>
+
+<p>The top line has a number on the left side. This number is the <strong>executor </strong>number. If this number has a different background color, then there is a <a href="key_wfm_apply_to_exec_seq.html">Playback filter</a>&nbsp;applied.</p>
+
+<p>Next to this there might be different letters or symbols. This is list of the different possibilities:</p>
+
+<ul>
+	<li><strong>! (exclamation mark):</strong><br />
+	This symbol means that the executor is currently assigned the "Super" priority.</li>
+	<li><strong>S:</strong><br />
+	This symbol means that the executor is currently assigned the "SWP" priority.</li>
+	<li><strong>H:</strong><br />
+	This symbol means that the executor is currently assigned the "HTP" priority.</li>
+	<li><strong>Triangle pointing up:</strong><br />
+	This symbol means that the executor is currently assigned the "High LTP" priority.</li>
+	<li><strong>L:</strong><br />
+	This symbol means that the executor is currently assigned the "LTP" priority.</li>
+	<li><strong>Triangle pointing down:</strong><br />
+	This symbol means that the executor is currently assigned the "Low LTP" priority.</li>
+	<li><strong>T:</strong><br />
+	The "T" is there if the sequence is set as a tracking sequence. Read about tracking in the <a href="key_cs_what_is_tracking.html">What is Tracking topic</a>.</li>
+</ul>
+
+<p>The different priorities are described in the <a href="key_cs_playback.html">Playing back Cues topic</a>.</p>
+
+<p>On the right side there is another number. This is the <strong>sequence </strong>number. If this number has a different background color, then there is a <a href="key_wfm_apply_to_exec_seq.html">Input filter</a>&nbsp;applied.</p>
+
+<p>The second line in the top part is the name of the sequence.</p>
+
+<p>The background color have different meanings:</p>
+
+<ul>
+	<li><strong>Black</strong>:<br />
+	This is the normal background color.</li>
+	<li><strong>Green</strong>:<br />
+	The executor is selected.</li>
+	<li><strong>Orange</strong>:<br />
+	The executor is fixed.</li>
+	<li><strong>Red</strong>:<br />
+	The Assign Menu is open for this executor.</li>
+	<li><strong>Dark Red</strong>:<br />
+	The temporary Edit Sequence pop-up is open.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Middle Part</h2>
+
+<p>The middle part usually displays one or three cues. If a sequence only has one cue, then only one is displayed. If there are multiple cues in the sequence then three lines with cues are displayed.</p>
+
+<p>The top cue is the previous active cue or the cue that will be active should a GoBack&nbsp;action be performed. The middle cue is the currently active cue - if there are no active cue, then this line will be empty. The bottom cue will be the next active cue if a Go (forward) action is applied.</p>
+
+<p>If a cue is active, it will have a blue background. If the cue is fading in, then the blue background is visualized as a blue bar moving from the left to the right.</p>
+
+<p>Pressing or clicking in this area will open a temporary <a href="key_cs_cue_sequence.html">Sequence Executor window</a>.</p>
+
+<p>&nbsp;</p>
+
+<p>The middle part can look very different if it is "located" using the <a href="key_keyword_locate.html">Locate command</a>. It will look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_located-executor_v3_2.png" />
+<figcaption><em>Located sequence</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<h2>Lower Part</h2>
+
+<p>The lower part labels and simulates physical keys and fader.</p>
+
+<p>This is the part that is different depending on the sequence being assigned to a fader executor or button executor.</p>
+
+<p>The left side show two different things depending on the executor being a button executor or a fader executor.</p>
+
+<p>If it is a button executor then it shows the intensity master for the sequence.</p>
+
+<p>If the executor is a fader executor then the left area lapels what kind of master it is, and possibly the priority. It will also try to display the current value of the fader.</p>
+
+<p>This area might be split into two parts. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_mini-executor_sequence_playback-master_v3_3.png" />
+<figcaption><em>Mini Executor - Sequences - With Playback Master</em></figcaption>
+</figure>
+
+<p>This happens if the executor have a Playback Master assigned - Read about Playback Masters in the <a href="key_adv_exec_spec_master_playback.html">Playback Masters topic</a>.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>The right side have three squares or one, depending on the amount of physical buttons. These graphical representations of the real physical key&nbsp;labels the function of the keys. In grandMA2 onPC they can be clicked or pressed just like the real physical keys.</p>
+
+<p>&nbsp;</p>
+
+<h2>Wide Executors</h2>
+
+<p>The executors might span up to five executors wide. The top and middle part stay the same - just wider. The bottom part will show the amount of faders and keys that are now relevant for the sequence. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/img_mini-executor_sequence_two-wide_v3-3.png" />
+<figcaption><em>Two wide executor</em></figcaption>
+</figure>
+
+<p>Read about making wider executors in the <a href="key_exec_assign.html">Assign a Function topic</a>.</p>
+
+		
+	</body>
+</html>

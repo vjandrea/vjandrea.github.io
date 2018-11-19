@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Object List</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Object list" />
+	</head>
+	<body>
+		
+		
+		<h1>Object List</h1>
+		
+		<p>An object list is a list of objects of the same type.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h3>Syntax</h3>
+
+<p><span class="syntax">[Object-type1] [ID1]</span></p>
+
+<p><span class="syntax">[Object-type1] [ID1] [Object-type1] [ID2]</span></p>
+
+<p><span class="syntax">[Object-type1] [ID1] + [ID2]</span></p>
+
+<p><span class="syntax">[Object-type1] [ID1] Thru [ID2] - [ID3]</span></p>
+
+<p><span class="syntax">[Object-type1] [ID1] Thru</span></p>
+
+<p><span class="syntax">[Object-type1]​ Thru [ID1]</span></p>
+
+<p><span class="syntax">[Object-type1]​ Thru</span></p>
+
+<p><span class="syntax">[Object-type1]​​ "Name"</span></p>
+
+<p><span class="syntax">[Object-type1]​ "Nam*"</span></p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>If no object type is given, the list contains items of your current destination.&nbsp;</li>
+	<li>If no object type is given and the current destination is root –&nbsp;no destination –&nbsp;the list contains the default object types for the function applied.</li>
+	<li>If no object type is given and no function is applied, the list contains the current object type default of the command line.&nbsp;</li>
+</ul>
+
+<h3>Example:</h3>
+
+<div class="cl_input">[Channel] &gt; <strong>Fixture </strong>3 <strong>Thru </strong>6</div>
+
+<p><br />
+Selects fixture 3 through 6 (1, 2, 3, 4, 5, 6). &nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; <strong>Fixture Thru </strong>3</div>
+
+<p>&nbsp;<br />
+Selects fixture 1 through 3 (1, 2, 3).&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; <strong>Delete </strong>3 <strong>Thru</strong></div>
+
+<p>&nbsp;<br />
+&nbsp;Deletes cue 3 and the following upper cues.&nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; <strong>Channel Thru</strong></div>
+
+<p><br />
+Selects all channels. &nbsp;</p>
+
+<div class="cl_input">[Channel]&gt; <strong>Channel </strong>1 <strong>Channel </strong>5</div>
+
+<p><br />
+Selects channel 1 and 5.</p>
+
+<div class="cl_input">[Channel] &gt; <strong>Fixture </strong>mac*</div>
+
+<p><br />
+Selects all fixtures with a name starting with mac.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

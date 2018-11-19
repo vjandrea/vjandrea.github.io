@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Protocol Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Protocol, Network Protocols" />
+	</head>
+	<body>
+		
+		
+		<h1>Protocol Keyword</h1>
+		
+		<p>To go to the Protocol keyword, type <strong>Protocol</strong> in the command line or use the shortcut <strong>Prot</strong>.</p>
+
+<h2>Description</h2>
+
+<p>The Protocol keyword is an object keyword to access the network protocols.</p>
+
+<p>You can store or delete network protocols and assign parameters.</p>
+
+<p>For more information, see <a href="key_network_dmx_protocols.html">Network DMX Protocols</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">[Function] Protocol [Network Protocol ID] . [Row ID] </span></p>
+
+<p><span class="syntax">Assign Protocol [Network Protocol ID] / [Parameter] = [Parameter Value]</span></p>
+
+<p><span class="syntax">Assign Protocol [Network Protocol ID] . [Row ID] / [Parameter] = [Parameter Value]</span></p>
+
+<p>The following table displays the available network protocol along with their ID.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:250px">
+	<thead>
+		<tr>
+			<th scope="col">Network Protocol</th>
+			<th scope="col">ID</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:50%">Art-Net</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>ETC Net2</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>Pathport</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>sACN</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>Shownet</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>Kinet1</td>
+			<td>6</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Parameter</h2>
+
+<p>The following table displays the assignable parameter by use the command <span class="syntax">Assign Protocol [Network Protocol ID] / [Parameter] = [Parameter Value].</span></p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">Network Protocol</th>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:25%">Art-Net, sACN, Kinet1</td>
+			<td style="width:25%">OutActive</td>
+			<td style="width:25%">"On", "Off"</td>
+			<td style="width:25%">Assign if the output is set to on or off.</td>
+		</tr>
+		<tr>
+			<td style="width:25%">Art-Net, sACN, Kinet1</td>
+			<td>InActive</td>
+			<td>"On", "Off"</td>
+			<td>Assign if the input is set to on or off.</td>
+		</tr>
+		<tr>
+			<td>Art-Net</td>
+			<td>MaxUnicast</td>
+			<td>0...10</td>
+			<td><strong>Only if the mode is OutputAuto:</strong><br />
+			Assign the maximal amount of members until Art-Net switches from unicast to broadcast.</td>
+		</tr>
+		<tr>
+			<td>Art-Net, ETC Net2, Pathport, sACN, Shownet, Kinet1</td>
+			<td>Info</td>
+			<td>"Information text"</td>
+			<td>Assign additional information.</td>
+		</tr>
+		<tr>
+			<td>ETC Net2, Pathport, Shownet</td>
+			<td>Active</td>
+			<td>"On", "Off"</td>
+			<td>
+			<p>Assign if the console transmit or hide<br />
+			the network protocol.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>ETC Net2, Pathport, Shownet</td>
+			<td>LocalStart</td>
+			<td>1...256</td>
+			<td>Assign the DMX universe to transmit or receive the network protocol.</td>
+		</tr>
+		<tr>
+			<td>ETC Net2, Pathport, Shownet</td>
+			<td>Amount</td>
+			<td>
+			<p><strong>ETC Net2 and Pathport:</strong><br />
+			1...64</p>
+
+			<p><strong>Shownet:</strong> 1...256 or "None"</p>
+			</td>
+			<td>Assign the amount of DMX universes to transmit the network protocol.<br />
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td>ETC Net2, Pathport, Shownet</td>
+			<td>ExternStart</td>
+			<td>1...64</td>
+			<td>Assign the transmitted or received DMX universe.</td>
+		</tr>
+		<tr>
+			<td>ETC Net2</td>
+			<td>Groups</td>
+			<td>1...6</td>
+			<td>ETC Net2 uses multicast groups to simplify and optimize the transmission. Assign the group to transmit to.</td>
+		</tr>
+		<tr>
+			<td>ETC Net2, Shownet,</td>
+			<td>Priority</td>
+			<td>
+			<p><strong>ETC Net2: </strong>1...20</p>
+
+			<p><strong>Shownet:</strong> 0...16</p>
+			</td>
+			<td>
+			<p>Assign the priority to decide who a node should listen to in a conflict.<br />
+			<strong>ETC Net2:</strong><br />
+			The lowest number has the highest priority.<br />
+			<strong>Shownet:</strong><br />
+			A DMX512 slot can be patched to multiple Netslots with each Netslot assigned to a different priority. The DMX512 slot outputs the level of the Netslot with the highest priority if HTP is not selected.</p>
+			</td>
+		</tr>
+		<tr>
+			<td>ETC Net2, Pathport</td>
+			<td>TTL</td>
+			<td>0...255</td>
+			<td>TTL = Time to live<br />
+			<br />
+			Assign the number of routers (hops) that multicast traffic is permitted to pass through before expiring on the network. For each router (hop), the original specified TTL is decremented by one (1). When its TTL reaches a value of zero (0), each multicast datagram expires and is no longer forwarded through the network to other subnets.<br />
+			&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p>The following table displays the assignable parameter by use the command <span class="syntax">Assign Protocol [Network Protocol ID] . [Row ID] / [Parameter] = [Parameter Value].</span></p>
+
+<p>Only available for:</p>
+
+<ul>
+	<li>Art-Net</li>
+	<li>sACN</li>
+	<li>Kinet1</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="1" cellspacing="1">
+	<thead>
+		<tr>
+			<th scope="col">Network Protocol</th>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Art-Net, sACN</td>
+			<td style="width:25%">Mode</td>
+			<td style="width:25%"><strong>Art-Net:</strong><br />
+			"OutputBroadcast", "OutputUnicast", "OutputAuto", "Input"<br />
+			<strong>sACN:</strong><br />
+			"OutputMulticast", "OutputUnicast", "InputMulticast", "InputUnicast"</td>
+			<td style="width:25%">Assign the output or input mode.</td>
+		</tr>
+		<tr>
+			<td>Art-Net, sACN</td>
+			<td>DestinationIP</td>
+			<td>"1.2.3.4"</td>
+			<td><strong>Only if the mode is OutputUnicast.</strong><br />
+			Assign the the destination IP address.</td>
+		</tr>
+		<tr>
+			<td style="width:25%">Art-Net, sACN, Kinet1</td>
+			<td>LocalStart</td>
+			<td>1...256</td>
+			<td>Assign the DMX universe to transmit or receive the network protocol.</td>
+		</tr>
+		<tr>
+			<td>Art-Net, sACN, Kinet1</td>
+			<td>Amount</td>
+			<td>1...256</td>
+			<td>Assign the amount of DMX universes to transmit or receive the network protocol.</td>
+		</tr>
+		<tr>
+			<td>Art-Net</td>
+			<td>Network</td>
+			<td>1...128</td>
+			<td>Assign the network.</td>
+		</tr>
+		<tr>
+			<td>Art-Net</td>
+			<td>Subnet</td>
+			<td>0...15</td>
+			<td>Assign the subnet.</td>
+		</tr>
+		<tr>
+			<td>Art-Net</td>
+			<td>Universe</td>
+			<td>0...15</td>
+			<td>Assign the universe.</td>
+		</tr>
+		<tr>
+			<td>Art-Net, sACN</td>
+			<td>Delay(ms)</td>
+			<td>0.000...5.000</td>
+			<td><strong>Only if the mode is an output mode.</strong><br />
+			Assign the milliseconds between the packets.</td>
+		</tr>
+		<tr>
+			<td>sACN</td>
+			<td>sACNUniverse</td>
+			<td>&nbsp;1...64000</td>
+			<td>Assign the sACN universe.</td>
+		</tr>
+		<tr>
+			<td>sACN</td>
+			<td>Priority</td>
+			<td>0...200 or "None"</td>
+			<td>Assign the priority to decide who a node should listen to in a conflict. The highest number has the highest priority.</td>
+		</tr>
+		<tr>
+			<td>sACN</td>
+			<td>Protocol</td>
+			<td>"Final" or "Draft"</td>
+			<td>Assign a sACN protocol. Some equipment have implemented the draft version of sACN before the final release.</td>
+		</tr>
+		<tr>
+			<td>sACN</td>
+			<td>TTL</td>
+			<td>0...255</td>
+			<td>TTL = Time to live<br />
+			<br />
+			Assign the number of routers (hops) that multicast traffic is permitted to pass through before expiring on the network. For each router (hop), the original specified TTL is decremented by one (1). When its TTL reaches a value of zero (0), each multicast datagram expires and is no longer forwarded through the network to other subnets.<br />
+			&nbsp;</td>
+		</tr>
+		<tr>
+			<td>sACN, Kinet1</td>
+			<td>Info</td>
+			<td>"Information text"</td>
+			<td>Assign additional information.</td>
+		</tr>
+		<tr>
+			<td>Kinet1</td>
+			<td>ExternStart</td>
+			<td>0...255 or "None"</td>
+			<td>Assign the transmitted universe number.</td>
+		</tr>
+		<tr>
+			<td>Kinet1</td>
+			<td>IPAddress</td>
+			<td>"1.2.3.4"</td>
+			<td>Assign the IP address.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Example</h2>
+
+<ul>
+	<li>Set the sACN output to active.</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Assign Protocol 4 /outactive=on</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>&nbsp;Send grandMA2 universe 10 to Art-Net universe 9.
+	<div class="important"><strong>Important:</strong><br />
+	Art-Net universe 0 is the first Art-Net universe.</div>
+
+	<div class="cl_input">[Channel]&gt; Assign Protocol 1.1 /mode=outputauto /localstart=10 /amount=1 /network=1 /subnet=0 /universe=9</div>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

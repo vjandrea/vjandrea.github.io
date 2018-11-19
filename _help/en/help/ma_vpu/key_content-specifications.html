@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Content Specifications</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Content Specifications, HAP, HAPAlpha, Hap1, HapQ" />
+	</head>
+	<body>
+		
+		
+		<h1>Content Specifications</h1>
+		
+		<p>VPU content should require to the following specifications.</p>
+
+<p>To convert video content into MPEG2 see subchapter<strong>:</strong>&nbsp;<a href="key_rovi-total-codestudio.html">Rovi TotalCode Studio for converting your content into MPEG2</a></p>
+
+<p>To convert video content into HAP see subchapter<strong>:</strong>&nbsp;<a href="key_hap-content-converter.html">Hap Content Converter</a></p>
+
+<h2><strong>Video content requirements format 'MPEG':</strong></h2>
+
+<table>
+	<tbody>
+		<tr>
+			<td><strong>'MPEG' Video requirements</strong></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Video codec</td>
+			<td>MPEG-2</td>
+		</tr>
+		<tr>
+			<td>Bit rate</td>
+			<td>Constant Bit Rate (CBR) 10 - 30 Mbps (Mega bit per Second), Variable Bit Rate (VBR)&nbsp;<strong>(1)</strong></td>
+		</tr>
+		<tr>
+			<td>Frame rate</td>
+			<td>24 fps, 25 fps, 29,97 fps, 30 fps, 50 fps, 60 fps&nbsp;<strong>(2)</strong></td>
+		</tr>
+		<tr>
+			<td>GOP-Structure (Group of pictures)</td>
+			<td>GOP 12, I-Frame only&nbsp;<strong>(3)</strong></td>
+		</tr>
+		<tr>
+			<td>Container format</td>
+			<td>Program Stream (with sound) or Elementary Stream (without sound)</td>
+		</tr>
+		<tr>
+			<td>Audio stream</td>
+			<td>LPCM (uncompressed, 48 kHz, 16 Bit) or MPEG-1 Layer 2 (48 kHz, 384 kbps)</td>
+		</tr>
+		<tr>
+			<td>Color space / Chroma format</td>
+			<td>4:2:0</td>
+		</tr>
+		<tr>
+			<td>File extension video</td>
+			<td>.mpg, .mpeg, .m2v, .mpv <strong>(4)</strong></td>
+		</tr>
+		<tr>
+			<td>Pixel aspect ratio</td>
+			<td>1:1</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<p><strong>(1)</strong>&nbsp;Please note that VBR is also possible but prevents frame-exact playback from first to last frame. We strongly recommend CBR. Please also note that the bit rate heavily depends on the resolution of your video clip and on the content itself (e.g. lots of signal changes) !!! Using variable bit rate (VBR) causes loop problems, so please use constant bit rate (CBR)!!!</p>
+
+<p><strong>(2)</strong>&nbsp;Please note that frame rates above 30 fps are extremely resource-consuming and will decrease the performance. Use these high frame rates only for specific reason.</p>
+
+<p><strong>(3)</strong> GOP 12 is possible for simple playback without jumping within the frames (indexing). The more B- and P-frames are used the higher the compression, the smaller the file size. I-frames only is also possible but increases the data rate.</p>
+
+<p><strong>(4)</strong>&nbsp;Files with a leading "._" e.g. "._test.mpeg" are ignored by the VPU software because these files are created by the MAC OSX operating system.</p>
+
+<p><strong>General notes:</strong></p>
+
+<p>Program Stream =&gt; contains video and audio files, typical file extension .mpg</p>
+
+<p>Elementary Stream =&gt; contains video or audio files, file extension .mpv for video data and.mpa for audio data.</p>
+
+<p>File names must not exceed 63 characters.</p>
+
+<p><strong>Please keep in mind:</strong>&nbsp;Aggressive compression (reducing the bit rate) causes loss of quality. The less signal changes and information the video sequence contains, the more you might go down with the bit rate without necessarily having visible artefacts. Compression artefacts: Loss of edge clarity, tone fuzziness, blocking / contouring artefacts.</p>
+
+<p>&nbsp;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td><strong>Recommended bit rates</strong></td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td><strong>Resolution</strong></td>
+			<td><strong>4:3</strong></td>
+			<td><strong>16:9</strong></td>
+			<td><strong>Bit rate</strong></td>
+		</tr>
+		<tr>
+			<td>PAL</td>
+			<td>720x576</td>
+			<td>&nbsp;</td>
+			<td>10-20 Mbps</td>
+		</tr>
+		<tr>
+			<td>NTSC</td>
+			<td>720x480</td>
+			<td>&nbsp;</td>
+			<td>10-20 Mbps</td>
+		</tr>
+		<tr>
+			<td>VGA</td>
+			<td>640x480</td>
+			<td>&nbsp;</td>
+			<td>10-20 Mbps</td>
+		</tr>
+		<tr>
+			<td>SVGA</td>
+			<td>800x600</td>
+			<td>&nbsp;</td>
+			<td>10-20 Mbps</td>
+		</tr>
+		<tr>
+			<td>XGA</td>
+			<td>1024x768</td>
+			<td>&nbsp;</td>
+			<td>15-20 Mbps</td>
+		</tr>
+		<tr>
+			<td>HD 720p</td>
+			<td>&nbsp;</td>
+			<td>1280x720</td>
+			<td>15-20 Mbps</td>
+		</tr>
+		<tr>
+			<td>HD 1080p</td>
+			<td>&nbsp;</td>
+			<td>1920x1080</td>
+			<td>20-30 Mbps</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="important">
+<p>About MPEG-2</p>
+
+<p>MPEG stands for “Moving Pictures Expert Group” who created a couple of international standards. An important one is the MPEG-1/2 (ISO/IEC 13818-part x) standard which will be used for the MA VPU. As opposed to MPEG-4 this standard keeps a good balance between file size and calculation power that is needed to decode the video information.</p>
+
+<p>The MPEG-2 standard allows a couple of settings which will highly influence the quality of the picture and the way the VPU handles this data. They are defined to be able to run several resolutions like full HD for example. That influences also the bit rate which can vary from approx. 3 to over 80 Mbit/s.</p>
+
+<p>The higher the bit rates the more workload for the CPU, RAM and so on. Because of that MA Lighting choose settings that form a good compromise between bit rate and resulting frame rate.</p>
+
+<p>To gain safe and proper performance with the VPU, we strongly encourage encoding any content as described here.</p>
+
+<p>Non-linear video editing systems and compositing tools such as Avid Composer / Adobe Premiere Pro / Adobe After Effects / Final Cut Pro do also feature high quality MPEG-2 encoding tools that are very versatile and produce MPEG-2 conform content.</p>
+
+<p>However: you have to test this content with the VPU for correct and stable performance before doing a production with this content.</p>
+
+<p>If you do not know the origin and quality of the MPEG-2 encodings of your content, we strongly encourage you to re-encode the complete material even if you are afraid of slightly visible artefacts.</p>
+
+<p>If you want to gain the best quality, use un-encoded raw video and audio material as the source.</p>
+
+<p>Since Main Concept Reference can be downloaded for free to do test encodings (watermark is inserted into the video and audio is cut off after 30 seconds in the trial version), you can also use that tool to check your content by re-encoding it in case of problems related to content issues.</p>
+
+<p>You cannot gain high performance of parallel video stream decoding with guaranteed performance with not conforming and correct encoded content.</p>
+</div>
+
+<p>&nbsp;</p>
+
+<h2><strong>Video content requirements format 'HAP':</strong></h2>
+
+<h3>Hap for Direct Show Codec</h3>
+
+<p>This codec is available only for Windows. It creates a Hap video file inside an avi-container.</p>
+
+<p>Link: <a href="http://renderheads.com/product/hap-for-directshow/">http://renderheads.com/product/hap-for-directshow/</a></p>
+
+<div class="important"><strong>Important:</strong><br />
+We strongly recommend to use the Hap for Direct Show Codec Version 1.0.10. Video files created with other versions of the Hap for Direct Show Codec maybe can´t be played back.</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="height:198px">
+	<tbody>
+		<tr>
+			<td><strong>'HAP' Video requirements</strong></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Supported formats</td>
+			<td>Hap1, HapQ, HapAlpha</td>
+		</tr>
+		<tr>
+			<td>Frame rate</td>
+			<td>24 fps, 25fps, 29,97 fps, 30fps, 50 fps, 60 fps (2)</td>
+		</tr>
+		<tr>
+			<td>Bit rate</td>
+			<td>Variable Bit Rate (VBR) (3)</td>
+		</tr>
+		<tr>
+			<td>Maximum resolution</td>
+			<td>depends on MA VPU hardware:&nbsp;<br />
+			&nbsp;– using a MA VPU MK2 the maximum resolution is 7680 x 4320 (5)</td>
+		</tr>
+		<tr>
+			<td>File extension video</td>
+			<td>.avi</td>
+		</tr>
+		<tr>
+			<td>Aspect ratio:</td>
+			<td>Pixel&nbsp; 1:1</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Hap for Quicktime Codec</h2>
+
+<p>This codec is available for OSX and Windows. It creates a Hap video file inside a mov-container (1).</p>
+
+<p>Link: <a href="https://github.com/Vidvox/hap-qt-codec/releases">https://github.com/Vidvox/hap-qt-codec/releases</a></p>
+
+<div class="important"><strong>Important:</strong><br />
+We strongly recommend to use the Hap for Quicktime Codec Version 8. Video files created with other versions of the Hap for Quicktime Codec maybe can´t be played back.</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="height:154px">
+	<tbody>
+		<tr>
+			<td><strong>'HAP for Quicktime' Video requirements</strong></td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Supported formats</td>
+			<td>Hap1, HapQ, HapAlpha</td>
+		</tr>
+		<tr>
+			<td>Frame rate</td>
+			<td>24 fps, 25fps, 29,97 fps, 30fps, 50 fps, 60 fps (2)</td>
+		</tr>
+		<tr>
+			<td>Bit rate</td>
+			<td>Variable Bit Rate (VBR) (3)</td>
+		</tr>
+		<tr>
+			<td>Maximum resolution</td>
+			<td>
+			<p>3840 x 2160 (4)(5)</p>
+			</td>
+		</tr>
+		<tr>
+			<td>File extension video</td>
+			<td>.mov</td>
+		</tr>
+		<tr>
+			<td>Aspect ratio:</td>
+			<td>Pixel&nbsp; 1:1</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li>Hap video files inside a mov-container can only be played back, if the installation of additional 3rd party codecs was accepted at the EULA-prompt of the MA VPU.</li>
+	<li>Please note that frame rates above 30 fps are extremely resource-consuming and will decrease the performance. Use these high frame rates only for specific reason.</li>
+	<li>The encoders do not support to set a bit rate in Mbit/s by user. The bit rate is set automatic and depends on the content of the video file.</li>
+	<li>Hap for Quicktime encoder does not support higher resolutions. If you need to encode a video clip with a higher resolution, we recommend to use the Hap for Direct Show codec.</li>
+	<li>Resolution of width as well as height of a Hap video file needs to be divisible by 4. File names must not exceed 63 characters!</li>
+</ol>
+
+<div class="tip"><strong>Hint:</strong><br />
+<strong>Hap1:</strong> Good quality, higher compression, smaller files, higher CPU load (but less compared to MPEG-2), less hard disk load.<br />
+<strong>HapQ:</strong> Best quality, lower compression, bigger files, less CPU load, higher hard disk load.<br />
+<strong>HapAlpha:</strong> Hap1 with support of alpha channel.</div>
+
+<p>&nbsp;</p>
+
+<h2><strong>Video content requirements for images:</strong></h2>
+
+<table>
+	<tbody>
+		<tr>
+			<th><strong>Images</strong></th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td><strong>Image format</strong></td>
+			<td><strong>File extension</strong></td>
+		</tr>
+		<tr>
+			<td>Bitmap</td>
+			<td>.BMP</td>
+		</tr>
+		<tr>
+			<td>Portable Network Graphics</td>
+			<td>.PNG</td>
+		</tr>
+		<tr>
+			<td>Graphics Interchange Format</td>
+			<td>.GIF</td>
+		</tr>
+		<tr>
+			<td>Joint Photographic Experts Group</td>
+			<td>.JPEG, .JPG, .TGA</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Uncompressed images have to be in RGB 24bit/ 32bit colour space. CMY is not supported. We recommend 32 bit .png for alpha channel support. Max. 8192 x 8192 resolution for still images.</p>
+
+<h2><strong>Audio content requirements:</strong></h2>
+
+<table>
+	<tbody>
+		<tr>
+			<th><strong>Audio</strong></th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td><strong>Audio format</strong></td>
+			<td><strong>File extension</strong></td>
+		</tr>
+		<tr>
+			<td>16Bit 44,1kHz / 48kHz Stereo PCM</td>
+			<td>.WAV</td>
+		</tr>
+		<tr>
+			<td>32-320kbps 44,1kHz / 48kHz MPEG-1 Layer 3 (MP3) Stereo</td>
+			<td>.MP3</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2><strong>3D Objects&nbsp;content requirements​:</strong></h2>
+
+<table>
+	<tbody>
+		<tr>
+			<th><strong>3D Objects</strong></th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td><strong>3D Object format</strong></td>
+			<td><strong>File extension</strong></td>
+		</tr>
+		<tr>
+			<td>DirectX</td>
+			<td>.X</td>
+		</tr>
+	</tbody>
+</table>
+
+		
+	</body>
+</html>

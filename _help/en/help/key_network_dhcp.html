@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Using DHCP in MA devices</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="DHCP, automatic IP address, APIPA" />
+	</head>
+	<body>
+		
+		
+		<h1>Using DHCP in MA devices</h1>
+		
+		<p>The grandMA2 supports the use of DHCP (Dynamic Host Configuration Protocol). Use the normal procedure for setting static IP addresses in your devices, if you do not know what DHCP is.</p>
+
+<p>&nbsp;</p>
+
+<p>DHCP is enabled as a default when you do a full install. It can also be enabled on Consoles, NPU, and DMX Nodes from the Setup-&gt;Network-&gt;MA Network Configuration. Read more about this in the <a href="key_network_session_add_device.html">Adding devices to your session topic</a>.</p>
+
+<p>The device will look for a DHCP server in the network during the boot process. If a DHCP server is not found, then the device will assign an IP address in the APIPA (Automatic Private IP Addressing) range. This address will begin with 169.254.x.y.</p>
+
+<p>DHCP can also be used to define a gateway address. This can also be done with static address, but only when using the <a href="key_keyword_setip.html">SetIP keyword</a> in the command line.</p>
+
+		
+	</body>
+</html>

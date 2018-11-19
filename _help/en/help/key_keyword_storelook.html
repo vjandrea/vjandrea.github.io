@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>StoreLook Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="StoreLook, Store Look" />
+	</head>
+	<body>
+		
+		
+		<h1>StoreLook Keyword</h1>
+		
+		<p>To go to the StoreLook keyword, type <strong>StoreLook</strong> in the command line or use the shortcut <strong>StoreL</strong>.</p>
+
+<h2>Description</h2>
+
+<p>StoreLook stores all dimmer values from all fixtures in the show.</p>
+
+<p>If the dimmer value is bigger than 0, it stores additional all further attributes.<br />
+If the dimmer value is 0, it stores only the dimmer value because there is no further visible output.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+To exclude channels or fixtures from StoreLook, deactivate <strong>React to Master</strong> in the Patch &amp; Fixtures Schedule.</div>
+
+<p>For more information, see <a href="key_cs_store_options_default.html">What are the store options?</a>.</p>
+
+<p>StoreLook is a function keyword.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">StoreLook [object] / [option] = [option value]</span></p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available options to the storelook keyword, type in the command line</p>
+
+<div class="cl_input">[Channel]&gt; StoreLook /?</div>
+
+<p>The storelook keyword has the following options.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option Shortcut</th>
+			<th scope="col">Option Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>append</td>
+			<td>a</td>
+			<td>no option value</td>
+			<td>Adds new cue.</td>
+		</tr>
+		<tr>
+			<td>cueonly</td>
+			<td>co</td>
+			<td>False, True</td>
+			<td>Prevents changes to track forward.</td>
+		</tr>
+		<tr>
+			<td>effects</td>
+			<td>ef</td>
+			<td>False, True</td>
+			<td>Filters or enables effect layer.</td>
+		</tr>
+		<tr>
+			<td>merge</td>
+			<td>m</td>
+			<td>no option value</td>
+			<td>Adds to existing content.</td>
+		</tr>
+		<tr>
+			<td>originalcontent</td>
+			<td>or</td>
+			<td>False, True</td>
+			<td>Stores the original content of the preset, effect, or cue. False is the same as addnewcontent.</td>
+		</tr>
+		<tr>
+			<td>overwrite</td>
+			<td>o</td>
+			<td>no option value</td>
+			<td>Replace existing content.</td>
+		</tr>
+		<tr>
+			<td>release</td>
+			<td>rea</td>
+			<td>no option value</td>
+			<td>Releases content.</td>
+		</tr>
+		<tr>
+			<td>remove</td>
+			<td>r</td>
+			<td>no option value</td>
+			<td>Removes content.</td>
+		</tr>
+		<tr>
+			<td>source</td>
+			<td>so</td>
+			<td>Prog, Output, Dmx In</td>
+			<td>Defines data source.</td>
+		</tr>
+		<tr>
+			<td>statusmerge</td>
+			<td>sm</td>
+			<td>no option value</td>
+			<td>Adds tracking status to existing cue.</td>
+		</tr>
+		<tr>
+			<td>tracking</td>
+			<td>t</td>
+			<td>False, True</td>
+			<td>Stores with tracking. False is the same as cueonly.</td>
+		</tr>
+		<tr>
+			<td>trackingshield</td>
+			<td>ts</td>
+			<td>no option value</td>
+			<td>Use tracking shield for storelook.</td>
+		</tr>
+		<tr>
+			<td>values</td>
+			<td>v</td>
+			<td>False, True</td>
+			<td>Filters or enables value layer.</td>
+		</tr>
+		<tr>
+			<td>valuetimes</td>
+			<td>vt</td>
+			<td>False, True</td>
+			<td>Filters or enables fade and delay layer.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Example</h2>
+
+<p>Store all dimmer values from all fixtures in the show as cue 1 on executor 1.</p>
+
+<div class="cl_input">[Channel]&gt; StoreLook Executor 1</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

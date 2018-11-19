@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Clone</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="clone, clone fixtures, replace fixture, change fixture type, If keyword - clone, fixture type - change, fixture - replace, fixture - replace" />
+	</head>
+	<body>
+		
+		
+		<h1>Clone</h1>
+		
+		<h2>Function</h2>
+
+<p>Clone is used to add fixtures to the rig which suppose to behave exactly the same as existing fixtures.</p>
+
+<p><strong>Requirements:</strong></p>
+
+<ul>
+	<li>Program your show using presets.</li>
+	<li>Program relevant parameters in your presets.</li>
+</ul>
+
+<div class="important"><strong>Important:</strong><br />
+Avoid using fixture specific functions, e.g., build-in fixture macros. Use generic functions only.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<hr />
+<h2>How to Use Clone</h2>
+
+<h3>&nbsp;It is possible:</h3>
+
+<ol>
+	<li>To clone in order to copy values from fixture to fixture.</li>
+	<li>To clone a selection of fixtures to another selection of fixtures.&nbsp;</li>
+	<li>To clone using the <a href="key_keyword_clone.html">keyword Clone</a> or the <a href="key_clone_clone_in_user_interface.html">screen</a>.&nbsp;</li>
+</ol>
+
+<div class="important"><strong>Important:</strong><br />
+It is not possible to clone values from several fixtures to a single fixture. Cloning is only possible with one set of values.&nbsp;</div>
+
+<div class="important"><strong>Important:</strong><br />
+It is possible to limit the scope of cloning by using the <a href="key_keyword_if.html">keyword If</a>.</div>
+
+<p>&nbsp;</p>
+
+<p>By default, the cloning is done with low priority. This means that data is preserved wherever the destination fixtures or fixture types already contain data. The data form the source fixtures or fixture types is added to objects such as presets, cues, effects etc. where data does not exist yet.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+The console automatically clones dependencies e.g., presets and effects by reference to the cloned sequence whenever cloning with a limited scope. To protect existing data these dependencies are cloned with the default low priority clone option.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<hr />
+<h2>Replace</h2>
+
+<p>Contrary to clone, replace does not preserve data, i.e., data is overwritten. &nbsp;</p>
+
+<p>For more information on replace see <a href="key_search_replace.html">Search and Replace</a>.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

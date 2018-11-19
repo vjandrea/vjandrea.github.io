@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Agenda Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="agenda, list agenda, calendar - agenda keyword, macro" />
+	</head>
+	<body>
+		
+		
+		<h1>Agenda Keyword</h1>
+		
+		<p>To execute the keyword Agenda, type <strong>Agenda </strong>or the shortcut <strong>Ag </strong>into the command line.</p>
+
+<h2>Description</h2>
+
+<p>Agenda&nbsp;is an object type which holds scheduled tasks to be executed at specific dates and times.</p>
+
+<h2>Syntax</h2>
+
+<p>Agenda&nbsp;[ID]</p>
+
+<p><span class="syntax">Assign Agenda [Object-list]/Start</span></p>
+
+<p><span class="syntax">​Assign Agenda [Object-list]/Time</span></p>
+
+<p><span class="syntax">Assign Agenda [Object-list]/Duration</span></p>
+
+<p><span class="syntax">Assign Agenda [Object-list]/Repeat</span></p>
+
+<p><span class="syntax">Assign Agenda [Object-list]/CMD</span></p>
+
+<p><span class="syntax">Assign Agenda [Object-list]/Info</span></p>
+
+<p><span class="syntax">​Assign Agenda [Object-list]/First</span></p>
+
+<p><span class="syntax">Assign Agenda [Object-list]/Last</span></p>
+
+<p>&nbsp;</p>
+
+<p>Options</p>
+
+<p>To receive a list of all options for the keyword Agenda, type the following into the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Agenda /?</div>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Start</td>
+			<td>Absolute, Dawn, Sunrise, Sunset, Dusk</td>
+			<td>Sets the start of a task.</td>
+		</tr>
+		<tr>
+			<td>Time</td>
+			<td>hh/mm/ss</td>
+			<td>Sets the time of a task.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Duration</td>
+			<td>hh/mm/ss</td>
+			<td>Sets the duration of a task.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Repeat</td>
+			<td>None, Daily, Weekly, Monthly, Yearly, Daily each month, Weekly each month, Daily each year, Weekly each year, Monthly each year, Every 2nd day, Every 3rd day, Every 4th day, Every 5th day, Every 6th day&nbsp;</td>
+			<td>Sets the recurrence of a task.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>CMD</td>
+			<td>"Your command"</td>
+			<td>Sets the command of a task.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Info</td>
+			<td>"Your info text"</td>
+			<td>Sets the info regarding a task.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>First</td>
+			<td>MM/DD/YYYY</td>
+			<td>Sets the date of the kick off of the first task.&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Last</td>
+			<td>MM/DD/YYYY</td>
+			<td>Sets the date of the completion of the last task.&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+
+<h2>Example</h2>
+
+<div class="cl_input">[Fixture]&gt; List Agenda&nbsp;</div>
+
+<p>Lists all agenda items stored.</p>
+
+<p>&nbsp;</p>
+
+<div class="cl_input">[Fixture]&gt; Agenda 1&nbsp;</div>
+
+<p>Executes the command which was stored in agenda 1.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+It is also possible to enter agenda into the command line by pressing the key <span class="hardkey">Macro</span> three times on the console.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<p>For more information see the key <a href="key_key_macro.html">Macro</a>.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Session Collision</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Session Collision" />
+	</head>
+	<body>
+		
+		
+		<h1>Session Collision</h1>
+		
+		<p>You might experience a Session Collision at some point.&nbsp;</p>
+
+<p>It is a situation that occurs when two stations believe that they are the master of the same session.</p>
+
+<p>This can happen if you have a faulty network cable, a bad switch or someone who manually unplugs and re-plugs network cables.</p>
+
+<p>When this happens, then the session is divided into two parts.</p>
+
+<p>One of the stations that have left the original session, will become master - if it was not already.</p>
+
+<p>The other part are the stations that are left in the original session. The session needs a master console, so if the station that left was the master, then one of the remaining stations will become the new master.</p>
+
+<p>&nbsp;</p>
+
+<p>When the two parts are reconnected, then you have a situation with two stations that think they are the masters. The system cannot automatically decide what is the right thing to do in this situation.</p>
+
+<p>So you get a big warning and are forced to make a decision. It could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_session-collision_v3-2.png" />
+<figcaption><em>Session Collision pop-up</em></figcaption>
+</figure>
+
+<p>It shows the session number and name, plus the IP address of the console you have session collision with and finally the session speed.</p>
+
+<p>At the bottom of this pop-up you have three buttons:</p>
+
+<ul>
+	<li><strong>Join Other Session:</strong><br />
+	Pressing this will throw away the show file in the part of the session you are in, and join the other part (thus getting their show file).</li>
+	<li><strong>Take Over Session:</strong><br />
+	This will throw away the show file in the other part, and force the stations in that part to join your part (and getting your show file).</li>
+	<li><strong>Leave Session:</strong><br />
+	This will make the stations in your part leave the session and the other part will continue the session with their show file. This can be useful if both parts have made something important. The part that left the session can store the show file. This stored show can then be the source for a partial show read or elements can be exported and later imported into the running show.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>This big window will stay on all screens until someone presses one of the buttons.</p>
+
+<p>If you are working in a multi user environment, it might be good idea to talk about what to do if a session collision should appear - before it happens!</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

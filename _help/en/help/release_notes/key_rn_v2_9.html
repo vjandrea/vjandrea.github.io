@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Release Notes - Version 2.9</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="release notes version 2.9" />
+	</head>
+	<body>
+		
+		
+		<h1>Release Notes - Version 2.9</h1>
+		
+		<h2>Release Notes - Version 2.9</h2>
+
+<div class="important"><strong>Important:</strong>
+
+<ul>
+	<li>The MA-Net2 protocol has changed to support the 8Port Node devices. All MA devices need a new network streaming protocol with the 2.9 software. Once updated to the correlating Version to grandMA2 v2.9, 2Port, 4Port, 8Port, NSP 4Port Node and the NDP will no longer work in a session with an older network streaming protocol (e.g.: grandMA2 v2.8). Down-dating MA 2Port Nodes and NSP running in 4Port Node Mode to be v2.8 compatible is possible only via grandMA1 v 6.801. All other devices can be down-dated via USB or windows installer only.</li>
+	<li>If you would like to update your dimMA system from any version below 7.x please contact your MA-dealer or MA direct for any update information. Should you be using grandMA2 in connection to our dimMA solutions, please get in touch with us, since a console update will now require a NDP update and vice versa. We are happy to assist you.</li>
+	<li>The current versions of grandMA onPC and MA 3D require minimum Windows® XP with Service Pack 3. Microsoft® .NET Framework (4.0) will be installed on your computer, if not already installed.</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+<h2>grandMA2 - Version 2.9.1.1</h2>
+
+<h3>Fixed Bugs and improved functionality</h3>
+
+<ul>
+	<li>Solved: Tracksheet edit release values does not block default values instead any more.</li>
+	<li>Solved: Calling channel sheet view containing Mask If Live freezes console.</li>
+	<li>Solved: Delete cue range with option Cue Only does not delete the whole cue range at other stations in the network.</li>
+	<li>Solved: HTP Exec should not be overwritten when knocking in values in programmer.</li>
+	<li>Solved: Autocreate single groups of multi patched fixtures crash the desk.</li>
+	<li>Solved: Delete selection does not un-patch channels at other stations in the network.</li>
+	<li>Solved: Changing Agenda view mode crashes the desk.</li>
+	<li>Solved: Info View may crash when selecting another sequence, cue, macro,... to show its containing info.</li>
+	<li>Solved: Executor button "load" functionality in combination with an "up" or "down" key crashes the desk.</li>
+	<li>Solved: Fixture editor: delete all attributes from a module crashes the desk.</li>
+	<li>Solved: Start desk with force login does not show executor bar.</li>
+	<li>Solved: Timecode events from show files stored with version 2.8 may not be converted correctly.</li>
+	<li>Solved: The alternative flip solution in stage calibration menu may crash the desk.</li>
+	<li>Solved: Assign a cue times using command line are not spread in network.</li>
+	<li>Solved: MA 2Port Node freeze when changing between Session and standalone mode</li>
+	<li>Solved: MA 2Port Node delayed output of sACN and Artnet</li>
+	<li>MA 2Port Node v1.77: Improved synchronization between grandMA2 onPC and MA 2Port Node.</li>
+	<li>NDP Minimal Streaming Version set to 2.9.1</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>grandMA2 - Version 2.9.1.1</h2>
+
+<p>&nbsp;</p>
+
+<h2>Main feature overview:</h2>
+
+<ul>
+	<li>The color picker is now able to handle multi-color LEDs and color wheels</li>
+	<li>A Q fader fades from purest color through maximum brightness to a clean RGB mix</li>
+	<li>The color picker is an independent view now</li>
+	<li>Copy, paste and insert at many places, e.g. for fixtures and layers inside the setup</li>
+	<li>Import and export of users and user profiles (new menus)</li>
+	<li>Import and export of preset references together with fixture types</li>
+	<li>New running playbacks view</li>
+	<li>The layout view can contain images (new image pool) and pool objects showing real-time graphics, e.g. timecode as well as static video thumbnails</li>
+	<li>New camera pool to directly control MA 3D cameras</li>
+	<li>Filters can be applied to the stage view</li>
+	<li>It is possible to have a height offset for the follow function inside the stage view</li>
+	<li>Time code shows do also record group and special masters</li>
+	<li>Pools and presets can be stored without specifying numbers</li>
+	<li>Screens can be turned to black</li>
+	<li>New flash on, flash go, swop on and swop go commands</li>
+	<li>Load next and load previous commands for executors</li>
+	<li>Different infade and outfade times for Chasers</li>
+	<li>New syntax allows aligning several ranges of values at the same time.</li>
+	<li>New improved calculator functionality</li>
+	<li>Improved x-y-z engine setup</li>
+	<li>Improved clarity for the setup dialog</li>
+	<li>New Clone menu</li>
+	<li>New views inside the grandMA2 onPC optimized for onPC command/fader wing usage</li>
+	<li>Implementation of the non-proprietary PosiStageNet(PSN) protocol for real-time x-y-z tracking systems</li>
+	<li>clean-up and improvements of multiple places in views and menus</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>New functions and features in detail:</h2>
+
+<ul>
+	<li><strong>Color Mixing System</strong>
+
+	<ul>
+		<li>Color special dialog has new operating elements which define which color attributes are used to mix the color. In addition to colorRGBs, color wheels(C1...) and scroller are supported.</li>
+		<li>RGB (Headline in fixture sheet) was renamed in Mix color and contains all additive colors.</li>
+		<li>There is a "RAW Faders" view. All color channels of the current selected fixtures are displayed e.g. R G B A W.</li>
+		<li>The"HSB" view has a "Q" Fader. Only active when fixtures are selected which have also other additive color channels than RGB. Set to 0% / Pure, the color is mixed mainly from the additional color channels(e.g.. Amber). Set to 50% / Max, maximum Intensity together with the RGB color is adjusted. Set to 100% / Primary, only RGB channels are used for mixing.</li>
+		<li>There is also a new button which decides color mixing preferences
+		<ul>
+			<li>"Prefer MIX color" = prefer Mix color and set all color wheels to open white.</li>
+			<li>"Mixcolor only" = only ColorRGB attributes are controlled by this dialog.</li>
+			<li>"Colorwheel only" = only Color wheels (color 1, 2, 3) and scrollers are controlled by this dialog.</li>
+		</ul>
+		</li>
+		<li>The values of the "Hue" Fader are displayed from 0-360. When option "Link Encoder HSB" is active the encoder wraps around."</li>
+	</ul>
+	</li>
+	<li><strong>Setup</strong>
+	<ul>
+		<li><strong>Patch and Fixture Schedule</strong>
+		<ul>
+			<li>"Setup / Show / Patch + Fixture Schedule: with "Cut...", "Copy...", and "Paste..." row can be moved or copied.Button names change automatically according to context (left area "Layers" or right area "Layer".When one or more rows are marked red ("cut") they can be pasted anywhere else.When copying fixtures or layers the ID Numbers and the Patch will be ignored (not allowed to exist twice). When pressing "paste" after having copied and selected a new row a pop-up will ask whether to overwrite or to insert the line(s).</li>
+			<li>Export Patch and Fixture Schedule to File for viewing (HTML-Browser), or printing (Excel). Till now this was possible via predefined macros. Setup/Show/Patch + Fixture Schedule or Patch only: "Export Layer" or "Export Fixture", depends on selected row, one or more Layers / Fixtures can be exported. A pop-up will ask for a file-name if multiple rows are selected. When a USB Stick exists, it will be asked whether to store to USB drive or to internal hard drive. In an additional pop-up a style must be selected.
+			<ul>
+				<li>"Only Xml" = will create a xml file only.</li>
+				<li>"fixture + layer + layers@html@default.xsl" = an HTML File for usage with an HTML Browser.</li>
+				<li>"fixture + layer + layers@csv.xsl = a CSV File which can be e.g. imported to Excel.</li>
+				<li>A folder "Fixture" or "Fixture_Layers" will be created automatically , depending on exported type.</li>
+			</ul>
+			</li>
+			<li>Select Fixture Type pop-up when exchanging fixture types (Edit Setup) displays the amount of DMX channels and the amount of instances per fixture type. e.g. FixtureType10(DMX 20 Ins. 2)</li>
+			<li>If "Patch Readout Absolute Address" is activated in the patch menu the "Universe" Encoder will be suppressed. DMX address of all universes can be addressed via the"Address" Encoder only. Also the DMX addresses on the right side of the menu are displayed absolute.</li>
+			<li>3D environment can be modified inside Setup/Patch Fixture Schedule / Fixture Positions. 3D objects are listed in a separate layer inside this dialog.</li>
+		</ul>
+		</li>
+		<li><strong>Fixture Types</strong>
+		<ul>
+			<li>2 new columns in "Fixture Types" menu: "DMX Footprint" and "Instance". Number of DMX addresses and instances is shown.</li>
+			<li>In the Info area attribute to DMX address mapping of the selected fixture type is shown. Virtual attributes are shown below.</li>
+			<li>FixtureType and FixtureLayer Export - exporting multi selection creates one file per object.</li>
+			<li>The "Clean-up" button converts fixture types from former show files to collect duplicate features to provide a better overview in the calculator.</li>
+			<li>Attribute editor: "Identified As" column of sub-attributes show also the unit of the physical value in "[]" if there is one</li>
+			<li>When opening Import Fixture Dialog: keyboard focus is at manufacturer filter and screen encoder focus is at fixture type grid.</li>
+		</ul>
+		</li>
+		<li><strong>Fixture Type Editor</strong>
+		<ul>
+			<li>Carallon lib 9.6 fixture library included.</li>
+			<li>MIB can be disabled per attribute inside fixture type editor.</li>
+			<li>"React to Master" can now be switched on/off for color attributes even if there is no dimmer channel.</li>
+			<li>When fixture types are imported from the library into a show file they have extended channel sets. Minimum and maximum values for attributes with physical values are now displayed as e.g.. "open Iris", "min Strobe", "max Frost". The ranges of the physical sub-attributes are shown with units e.g. Unit of Position, Zoom and Iris is "degrees", Strobe is "Hertz" and Gobo rotation is "RPM". Also channel-sets and mode dependencies of animation wheels have been extended</li>
+			<li>Fixture types with CMY color mixing system: A lot of fixtures have mode dependencies on their color channels or having integrated macro functions mapped to the upper part of CMY attributes DMX channels CMY attributes of these fixture types are converted to RGB by converting only the range of the DMX channel controlling the color.</li>
+			<li>Setup/Patch and Fixture Schedule/ Fixture Type editor sub-attribute selection dialog is similar to attribute selection dialog.</li>
+			<li>Fixture Type: Overlapping functions of channels or non-unique natural to DMX mapping result in non-operate-able fixture type. Diagnostic screen will show error message for the user, when having such an error in fixture type.</li>
+		</ul>
+		</li>
+		<li><strong>Cloning</strong>
+		<ul>
+			<li>Cloning of fixtures: Setup / Show / Cloning: the menu "Prepare Cloning" is divided into 2 parts: Left part of view displays the source - right part of view the destination fixtures. Fixture have to be selected and applied to the left or right side using the left or right side "take selection" button. Prepare will lead to the cloning menu. Here can be chosen whether the prepared fixtures are cloned in all sequences/presets/worlds/... or only in selected ("chosen sequences/presets/worlds/..."). The button "Clone" will open the "Perform cloning" pop-up.The clone priority can be defined here:
+			<ul>
+				<li>"Low Prio. Merge" = simple cloning with low priority. Takes only values which are containing in the source fixture and are free in the destination fixture (no existing data of destination will be overwritten or deleted).</li>
+				<li>"Merge" = Mixes Values from the source fixture into the destination fixture and overwrites also already existing values.Values only containing in the destination fixture and not in the source fixture are not overwritten</li>
+				<li>Overwrite" = All values of the destination fixture are overwritten with the existing and non-existing values of the source fixture"</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><strong>Import/Export Gobo Bitmaps</strong>
+		<ul>
+			<li>Setup / Show / Import Export includes a user interface for importing and exporting Gobo Bitmaps" Exporting Gobo bitmaps to USB drives will export to /gma2/gobos/user_gobos folder. Gobo bitmaps have to be copied to this folder at the USB drive to be able to import them to a grandMA2 onPC or console.</li>
+		</ul>
+		</li>
+		<li><strong>Import/Export User Profiles</strong>
+		<ul>
+			<li>User Profiles can be exported and imported at / Show / Import/Export/User Profile. Export menu displays all user profiles of current show file on the left and all user profile xml files stored at /gma2/user_profile folder of current selected drive at the right column. Enabling "Always ask for Name" will provide possibility to custom label xml file when exporting. Import menu displays all user profile xml files stored at /gma2/user_profile folder of current selected drive at the left column. Button to the right toggles between import user profile only an import user profile and create user. Enabling Always ask for name provides possibility to rename user profile and user when importing user profile. Export and import of user profiles is limited to one user profile per file when using this dialogue. If you would like to export multiple user profiles into one single xml file, please refer to grandMA2 online help command line syntax for exporting and importing multiple user profiles. When trying to import a file containing multiple user profiles using Import/export menu, only the first user profile of this file will be imported. All exported user profile xml files will be stored to /gma2/user_profile folder of your hard drive or usb drive. User profiles which have been exported with grandMA2 v2.8.3 or earlier have to be manually copied from /gma2/importexport to /gma2/user_profile to be able to import these profiles in grandMA2 v2.9.</li>
+		</ul>
+		</li>
+		<li><strong>User + User Profiles</strong>
+		<ul>
+			<li>Import/export user profiles includes view button thumbnails.</li>
+			<li>Import/Export User profile can be done using Import export menu or buttons in /Setup/Console/User and Profile Setup</li>
+			<li>Cut-Copy-Paste has been added to the User and User-Profile dialog. Cut-Paste doesn't work for User Administrator and guest and UserProfile Default.</li>
+			<li>If in Setup / Console / User + Profiles a user has the focus, the button "Login" gives the ability for a direct login. In case of password protection the pop-up to login is displayed. In the headline the current user name is shown.</li>
+			<li>When copying or exporting user profiles, they always store the mask pool and the information on which screens the menus are to be opened</li>
+		</ul>
+		</li>
+		<li><strong>Network</strong>
+		<ul>
+			<li><strong>MA Network Control</strong>
+			<ul>
+				<li>New command and button inside Setup /Network /MA Network Config /Endsession to end a session for all session members.</li>
+				<li>Setup / Network / MA Net Control: Current Focus frame affects accessibility of buttons. Buttons without function for current focused object (console/session) will be grayed out.</li>
+			</ul>
+			</li>
+			<li><strong>MA Network Configuration/DMX Nodes</strong>
+			<ul>
+				<li>DMX Node configuration can be exported to and imported from a XML file. Setup / Network / MA Network Configuration / DMX Nodes: the button "Export Config" saves the configuration of the DMX Nodes tab inside the "gma2 / network_nodes" folder. The button "Import Config" loads exported configuration files and overwrites current DMX Nodes configuration with the one from the file.</li>
+				<li>&nbsp;</li>
+				<li>MA 8-Port-Nodes can be configured using / Setup / Network / MA Network Configuration / DMX Nodes</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><strong>Auto Create/Create Preset Reference</strong>
+		<ul>
+			<li>Presets can be added to fixture types as preset reference. Setup/ Autocreate provides access to create a preset reference and to create presets from a preset reference. Preset reference is part of the fixture type and will be exported and imported inside the fixture type file.</li>
+			<li>Preset references can be created via command line. At first a fixture of a fixture type must be selected. With the command "Store Fixturetype x.5" all presets of the currently selected fixtures are added to this fixture type. If a reference already exists, a pop-up occurs. The command can be restricted to single presettypes :"Store Fixturetype x.5 if Presettype "color". With "Autocreate Preset Fixturetype x" all preset of that type will be generated and to eventually existing merged (same name). With the extension "/add" always new presets are added. This can be limited with "if" for each presettype. Presets are identified by their name of each presettype and applicable overwritten. Example: "Store Fixturetype x.5 /remove if Presettype "color".</li>
+			<li>Autocreate Presets creates preset label by merging channelset and attribute label.</li>
+		</ul>
+		</li>
+		<li><strong>Misc</strong>
+		<ul>
+			<li>Blind button can be disabled at Setup / User / Grand Master + B.O. etc.</li>
+			<li>Update local console reboot dialog provides a reboot now button.</li>
+			<li>Setup / Show / Remote Inputs Setup: column "Macro" in the remote menu renamed to "CMD". Accordingly the remote Type "Macro" has been renamed to "CMD"</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><strong>Views and Pools</strong>
+	<ul>
+		<li><strong>Layout View Improvements</strong>
+		<ul>
+			<li>Layout view: Following elements can be shown and visualized as a pool icons:effects, bitmap effects, filter, forms, groups, images, macros, channel pages, executor pages, sequences, timecodes and worlds"</li>
+			<li>Clean-up of Stage View and Layout view title bar buttons and view options</li>
+			<li>1. Move and Select title buttons were combined into one list title button without icons</li>
+			<li>2. Zoom In, Zoom Out title buttons have been exchanged by zoom bar (already known from stage stage view) zoom bar can be hidden via layout view options. Deactivate zoom on the screen encoder. 4.</li>
+			<li>Title button was renamed to "Reset camera" Title buttons in the layout view are customizable now.</li>
+			<li>The Layout View options have been divided into 5 areas.</li>
+			<li>Pool Element defaults: Basic adjustments for pool elements are defined if they have been added with the "assign" command into a new layout</li>
+			<li>Fixt. / Chan. defaults: Basic adjustments for fixtures and channels when they are added with the "store" command</li>
+			<li>Layout Data: basic adjustments for the layout itself e.g. "visible marker"</li>
+			<li>Tools: basic adjustments for the layout e.g. zoom Bar, zoom Encoder ,Scrollbar deactivation. Display of Dimmer value regarding fixture sheet ("Cue colors")</li>
+			<li>Title Buttons: Button in the title bar can be enabled/disabled. New are also "Pool Playbacks" in the headline</li>
+			<li>Frames in Layout View: In the "Setup" mode of the layout view frames can be created(via the Encoder bar). Frames are always displayed on the lowest level. To edit this level the option "Edit Rectangle" must be active. Images then can be selected in the edit menu or via the encoder bar. If the frame shall only visualize one background image, the selection of the frame can be switched off in the edit menu ("Group Select" -&gt; "off")</li>
+			<li>New structure of elements in layout: The display of a pool / fixture Element can have different levels. The lowest is the visualization of fixtures: Brightness, color and gobos above those Images and Icons are displayed. These can contain alpha channels, means they can be transparent. Text, Id Numbers and Dimmer Values are on Top.</li>
+			<li>Edit of Channel / Fixture elements: Pressing "Edit" and onto a fixture in the layout view the fixture editor comes up. Same in"Setup" Mode opens the editor for the selected layout element. The assignment to a fixture can be exchanged by changing the ID Number. Additional Text and adjustments like visualization, size or image / icon rotation per element are possible. In Tab "Subfixture" Element Channel Id and Fixture Id can be switched on or off</li>
+			<li>Editing of Pool Objects: Pressing "Edit" and then onto a pool element in the layout view, e.g. a preset, a "normal edit" will be executed, means the preset is taken into the programmer. Same in "Setup" Mode opens the editor for the selected pool element. E.g. a preset can be exchanged via the Id as well. "Visualization": "Simple" -&gt; shows the object as usual. "Pool Icon" shows the pool element like in its own pool. For preset and bitmap elements the display of the symbols can be adjusted via Tab "Pool" "Spot", and "Filled".</li>
+			<li>Dimmer values and dimmer bar can be visualized for group pool elements "Filled" add colors and "Spot" Gobos in addition. The values of the last channels / fixtures in the group are used. Same for display of markers, when there are switched on in the layout.</li>
+			<li>Copy in layout view : In setup mode pool elements, text, frame elements can be copied with the "copy" button. Press "Copy", select pool element, click onto new position in layout. Fixtures and channels cannot be copied. These can only be used once per layout</li>
+			<li>Copy of Layout Views: With command "Copy Layout 1 at 2 /merge" it is possible to merge 2 different layouts. Layouts can be imported with PSR (Partial Show Read) as well.</li>
+			<li>Cloning fixtures can also be used to clone layouts.</li>
+			<li>Video attribute thumbnails are displayed in a layout now (like in a Preset pool).</li>
+			<li>Command "Assign" and multiple touch of object works same as "Move"</li>
+			<li>Image Recommendations for gMA2 layout view:
+			<ul>
+				<li>Format PNG</li>
+				<li>Canvas Size max 240X240</li>
+				<li>Colour Black</li>
+				<li>Image size max 180X180</li>
+				<li>Symbols outline 5 pixels 50% grey</li>
+				<li>Symbols shall have alpha fill</li>
+				<li>Area around symbols shall be black</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+		<li><strong>Stage View and XYZ</strong>
+		<ul>
+			<li>New Stage View camera mode "Link Selected". Stage views will follow currently selected camera. Camera can be selected by touching a camera object inside camera pool or via command line "Select Camera ID/Name" E.g. "Select Camera "Front" or "Select Camera 1"</li>
+			<li>Stage view yellow ball options menu has been extended. Calibration tab provides access to fixture position calibration dialog Follow tab provides access to set z-offset of the stage view follow functionality. mask tab can be used to mask a stage view similar to masking any sheet. Title buttons tab provides the possibility to enable/disable title buttons.</li>
+			<li>Fixtures can be edited using stage view. Pushing edit and touching any fixture inside stage view or right mouse clicking any fixture in stage view provides access to edit fixture dialog</li>
+			<li>Stage View Setup encoderbar provides possibility to "Reset Position" or "Reset Rotation". Resetting Position will move 3D models of current selected fixtures to XYZ position 0:0:0 Reseting Rotation will reset fixture rotation of current selection to 0. New command line keywords "Move3D [at X Y Z]" and "Rotate3D [at X Y Z]". Using Move3D or Rotate3D without coordinates will reset current selected fixtures to zero. E.g. "Move3D at 2.5 -5 3.3" positions current selected fixtures at X = 2.5, Y = -5 and Z = 3.3</li>
+			<li>Stage View Setup mode encoder bar position encoders (x, y, z) show range of values min..max.</li>
+			<li>Stage View fixture calibration dialog New functionality and new button "Reset all Values"</li>
+			<li>Selection of channels or fixtures in stage view has been improved.</li>
+			<li>Stage View options defaults can be adjusted per user profile. Options can be found at Setup/User/Window Settings/Other/Stage</li>
+			<li>Calibrate fixture dialog got a new button (Find alternative flip solution) to calibrate fixtures having wrong physical values. Pushing this button will toggle through all 4 possible calibration positions.</li>
+			<li>3D object parameters can be modified at the fixture position dialog of the setup (Patch and Fixture Schedule or Live Setup). Same as in MA 3D object Size input readout can be toggled between meters and Scaling factor.</li>
+			<li>Stage Markers and XYZ Offset can be stored selectively to different cues.</li>
+			<li>Stage View Follow Mode default has been defined by "No tilt flip"</li>
+			<li>Auto-generated 3d object for stage marker: orange ball with 25cm diameter</li>
+			<li>Stage markers are automatically collected inside a Stage marker folder in 3D assert view.</li>
+		</ul>
+		</li>
+		<li><strong>Channel and Fixture Sheet</strong>
+		<ul>
+			<li>New Edit Fixture dialog title buttons Next and Previous to edit next or previous fixture without having to close and reopen the editor.</li>
+			<li>Sheet and Stage view title bar set buttons can be edited inside the sheet options title buttons tab.</li>
+			<li>Readout decimal and hex have been split. Decimal and hex always shows 8bit values while decimal16 and hex16 always shows 16bit values.</li>
+		</ul>
+		</li>
+		<li><strong>Sequence Executor Sheet</strong>
+		<ul>
+			<li>"I.Fade and I.Delay are editable inside executor sheet. Right mouse click will delete individual timing, holding down middle mouse button and moving mouse up or down will increase or decrease all individual timings. "</li>
+		</ul>
+		</li>
+		<li><strong>Tracking Sheet</strong>
+		<ul>
+			<li>Additional warning message box when trying to delete the complete content of a sequence from the tracking sheet edit dialog</li>
+		</ul>
+		</li>
+		<li><strong>Content Sheet</strong>
+		<ul>
+			<li>New Content sheet sorting option. Content sheet can be sorted by Fixture ID or Channel ID first.</li>
+			<li>"Remove", "Off" and "Deactivate" buttons added to content sheet cell edit calculator.</li>
+		</ul>
+		</li>
+		<li><strong>DMX Sheet</strong>
+		<ul>
+			<li>DMX View: new option "Readout is absolute DMX Address" - universe overlapping</li>
+		</ul>
+		</li>
+		<li><strong>Timecode</strong>
+		<ul>
+			<li>In addition to sequence executors also groupmasters, specialmasters, effects assigned to executors and bitmap effects assigned to executors can be recorded into a timecode show.</li>
+			<li>Timecode shows can be merged together. Timecode Tracks, Timecode Subtracks and Timecode Events will be merged. Timecode show options will not be altered.</li>
+			<li>Timecode options can be saved to default and loaded from default using timecode option title bar buttons. Default options will be used when creating new timecode pool objects.</li>
+			<li>Adjustment of "Pre Roll" and "After Roll" for SMPTE and Midi possible -&gt;. Setup / Console / Timecode.</li>
+			<li>Timecode editor options have been moved from separate options button to Title bar Yellow Ball options menu.</li>
+			<li>Jumping in timecode shows is possible via command line. Syntax: Go Time (time) Timecode (number). E.g. "Go Time 3h5m Timecode 1" Timecodeshow 1 will start and jump to 3 hours and 5 minutes. "Pause Time 6s Timecode 4" will position timecode show 4 at 6 seconds and pause timecode show 4. "Goto Timecode X" or "Load Timecode x" will provide a list of events of timecode x to select the event to jump to. Pressing the button Time (Fade) will be processed as keyword time in combination with timecode.</li>
+			<li>New Command line Time unit input possibility; dot separated input [h].[m].s[.1/10s]. E.g. "Goto Timecode x Time 3" jumps to 3 seconds. "Time 3.4" = 3 seconds and 40/100 frames. "Time 2.3.4" = 2 minutes 3 seconds and 40/100 frames. "Time 1.2.3.4" = 1 hour 2 minutes 3 seconds and 40/100 frames.</li>
+			<li>Timecode shows can be loaded from another show file using partial show read</li>
+			<li>Timecode FastOff event is in the list of manually addable events</li>
+		</ul>
+		</li>
+		<li><strong>Misc</strong>
+		<ul>
+			<li>Special dialog color can be assigned to any view using Create basic window dialog tab other. In addition to the functionality already known from the special dialog, labels below the color picker can be hidden.</li>
+			<li>New view: Create basic Window / Playbacks / Running Playbacks. All running playbacks are displayed. (Similar to temp. Off menu). In the headline there are 4 buttons: "Only my Playbacks" shows only playbacks started with own user profile. "Preview Playbacks" shows only in Preview Mode started playbacks. If "Link Encoders" is active, Playbacks can be operated in the command line and if "Off Mode" is on, playbacks can be directly switched off by clicking on them. The selected executor has in the first column a green background. In the option menu the font size is adjustable and an info column can be turned on. All options can be turned on and off in the headline as "Title Buttons".</li>
+			<li>New User-Pool: "Camera". "Store" on an empty pool object creates a new 3d Camera, which can be positioned. Clicking on the pool object will select this camera (object gets green). Works via command line as well: "Select Camera "Front" or "Select Camera 1".</li>
+			<li>"Pictures in layouts: There is a new pool to administrate pictures which can be used in the layout view as "Image" which can be assigned to the objects -&gt; Create Basic Window / Pools / Images. Formats: bmp, gif, jpg, lossless jpg, png, tif, targa. To avoid huge show file, the size is limited per picture to 2MB, and the total size of the image pool to 10MB. Resolutions larger than FullHD (1920 x 1080) are downscaled automatically. With "Store" or "Edit" a pool object can be created or modified. With the button "Load Image" in the editor Pictures can be loaded into the pool from the "Bitmaps" Folder of the desk or the "gMA2" Folder of a memory stick. They are then part of the show file. The resolution and the size is displayed. In the option menu of the image pool the symbol size can be chosen (small / big) "</li>
+			<li>Command section window height limit has been removed. Command section can be scaled up to any screen size bigger Minimum size of command section is 2x3 grid cells.</li>
+			<li>OnScreen keyboard has been added to Info View multi-line editor.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li><strong>Command line</strong>
+	<ul>
+		<li>Store Presettype X Please will store at the next empty pool object of the referring pool.</li>
+		<li>Storing a new preset generates a default name containing type of preset and index of preset inside preset pool. E.g. Store Preset 2.5 will generate a Position preset labelled "Position 5"</li>
+		<li>Move/copy/insert can be used to copy ONE empty object.</li>
+		<li>New command line command BlackScreen [Screennumber]. The command BlackScreen will blackout all screens. The command BlackScreen 5 will blackout screen 5. Screens can be reactivated using the button ´"Show Screen" or "Show All Screens" in the bottom right corner of each screen of by using the command BlackScreen Off.</li>
+		<li>Command line Feedback displays not existing commands also. A yellow message shows "Command not executed". If SpecialMaster 2.4 is on ("SpecialMaster "Snd out" at 100"), error sounds will be replayed (Not in grandMA2 onPC)</li>
+		<li>New command IfOutput Fade(Delay) [time range] [Executer] selects all fixtures of a sequence currently using an individual fade or delay time. E.g. Ifoutput Fade 3 Executor 1 selects all fixtures stored or tracked with an individual fade time of 3 seconds at current cue of the sequence assigned to executor 1. Ifoutput Fade Executor 1 selects all fixtures stored or tracked with any individual fade time at current cue of the sequence assigned to executor 1. Ifoutput Fade 1 thru 10 selects all fixtures stored or tracked with an individual fade time between 1 and 10 seconds at current cue of selected executor.</li>
+		<li>New command option "At": "/status". Example: "Fixture 1 thru 5 at Cue 5 /status". Result: Fixture 1 thru 5 get the values from Cue 5 including tracking values from Cue 0 to 4 active in programmer"</li>
+		<li>Command line command "Edit DMX x" or pushing Edit hard key and touching any cell inside DMX Sheet opens edit fixture dialog of fixture using this DMX address x.</li>
+		<li>Store Cue 2.1 thru 3.1 will create following cues: 2.1 + 2.2 + 2.3 + 2.4 + 2.5 + 2.6 + 2.7 + 2.8 + 2.9 + 3.0 + 3.1</li>
+		<li>Absolute and relative negative Values in the command line can be distinguished by not adding a blanc between "minus" and number. Example: "Attribute "Tilt" at -10" sets absolute (negative) Value -10. "Attribute "Tilt" at - 10" sets the value relative - 10 to the current value relative. This may have impact on existing macros (e.g. add a value (+5) now (+ 5)</li>
+		<li>Screens can be copied to other screen using new copy screen x at y command. Screens can be merged or overwritten. Hard key combination MA+View adds keyword screen to command line.</li>
+		<li>Off Time of Executors can be modified via command line. Example 1: Assign Executor 1 /OffTime = 10. Example 2: Assign Executor 1 /OffTime = "default".</li>
+		<li>Similar the Default Off Time: Example: "Assign Root 3.3 /off= 5s"."</li>
+		<li>Fixture At Fixture will extract preset information, if target fixture is not included in preset currently used by source fixture.</li>
+		<li>Command "Fixture x at Fixture y" does now also work when the origin (y) is deriving from a sequence with Master Fader less 100%</li>
+		<li>Playback Master are assignable to sequence executors via command line. Example: "Assign Executor 1.1 /PlaybackMaster = 2" (0 for none). To assign a Playback Master to an empty executor: "Assign Specialmaster "Playback 2" Executor y"</li>
+		<li>Telnet commands can be sent from grandMA2 command line directly using the Syntax: Telnet IP-address:Port "String"</li>
+		<li>Current active pages can be changes per userprofile via command line using a command like "Assign Userprofile x /CurrentFaderPage=1" possible parameters are “CurrentChannelPage” “CurrentFaderPage”, “CurrentButtonPage” It is not possible to jump to non-existing executor or channel pages.</li>
+		<li>Command SetUserVar works also with float values</li>
+		<li>Command At EffectForm "form name" (e.g. "PWM") works</li>
+		<li>Attribute and feature keyword in combination with numbers respects current presettype selection.</li>
+		<li>Command line support to assign loops in sequences. Assign Cue X /Loop=Y.</li>
+	</ul>
+	</li>
+	<li><strong>Executors</strong>
+	<ul>
+		<li>New executor commands and executor button assignments: Flash+On, Flash+Go, Swop+On, Swop+Go. FlashON flashes executor, but does not switch off executor when releasing flash button. FlashGO flashes executor, steps to next cue and does not switch off executor when releasing flash button. SwopOn swops executor, but does not switch off executor when releasing swop button. SwopGo swops executor, steps to next cue and does not switch off executor when releasing Swop button.</li>
+		<li>New Executor button functionality, "Load Next" and "Load Prev". This will load the next/prev cue of the current loaded cue.</li>
+		<li>2 new Special Master: "StepInFade" and StepOutFade". Special Masters are devided into 5 groups of functions. Necessary to avoid renumbering for future extensions. Macros which contain special masters must be adapted.
+		<ul>
+			<li>Already done for predefined macros</li>
+			<li>Default Master 1.1 - 1.11</li>
+			<li>Grand Master 2.1 - 2.6</li>
+			<li>Speed Master 3.1 - 3.16</li>
+			<li>Rate Master 4.1 - 4.16</li>
+			<li>Playback Master 5.1 - 5.50"</li>
+		</ul>
+		</li>
+		<li>Keys X1 - X20 can have a fixed link to Exec201 - 220. -&gt; "Setup / User / Settings" Option "XKeys always for Exec". If turned on, User 1+2, and special menus (e.g. colour Picker) are only operable with touch-screen soft-keys.</li>
+		<li>New Sequence Executor assign menu option "Loop breaking Go". With this option activated a go command will break a currently running loop and will step to the next cue after the loop.</li>
+		<li>Sequence Executor assign menu defaults also include playback masters.</li>
+		<li>Sequence Executor assign menu defaults also include Input filter.</li>
+		<li>Sequence option "Forced Position Mode" can be adjusted using Edit Sequence dialog</li>
+	</ul>
+	</li>
+	<li><strong>Encoderbars</strong>
+	<ul>
+		<li>Special dialogs can be moved to other screens using Change screen title bar button.</li>
+		<li>Encoder Bar Frames follow current layer, value layer Yellow, fade layer Green, delay layer Orange and all effect layers Magenta.</li>
+		<li>New button "Link Encoder" in "Special dialog Shaper". This button switches encoders for all shaper modes
+		<ul>
+			<li>Angle Mode (Invert B)" inverts the B attribute. In this mode the encoder changes all positive and negative values at the same time.</li>
+			<li>"Set All" selects all attributes.</li>
+			<li>"Invert All" inverts selection</li>
+			<li>A mouse click on the attribute value opens the calculator. Pressing on the encoder switches the attribute selection."</li>
+		</ul>
+		</li>
+		<li>100mm Fader on-screen buttons are using default button assignment of specialmaster assigned to the referring 100mm fader.</li>
+		<li>In the DMX Encoderbar (open e.g. with "Channel Channel 1") there is a new button "Universe / Absolute". In Position "Universe" the DMX address can be adjusted as usual with the Encoders "Universe" and "Address". In position "Absolute" only the "address" encoder can be used.</li>
+		<li>Encoder button menu Clear Screen soft button will also close any temporary window or pool.</li>
+		<li>Encoder bar encoder mode "Link defined" and "Link defined active" have been replaced by the new modes "Link Filter" and "Link Filter active" These options use the current setting of the filter pool respectively command filter</li>
+	</ul>
+	</li>
+	<li><strong>New Calculator</strong>
+	<ul>
+		<li>New calculator: multiple entries in one line e.g. "0 thru 50 thru 0 thru 100" are possible. With the + - * / Buttons values can be changed. When an attribute has more functions, this is displayed above the input line. In the right area only the "channelsets" of the selected "Function" are displayed. For each function also "Min" and "Max" Buttons exist. When the calculator is open, it is possible to scroll through the channelsets via the encoder - by pressing and turning through the feature.</li>
+		<li>Calculator +/- button can be used to input absolute values.</li>
+		<li>Input of complex ranges does work with the numeric keypad as well</li>
+		<li>Presetbar readout is updated by following tracking and content sheet in addition to fixture and channel sheet.</li>
+		<li>User option "Single Digit input" is used in commandline and calculator for dimmer attributes only.</li>
+	</ul>
+	</li>
+	<li><strong>Misc</strong>
+	<ul>
+		<li>PosiStageNet (PSN) realtime tracking protocol added. Setup / Network / PSN Network Configuration. This allows to transmit XYZ Stage Positions to the grandMA2 System. Every tracking system which supports that protocol can drive stage marker and X,Y,Z positions of moving lights.</li>
+		<li>New iOS MA Remote app v1.011. Support for grandMA2 v2.9 and iPod/iPhone 5 added.</li>
+		<li>Create basic window clean-up: All system windows have been moved from the other tab to the new system tab.</li>
+		<li>Last called View button of each screen is highlighted.</li>
+		<li>The headline of the update menu is shown whether a filter is active.</li>
+		<li>Store and label message box title bar shows target object.</li>
+		<li>A pop-up warns the user if trying to label any object using illegal characters.</li>
+		<li>grandMA2 ultralight screen encoder 2 can be assigned to an external screen using Faderwing and Monitor. To assign the encoder to an external screen move the screen icon above the fader section of the grandMA2 ultralight icon.</li>
+		<li>Resolution of virtual Dimmer and XYZ Attributes has been increased to 24bit.</li>
+		<li>Programmer values of all users are not active anymore when loading a show file. (regardless of the last storage state)</li>
+		<li>AT Filter dialogue can be moved to other screens using Select screen title bar button.</li>
+		<li>Option buttons in pop-ups will be displayed with a checkbox. E.g. Copy Cue pop-up Cue only option button.</li>
+		<li>Tools / Login Screen: The keyboard "TAB" can be used to move cursor between "name" and "password" entry field.</li>
+		<li>Improvement in Setup Dialogue-&gt; When entering the setup all submenus for the 4 main tabs are displayed. With "Home" you get back from a sub menu to this setup overview.</li>
+		<li>Show files from ADB consoles can be converted via "ASCII Show Read" to grandMA2 show files.</li>
+		<li>grandMA2 CITP implementation supports different version for the same structure in CITP messages. So you should not face LSta message errors with Hippotizers anymore.</li>
+		<li>CITP Progress bars for Green Hippo Update Thumbnails functionality has been improved.</li>
+		<li>MBOX Content attributes are detected automatically when choosing a MBOX Fixture layer in the CITP menu</li>
+	</ul>
+	</li>
+	<li><strong>grandMA2 onPC</strong>
+	<ul>
+		<li>New grandMA2 onPC Mode "Single Screen (Internal only). grandMA2 onPC Mode can be changed via options dialog (yellow dot left upper corner of the command screen). In "Single Screen (Internal only)" mode, all internal screens can be accessed in one single Microsoft® Windows® window and external monitors will be displayed in two additional Microsoft® Windows® windows. Moreover the button "CmdWing Bar" allows to adapt the encoderbar on screen 2 to an MAonPC command wing layout (means additional 6 playback fader)</li>
+		<li>New windows start menu short-cut to launch grandMA2 onPC "Launch onPC CleanStart". Using this short-cut will reset all grandMA2 onPC Windows to default size and starts grandMA2 onPC with a blank show.</li>
+		<li>Command Wing bar can be chosen as window from the create basic window other tab. This bar contains a command line, an encoder bar, a 100mm fader GUI and a six executor wide mini playback view.</li>
+		<li>grandMA2 onPC select screen buttons labels change to the following labels when connecting a grandMA2 onPC wing."Screen 2" = "CMD Wing", "Screen 3" = "Fader Wing 1", "Screen 4" = "Fader Wing 2"</li>
+		<li>grandMA2 onPC native resolution has been increased to 1352 x 800 to be able to display original sized view buttons.</li>
+	</ul>
+	</li>
+	<li><strong>grandMA1To2 Show Converter</strong>
+	<ul>
+		<li>grandMA1 STROBE and STROBE_RATIO Attributes are converted to grandMA2 SHUTTER Attribute to be compatible with grandMA2 library.</li>
+		<li>Further conversion improvements: Executor Assignment, Attribute Names , Presettype Names , 16bit Attributes , "React to dim" , color mixing system, Attack and Decay in Effects, Effect Links in Cues , Page numbers in Cue links, Macros , Agenda entries.</li>
+		<li>Effects, Group Master and Special Master in timecode shows are converted.</li>
+		<li>The Feature "PanTilt" is converted to "Position".</li>
+		<li>Effects and Cues do not create empty lines anymore"</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Fixed Bugs and improved functionality</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Importing fixture layer via command line in another show does not crash the desk anymore</li>
+	<li>Import Fixture Type input filters using on screen keyboard are automatically applied.</li>
+	<li>Editing a Faderwing inside graphical Faderwing + monitor setup has been improved.</li>
+	<li>Command DMX 2.1 Thru 20 At 100 means DMX 2.1 Thru 2.20 At 100</li>
+	<li>Maximum values for timecode options "length" and "offset" have been increased to 255h59m59s.</li>
+	<li>Setting a Speedmaster to a specific value via command line will reset any speedmaster scaling.</li>
+	<li>Unblocking cues in the tracking sheet in a network environment does not crash the desk anymore</li>
+	<li>Channel Sheet redraw bug after toggle vertical Scrollbar has been fixed.</li>
+	<li>"Link Fader and Button Page" option will not offset Fader and button pages anymore when using channel pages in between.</li>
+	<li>Setup / Show / Patch and Fixture Schedule: Newly added layers or fixtures are immediately sorted to correct grid position</li>
+	<li>grandMA2 NPU USB mouse support has been fixed.</li>
+	<li>Red Programmer markers of virtual dimmers are also displayed in Layout View DMX Layer readout mode.</li>
+	<li>Error handling when patching fixtures containing patch collisions of subfixtures has been improved.</li>
+	<li>Newly created show files also display default gobo and color wheels symbols in a fixture sheet, regardless of current programmer status.</li>
+	<li>Setting Executors containing off times to specific values via command line respects Auto Start and Stop setting.</li>
+	<li>Mixed up crossfade A/B has been fixed. Crossfade A fades decreasing values, Crossfade B fades increasing values.</li>
+	<li>Disabling GrandMaster, Highlight, Solo, Blind,... resets the disabled button function to default state</li>
+	<li>Layout View: Value display and readout Option (DMX, Output, Value) is stored in show file.</li>
+	<li>Setup / Network / MA Network Configuration / onPC: Column type displays the type of wing (MA onPC command or MA onPC fader wing)</li>
+	<li>Edit Fixture dialog grid can be sorted by highlight column.</li>
+	<li>Forced Fixture ID of single fixture groups has been removed. Fixture ID can be removed when labelling a single fixture group.</li>
+	<li>Setup / Network / MA Network Configuration / DMX Nodes: The column "Firmware" shows firmware version of MA 4Port Nodes.</li>
+	<li>Action buttons can be edited again using the edit hardkey and pressing an action button afterwards.</li>
+	<li>Setup / Network / MA Network Configuration / DMX Nodes: The first 2 columns (id, name) are always visible when scrolling horizontal</li>
+	<li>Fixture names display of dynamic channel faders has been improved.</li>
+	<li>Moving masks in pool does not destroy link to links to sheets anymore.</li>
+	<li>Tracking sheet layer Values only is displayed correct in combination with merge same values option.</li>
+	<li>Dynamic channel fader pages can be used in combination with color readout CMY</li>
+	<li>Channel page flash buttons respect world of current user.</li>
+	<li>It is not allowed to copy or move fixtures or layers in live setup. These actions can be done in full edit setup only.</li>
+	<li>The command line feedback view can display more characters per line. E.g. List Executor shows all possible executor options.</li>
+	<li>The command "goto cue "name" "has been fixed.</li>
+	<li>Max amount of sACN input universes per grid row is one universe. Amount cell of sACN input rows are not editable.</li>
+	<li>Fixed color preset import from grandMA2 v2.7</li>
+	<li>Sequence Sheet follow cue fade time display has been fixed.</li>
+	<li>Empty Fixture sheet cells in vertical styled fixture sheets do not show off-colors anymore.</li>
+	<li>Changing sheet color readout changes also encoder bar readout.</li>
+	<li>Visible button glowing added at Autocreate dialog</li>
+	<li>Setup/Patch Only/Fixture Position ID and name column is always visible, even when scrolling horizontally.</li>
+	<li>The command "Selfix Bitmap x" selects all fixtures in a bitmap, even the bitmap is not linked to any executor</li>
+	<li>Info window does not show wrong object numbers for fixtures anymore</li>
+	<li>Patched DMX addresses of break 2-4 are displayed on the left side of the patch menu , when they belong to a subfixture</li>
+	<li>grandMA1@grandMA2 hardware default keyboard layout has been set to English.</li>
+	<li>Readability of Smart View Icons labels area has been improved.</li>
+	<li>Backup Server Windows share mounting has been fixed.</li>
+	<li>Network configuration DMX node clean-up: Mode column provides access to available modes of a MA 4port node only.</li>
+	<li>Fixed "/use=allforselected" bug when storing XYZ values using this option.</li>
+	<li>MAtricks button is available while having encoders linked in special color dialog</li>
+	<li>Effect editor follows user profile mixcolor readout switch.</li>
+	<li>Session collision pop-up does not disappear anymore when unlocking a desk.</li>
+	<li>Knocking in XYZ values in combination with markers knocks in correct XYZ offset values.</li>
+	<li>Editing Multiple effect lines at the same time will keep attribute selection when closing effect layer calculator.</li>
+	<li>Reassign another SpecialMaster to an executor already containing a special master automatically loads special master button defaults.</li>
+	<li>Color Special dialog link encoders have been changed to relative to be able to use them in combination with Align.</li>
+	<li>Effect Editor encoder push and turn is 10 times faster than turning without push.</li>
+	<li>Effect Editor / Edit Effect Line Low and High value wheels handling of template effects has been improved.</li>
+	<li>Programmer effect encoder bar supports "Off Effect", "Release Effect" and "Stomp Effect" also when set to "All"</li>
+	<li>When moving executors (move Executor 1 at 2) the motor fader of the empty exec will be moved to 0</li>
+	<li>"The "Snap Percent" values of a sequence are obeyed when being executed as a chaser. The percent value will be calculated to the fade time of the chaser</li>
+	<li>When desk is locked and non-motorized faders are moved, output does not jump anymore after unlocking the desk</li>
+	<li>MSC (MidiShowControl) Slave takes over when becoming Master</li>
+	<li>Off menu is working also with a few hundred pages of allocated executors</li>
+	<li>Command "Update Cue" combined with a name will only be executed when the exact name already exists</li>
+	<li>Trying to login with non-existing user using command line login command will not logout current user anymore.</li>
+	<li>Command "Attribute 1.1.1 at 50" without fixture selection does not work anymore</li>
+	<li>Command "Kill" does not exist for bitmap and effect executors anymore, because it is only possible for sequence executors</li>
+	<li>With the editor in the content sheet individual timings can be removed</li>
+	<li>LED Fixtures with a real dimmer are displayed in the output layer of the layout view with same intensity as LED Fixtures with virtual dimmer.</li>
+	<li>Command Store If Attribute "dim" + "pan" EndIf works with both attributes</li>
+	<li>Learn speed function for Bitmap effect executors has been implemented.</li>
+	<li>Bitmap effect editor button naming has been changed. Basic tab scale mode has been renamed to "Scale Bitmap". Tools tab Scale 1:1 and Scale Fit has been renamed to Scale Modulator 1:1 and Scale Modulator Fit</li>
+	<li>BPM speed master is assignable to bitmap effect playbacks</li>
+	<li>Partial Show Read: When importing a show via PSR into an existing show which contains multi-patches , these will be not be destroyed anymore</li>
+	<li>"Partial Show Read: Playback Settings of executors will be taken correct into a show(Priority / Off On</li>
+	<li>Overwritten)."</li>
+	<li>Selecting Fixtures using command line will be executed without please when touching inside the colorpicker dialog afterwards.</li>
+	<li>Timecode show option "Status Call" can also be used when timecode signal has been interrupted and cues were triggered manually.</li>
+	<li>Timecode editor does not automatically jump to next event deleting current event.</li>
+	<li>Creating Reports for USB export using the List command will automatically create new folder "Report" inside USB drive gma2 folder structure. Workflow to create reports for USB: Choose USB drive in backup menu, select an executor with assigned sequence, "List Cue /Filename="mycuelist"</li>
+	<li>Clone command respects locking of objects. It is not possible to clone new fixtures into locked objects.</li>
+	<li>Logged in user will not reset to administrator when receiving an show download from a slave console leaving Patch and Fixture Schedule.</li>
+	<li>Agenda calculator month and year button labels have been fixed.</li>
+	<li><strong>grandMA2 onPC</strong>
+	<ul>
+		<li>grandMA2 onPC Encoder Mode Rotation resolution has been decreased so one turn (360deg) will be the same value change as when turning console encoders</li>
+		<li>Windows® 8 grandMA2 onPC Wing driver are installed automatically when installing grandMA2 onPC</li>
+		<li>onPC Faderwing + monitor setup: switch screen 5 + 6 will exchange screens as expected.</li>
+		<li>Users without admin rights are allowed to shutdown grandMA2 onPC</li>
+		<li>grandMA2 onPC executor views display empty executors with a grey frame instead of an orange one</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Appendix</h2>
+
+<div class="warning">The command "store /remove" or pressing [store][cue][2] and the select [remove] in the pop-up will remove the whole attribute with all (!!) its layers for fixtures having any value or effect layer of this attribute active in programmer. It can be filtered to only remove values, value timings or effects by using the buttons in the stored encoder bar. To remove only specific layers, for example only individual effect fade, the operator needs to open the calculator for these layers and select "remove" in the calculator. Afterwards the operator needs to update the cue, or has to use store /merge to remove the specific layers.</div>
+
+<div class="warning">Selecting multiple fixtures with a lasso in the layout view is respecting the snap grid settings to interpolate small position differences of fixture icons. The selection order will always be made inside of one snap grid cell first, afterwards line by line in the direction of the lasso movement.</div>
+
+<div class="warning">The 4Port and 8Port Nodes do not supporting the SACN protocol by now.</div>
+
+<div class="warning">The gma2 folder on your USB stick needs 3 additional new folders:
+<ul>
+	<li>a. gma2/user_profile (copy your old user profile xml files from the gma2/importexport folder to this new folder)</li>
+	<li>b. gma2/network_nodes (this folder will be used to Import/Export the Node Configurations)</li>
+	<li>c. gma2/fixture_layers (this folder will be used when you Export Layer in the Patch and Fixture Schedule menu)</li>
+</ul>
+</div>
+
+<div class="warning">Network switch IGMP Snooping functionality has to be switched off to be able to update MA 2Port nodes.</div>
+
+<p>&nbsp;</p>
+
+<h2>Known Limitations</h2>
+
+<div class="important">
+<ul>
+	<li>Release version&nbsp;<strong>2.3</strong>&nbsp;of grandMA2 divorced values and effect values! Therefore older show files might not be 100% compatible. Therefore please check your show file with the new version before using it live!</li>
+	<li>With Version&nbsp;<strong>2.5.70</strong>&nbsp;the default speed of effects and the rate of effect lines has been exchanged by a single speed per line. Therefore older show files might not be 100% compatible. Please check your show file with the new version before using it live!!</li>
+	<li>ASCII show import supports Strand, Transtechnik and ADB ASCII show files only.</li>
+	<li>MA onPC command wing DMX input is supported for the ports "DMX In" and "DMX out A" only. The port "DMX out B" is allowed to be used as DMX out only!</li>
+	<li>Before loading show files stored with grandMA2&nbsp;<strong>v2.7.x</strong>&nbsp;the first time with grandMA2 v2.9.x, attribute Colormix4 and 5 and Colordim4 and 5 of self-made fixture types have to be manually adjusted to fulfill color specification Amber has to be Colormix 4 invert or Colordim 4 without invert, and White has to be Colormix 5 invert or Colordim 5 without invert. Otherwise color information of these fixture types will be lost after loading show file with v2.9.</li>
+	<li>The Feature name for ColorDim/ColorMix has changed into MixColor. Macros using one of these feature names have to be adjusted.</li>
+	<li>Known limitation when loading show files stored with&nbsp;<strong>v2.8.x</strong>&nbsp;for the first time in v2.9
+	<ul>
+		<li>Special Masters have a new data structure in grandMA2 software.
+		<ul>
+			<li>All Special Master custom labels will be reset to MA default labels</li>
+			<li>Assignment of 100mm faders will be reset to default.</li>
+			<li>Macros, referring to special masters have to be adjusted and have to use the new naming and numbering of special masters.</li>
+		</ul>
+		</li>
+		<li>Macros referring to relative values have to be adjusted according to new relative/absolute syntax.</li>
+		<li>User profiles exported to USB drives have to be manually moved from importexport folder to user_profile folder to be able to import these profiles using grandMA2 v2.9</li>
+	</ul>
+	</li>
+	<li>4Port and 8Port Nodes have to be updated to v1.0.9 to be compatible with grandMA2 v2.9. 2-Port Nodes have to be updated to 1.74 to be compatible with grandMA2 v2.9.</li>
+	<li>Channelset labels of fixture types have to be unique to be visible and accessible in calculator. E.g. Channel sets of Attribute Shutter = closed, open, open, open,… only one open is visible in the calculator. Changing channel set labels to closed, open, open(2), open(3),… will result in all channel sets are visible in the calculator.</li>
+</ul>
+</div>
+
+		
+	</body>
+</html>

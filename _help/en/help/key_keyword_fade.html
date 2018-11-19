@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Fade Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Fade keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>Fade Keyword</h1>
+		
+		<p>To get the Fade keyword in the command line press <span class="hardkey">Time</span>.</p>
+
+<p>Another way is to type <strong>Fade </strong>or the shortcut <strong>Fa </strong>directly in the command line.</p>
+
+<h2>Description</h2>
+
+<p>Fade is a helping keyword to indicate fade times.</p>
+
+<p>As a helping keyword for playback functions (for example Goto), this keyword sets the time used to execute the function.</p>
+
+<p>As a helping keyword for programming functions (for example Store), this keyword sets the fade time of an object.</p>
+
+<p>Used as a starting keyword, Fade applies individual timing in the programmer for the current selection and attributes.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+As long as the command line starts with a function, the fade keyword and value may appear anywhere in the command line.</div>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">Fade [Value-list] </span></p>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To crossfade to cue 3 in the selected executor in 4 seconds type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Goto Cue 3 Fade 4</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To create cue 3 in the selected executor and set its fade time to 4 seconds type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Store Cue 3 Fade 4</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To set the fade time of cue 2 in the selected executor to 3 seconds type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Assign Fade 3 Cue 2</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To set the individual fade time of 2 seconds to the current selection/attributes type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Fade 2</div>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>To set the fixture selection to 50 % and give them an individual fade time of 2 seconds to the selected attributes type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; At 50 Fade 2</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

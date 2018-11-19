@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Plugin Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Plugin Keyword, Export Plugin, Start Plugin" />
+	</head>
+	<body>
+		
+		
+		<h1>Plugin Keyword</h1>
+		
+		<p>To get the Plugin keyword in the command line, type <strong>Plugin</strong> or the shortcut <strong>Pl</strong> in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The Plugin keyword is an object keyword to access Plugins. The default function for the Plugin keyword is <a href="key_keyword_go.html">Go+</a>.</p>
+
+<p>Plugin 1 is a predefined plugin and not editable.</p>
+
+<p>For more information, see <a href="key_plugins.html">Plugins</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">[Function] Plugin [ID] </span></p>
+
+<p><span class="syntax">Assign Plugin [ID] /[Parameter]=[Parameter Value]</span></p>
+
+<h2>Parameter</h2>
+
+<p>The following table displays the assignable parameter via command line.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Name</td>
+			<td>"Create Sequence"</td>
+			<td>Assign the plugin name.</td>
+		</tr>
+		<tr>
+			<td>ExecuteOnLoad</td>
+			<td>"Yes", "No"</td>
+			<td>Assign if the plugin be directly executed during show upload.</td>
+		</tr>
+		<tr>
+			<td>Info</td>
+			<td>"Additional Information"</td>
+			<td>Assign additional information.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<p>1. To executor plugin 2, type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Plugin 2</div>
+
+<p>&nbsp;2. Press <span class="hardkey">Please</span>. Plugin 2 is executed.</p>
+
+<hr />
+<p>1. To change the name of plugin 2 to "Create Sequence", type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Assign Plugin 2/name="Create Sequence"</div>
+
+<p>2. Press <span class="hardkey">Please</span>. Plugin 2 has the name "Create Sequence".</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

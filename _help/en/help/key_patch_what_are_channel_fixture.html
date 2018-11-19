@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>What Are Channels &amp; Fixtures</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="channels, fixtures, channel ID, fixture ID" />
+	</head>
+	<body>
+		
+		
+		<h1>What Are Channels &amp; Fixtures</h1>
+		
+		<p>The two words Channel and Fixtures can be several things and it can be a little bit confusing. Even in this manual we might use both words.</p>
+
+<p>When talking (or writing) about the actual device that emits light, we are referring to that as a fixture. This might be all sorts of devices from different manufacturers. They may have one function or many different functions. All these functions are called <a href="key_patch_attributes.html">Attributes</a>.</p>
+
+<p>When you program a show, you will need to be able to select these devices, so they have an ID number - something we can type on a numeric keypad.</p>
+
+<p>The grandMA2 have the option to give each device two ID numbers. They can be the same number or they can be different numbers for the same physical device. The ID numbers are called <strong>Channel ID</strong> and <strong>Fixture ID</strong>. A device needs at least one ID number to be select-able and programmable. Two different devices cannot have the same Channel ID or the same Fixture ID. But one device can have Channel ID number 1 and another device can have Fixture ID number 1.</p>
+
+<p>A device with a <strong>Channel ID</strong> will be visible in the <strong>Channel Sheet</strong> and a device with a <strong>Fixture ID</strong> will be visible in a <strong>Fixture Sheet</strong>. If the device have two different ID numbers, then you can choose to hide one of the numbers in the sheets.</p>
+
+<p>If you have already programmed something with a device and you later change the ID numbers, then you will not loose any programmed information. If you remove the ID number so the device does not have any, then the values are still there and it will still output DMX even though you cannot select the device. When you cannot select it, then you cannot edit it or the stored values. It is not visible in sheets. You cannot delete the values either.</p>
+
+<p>You should pay attention to what your default beginning keyword is. You can see it in the Command Line input. The default on a new empty show is "Channel". Your Command Line input will look like this:</p>
+
+<div class="cl_input">[Channel]&gt;</div>
+
+<p>If you are trying to select a device that only have a Fixture ID, then you need to specify that it is a Fixture ID by pressing the <span class="hardkey">Fixture</span> key before entering the ID number.</p>
+
+<p>You can change the default keyword by pressing the key corresponding to the one you want and the press <span class="hardkey">Please</span>.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>So to sum up. We call each device a fixture and each fixture can have a Channel ID and/or a Fixture ID and to be able to control it it will need at least one ID number.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

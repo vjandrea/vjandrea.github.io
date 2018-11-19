@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Replace</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="replace" />
+	</head>
+	<body>
+		
+		
+		<h1>Replace</h1>
+		
+		<p>The <strong>Replace</strong> mechanism is used to replace some objects with other objects (or values with other values), using the <a href="key_keyword_with.html">With keyword</a>, and it might be limited to a defined scope using the <a href="key_keyword_if.html">If keyword</a>.</p>
+
+<p>The syntax is:</p>
+
+<p><span class="syntax"><strong>Replace [</strong>search for objects/values] <strong>( With [</strong>replace with objects/values] &nbsp;( If&nbsp;<strong>&nbsp;[</strong>search in objects] ))</span></p>
+
+<p>Details about the syntax can be read in the <a href="key_keyword_replace.html">Replace keyword</a> topic. The Replace command can be accessed by pressing the <span class="hardkey">Move</span> key twice.</p>
+
+<p>&nbsp;</p>
+
+<p>The replace will search for the objects (could be fixtures, groups, presets, or any object) or values and the search result will be exchanged with similar objects or values. Just like the regular <a href="key_search_replace_search.html">search function</a>, it might be limited to a certain area in the show (for instance a specific sequence, group, world, or any object).</p>
+
+<p>All this might sound complex but it does not have to be.</p>
+
+<p>&nbsp;</p>
+
+<h2>Replacing objects</h2>
+
+<p>If Fixture 1 needs to be replaced by Fixture 2 in the entire show then type the following:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1 With Fixture 2</div>
+
+<p>Doing the replace will open a confirmation pop-up like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_confirm-replace_v3-3.png" />
+<figcaption><em>Confirm Replace pop-up</em></figcaption>
+</figure>
+
+<p>Tapping the <span class="softkey">Ok</span> button will perform the replace action.</p>
+
+<p>Tapping the <span class="softkey">Ok Create Report</span> button will also perform the replace, but in addition it will create and open a report showing what the replace action did - it is similar to the search report described in the <a href="key_search_replace_search.html">Search topic</a>.</p>
+
+<p>Tapping the <span class="softkey">Cancel</span> button will cancel the replace action - it is same result if the X in the upper left corner is tapped.</p>
+
+<p>If the replace action is performed, then the result is that the values fixture number 1 had is now transferred to fixture number 2 and fixture number 1 is no longer used in the show.</p>
+
+<p>If the replace is only supposed to happen in sequence number 3 then use the following command:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1 With Fixture 2 If Sequence 3</div>
+
+<p>&nbsp;</p>
+
+<p>If a fixture is replaced by nothing then the stored values are just removed.</p>
+
+<p>The following two commands will remove any stored data from fixture 1:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1</div>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1 With</div>
+
+<p>The <strong>With</strong> keyword is optional when the object is not replaced with something else.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Presets</strong> can also be changed with replace. For example replacing position preset 2 with preset 4 in sequence 5 can be written like this:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Preset 2.1 With Preset 2.4 If Sequence 5</div>
+
+<p>&nbsp;</p>
+
+<p>If the preset is only suppose to be replaced for fixture 8 in sequence 5 then it is a two step process:</p>
+
+<ol>
+	<li>First do a search for fixture 8 in sequence 5
+	<div class="cl_input">[Channel]&gt; Search Fixture 8 If Sequence 5</div>
+	</li>
+	<li>Then use the <strong>SearchResult</strong> (the virtual world created by a search action) as the limiting object in the replace:
+	<div class="cl_input">[Channel]&gt; Replace Preset 2.1 With Preset 2.4 If SearchResult</div>
+	</li>
+</ol>
+
+<div class="tip"><strong>Hint:</strong><br />
+The SearchResult command can be accessed by pressing the <span class="hardkey"><span class="mlg mlg_k mlg_k_ma"><img src="../../img/ma_1.png" alt="ma" /></span></span> key while pressing the <span class="hardkey">Group</span> key twice.&nbsp;</div>
+
+<p>&nbsp;</p>
+
+<h2>Replacing values</h2>
+
+<p>Values can also be replaced by other values.</p>
+
+<div class="restriction"><strong>Restriction:</strong><br />
+Use the keyboard for the following example. If the command keys are used then the <span class="hardkey">At</span> key will interrupt the replace command.</div>
+
+<p>A single value can be replaced by another:</p>
+
+<div class="cl_input">[Channel]&gt; Replace At 50 With 55</div>
+
+<p>This would change all the places where the dimmer value 50 are stored to a value of 55.</p>
+
+<p>&nbsp;</p>
+
+<p>What is perhaps more interesting is changing value ranges with a different value range. For instance if all dimmer values should be raised 20% in sequence 4 (a dimmer value of 10 will become 12) then the following command can be used:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Value 0 Thru 100 With 0 Thru 120 If Sequence 4</div>
+
+<p>Or if only fixture 1 and 2 are suppose to get a 20% (a dimmer value of 100 will become 80) lower value in sequence 4:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1 + 2 Value 0 Thru 100 With 0 Thru 80 If Sequence 4</div>
+
+<p>Remember that when using more complex limitations it might be a good idea to used the SearchResult from a limiting search as the limiting scope.</p>
+
+<div class="important"><strong>Important:</strong><br />
+If the attribute is not specified, it will be searched for the dimmer attribute.</div>
+
+<p>&nbsp;</p>
+
+<p>Other attributes can also be replaced.</p>
+
+<p>Making the stored <strong>Pan</strong> range smaller for a fixture range of 1 through 10, can be done like this:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1 Thru 10 Attribute "Pan" At -270 Thru 270 With -200 Thru 200</div>
+
+<p>Or it can be shifted +20 degrees:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Fixture 1 Thru 10 Attribute "Pan" At -270 Thru 270 With -250 Thru 290</div>
+
+<div class="important"><strong>Important:</strong><br />
+It is very important that there is no space between the minus symbol and the number.</div>
+
+<p>&nbsp;</p>
+
+<p>The attributes are different depending on what fixture types are patched in the show. The list of attributes and their (screen)names can be seen using the <a href="key_keyword_list.html">List keyword</a>:</p>
+
+<div class="cl_input">[Channel]&gt; List Attribute</div>
+
+<p>The names listed in the column called <strong>LibraryName</strong> needs to be used with the replace function - do not use the ScreenName.</p>
+
+<p>&nbsp;</p>
+
+<h2>Replacing values with presets (objects)</h2>
+
+<p>As a rule it is only possible to replace values with values and objects with objects. So replacing a stored value with a preset is not possible as a direct action. But there is a way by first searching the value maybe limited to a specific object like a sequence.</p>
+
+<p>In this example the stored dimmer value of 50 is to be replaced by a dimmer preset. First the value is searched in sequence number 8:</p>
+
+<div class="cl_input">[Channel]&gt; Search Value 50 If Sequence 8</div>
+
+<p>Then the result is used to limit where the replace is performed and the dimmer attribute (object) is replaced with the preset:</p>
+
+<div class="cl_input">[Channel]&gt; Replace Attribute "Dim" With Preset 1.5 If SearchResult</div>
+
+		
+	</body>
+</html>

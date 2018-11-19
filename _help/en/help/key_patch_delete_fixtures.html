@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Delete fixtures from the show</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="fixture - delete, fixture - remove" />
+	</head>
+	<body>
+		
+		
+		<h1>Delete fixtures from the show</h1>
+		
+		<div class="tip"><strong>Quick steps:</strong>
+<ol>
+	<li>Press <span class="hardkey">Setup</span> and then <span class="softkey">Patch &amp; Fixture Schedule</span>.</li>
+	<li>Select the layer where the fixture is and select the fixture.</li>
+	<li>Tap the <span class="softkey">Delete Fixture</span> button at the bottom and confirm the deletion.</li>
+	<li>Exit the EditSetup and tap <span class="softkey">Yes</span> to confirm changes.</li>
+</ol>
+
+<p>This was the quick steps - Keep reading for more details.</p>
+</div>
+
+<p>&nbsp;</p>
+
+<p>Deleting a fixture completely removes the fixture and the data associated with the fixture - all programming is lost for the fixture.</p>
+
+<p>If a fixture is unpatched then all data is still there and the fixture can be programmed, but it will not output anything since the system do not know where to send the data.</p>
+
+<p>If fixture ID numbers are removed, then the fixture does not go away and the programming is not lost. It cannot be selected or modified, but the data is still there. If the fixture was stored in groups then these group will get a little red marker. <strong>The DMX data is still going to the output!</strong></p>
+
+<div class="restriction"><strong>Restriction:</strong><br />
+It is not possible to Oops or undo the deletion and the data is gone! It is a good idea to save the show before deleting the fixtures.</div>
+
+<h2>Deleting a fixture</h2>
+
+<p>It is all done from the setup.</p>
+
+<ol>
+	<li>Press the <span class="hardkey">Setup</span> key and then the <span class="softkey">Patch &amp; Fixture Schedule</span> button.</li>
+</ol>
+
+<p>The fixtures are organized in layers (or maybe just one layer) in the <strong>EditSetup</strong>.</p>
+
+<div class="important"><strong>Important:</strong><br />
+For details about Layers please read the <a href="key_patch_layers.html">Working with Layers</a> topic.<br />
+For details about the <strong>EditSetup</strong> menu please read the <a href="key_patch_add_fixtures.html">Adding fixtures to your show</a> topic.</div>
+
+<ol start="2">
+	<li>Select the layer that have the fixture that needs to be deleted.</li>
+	<li>Select the fixture in the list.</li>
+	<li>Tap the <span class="softkey">Delete Fixture</span> button at the bottom. If this window is on screen 1 and the console is a grandMA2 full-size or grandMA2 light, then it might also be possible to press the <span class="hardkey">X13</span> key.</li>
+</ol>
+
+<p>A confirmation pop-up appears:</p>
+
+<figure class="caption"><img alt="" src="../../img/popup_attention_delete-object_v3-2.png" />
+<figcaption><em>Attention pop-up - Deleting an object in use</em></figcaption>
+</figure>
+
+<ol start="5">
+	<li>Tap <span class="softkey">Ok</span> to confirm deletion of the fixture. Tapping <span class="softkey">Cancel</span> will cancel the deletion.<br />
+	When the fixtures are deleted then exit the EditSetup.<br />
+	A new pop-up asks if the changes should be saved to the active setup.</li>
+	<li>Tap <span class="softkey">Yes</span> to confirm the changes and leave the EditSetup (<span class="softkey">No</span> to discard any changes, <span class="softkey">Cancel</span> to stay in the EditSetup).</li>
+</ol>
+
+<p>Read more details about the Warning pop-up at the end of the <a href="key_patch_add_fixtures.html">Adding fixtures to the show</a> topic.</p>
+
+<p>That was it for deleting a fixture.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>There is no easy way to delete the fixture using the command line or hard keys.</p>
+
+<p>Pressing <span class="hardkey">Delete</span> <span class="hardkey">Fixture</span> <span class="hardkey">1</span> <span class="hardkey">0</span> <span class="hardkey">1</span> <span class="hardkey">Please</span>, only unpatches fixture 101 - it will not be deleted.</p>
+
+		
+	</body>
+</html>

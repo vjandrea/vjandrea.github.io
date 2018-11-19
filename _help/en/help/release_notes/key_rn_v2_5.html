@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Release Notes - Version 2.5</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="release notes version 2.5" />
+	</head>
+	<body>
+		
+		
+		<h1>Release Notes - Version 2.5</h1>
+		
+		<h2>Release Notes - Version 2.5.70.6</h2>
+
+<p>Released 2012-04-03</p>
+
+<p>&nbsp;</p>
+
+<div class="important"><strong>Important:</strong>
+
+<ul>
+	<li>If you would like to update your dimMA system from any version below 6.x please contact your MA-dealer or MA direct for any update information. Should you be using grandMA2 in connection to our dimMA solutions, please get in touch with us, since a console update will now require a NDP update and vice versa. We are happy to assist you.</li>
+	<li>The current versions of onPC and 3D require minimum Windows® XP with Service Pack 3 (Microsoft® .NET Framework (4.0) will be installed on your computer, if not already installed).</li>
+	<li>With Version 2.5.70 the default speed of effects and the rate of effect lines has been exchanged by a single speed per line. Therefore older show files might not be 100% compatible. Therefore please check your show file with the new version before using it live!!</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+<h2>Bugfix Release - Version 2.5.70.6</h2>
+
+<p>&nbsp;</p>
+
+<h2>Fixed Bugs and improved functionality</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Sequence Executor Sheets do not lose their scroll position any more when updating a cue.</li>
+	<li>Knock in bug has been fixed. Store mode all and store mode all for selected work as expected now.</li>
+	<li>Missing Reset of the Store bar filter has been fixed.</li>
+	<li>Channel sheet columns are resized correctly again when resizing the channel sheet.</li>
+	<li>Colordim fixtures with a real master dimmer are visualized correctly at the 3D and Stage view.</li>
+	<li>Command line default is not changed when hitting update.</li>
+	<li>Preset symbols display has been fixed.</li>
+	<li>Effects running from HTP executors can be stomped.</li>
+	<li>Effect off time calculation bug has been fixed.</li>
+	<li>Very fast running chasers do not blip the DMX universes any more.</li>
+	<li>DMX remote triggering buttons threshold has been set to 128 instead of 255.</li>
+	<li>Touch screen long press has been improved for sheets.</li>
+	<li>Library subfixture spacing has been fixed for a huge amount of fixtures.</li>
+	<li>Crash fixed, when using the command line to patch or unpatch fixtures.</li>
+	<li>grandMA2 onPC resizing has been improved. The grandMA2 onPC will resize to the screen it has been started. The onPC only changes its size when started. If you move the onPC from one screen to another, you have to restart the onPC to resize it to the new resolution. The maximum resolution of the internal screens is 1280 x 800, the resolution of the external screens can be adjust at the onPC options when using multiscreen mode.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Release - Version 2.5.70</h2>
+
+<p>&nbsp;</p>
+
+<h2>Fixed Bugs and improved functionality</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li><strong>Command line</strong>
+
+	<ul>
+		<li>The command "update please" updates the current cue of the selected sequence obeying the settings of "Add new Content / Original Contents only" and "Tracking Update / Update Cue Only" (inside the Update menu). Using the command extension "Update (Cue) x" allows to update Cues not outputted at the moment. Accordingly pushing the hardkey "Update" an Executor Button does the same.</li>
+		<li>Setup/Console/local settings/ "Exec CLI": When CLI (Command Line Interaction) for Executors is disabled a combination of the command line content with- with the exception of the selected Executor.</li>
+		<li>Automatic MAtricks Single X and Y Reset: The current "Single X" and "Single Y" settings of the MAtricks will be reset if a fixture selection changes or gets canceled using "clear".</li>
+		<li>The functionality of the commands "Stomp", "Release" and "Remove" for effects are brought into line. Using one of the above commands in combination with an effect will add the referring command to the programmer for attributes of current selection currently using this effect. "Stomp/Release/Remove Effect x", without having fixtures selected: Signs all attributes of Effect x with "Remove" set active into the programmer, to e.g. store/merge this into an existing Cue and thereby remove all such effect information.</li>
+		<li>Implemented the "edit next/prev" functionality. With "Edit Please" the editing function for the selected sequence of the first Cue (when switched off), resp. for the current cue. "Edit Next" edits the next Cue - "Edit Prev" the previous one.</li>
+		<li>Playback commands can be filtered by user profiles, e.g. "off page 1 /UPR=2" or "OFF EXEC 1 /userprofile="Gabi". Only the executors last used by User 2 (resp. "Gabi") will be considered.</li>
+		<li>Using the command "info" with an object (Pool): Info property is listed in command line for: BMP, Effect, Fade Path, Filter, Fixture, Fixture Layer, Fixture Type, Form, Group, Macro, Master, MATrix, Page, Preset, Sequence, Time Code, User, User Profile and View.</li>
+		<li>Workflow using the decimal keyboard in the command line: "Channel 1 at 50". The selection will be executed right after keying in the channel / fixture (before an AT). This can be helpful in case e.g. channels shall be re-sorted in a view -&gt; actual values can be seen before changing them.</li>
+		<li>New Commands: "CrashLogCopy", "CrashLogDelete", and "CrashLogList". The command "CrashLogCopy" copies existing Log files coming from a crash to the first recognized USB-Stick to the folder gma2/"temp". "CrashLogList" views such files in the "Command line Feedback" view. "CrashLogDelete" deletes them from the harddrive.</li>
+		<li>The Show file History can be displayed in the "Command line Feedback" view. The command "List 1.1 thru" displays this show file information.</li>
+		<li>Pages can be called with their names (alias): e.g. instead of typing "Page 1" the command "Page "Admission"" can be used. The names need to be typed in completely - no wildcards (*,…) are allowed.</li>
+		<li>"Shuffle selection" works in combination with MAtricks.</li>
+		<li>The executor buttons have new functions in the assign menue: "ToFull" and "ToZero". "ToFull" sets the master fader of an executor to100%, - "ToZero" to 0%. When "auto start" or. "auto stop" is active sequences and effects on this executor will be switched on/off as well,.</li>
+		<li>Rate / Rategroups, Speed / Speedgroups can be used in the command line.e.g.. "Assign Specialmaster x at Effect y thru z". With the "List" command entries in the command feedback view can be executed. "List 19.1.1.1".</li>
+		<li>When effect values are entered via the command line different attributes get the default adjustments "absolute/relative".</li>
+		<li>Opening the calculator of an encoder it follows the "Program Time"</li>
+		<li>Lock / unlock: Complete pools can be locked. Indicator is a yellow lock sign. If cues in a sequence are locked and the sequence will be deleted the locked cues remain existing. Indicator: red font colour.Lock / unlock follows oops. When trying to update locked cues, effects or presets, the update menu shows this with red font colour as well.</li>
+		<li>Command "Selection" can be combined with "if".e.g.. "Store if Presettype Position if Selection" = only pan/tilt is stored for the current selection.</li>
+		<li>Command "default" (keys "MA" and"." ) accepts filters.e.g. set only attribute position at default. "Default if Filter x" .</li>
+		<li>"List function" (e.g. list 19.1.1.1) in the command feedback display uses more colors . green: changeable values (assign /speed=30). yellow: Assignable values (Assign Specialmaster 16 Effekt 1). red: unchangeable (locked ) values</li>
+		<li>When executing Cue Mode "Release" will no more be break nor assert cues.</li>
+		<li>New 0ption"overwrite all" in overwrite Popup when exporting- e.g.. "export Preset 0.1 thru /overwrite". ( similiar as "/noconfirm" before)</li>
+		<li>The Fixture Button has a new function: 2 x press= "Selection"</li>
+		<li>The Delete Button has new functionality: 2 x press = "Remove", 3 x press = "Release". This can be filtered with an IF as well. e.g.. Fixture 1 thru 5 are selected: "Remove if Presettype Position" = Write Pan and Tilt for the selected fixtures with remove into the programmer. These can be removed out of a sequence with a store/merge.</li>
+		<li>Fixture and sequence views: Moving Attribute / Functions in the headline will insert them at the target position.</li>
+		<li>New view (create Basic Window/ "Others") : Command Filter. The AT / Store Filter is shown permanently and visible.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li><strong>Effects</strong>
+	<ul>
+		<li>Effect Editor and Effect Line Editor: With "Take selection" in the Edit Effect menu the current selection in the selected effect lines will be taken as usual.With the new button "Take MAtricks" the "Block X", "Align Group X" and "Wing" adjustments will be taken from the current MATricks. With "Show selection" the selection and groups, blocks and wings are also taken into the MATricks. (If more than one sequence lines with different adjustment are selected the adjustments of the last selected are taken.</li>
+		<li>New structure of effect speeds in effect editor:the "default effect speed" and the possibility to replace the start speed with a speed group has been completely taken out.The column "Rate Group" has been changed in "Speed Group". This enables to use a speed group or a rate group to each effect line.This is always active when using the effect in the programmer as well as storing the effect in a cue.The column"Rate" has been changed in"Speed". In the headline the unit is shown (Hz, BPM, Sek in Userprofil adjustable) and times can be directly entered. (If rate groups in older version were uses you will now find them in the speed group column). Also in channel, fixture and misc. views the layer "Rate" was exchanged with "Speed". That means that no more a factor can be entered , but the speed directly.In the command line speeds have tob e entered in Hz. If an effect which follows a speed group is stored in a sequence this effect can only be changed with the speed group -no longer with the speed fader of the sequence executor</li>
+		<li>When starting an selective Effect in the Effectpool, only the Effect ID will be taken into the programmer ( not the rate ( now speed) anymore )</li>
+		<li>New Mode Buttons in the "Running Effect" View. Is no mode selected, clicking an effect opens the corresponding encoder bar. Switching to the "Off Mode" or "Stomp Mode" , this action takes place on the afterwards selected effect.If "All Stomp" or "All Off" in single columns is selected, all Effects of a column will be switched off, or with "Stomp" taken into the programmer. Attention: "Off" in column "Sequence" switches off the complete sequence, in the column "Programmer" the effects will be taken out of the programmer.</li>
+		<li>If "Link Feature" ( encoder bar ) is selected when creating an effect,it is possible with the command "at Form 19" (Circle) to add directly to both sub-forms the attributes pan and tilt e.g. for presettype position.This also works when in the special effect dialog more than one attributes are selected ( U-Keys) and a form with multiple subforms is selected.</li>
+		<li>New button "Shuffle Selection" in Edit Effect menu. Works for currently selected effect lines. Shuffle Selection does not work for template effects(no Selection in Effect lines available).</li>
+		<li>In Form Editor new button "Link Graphs" can combine 2 graphs - means they have a similar number of points in 2D Mode.</li>
+		<li>Form Editor: editing a form with 2 Graphs in 2d Mode, "Load Predefined" gives new 2 dimensional form which are shown animated in the editor.</li>
+		<li>New buttons in Assign menu: "Stepped Rate" and "Link Effect To Rate". Is "Stepped Rate" active, the rate fader does not work analog but discrete: 1:32, 1:16 , 1:8 , 1:4 , 1:2 ,1:1, 2:1 , 4:1 , 8:1 , 16:1, 32:1. Is "Link Effect To Rate" active, the rate fader does not only change the fade times of a cues but also the speed of effects in cues. Attention: This only works with effects not using speed groups.</li>
+		<li>Rate Fader can be tapped with the "learn" Button. The "Stepped Rate" in the executor assign menu has to be switched on.</li>
+		<li>Edit Effect Dialog: entering presets for "Low", "High", "Center" or "Size" will change the effect lines from "Relative" in "Absolute"</li>
+		<li>Effect Editor : buttons which have temporarily no functionality are not displayed anymore e.g.. Effect has no selection (Temp. Effect).</li>
+		<li>On/off times for Chaser/Effects and off times for Sequence - Toggle fade now via a virtual master.</li>
+		<li>FAST_OFF - FAST_ON for Chaser and Effect</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li><strong>Layout View</strong>
+	<ul>
+		<li>Defaults for layout views can be stored now:. Setup / User / Defaults / Layout defaults. The new buttons "Save to default" and "load from default" in the caption bar of the layout view options will store / recall these settings. The size of new inserted fixtures and elements is corresponding to the values "Grid X" and "Grid Y". (a little bit smaller to have a distance).</li>
+		<li>Circle arrangement in Layout view: Special behavior if angle sum is 360 degrees: Last element is at "next to last" position. Otherwise last element is at last position.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li><strong>Sheets</strong>
+	<ul>
+		<li>Tracking Sheet: Create Individual times (where there had only been default times).</li>
+		<li>Tracking view: Tracked values can be changed directly.Selected Cells will be blocked automatically, when they are changed via middle mouse button or via edit button in option menu..With new "Edit Cue Only" button in the headline it can be choose whether the cells in the next cue are blocked as well so that the changed values will not be tracked. The editor can be opened with the mouse as well :press middle and right mouse button and then release right mouse button.</li>
+		<li>Touchscreen long-press edit has been implemented for Sheets and layers. (same behavior as right mouse click or hitting edit and touching the sheet or layer ).</li>
+		<li>Masks (in Mask Pool) can now be displayed with a selection: e.g. "Assign Fixture x Mask y" or "Assign selection" and click in the mask pool</li>
+		<li>New options in fixture masks: Full Patched</li>
+		<li>Sequence Sheet: If "Move in Black" is possible in a cue , the column "MIB" displays "!Y", when "MIB always" is active in the assign menu. Corresponding "!N" is displayed in red , when "MIB never" is active.</li>
+		<li>Tracking view: Attribute can be also edited on Effect Layers.</li>
+		<li>A long touch press or right mouse button click on a layer in Channel or Fixture views (Value, Fade, Form…) opens the calculator directly.</li>
+		<li>A input filter assigned to a sequence is also visible in the sequence pool</li>
+		<li>Worlds and Masks are displayed clearly in the headlines</li>
+		<li>Tracking + Sequence Sheet: CueNumber Pop-up provides the option to block or unblock the selected cues.</li>
+		<li>Fixture and Content Sheets do have in vertical mode the button "Namefield" in the Options menu.</li>
+		<li>Fixture Sheet :Fixture Sort Function active : If more fixtures which can be shown at a time are selected and next" or "prev" are used to step through, the view scrolls automatically</li>
+		<li>The Button Function PARK and UNPARK on a Group Master Fader now works</li>
+		<li>Exec Master Dialogs = special masters on executors have now short names in the naming area: "Sp" Speed Group, "Ra" Rate Group , "Pl" Playback Master.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li><strong>Setup</strong>
+	<ul>
+		<li>grandMA2 onPC also provides grandMA 1 style keyboard shortcuts. (Setup / Console / Edit Keyboard Shortcuts / import)</li>
+		<li>Page Pool Buttons in Layout views can be executed now.</li>
+		<li>Copying Presets does obey the Preset Mode (Selectiv, Global, Universal).</li>
+		<li>"Setup encoder bar will not disappear unexpected when adding objects to the 3 Layout"</li>
+		<li>Buttons Setup / Network / MA Network Control menu are better readable.</li>
+		<li>Parameter list in Setup/Patch only dialog. In this list all single parameter of all fixtures in fixture layers are displayed. Sorting: click right mouse button in the caption of a column (or with finger in touch screen) , and then move upwards or downwards</li>
+		<li>Import / Export in Setup/Show is also available for MAtricks.</li>
+		<li>Setup / User / Settings: new options for trackball buttons "Trackball Sequence" "Mouse - Off" and "Mouse - Wheel - Off"</li>
+		<li>New Info column in setup in layers and fixture types.</li>
+		<li>Clear filter button inside the fixture library - display info field for selected fixture type.</li>
+		<li>Fixture and Gobo library updated to Carallon 8.1</li>
+		<li>Setup: If fixtures are added with the "Add new fixtures wizard" then ID Numbers can only be given when a fixture type was selected.</li>
+		<li>Load Show Dialog : New button "I" (Info). Info Text (show description) and history are displayed. Show files are automatically stamped with Software Versions.</li>
+		<li>Midi Show Control(MSC) dialogue has a MSC Input and a MSC output info window. MSC commands will not be displayed any more at the system monitor.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li><strong>Miscellaneous</strong>
+	<ul>
+		<li>New views ( especially for working with onPC )
+		<ul>
+			<li>"Command section" ( with "Master Section" and "Time Controls") /</li>
+			<li>"Command line" (with"Entry Field" to show command input )</li>
+			<li>"Encoderbar". You can find them in in "Create Basic Window" / other</li>
+		</ul>
+		</li>
+		<li>U3 = Label for Sequence Editor, Effect Editor, Form Editor, Macro Editor, MATricks Editor, TimeCode Editor</li>
+		<li>MAtricks Pool: editing an empty Pool Button lets select predefined MATricks (Button "Predefined").</li>
+		<li>View Pool with display of stored screens. Rule: pressing a View Pool Button which contains only one screen it will be opened there. In case or more stored screens they will be opened where they have been stored.</li>
+		<li>Executor Assign menu: column "Start" 4th button of Options menu has new option: "Master Top" -&gt; If "Auto Stop" is switched off and the Master Fader of Executors is 0 -&gt; pulling again the master sets the sequence to first cue</li>
+		<li>ArtNet IP Adresse 10.x.x.x is outputed, even when the Subnet Mask is not 255.0.0.0 (e.g.. 255.255.254.0)</li>
+		<li>The IF Button works again with clone e.g.: "clone Fixture 1 thru 10 at Fixture 101 thru 110 if Sequence 1"</li>
+		<li>Fixed : Multi-instance fixtures are not visualized correctly</li>
+		<li>8bit grandMA series 1 mode channels are now converted correctly to grandMA2 mode channels</li>
+		<li>Fixture / Channel views: when the Option "Readout" in the caption bar changes the display of the values, now the value range of the encoder ( and calculator) changes as well</li>
+		<li>When "Cue Zero" is active on an executor, "Block Sequence x" now has the same result as "Block Cue Thru".</li>
+		<li>PWM Effects with Attack or Decay times &gt; 0 do now fade equally in or out</li>
+		<li>When importing / exporting Macros, Effects, Masks, or MAtricks the Screen Encoder now has the focus on the left side : "Select File".</li>
+		<li>Filter 1 in Filter Pool is now named "All", (was "Full" before )</li>
+		<li>Fixed: when pressing Backup / Save Show (both OnPC and console), the Backup key backlight will turn Off, while is should be kept On, until exiting the Backup menu</li>
+		<li>Tracking Sheet improvements: horizontal scroll offset</li>
+		<li>Selecting the Prog only view in a connected iOS remote software does not crash the console anymore</li>
+		<li>22 Presettypes do not crash the desk anymore</li>
+		<li>Sequence executor Sheet X-Break lines drawn correctly now</li>
+		<li>Form pool identification (Used forms has blue Pool number) is correct...</li>
+		<li>When a fixture type has more than one attribute,or one attribute which is not a dimmer, the fixture wizard automatically suggests a Fixture ID</li>
+		<li>The command "Assign Channel 1 Thru 513 at DMX 256.1 does not patch invalid DMX channels anymore. Result: Channel 1 to 512 will be patched to the last universe, Channel 513 is not patched.</li>
+		<li>Sequence Executor view: When in the last Cue of a Sequence the Mode "Release" is executed,Cue one will not show the delay progress bar anymore.</li>
+		<li>Long Cue names result in graphical glitches in the mini executor view in onPC</li>
+		<li>Moving executors does not automatically switch on MIB anymore</li>
+		<li>Very slow dimmer wheel movements result in slowly changing dimmer values</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Bugfix Release - Version 2.5.4.3</h2>
+
+<p>&nbsp;</p>
+
+<h2>New functions and features</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>onPC Command Wing support added.
+	<div class="important">
+	<p>Known Restrictions:</p>
+
+	<p>DMX In is not yet supported by the onPC Command Wing.</p>
+
+	<p>Midi Show Control is not yet supported by the onPC Command Wing.</p>
+	</div>
+	</li>
+	<li>onPC scales its size automatically to the screen resolution, if the screen resolution is smaller than 1280x800 pixels.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Fixed Bugs and improved functionality</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>MA-Net2 network session member handling improved. NPUs and VPU should not stay in non-existing sessions any more.</li>
+	<li>Cue Mode "Release" will no longer be a break cue. A Cue with cue mode release will finish fade in of this cue and then release the executor using executor off time.</li>
+	<li>Stomp Presettype will add stomp to the programmer only for attributes of selected fixtures currently using effect parameters.</li>
+	<li>Playback settings should be copied correctly when copying executors</li>
+	<li>Release first step executor option switch has been fixed.</li>
+	<li>Exec/Remote CLI mode bug has been fixed.</li>
+	<li>Crash fixed when entering or leaving patch and fixture schedule while having more than 22 presettypes.</li>
+	<li>MidiShowControl compatibility bug has been fixed.</li>
+	<li>The size of the MA network control columns at screen 1 is adjustable again.
+	<p>&nbsp;</p>
+	</li>
+	<li>GUI glitch fixed when scrolling the help pages at the onPC help popup.</li>
+	<li>Store popup will be displayed at all screens if onPC is used in single screen mode in combination with onPC wing hardkeys.</li>
+	<li>onPC should be compatible with HP Elitebooks.</li>
+	<li>Activating the Prog only view at a connected iOS remote app does not crash the desk any more.</li>
+	<li>Scaling of the resolution buttons has been fixed.</li>
+	<li>Multi instance fixtures are visualized correctly again, when added to a show file.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Release - Version 2.5.3.6</h2>
+
+<p>&nbsp;</p>
+
+<h2>Main feature overview:</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Sheet Masks</li>
+	<li>Filter</li>
+	<li>Playback Filter</li>
+	<li>grandMA Show Converter</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Overview Worlds, filters, masks.</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Worlds are containing a selection and an attribute filter. Calling a world filters all views and programmer access.</li>
+	<li>The new attribute filter is replacing the former separated Store filter and At filter. This filter contains an attribute filter and a layer filter (Value, Value Times, Effects). This filter can be stored at the new filter pool. A filter from the pool can be used temporarily (calling the filter), permanent (selecting the filter) or together with If at the command line.</li>
+	<li>Worlds and filters can be used as input filters for sequences and as playback worlds for executors.</li>
+	<li>Masks provide wide variety combinations for masking sheets to display only fixtures and attributes following these criteria at a sheet. These masks can be stored at the new mask pool and can be assigned to any sheet.
+	<p>&nbsp;</p>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>New functions and features in detail</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>The sheet masking has been revised and extended. The Feature Mask from previous versions has been improved and can be found by setting the right hand side of the new sheet mask options to: Show if in Saved Attributes, then pressing the 'Define Mask' button to choose what features or attributes to display.
+	<p>&nbsp;</p>
+	</li>
+	<li>Interactive Sheet Masking
+	<ul>
+		<li>Fixtures, Groups, Worlds, Filters, Masks, Presettypes ... can be assigned at sheet headlines to mask the current sheet to only show fixtures/attributes of the assigned object.</li>
+		<li>Example: <span class="hardkey">Assign</span><span class="hardkey">Group</span><span class="hardkey">1</span> fixture sheet headline; the fixture sheet will display only fixtures of group 1.</li>
+	</ul>
+	</li>
+	<li>Assigning an object to a sheet headline will be displayed by a red ghost. Any other active mask will be displayed by a orange ghost. Every sheet can only be masked by one mask at the same time. Using a set button or assigning a mask to the sheet headline will overwrite the local mask with the new settings.</li>
+	<li>Sheet Masking
+	<ul>
+		<li>Sheets have a new sheet mask editor in the sheet options.
+		<ul>
+			<li>The <span class="hardkey">Show if</span>/<span class="hardkey">hide if</span> button decides whether this line will be shown or hidden.</li>
+			<li>The <span class="hardkey">___ </span> black tick box is for inverting the current line.</li>
+			<li>The pull down menu provides all possible masking settings.</li>
+			<li>With the <span class="hardkey">Save to</span> button the current mask settings can be stored to the Sheet Mask pool.</li>
+			<li>With the <span class="hardkey">Load from</span> button masks can be loaded from the mask pool.</li>
+			<li>With the <span class="hardkey">Copy andgt;andgt;andgt;</span> / <span class="hardkey">Copy andlt;andlt;andlt;</span> buttons mask settings can be copied from the fixture to the attribute side and vice versa.</li>
+		</ul>
+		</li>
+		<li>Sheet masks can be stored into the new Sheet mask pool. With this pool, sheet masks can be created once and can be used by multiple sheets.</li>
+		<li>The pool objects 1 to 6 are predefined and cannot be modified or deleted.</li>
+		<li>Sheet masks are able to mask fixtures and attributes.</li>
+		<li>Right mouse click a sheet headline mask button will call this button and edit this button.</li>
+		<li>Sheet mask is selectable and editable. The currently selected mask is displayed by a green button background.</li>
+		<li>Sheets can be switched to follow selected mask mode.</li>
+		<li>Hitting a mask pool object will select this mask and all sheet set to follow selected mask will follow this mask.</li>
+		<li>Sheet mask can be assigned to a sheet using ASSIGN, touch a sheet mask in the pool and hit a sheet headline afterwards.</li>
+		<li>Up to 10 customizable Set buttons can be assigned to the sheet headlines to provide fast access to sheet masks.</li>
+		<li>In addition to the already known masks, the following new criteria for creating masks have been included.</li>
+		<li>at the Fixture Section
+		<ul>
+			<li><strong>"Used in Show"</strong> displays all fixtures stored in cues, selective effects, selective presets or additive group masters.</li>
+			<li><strong>"Selected"</strong>displays currently selected fixtures.</li>
+			<li><strong>"DMX tested"</strong> displays all fixtures with one or more attributes are overwritten by DMX tester values.</li>
+			<li><strong>"Fade/Delay"</strong>displays all fixtures with individual fade or delay timing stored at currently active cues or is active in programmer.</li>
+			<li><strong>"Effect"</strong>displays all fixtures currently using effect parameters at the output.</li>
+			<li><strong>"In Object"</strong>displays all fixtures currently using the defined object. Object can be a Group, Effect, Preset, Sequence or World.</li>
+			<li><strong>"Live"</strong>displays all fixtures with a dimmer output above 0% or with dimmer output at 0% blocked in current active cue.</li>
+			<li><strong>"In Saved Selection"</strong>displays the saved selection. The current selection can be saved by the take selection button.</li>
+			<li><strong>"Moved"</strong> displays all fixtures with blocked non dimmer values at cues currently active at the output.</li>
+		</ul>
+		</li>
+		<li>at the Attribute section:
+		<ul>
+			<li><strong>"Used in Show"</strong> displays all attributes stored in cues, selective effects, selective presets or additive group masters.</li>
+			<li><strong>"Selected"</strong> displays all attributes of currently selected fixture.s</li>
+			<li><strong>"DMX tested"</strong> displays all attributes overwritten by DMX tester values.</li>
+			<li><strong>"Fade/Delay"</strong>displays all attributes with individual fade or delay timing stored at currently active cues or is active in programmer.</li>
+			<li><strong>"Effect"</strong>displays all attributes currently using effect parameters at the output.</li>
+			<li><strong>"In Object"</strong>displays all attributes currently using the defined object. Object can be a Group, Effect, Preset, Sequence or World.</li>
+			<li><strong>"at Non Default"</strong>displays all attributes currently having non default values.</li>
+			<li><strong>"Of current Presettype"</strong>displays the presettype currently selected at the encoder bar.</li>
+			<li><strong>"Of current Featuretype"</strong> displays the featuretype currently selected at the encoder bar.</li>
+			<li><strong>"In Saved Attributes"</strong> displays the attributes defined by the define attribute button.</li>
+		</ul>
+		</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>New sheet headline button to change the sheet readout.</li>
+	<li>Filter Pool
+	<ul>
+		<li>Store filter, At filter, Circular Copy filter and link defined filter have been merged together to one attribute filter and can be stored and recalled by the filter pool. The filter pool is a global pool used by all users.</li>
+		<li>Store a filter at the filter pool will store the current status of the filter into the pool object. As at the world pool also at the filter pool filter pool object 1 is reserved for the all filter and is not editable.</li>
+		<li>Filters can be called (small green bar in the filter pool icon) or selected (Lower half of the filter pool icon is displayed green).</li>
+		<li>The selected filter will be used for any store/at/copy... operation until another filter is selected. Selecting Filter 1 will reset the filter to all attributes.</li>
+		<li>Filter can be selected by pressing <span class="hardkey">select</span> and touching the filter pool object afterwards.</li>
+		<li>The called filter will override the selected filter and will be used for the next operation and will be falling back to the current selected filter afterwards.</li>
+		<li>If the setting "Reset filter on clear " is active in the "Attribute filter menu" a called filter will stay active until 3x clear is pressed (former At filter behavior).</li>
+		<li>A temporary filter set in the store menu or by long pressing the At key can be stored to the next empty filter pool object by pressing the button "Store filter and select"</li>
+		<li>Filter can be called by touching the referring pool item.</li>
+		<li>The flashing <span class="hardkey">AT</span> key indicated an active attribute filter.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>Playback Worlds
+	<ul>
+		<li>Worlds or filters can be assigned as sequence executor playback filters. The filtered sequence executor will only playback fixtures and attributes of the assigned world or filter.</li>
+		<li>If a filter is used as a playback world, the playback will be filtered by attributes only, it will not filter by layer (Value, Value Times, Effects).</li>
+		<li>Worlds or filters can be assigned by using command line: <span class="hardkey">Assign</span><span class="hardkey">World</span><span class="hardkey">3</span><span class="hardkey">Executor</span><span class="hardkey">1</span><span class="hardkey">Please</span>, by using the assign menu, or by pressing <span class="hardkey">Assign</span><span class="hardkey">World</span><span class="hardkey"> 3</span> pressing an executor button of an executor with assigned sequence.</li>
+		<li>A orange executor number background in the mini executor view identifies an assigned playback world.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>Input Filter
+	<ul>
+		<li>Worlds or filters can be assigned as sequence input filters. The filtered sequence will only store fixtures and attributes of the assigned world or filter.</li>
+		<li>Worlds or filter can be assigned by using command line: <span class="hardkey">Assign</span><span class="hardkey">World</span><span class="hardkey">3</span><span class="hardkey">Sequence</span><span class="hardkey">1</span><span class="hardkey">Please</span>, by using the assign menu, or by pressing <span class="hardkey">Assign</span><span class="hardkey">World</span><span class="hardkey"> 3</span> pressing a pool sequence button.</li>
+		<li>A orange sequence number background in the mini executor view identifies an assigned input filter.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>New if function to filter while store, delete and at operations with.
+	<ul>
+		<li>New keyword endif. The Endif offers the possibility to use the phrase if condition1 + condition 2 ... endif in the command line syntax and execute this command with an executor button.</li>
+		<li>Pressing the <span class="hardkey">If</span> key and any object you want to filter by will add the touched object and endif automatically to the command line.</li>
+		<li>Pressing the <span class="hardkey">If</span> key will add Endif to the command line if an if is already in the current command line string.</li>
+		<li>Holding down the <span class="hardkey">If</span> key while hitting multiple object will filter by any of these pushed objects.</li>
+		<li>Possible objects are for example the encoder bar
+		<ul>
+			<li>Presettype buttons,</li>
+			<li>Groups,</li>
+			<li>Worlds,</li>
+			<li>Sequences,</li>
+			<li>Cues</li>
+			<li>Filter pool objects,</li>
+		</ul>
+		</li>
+		<li>Examples:
+		<ul>
+			<li><span class="hardkey">Store</span><span class="hardkey">Cue</span><span class="hardkey">2</span><span class="hardkey">If</span><span class="hardkey">Dimmer</span><span class="hardkey">Executorbutton</span><span class="hardkey"> 1.1.16</span> will add "Store Cue 2 If Presettype "Dimmer" Endif Executorbutton 1.1.16" and will store only active dimmer data at cue 2 of executor 1.1.16 and keep other active attributes in the programmer.</li>
+			<li><span class="hardkey">Store</span><span class="hardkey">Cue</span><span class="hardkey">2</span><span class="hardkey">If</span><span class="hardkey">+</span><span class="hardkey">Dimmer</span><span class="hardkey">Color</span><span class="hardkey">Position</span><span class="hardkey">If</span><span class="hardkey">Executorbutton</span><span class="hardkey"> 1.1.16</span> will add "Store Cue 2 If Presettype "Dimmer" + "Color" + "Position" Endif Executorbutton 1.1.12" at the command line and will store only active Dimmer, Color and Position data at cue 2 of executor 1.1.12 and keep other active attributes in the programmer.</li>
+			<li><span class="hardkey">Store</span><span class="hardkey">If</span><span class="hardkey">-</span><span class="hardkey">Dimmer</span><span class="hardkey"> </span><span class="hardkey">If</span><span class="hardkey">Cue</span><span class="hardkey">X</span> will add "Store If Presettype "Dimmer" EndIf Cue X" at the command line and will store all active attributes except the Presettype "Dimmer" to cue X</li>
+		</ul>
+		</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>Please can be used to step through the Edit Cue Number Window.</li>
+	<li>Export sequence command has been improved.
+	<ul>
+		<li>New parameter /style for the export command to select a xsl-stylesheet for the exported xml file. Example: andgt;Export Sequence 1 "NiceFileName" /style="sequ@executorsheet". By now included styles sequ@executorsheet.xsl, sequ@trackingsheet.xsl, sequ@html@default.xsl. If no style parameter will be added to the export command, the stylesheet with the filename containing @default will be used.</li>
+		<li>The command export sequence 1 "nice-sequence" /transform will generate an HTML Table of the sequence. This command can be combined with the /style=... parameter as well.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>Shortcut <span class="hardkey">MA</span> + <span class="hardkey">1</span>...<span class="hardkey">9</span> to switch to the referring presettype. Hitting the same number multiple times while pressing MA to go through the Features of the referring Presettype.</li>
+	<li>Shortcut: Hitting <span class="hardkey">Time</span> steps through Value, Fade, Delay. Hitting <span class="hardkey">MA</span>+<span class="hardkey">Time</span> to go through the effect layers. Long-press <span class="hardkey">Time</span> always switches to the value layer.</li>
+	<li>All pool elements used in show are marked by a cyan pool item number instead of the grey one.</li>
+	<li>DMX using Art-Net can also be sent and received alternatively at 10.x.x.x. Former versions of the grandMA2 software were only capable to send Artnet at 2.x.x.x. The IP address of the Art-Net network interface can be changed using the command SetIP 10.x.x.x. 255.0.0.0. After changing the IP address, a reboot is necessary.
+	<p>&nbsp;</p>
+	Be aware it is not possible to send to 2.x.x.x and 10.x.x.x at the same time.</li>
+	<li>New function Lock object to lock or unlock objects like Sequences, Cues, Presets,... by using the command line. Locked object have to be unlocked to edit or update them.
+	<ul>
+		<li>Objects locked by the system are displayed by a red padlock at the referring pool item. Objects locked by the system cannot be unlocked by the user.</li>
+		<li>Object locked by the user are displayed by an orange padlock and can be unlocked by the command unlock object X</li>
+		<li>Examples
+		<ul>
+			<li>Lock Preset 1.1 thru 1.10 will lock the dimmer presets 1 thru 10.</li>
+			<li>Unlock Preset 1.5 will unlock dimmer preset 5.</li>
+			<li>Unlock Sequence Thru will unlock all sequences</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>Shortcuts: Keyboard shortcuts have been implemented for OnPC. Pressing the keyboard Insert key (<span class="hardkey">Ins</span>) toggles the shortcut mode.
+	<ul>
+		<li>The shortcuts can be configured at the / Setup / Console / Edit Keyboard Shortcuts.</li>
+		<li>The <span class="hardkey">Reset to Defaults</span> button will reset the keyboard shortcuts to the build-in default settings.</li>
+		<li>the current keyboard shortcut setting will be stored automatically to the keyboard_shortcuts.xml file, when pressing save at the displayed pop up when leaving this dialog.</li>
+		<li>Add will ask for a function and a keyboard key and will add the shortcut assignment.</li>
+		<li>Multiple keyboard keys can be assigned to one function, but only one function can be assigned per key. The Select key pop-up will only provide available keys. If a key is already in use, it has to be deleted before it can be reassigned.</li>
+		<li>Shortcuts will be temporarily disabled as long as a text input pop-up is present.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>OnPC improvements
+	<ul>
+		<li>Encoders can be controlled via mouse wheel. Position the mouse pointer at the encoder and just turn the mouse wheel to adjust the referring parameter.</li>
+		<li>Right button mouse click at an encoder will open the referring calculator.</li>
+		<li>OnPC will return the last viewed screen after leaving the setup or backup dialog.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>MA remote improvements
+	<ul>
+		<li>Consoles with disabled remote login are displayed with a red background at the MA remote available console screen.</li>
+		<li>It is possible to logout from one console and login at another console without closing the app by using the new Logout button at the selecting view pop-up.</li>
+	</ul>
+
+	<p>&nbsp;</p>
+	</li>
+	<li>Delete button works interactive with sheet and pool headlines. E.g. Hitting Del and touch a fixture sheet headline will delete this sheet.</li>
+	<li>New command "Delete Screen X " to clear a single or multiple screens via command line or macro.
+	<p>&nbsp;</p>
+	</li>
+	<li>grandMA Show Converter
+	<div class="important">
+	<ul>
+		<li>grandMA Show Converter will convert only show data.</li>
+		<li>grandMA1 macros and Cue command links will be converted as far as possible. Commands not compatible with grandMA2 syntax will not be converted!</li>
+		<li>grandMA1 userprofiles are not compatible with grandMA2 and will not be converted at all.</li>
+		<li>grandMA1 effects, bitmap effect, layouts and modulators will not be converted at all and have to be rebuild with the grandMA2 effects engine.</li>
+		<li>grandMA1 Fixture Schedule function invert per fixture will not be converted.</li>
+		<li>A fully featured list of all converted parts of a grandMA1 show can be found at the <a href="http://help.malighting.com/edit/php/editor.php?file=topic/Topic_Tutorial_ShowConverter.xml">grandMA Show Converter Help</a>.</li>
+	</ul>
+	</div>
+
+	<ul>
+		<li>The grandMA1 show files have to be stored with grandMA1 Version 6.615</li>
+		<li>The converted show files can only be loaded with grandMA2 versions beyond current version.</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Fixed Bugs and improved functionality</h2>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Off Feature X, Off Attribute X and Off Presettype X is using program time now.</li>
+	<li>Store options are temporarily visible while holding down the store button. Long-press of the store button will display the store options pop-up also after releasing the store button.</li>
+	<li>Goto / Load pop-up will be visible at all screens, if the option Messagebox on all screens is set to on.</li>
+	<li>Improved Cue Zero handling in preview mode.</li>
+	<li>Session collision handling has been improved. Session collision dialogs have to be solved by the user and should not disappear automatically anymore.</li>
+	<li>Updating a preset currently visible at the output should not drop the output to the previous preset values before the updated values are present anymore.</li>
+	<li>Orange progress bar is drawn correct in the executor sheet now.</li>
+	<li>Deleting a cue will not affect the edit executor sheet column width anymore.</li>
+	<li>No more useless Cue only pop ups, when deleting the last cue of a cue list.</li>
+	<li>Fixtures with already done MIB will not snap back to their origin position when knocking the fixture in the programmer or updating a cue of that sequence.</li>
+	<li>Sheets with activated fixture sort react to selection change again. E.g. when using shuffle selection.</li>
+	<li>Select DMX Profile pop up position has been improved.</li>
+	<li>Resizing the column width inside the "Patch &amp; Fixture Schedule" or "Patch Only" dialog will not shrink other column width anymore.</li>
+	<li>Sometimes not working store encoder bar encoders have been fixed.</li>
+	<li>Deleting an effect while this effect is displayed at the running effects window will not crash a console anymore.</li>
+	<li>Deleting an assigned effect was not displayed correctly in the effect overview.</li>
+	<li>The not very useful command assign and hitting an encoder afterwards does not crash the desk anymore.</li>
+	<li>Move multiple executors at executor 220 will not crash the desk anymore.</li>
+	<li>Trying to move or copy a sequence executor to a channel page does not crash the desk anymore.</li>
+	<li>Crash when trying to access the tools menu while full access enter layer name pop up is visible has been fixed.</li>
+	<li>Importing a sequence with activated cue zero does not crash the desk anymore.</li>
+	<li>Crash fixed when calling the Command line Response while the Full Access window was open at the same screen.</li>
+	<li>Setup / Network / MA Network Configuration: delete the first Line of any Menu = the content of the line do not jump to the left side anymore.</li>
+	<li>Special dialog shaper is able to display default link values.</li>
+	<li>Graphical artifacts of the Analog clock hands have been removed.</li>
+	<li>Chaser have been improved, especially when using Backward, Random, Bounce, Loop Shot-Off and Loop Shot-On chasers will not overshoot one step anymore.</li>
+	<li>Chasers running backward or random chasers are correctly calling their tracking status now.</li>
+	<li>On screen keyboard improvements
+	<ul>
+		<li>State(opened/closed) of the on screen keyboard will be restored when a text pop up is created.</li>
+		<li>Closing the on screen keyboard at one screen will close the on screen keyboard at all screens.</li>
+	</ul>
+	</li>
+	<li>Not working X-keys at the startup of the console have been fixed.</li>
+	<li>Swipe graphic position has been adjusted. BTW.</li>
+</ul>
+
+<div class="tip">
+<ul>
+	<li>You don't have to wait for the swipe icon to use the swipe, just swipe the referring button to open the pull down menu.</li>
+</ul>
+</div>
+
+<ul>
+	<li>Missing Oops, when assigning an object to a layout view has been fixed.</li>
+	<li>Further improvements of ASCII Show Read.</li>
+	<li>NPU dark screen bug has been fixed.</li>
+	<li>Setup / Network / MA Network / Configuration / NDP: NDP software version color display has been fixed. A red software version number means, the NDP software version is not compatible to the current console software version and the referring NDP is not allowed to be a session member of this MANet2 session.</li>
+	<li>NDP dimmer profiles can be edited in the dimmer view table as well as in the edit dimmer module view now.</li>
+	<li>Fixture Library has been updated to Carallon Lib 7.7</li>
+	<li>Creating a multi-attribute effect in programmer and storing this to the effect pool will not create unnecessary lines anymore.</li>
+	<li>Temp-faders will not switch off other executors with activated option OffOnOverwritten anymore.</li>
+	<li>Hitting the Align encoder bar soft-key will not reset the command line anymore.</li>
+	<li>Effect stomp and effect release will be ignored by the ifoutput command.</li>
+	<li>Leaving the edit blind mode after loading a show file stored in the edit blind mode does not crash the console anymore.</li>
+	<li>Further improvements of the Sheet masking</li>
+	<li>Leaving the Partial Show Read Initialize dialog with the X-key has been fixed.</li>
+	<li>Flashing Ultralight red LED as indicator of a wrong fader position is adjustable in local settings. (Setup/Console/Local settings: "Error LED is flashing when fader position is wrong.)</li>
+	<li>Create basic window pop-up is able to display up to 20 Icons per tab without scrolling.</li>
+	<li>Wrong display of the autosave countdown at the Backup menu after loading show files has been fixed.</li>
+	<li>Import Export of fixtures also imports exports the fixture 3D position scaling and rotation.</li>
+	<li>Keyboard focus issue when labeling pool objects has been fixed.</li>
+	<li>Leaving blind mode directly after loading a show file stored in blind mode will not crash the desk anymore.</li>
+	<li>Crash fixed when using the used in object sheet mask in combination with user profiles from previous software versions.</li>
+	<li>Calling an Executor X without any function will execute a selfix executor X.</li>
+	<li>DMX Tester retain mode bug at the onPC has been fixed.</li>
+	<li>Patch diagnostics screen also show unpatched subfixtures now.</li>
+	<li>Not working fixed executors in action button view have been fixed.</li>
+	<li>Fixture Schedule: The column "Master" has been renamed to "React to Master".
+	<ul>
+		<li>Only fixtures with "React to Master"=On will react to the Grandmaster and the Solo function.</li>
+		<li>Edit Fixture or Edit Fixture Type: Only attributes with "React to Master"=On will react to the Grandmaster and the Solo function.</li>
+	</ul>
+	</li>
+	<li>Improved ASCII Show read:
+	<ul>
+		<li>"Link go" / "Link toggle" : ASCII show file effects will be converted to grandMA2 chasers and assigned at executors. A "Link Go" or a "Link toggle" will be added to the referring cue command column of the main sequence.</li>
+		<li>"Effect Prio.LTP / Effect Prio.High The assigned chaser will be set to Priority</li>
+	</ul>
+	</li>
+	<li>Edit Bitmap Effects has been fixed.</li>
+	<li>Saving show files in network sessions has been changed. Storing a show file at one console will force all grandMA2 consoles and onPC2s and 3D Applications of this network session to save the show file.
+	<div class="important">The VPU will not save any show file in a network session anymore. The VPU will only save its show file when shutting down.</div>
+	</li>
+	<li>The command "Executor X at 100 Fade 5" is also possible for executors with assigned bitmap effects.</li>
+	<li>Command line response of the command "List Sequence X" shows the correct Cue Zero setting.</li>
+	<li>MIB has been changed and is only possible for cues instead of part cues now.</li>
+	<li>Missing gobos or content symbols will not be displayed as open symbols anymore.</li>
+	<li>Fixed executors in action button view are working now.</li>
+	<li>Knocking out effect layers using the Quick and Dirty bar has been fixed.</li>
+	<li>Deleting an effect line doesn't change the selection of other effect lines anymore.</li>
+	<li>Exchanging fixture types will not destroy the link to a moving path for that fixture at the 3D anymore.</li>
+	<li>Displaying pool playbacks as fixed executors (orange background) bug fixed.</li>
+	<li>Console does not crash anymore, if the Content Distribution window has been left open for a long time.</li>
+	<li>Cues with stored dummy attributes can be deleted again.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Appendix</h2>
+
+<p>&nbsp;</p>
+
+<div class="warning">The command "store /remove" or pressing [store][cue][2] and the select [remove] in the pop-up will remove the whole attribute with all (!!) its layers for fixtures having any value or effect layer of this attribute active in programmer. It can be filtered to only remove values, value timings or effects by using the buttons in the stored encoder bar. To remove only specific layers, for example only individual effect fade, the operator needs to open the calculator for these layers and select "remove" in the calculator. Afterwards the operator needs to update the cue, or has to use store /merge to remove the specific layers.</div>
+
+<div class="warning">Selecting multiple fixtures with a lasso in the layout view is respecting the snap grid settings to interpolate small position differences of fixture icons. The selection order will always be made inside of one snap grid cell first, afterwards line by line in the direction of the lasso movement.</div>
+
+<div class="warning">Release version <strong>2.3</strong> of grandMA2 divorced values and effect values! Therefore older show files might not be 100% compatible. Therefore please check your show file with the new version before using it live!</div>
+
+<p>&nbsp;</p>
+
+<h2>Known Limitations</h2>
+
+<p>&nbsp;</p>
+
+<div class="important">
+<ul>
+	<li>show file Conversion from Version 2.2 and earlier:The speed of a selective effect, stored in a cue, will not be brought correct into programmer, if the cue gets edited and the default speed of the effect in the pool is not 60 BMP.</li>
+	<li>ASCII show import supports Strand ASCII show files only.</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

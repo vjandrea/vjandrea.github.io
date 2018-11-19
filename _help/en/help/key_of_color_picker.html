@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Using The Color Picker</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="color picker, colors, gels" />
+	</head>
+	<body>
+		
+		
+		<h1>Using The Color Picker</h1>
+		
+		<p>Based on the field you work in, the color picker provides the opportunity of displaying the colors of fixtures in various views.</p>
+
+<p><strong>Requirement:</strong></p>
+
+<ul>
+	<li>Fixtures are patched.</li>
+</ul>
+
+<p>For more information on how to patch fixtures see <a href="key_patch_add_fixtures.html">Adding fixtures to your show</a>.&nbsp;</p>
+
+<hr />
+<h2>Open the Color Picker</h2>
+
+<p>There are two options to open the color picker.</p>
+
+<p><strong>1. Option:</strong></p>
+
+<ol>
+	<li>Tap any empty space in the <strong>user-defined area</strong>.</li>
+	<li>The pop-up <strong>Create Basic Window</strong> opens.&nbsp;</li>
+	<li>Tap <span class="softkey">Other</span>.</li>
+	<li>Then tap <span class="softkey">Color Picker</span>.</li>
+	<li>The <strong>Color Picker</strong> opens.&nbsp;</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_hsb_v3-3.png" />
+<figcaption><em>Color Picker Opened Via Create Basic Window</em></figcaption>
+</figure>
+
+<p><strong>2. Option:</strong></p>
+
+<ol>
+	<li>Tap <span class="softkey">Color</span> in the encoder bar.</li>
+	<li>Then tap <span class="softkey">Special Dialog</span>.&nbsp;</li>
+	<li>The temporary color picker opens.</li>
+</ol>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_special-dialog_v3-3.png" />
+<figcaption><em>Color Picker Opened Via Special Dialog</em></figcaption>
+</figure>
+
+<div class="important"><strong>Important:</strong><br />
+If you open the color picker via the&nbsp;<strong>Special Dialog</strong>, you will see an additional bar with buttons that are not visible if you open the color picker via the dialog&nbsp;<strong>Create Basic Window</strong>. These buttons, however, can be enabled in the options of the color picker.&nbsp;</div>
+
+<p>The differences of each view in special dialog are explained further down in the corresponding views. &nbsp;</p>
+
+<hr />
+<p>As mentioned before the color picker consists of five views. &nbsp;</p>
+
+<h2>1. HSB:</h2>
+
+<div class="tip"><strong>Hint:</strong><br />
+HSB is the abbreviation for hue, saturation and brightness.&nbsp;</div>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_hsb_v3-3.png" />
+<figcaption><em>Color Picker – HSB&nbsp;</em></figcaption>
+</figure>
+
+<p><strong>Hue:</strong><br />
+Is displayed in degrees and it is the horizontal axis of the screen.<br />
+&nbsp;</p>
+
+<p><strong>Saturation:</strong><br />
+Is displayed as a vertical axis of the screen.<br />
+&nbsp;</p>
+
+<p><strong>Brightness:</strong><br />
+Is displayed as an additional fader.&nbsp;</p>
+
+<p><strong>Q fader:</strong></p>
+
+<p>The Q fader is displayed at the far right of the screen.&nbsp;</p>
+
+<div class="important"><strong>Important:</strong><br />
+The Q fader is disabled for fixtures with ColorWheel&nbsp;or MixColor attributes (RGB) only. Fixtures with more than three&nbsp;MixColor attributes enable the Q fader.&nbsp;</div>
+
+<p>It consists of three categories:</p>
+
+<p><strong>Primary:</strong><br />
+Represents&nbsp;RGB&nbsp;only.</p>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_q-fader-primary_v3-3.png" />
+<figcaption><em>HSB&nbsp;– Q Fader – Category Primary</em></figcaption>
+</figure>
+
+<p><strong>Max:</strong><br />
+Represents a mixture of RGB&nbsp;and the special color attributes.&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_q-fader-max_v3-3.png" />
+<figcaption><em>HSB&nbsp;– Q Fader – Category Max</em></figcaption>
+</figure>
+
+<p><strong>Pure:</strong><br />
+Represents a special color attribute.</p>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_q-fader-pure_v3-3.png" />
+<figcaption><em>HSB&nbsp;– Q Fader – Category Pure</em></figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<hr />
+<h2>Bar In HSB&nbsp;– Special Dialog</h2>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_bar-in-hsb_special-dialog_v3-3.png" />
+<figcaption><em>Bar Highlighted In&nbsp;HSB&nbsp;– Special Dialog</em></figcaption>
+</figure>
+
+<ul>
+	<li><strong>Percentage display:</strong><br />
+	Displays the value in percentage. The corresponding color spectrum is displayed on top of the percentage.&nbsp;<br />
+	&nbsp;</li>
+	<li><strong><a id="Link Encoders" name="Link Encoders"></a>Link encoder HSB:</strong><br />
+	Links the three encoders starting from the left with the display of HSB.<br />
+	&nbsp;</li>
+	<li><strong>​Link encoder CMY:</strong><br />
+	Links the three encoders starting from the left with the display of CMY.&nbsp;<br />
+	&nbsp;</li>
+	<li><strong>Link encoder RGB:</strong><br />
+	Links the three encoders starting from the left with the display of RGB.&nbsp;<br />
+	&nbsp;</li>
+	<li><a id="Preferable Color Engine" name="Preferable Color Engine"><strong>Prefer MixColor only:</strong><br />
+	This is usually the default. Here&nbsp;MixColor attributes are preferably used to blend the color. &nbsp;</a><br />
+	&nbsp;</li>
+	<li><a name="Preferable Color Engine"><strong>MixColor only:</strong><br />
+	Here only MixColor attributes are used to blend the color.&nbsp;</a><br />
+	&nbsp;</li>
+	<li><a name="Preferable Color Engine"><strong>ColorWheel only:</strong><br />
+	Here only ColorWheel attributes are used to blend the color.&nbsp;</a></li>
+</ul>
+
+<hr />
+<h2>2. Swatch Book</h2>
+
+<p>The swatch book displays manufacturers and their corresponding gels.&nbsp;</p>
+
+<p>For more information on gel see the keyword <a href="key_keyword_gel.html">Gel</a>.&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_swatch-book_v3-3.png" />
+<figcaption><em>Color Picker – Swatch Book</em></figcaption>
+</figure>
+
+<div class="important"><strong>Important:</strong><br />
+The swatch book displays the color in RGB and RGB number.&nbsp;</div>
+
+<ul>
+	<li>If you type a number into the filter on the top left, the swatch book will sort the list by the hints containing this number.&nbsp;</li>
+	<li>If you type a letter into the filter, the swatch book will sort by the name of the color.&nbsp;</li>
+</ul>
+
+<hr />
+<h2>Bar In Swatch Book – Special Dialog</h2>
+
+<figure class="caption"><img alt="" src="../../img/img_special-dialog_swatch-book-bar_v3-3.png" />
+<figcaption><em>Special Dialog – Bar In Swatch Book</em></figcaption>
+</figure>
+
+<ul>
+	<li><strong>Clear Filter:</strong><br />
+	Empties the filter on the top left of the dialog.&nbsp;</li>
+	<li><strong><a id="Live Preview" name="Live Preview"></a>Live Preview:</strong><br />
+	If you scroll using the encoder to change colors, these colors&nbsp;are&nbsp;directly shown live.&nbsp;</li>
+</ul>
+
+<hr />
+<h2>3. Raw Faders</h2>
+
+<p>Raw faders display all MixColor&nbsp;attributes in a show file.&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/image_color-picker_raw-faders_v3-3.png" />
+<figcaption><em>Color Picker – Raw Faders</em></figcaption>
+</figure>
+
+<hr />
+<h2>4. Predefined Colors</h2>
+
+<p>Predefined colors are displayed in a rod-shaped pattern in four columns.&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_predefined-colors_v3-3.png" />
+<figcaption><em>Color Picker – Predefined Colors</em></figcaption>
+</figure>
+
+<div class="important"><strong>Important:</strong><br />
+Predefined colors are not available in the Special Dialog.&nbsp;</div>
+
+<hr />
+<h2>5. Faders</h2>
+
+<p>Faders display the three color systems –&nbsp;HSB, CMY and RGB along with the Q fader – in contrast to one another in form of faders.</p>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_faders_v3-3.png" />
+<figcaption><em>Color Picker – Faders</em></figcaption>
+</figure>
+
+<hr />
+<h2>Options</h2>
+
+<p>To open the options in the color picker, tap&nbsp;<img alt="" src="../../img/icon_yellow-ball_3_2.png" />in the upper left corner of the window.&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picer_options_v3-3.png" />
+<figcaption><em>Color Picker – Options</em></figcaption>
+</figure>
+
+<p>Options display the following:</p>
+
+<p><strong><a href="#Live Preview">Live Preview</a>:</strong></p>
+
+<p>See Bar in Swatch Book – Special Dialog.</p>
+
+<p><strong>Linked Encoders:</strong></p>
+
+<p>If you tap this button, the pop-up <strong>Select Linked Encoders </strong>opens. Choose which <a href="#Link Encoders">encoders</a> you would like to link here.&nbsp;</p>
+
+<p><strong>Preferable Engine:</strong></p>
+
+<p>If you tap this button, the pop-up <strong>Select Preferable Engine</strong> opens. Choose the <a href="#Preferable Color Engine">color system</a> you would prefer to use.&nbsp;</p>
+
+<p><strong>Active Page:</strong></p>
+
+<p>If you tap this button, the pop-up <strong>Select Active Page</strong> opens. Choose the view you would like to be displayed here.</p>
+
+<p><strong>Swatch Book View Mode:</strong></p>
+
+<p>If you tap this button, the pop-up <strong>Select Swatch Book View Mode </strong>opens. Choose the category you would like the Swatch Book to be displayed by.</p>
+
+<p><strong>Swatch Book Sort Mode:</strong></p>
+
+<p>If you tap this button, the pop-up&nbsp;<strong>Select Swatch Book Sort Mode </strong>opens. Choose the category you would like to sort the swatch book by.&nbsp;</p>
+
+<p><strong>Hide Labels:</strong></p>
+
+<p>If you disable this button, the values of HSB, CMY and RGB&nbsp;will be displayed in percentage.&nbsp;</p>
+
+<hr />
+<h3>Title Buttons</h3>
+
+<p>To open the title buttons in the color picker, tap&nbsp;<img alt="" src="../../img/icon_yellow-ball_3_2.png" />in the upper left corner of the window.&nbsp;</p>
+
+<figure class="caption"><img alt="" src="../../img/img_color-picker_title-buttons_v3-3.png" />
+<figcaption><em>Color Picker – Title Buttons</em></figcaption>
+</figure>
+
+<p>If you enable <strong>Color Engine</strong>, <strong>Active Page</strong> and <strong>Link Encoders</strong>, these buttons will be displayed in the title bar of the view.&nbsp;</p>
+
+<p>If you enable <strong>Swatch Book</strong> and <strong>Swatch Book View</strong>, these buttons will be displayed in the title bar in Swatch Book only.&nbsp;</p>
+
+<p>To close the <strong>Color Picker Options</strong>, tap <img alt="" src="../../img/icon_close_small_v3-2.png" />&nbsp;in the upper right corner.&nbsp;</p>
+
+<hr />
+<h2>Close the Color Picker</h2>
+
+<p>To close the color picker altogether, tap&nbsp;<img alt="" src="../../img/icon_yellow-ball_3_2.png" />&nbsp;in the upper left corner of the dialog and tap <span class="softkey">Delete Window</span>.&nbsp;</p>
+
+<p>If you opened the color picker via the special dialog, then tap&nbsp;<img alt="" src="../../img/icon_close_small_v3-2.png" />&nbsp;in the upper right corner of the dialog.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

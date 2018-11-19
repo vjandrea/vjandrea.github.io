@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Change hostname of the MA Network Switch</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="hostname MA Network Switch" />
+	</head>
+	<body>
+		
+		
+		<h1>Change hostname of the MA Network Switch</h1>
+		
+		<p>You can change the name of the MA Network Switch.<br />
+The name is displayed at the front end display and in the title bar of the web interface.</p>
+
+<p>The maximum length of the name are 12 characters.<br />
+The following characters are allowed.</p>
+
+<ul>
+	<li>Upper case letters A...Z</li>
+	<li>Lower case letters a...z</li>
+	<li>Numbers 0...9</li>
+	<li>Spaces, minus (-), plus (+), underscore (_)</li>
+</ul>
+
+<p><strong>Requirement:</strong> <a href="key_control_ma_switch_add.html">Added MA Network Switch in the network configuration</a>.</p>
+
+<ol>
+	<li>&nbsp;Open the MA Network Configuration.<br />
+	- Press <span class="hardkey">Setup</span>, and tap under <strong>Network</strong> <span class="softkey">MA Network Configuration</span>.<br />
+	The MA Network Configuration window opens.</li>
+	<li>Tap at <span class="softkey">Network Switch</span>.
+	<figure class="caption"><img alt="" src="../../img/menu_ma-network-configuration_network-switch_v3_2.png" />
+	<figcaption><em>MA Network Configuration - Network Switch</em></figcaption>
+	</figure>
+	</li>
+	<li>Tap and hold the cell in the column hostname or tap in the cell and press the screen encoder until the <strong>Edit Hostname pop-up</strong> opens.</li>
+	<li>Enter the new name, e.g. Stage Left. Tap at the <strong>plus&nbsp;</strong><img alt="" src="../../img/icon_plus_small_v3-2.png" /> to open the virtual keyboard.</li>
+	<li>Press <span class="hardkey">Please</span>.</li>
+</ol>
+
+<p>The new name is applied and saved in the startup configuration.</p>
+
+<p>The front end display of the MA Network Switch displays the new name.</p>
+
+<div class="tip"><strong>Hint:</strong><br />
+You can change the hostname by using the command line.<br />
+- Change the destination of the command line to <span class="syntax">NetConfig/Network Switch 8</span>. For more information see <a href="key_keyword_changedest.html">ChangeDest keyword</a>.<br />
+- Type in the command line <span class="syntax">Assign 1 / Hostname = "Stage Left"</span>.<br />
+The hostname of the NetworkSwitch 1 is changed.</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Release Notes - Version 2.8</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="release notes version 2.8" />
+	</head>
+	<body>
+		
+		
+		<h1>Release Notes - Version 2.8</h1>
+		
+		<h2>Release Notes - Version 2.8</h2>
+
+<p>Released 2014-02-16</p>
+
+<p>&nbsp;</p>
+
+<div class="important"><strong>Important:</strong>
+
+<ul>
+	<li>If you would like to update your dimMA system from any version below 7.x please contact your MA-dealer or MA direct for any update information. Should you be using grandMA2 in connection to our dimMA solutions, please get in touch with us, since a console update will now require a NDP update and vice versa. We are happy to assist you.</li>
+	<li>The current versions of grandMA onPC and MA 3D require minimum Windows® XP with Service Pack 3. Microsoft® .NET Framework (4.0) will be installed on your computer, if not already installed.</li>
+</ul>
+</div>
+
+<h2>grandMA2 - Version 2.8.3.1</h2>
+
+<h2>&nbsp;</h2>
+
+<h2>Fixed Bugs and improved functionality</h2>
+
+<ul>
+	<li>Patching fixture types containing more than 4 breaks crash the console - fixed.</li>
+	<li>Vertical Style fixture sheet crash with a specific amount of columns - fixed.</li>
+	<li>Multiple file selection crash in bitmap importer - fixed.</li>
+	<li>Bitmap editor modulator sheet was not usable - fixed.</li>
+	<li>Agenda events were not executed if event was not created or edited at the same day - fixed.</li>
+	<li>Possible crash when leaving Patch and Fixture Schedule - fixed.</li>
+	<li>grandMA2 Replay Unit system slow down if no grandMA2 Faderwing was connected - fixed.</li>
+	<li>MA 4Port Node DMX Output drops merged DMX Universes - fixed.</li>
+	<li>grandMA2 Backup Server Windows share mounting was not always possible - fixed.</li>
+	<li>External keyboards connected to NPUs may not be recognized correctly - fixed.</li>
+	<li>Partial Show Read of presets which have been moved inside a preset pool was not always possible - fixed.</li>
+	<li>Layout View lasso selection is able to handle a mixture of Fixture and Channel IDs - fixed.</li>
+	<li>Backup menu "Mark all" has to be renamed to "Check All"</li>
+	<li>Wysiwig DMX Invert - fixed.</li>
+	<li>Install of grandMA2 onPC Wing driver has been improved when using Windows® 8.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>grandMA2 - Version 2.8.3</h2>
+
+<h2>&nbsp;</h2>
+
+<h2>Fixed bugs:</h2>
+
+<ul>
+	<li>FixtureTypes using mode channels with multiple dependent channelsets limit DMX output to range of first dependent channelset - fixed.</li>
+	<li>Wrong sorting of color values in tracksheet when using part cues - fixed.</li>
+	<li>Starting Preview mode does not remove input filter anymore.</li>
+	<li>DMX Tester Encoder bar Encoder 3 is updated when DMX channel is selected via command line.</li>
+	<li>Readability of cue numbers using more than 5 digits has been improved inside sequence executor sheet cue renumber dialog.</li>
+	<li>Editing multiple grid cells using Lasso selection in combination with edit hardkey - fixed.</li>
+	<li>Info View cursor position offset has been fixed.</li>
+	<li>Link fader pages could be Offset, when using link fader pages in combination with dynamic channel pages. This has been fixed. It is not possible to have Buttons and faders at different pages while Link fader pages user Setting is active.</li>
+	<li>Default effect mode has been set to Absolute for Feature ColorRGB.</li>
+	<li>Color Special Dialog refresh if Color Output is changed by starting a new playback or calling a cue.</li>
+	<li>MA onPC command wing button longpress toggle bug has been fixed. E.g. Longpress Store will open Store Options in the same way as it is done at grandMA2 consoles.</li>
+	<li>MA onPC command and fader wing are displayed in the network config onPC tab type column.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2>grandMA2 - Version 2.8.2.6</h2>
+
+<p>&nbsp;</p>
+
+<h2>Main feature overview:</h2>
+
+<ul>
+	<li>Software Update via Network</li>
+	<li>New Handling of additive and subtractive color mixing fixtures.</li>
+	<li>Graphical Faderwing and Monitor Setup</li>
+	<li>Improved and new structured fixture library</li>
+	<li>Improved Patch Dialog</li>
+	<li>Macro Pool objects status indicator</li>
+	<li>XYZ Stage Marker</li>
+	<li>Sound In</li>
+	<li>grandMA2 onPC Wing Configuration</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h2>New functions and features in detail:</h2>
+
+<ul>
+	<li><strong>Software Update via Network </strong>
+
+	<ul>
+		<li>
+		<p>Software Update via Network has been implemented. Minimum Streaming version for software update via network is grandMA2 [2.8.0]. Stations running former grandMA2 versions have to be updated the known way via USB. Network Update can be found at /setup/console/Software Update. List of stations to update can be filtered by session ID. Stations already running same version are hidden by default. Activating show same version will also show stations running same version. Software Update via network also supports updating multiple stations simultaneously by press and hold CTRL and select multiple stations. grandMA2 consoles and grandMA2 onPCs can be used to update other grandMA2 consoles, NPUs, MA 3D,MA VPUs MA 4Port Nodes and grandMA2 onPCs running grandMA2 Streaming [2.8.0] or later.</p>
+
+		<p>To be able to update via network, please download the following files from MALighting.com:</p>
+
+		<ul>
+			<li>grandMA2[streaming gMA2][streaming gMA1].update</li>
+			<li>4Port_[version].update,</li>
+			<li>MA 3D Installer ( gMA3D_[version][streaming].exe )</li>
+			<li>MA VPU Installer ( gMA-VPU_[version][streaming].exe )</li>
+			<li>grandMA2 onPC installer. ( gMA2onPC_[version][streaming].exe )</li>
+		</ul>
+
+		<p>Copy all files needed for your devices to an empty USB drive root directory. USB drive should use FAT32 file system. The USB drive has to be connected to the transmitting grandMA2 console or computer running grandMA2 onPC while updating.</p>
+		</li>
+		<li>Software update via network is also possible using command line. Syntax would be "UpdateSoftware [IP-Address]" Update Please would update current console. USB drive containing update files as described above has to be connected to grandMA2 console or computer running grandMA2 onPC while updating via command line as well.</li>
+	</ul>
+	</li>
+	<li><strong>Setup </strong>
+	<ul>
+		<li>New Handling of additive and subtractive color mixing fixtures.
+		<ul>
+			<li>Due to the raising amount of LED fixtures and to improve fixture exchange, the former features Colormix and Colordim have been exchanged by a new Feature called ColorRGB. grandMA2 library has been converted. Show files will be converted when loading the show file the first time with grandMA2 v2.8.0.</li>
+			<li>Generic LED fixtures from grandMA2 library always contain a dimmer. Fixtures not having a real dimmer inside their dmx footprint will get a virtual one. Virtual dimmers work like a master for all ColorRGB attributes.</li>
+			<li>New sheet readout option to choose sheet and encoder readout between Default, RGB and CMY. Per Default all sheets will follow global readout setting which can be changed at /setup/user/settings/Default Color mode. . This option changes the readout only. Fixture types will still use ColorRGBs. Encoder Color readout will follow last touched sheet readout. For fast readout switching a special title button color readout can be activated inside sheet options title button tab.</li>
+			<li>Special Dialogue Color has new option Link Encoders to control special dialog faders via encoder. With activated link encoder encoder 1, 2 and 3 will control the choosen special dialog colorfaders.</li>
+			<li>Edit Setup / Fixture Types / Attribute + Encoder Grouping: New Color Feature "ColorRGB". This feature replaces former features Colormix and ColorDim. Default ColorRGB colors are: ColorRGB1=Red, ColorRGB2=Green, ColorRGB3=Blue, ColorRGB4=Amber, ColorRGB5=White, ColorRGB6=Warm White, ColorRGB7=Cool White, ColorRGB8=Orange, ColorRGB9=Red Orange, ColorRGB10=Purple, ColorRGB11=Indigo, ColorRGB12=Cyan, ColorRGB13=Magenta, ColorRGB14=Yellow, ColorRGB15=UV, ColorRGB16=Green Cyan, ColorRGB17=Medium White.</li>
+			<li>Attribute and Encoder Grouping and Edit Fixture Type dialogue got a new column Color. These Colors will be used for displaying light output color inside StageView and 3D and will also be used for colorpicker color calculation at future grandMA2 versions.</li>
+		</ul>
+		</li>
+		<li>grandMA2 Fader Wing
+		<ul>
+			<li>Graphic mode has been added to Setup / Console / Faderwing + Monitor Setup. Current connected hardware is marked by green check marks.New surfaces can be added or removed inside this dialog. This dialog can be used to arrange screens for mouse cursor navigation through all screens. To assign a screen encoder of an external fader wing to an external screen, the fader wing has to be moved above or below the screen. A grey encoder icon inside external screen symbol displays a correct assigned screen encoder. Pressing edit and touching any module or right mouse click any module can be used to assign a different part of current executor page to a fader module and to change screen assignment of external screens. Default surface 1 is locked and cannot be changed.</li>
+			<li>Surfaces can also be changed using command line. E.g. The command Surface 2 will switch to surface 2.</li>
+		</ul>
+		</li>
+		<li>Fixture Types
+		<ul>
+			<li>Fixture type library menu has been improved. Library will be displayed as table and can be sorted by any column and filtered by manufacturer or fixture type. DMX footprint, number of instances and fixture info is also displayed inside this menu. Manufacturer and Fixture Type filter algorithm has been improved to be able to find fixtures without knowing the exact file name.Fixture filter filters by fixture and mode column. Info window displays attribute to DMX mapping, Info and Revision Notes of currently focused fixture. Info window can be hidden using the i title bar button.</li>
+			<li>By default, all fixture types are using a generic 3D model depending on the class of the fixture module. Custom 3D models can be assigned to fixture types inside module manager using model column. Module manager can be found at /Setup/Patch and Fixture Schedule/Fixture Types/Module Manager. Multi Instance fixtures can have a fixture housing model in addition to the module manager subfixture models. These housing 3D models are assigned by choosing them inside model column of fixture type table. Exporting a fixture type includes assigned 3D model. Exchanging a 3D model of a single fixture can be done using 3D application or using /Setup/Patch Live/Fixture Position/ dialog model column.</li>
+			<li>"New keyword ""Model"" for 3d models in show file E.g. the command ""List Model"" lists all 3D models of this show file. The already existing keyword ""Items3D"" has been renamed to ""Item3D"" The syntax Assign [model] at [item3d] has been implemented to assign 3D models to fixtures using command line or macros. E.g. "Assign model 2 at item3d 10"</li>
+			<li>Fixture type info editor has been reworked. Fixture types can contain Infos and Revision Notes with time stamps. Time stamps are automatically created, when manually adding Infos or revision notes.</li>
+		</ul>
+		</li>
+		<li>Patch
+		<ul>
+			<li>Patch dialog has been reworked. Touching a DMX address at the right part of the patch dialog patches current focused fixture to touched DMX address. Right hand side of patch dialog only shows one universe at a time. Universe can be chosen via green soft key above scrollbar. A new Patch encoder bar has been implemented. Encoder one can be used to scroll through left all fixtures displayed at the left side of patch dialog. Encoder 2 and 3 can be used to choose DMX Universe and Address. Pressing Encoder 3 will patch current focused fixture(s) to chosen DMX address.</li>
+			<li>Patch dialog DMX Test Output functionality has been implemented. Encoder 4 of the new Patch dialog encoder bar can be used to set to a Level to test current chosen DMX address. Be aware using the Test DMX Output functionality of the patch dialog also affects and resets DMX Tester generated DMX Output.</li>
+			<li>Setup / User / Settings: New User Option "Patch Column Readout is absolute DMX Address". Activating this option will display DMX Addresses as absolute values instead of separated by Universe and Address inside this universe. E.g. 2.500 = 1012. Additional, this option can be changed inside DMX Patch dialog.</li>
+			<li>Create Multipatch has been moved from patch to fixture layer dialog. Mulitpatches can include 3D models to be visualized in Stage View and MA 3D. Multipatch fixtures will be displayed as Master/Slaves in Fixture Layer. Deleting Master will move next multipatch up to be new Master. Position of Multipatch fixtures can be adjusted inside fixture position dialog which can be found at the Patch and Fixture Schedule or Patch Live dialog.</li>
+			<li>Patching using Commandline: Assign Fixture X at DMX Y deletes current patch of fixture X and patches fixture X at DMX address Y. Assign DMX Y at Fixture X creates a Multipatch for DMX Y at Fixture X. Assign DMX Y at Fixture X /reset will delete any MultiPatch of Fixture X.</li>
+		</ul>
+		</li>
+		<li>Multi Selection of Executors has been implemented. Press and hold select key and choose more than one executor. Last selected executor is displayed with light green background, all other selected executors are displayed with dark green background. The commands On, Off, Go+, Go-, Pause, Fast Forward, Fast Backwards and Top Please will be executed by all currently selected executors. Selecting a single Executor will deselect all other executors.</li>
+		<li>grandMA2 consoles and NPUs can be remote rebooted or shut down via network using station IP address. E.g. The command Shutdown 192.168.0.4 will shutdown console or NPU with IP address 192.168.0.4 Reboot and shutdown can be canceled within 10s at the station receiving a remote reboot or shutdown command.</li>
+		<li>Column width of setup tables has been included in user profile.</li>
+		<li>Improved Multiuser Access Conflicts. E.g. As long as a user is changing a name, number or timing of a cue, other users cannot modify this cue. If another user tries to edit or modify this cue, he will get a automatically disappearing warning pop-up.</li>
+		<li>Pressing MA+. will add Default to the command line without automatically executing this command anymore. E.g. Pressing MA+. and an Encoder bar Presettype button afterwards will add default values for chosen Presettype.</li>
+		<li>New command "menu /reset" to switch all dialogs back to default screen.</li>
+		<li>New option for command Call: status Call Cue 3 activates all values of Cue 3 in programmer. Values of Cue Zero thru Cue 2.999 will be inactive in programmer. Call Cue 3 /status activates all values of Cue Zero thru Cue 3 in programmer.</li>
+		<li>It is possible to reference Fader and Button pages by name using wildcards. E.g. Off Page "Song*" will switch off all pages with page labels starting with "song".</li>
+		<li>The store option "Status Merge" includes also effects.</li>
+		<li>The commands Record Macro x and Record Timecode x will create a new macro/ timecode object, if object does not already exist. The commands Off Macro and Off Timecode without any following number will switch off all currently running macros or timecode playbacks.</li>
+		<li>Channelpage buttons can be disabled and Faderpage and Buttonpage buttons can be linked to switch complete pages. Option can be set at Setup / User / GrandMaster + B.O. Settings.</li>
+		<li>"add multiple" to add more than one new remote input row in Setup / Show / Remote Inputs Setup / Analog - Midi - DMX Remotes.</li>
+		<li>Setup / Network / MA Network Configuration: onPCs are displayed inside a new TAB.</li>
+		<li>Fixture Type Creation Choose Attribute dialog has been improved.</li>
+		<li>Kill can be used with or without considering Executor Off-time. Option can be set using Setup/Show/Playback+MIB Timing.</li>
+		<li>New Option in User Setting:Setup / User / Settings / "Disable Viewbutton and View CLI". (CLI = Command line Interaction). With this option activated Views and Viewbuttons will not interact with the command line anymore. E.g. Hitting the store button to store a group and realizing you have to change the View to get a group pool would not accidently store a view anymore.</li>
+		<li>"Value Encoder resolution can be changed per attribute using Attribute and Encoder Grouping dialog or by using command line: Assign Attribute """"/EncoderResolution. E.g. Assign Attribute ""Tilt"" /EncoderResolution=fine.</li>
+	</ul>
+	</li>
+	<li><strong>Pools and Sheets </strong>
+	<ul>
+		<li>Macro Pool objects show their current status (Play, Pause and record) and the number of the current active macro line.</li>
+		<li>Sequence Executor Sheet: Multiple CMD cells can be selected using CTRL and edited at the same time.</li>
+		<li>New Sheet option "Merge Same Values". This option defines whether Attributes of the same feature currently having the same value are display as one value or as one value per attribute. This option does not apply for presets.</li>
+		<li>Editing any MATricks objects displays a new MATricks editor. Using this editor, MATricks object can be labeled, modified or exchanged by a predefined one.</li>
+		<li>Executor Assign menu list buttons are got list button indicator.</li>
+		<li>Info View window has been renamed to Info Sequence Window. New Info window can be used to create Info for any object. New Info View Window works like a text editor. Link Selected will display Info of selected sequence. using the Info title button and touching any object afterwards will show editable Info of this object, e.g. sequence, group, preset,...</li>
+		<li>All pool items display a small i, if a pool object contains a Info and is not locked.</li>
+		<li>Specialmaster BPM can be assigned as Effect Speed Group. Effects will follow calculated Sound-IN BPM signal. One Shot per BPM trigger.</li>
+		<li>Effect editor displays Rate and Speed column. These columns are related to each other.</li>
+		<li>Effect size defaults for P/T reduced to +/- 50</li>
+	</ul>
+	</li>
+	<li><strong>XYZ </strong>
+	<ul>
+		<li>StageView Follow can be aligned. Activating any align mode and touch and move inside follow mode stage view will fan selected fixtures beam positions.</li>
+		<li>Stage Markers have been implemented. Stage markers are Moving Paths other fixtures using XYZ can refer to. XYZ beam position of fixtures not assigned to any stage marker are absolute XYZ coordinates in 3D space. XYZ beam position of fixtures assigned to a stage marker are relative to this stage marker's position. Moving, Rotating or Scaling a Stage marker will recalculate all XYZ beam positions of fixtures using this stage marker according to the changes made with the stage marker.</li>
+		<li>New Executor assign menu option "Forced Pos." to choose fixture position feature fades between always Pan/Tilt Fade (PT), always XYZ Fade(XYZ) and Auto. Auto mode will fade attributes as stored. Pan Tilt values fade in Pan Tilt mode and XYZ values fade in XYZ mode. The same setting can be chosen per cue using new sequence executor sheet column. A forced transition mode per cue will always overwrite forced transition mode set per sequence.</li>
+		<li>Stage View Calibration mode provides new button Stage values. This button will set current selected fixtures attributes to values of the fixture type stage column. Warning: grandMA2 library fixtures stage values are not set to be able to use this functionality stage values have to be set in fixture type first.</li>
+	</ul>
+	</li>
+	<li><strong>Sound </strong>
+	<ul>
+		<li>Sound In has been implemented. Sound In View provides access to Special Masters related to Sound In. These Special Masters can also be assigned to executors. Sound In has to be connected to be able to see any information in this window.</li>
+		<li>Cues can be triggered using Sound or BPM trigger. Column Trig Time can be used to further adjust Sound trigger frequency or BPM scaling factor.</li>
+		<li>Chaser can be assigned to BPM master using Edit Chaser dialog. Chaser will then follow Sound-In calculated BPM value.</li>
+	</ul>
+	</li>
+	<li>Load Show and New Show dialog enhanced by "set all markers" button.</li>
+	<li>Speed masters can be set to values beyond 225 BPM using learn button or double or half speed button. Speed master max value will be automatically changed any time when using this buttons.</li>
+	<li>Executors triggered via timecode or command line will be transmitted via Midi Show Control.</li>
+	<li>Pop-up will be displayed if commands cannot be executed because of insufficient user rights.</li>
+	<li>Session Collision Box will be displayed at all Screens. Session collisions have to be solved before being able to continue.</li>
+	<li>Changing executor assign menu options will ask for confirmation if playback needs to be switched off for applying changed option.</li>
+	<li>Swipe functionality has been changed. Swipe menu will only stay open if swipe gesture is moved out of swipe menu before releasing touch.</li>
+	<li>Timecode Autostop Option "Switch Off" uses the Executor Off-Timing.</li>
+	<li>grandMA2 library updated to Carallon 9.0.</li>
+	<li>New ESP Vision driver enabling support for up to 255 MANet2 DMX Universes.</li>
+	<li>Thumbnails received via CITP are shown in fixture type editor wheel slots manager.</li>
+	<li><strong>grandMA2 onPC </strong>
+	<ul>
+		<li>Setup / Network / MA Network Configuration: grandMA2 onPCs will be displayed in a separate TAB. Each grandMA2 onPC is always listed with all possible connected MA onPC Command and MA onPC fader wings. If more than one MA onPC fader wing is connected to a grandMA2 onPC, MA onPC fader wings have to be assigned to a logical fader wing 1 or 2 by using the "Identify Fader 1" or "Identify Fader 2" and press any button on that MA onPC fader wing within 10 seconds.</li>
+		<li>Support for grandMA2 onPC has been added to Wing and Monitor configuration menu. Menu can be found at /setup/console/Faderwing and Monitor Setup. In Multi Screen Mode This menu can be used to remap faders or mirror internal screens to external screens. Surface 1 is a locked default surface. Editable surfaces can be added using "Add Surface" button.</li>
+		<li>"Additional external screen resolutions have been added to onPC multi-screen mode: 2048x1152, 1650x1050 and 1280x768.</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Fixed Bugs and improved functionality</h2>
+
+<ul>
+	<li>Crash fixed when enabling all Tracksheet headline buttons.</li>
+	<li>Crash fixed when activating and deactivating XYZ without leaving Patch and Fixture Schedule in between.</li>
+	<li>Crash fixed when editing tracking part cue values.</li>
+	<li>Crash fixed when one console (or onPC) with an opened Label Bar (label group x), while receiving a show download from another station.</li>
+	<li>Sequence speed and rate assigned to executors can be faded using the Executor x at y fade z command.</li>
+	<li>Setup Fixture Layer: Columns FixId and ChaId are fixed when scrolling horizontal.</li>
+	<li>Using Coolux Pandoras Box Desktop Streamer in combination with CITP doesn't crash grandMA2 software any more.</li>
+	<li>Off menu is sorted from first called to last called from bottom to top. Any playback calling will bring this playback to the top of the off menu list. After show uploads this list is initialized from bottom to top.</li>
+	<li>If station, which currently calculates channels, will leave the session, output will stay as is for cue with active crossfade or temp fader.</li>
+	<li>Content Sheet window resize functionality is also possible in combination with horizontal scroll bar.</li>
+	<li>Partial Show Read doesn't mix up the attribute and encoder grouping of current loaded show file any more. All Attributes from current show file will stay at their position. Attributes coming from partial show read show file will be moved to the referring position of current loaded show file.</li>
+	<li>Partial Show Read Prepare merges also 3D Environment. With the soft key use other stage also the stage plane of the partial show read show file can be merged.</li>
+	<li>Partial Show Read: If fixtures coming from partial show read show file create a patch collision, these fixtures will be unpatched leaving the patch of current loaded show file included fixtures untouched.</li>
+	<li>grandMA1To2 Show file converter: Semi colon in macro lines will be converted to grandMA2 show file.</li>
+	<li>Program and Exec time assigned to executors can be faded using the Executor x at y fade z command. E.g. Executor 1 at 50 fade 3.</li>
+	<li>The command "executor x at 50" also works for Temp faders.</li>
+	<li>Auto Stomp functionality of high priority executors in combination with deactivated Soft LTP has been improved.</li>
+	<li>Chasers started using Temp faders are able to run forwards or backwards.</li>
+	<li>Insert executor pages has been improved and does not move unnecessary pages anymore.</li>
+	<li>Alternating between Scroll bar and scroll encoder inside big lists is possible at any position.</li>
+	<li>Executor Assign menu Save Default Sequence Options also saves current Input filter setting.</li>
+	<li>Encoder resolution settings have been included in user profile.</li>
+	<li>Command Import "" at cue x import at specified cue number. If cue already exist then user will be asked.</li>
+	<li>grandMA 1To2 Show Converter: Effect default speed is 60 BPM. Dim and Move Paths are converted correctly. Highlight and Zoom From values in Fixture types are converted correctly. Command links in cues that have more than one command are converted correctly as far as possible.</li>
+	<li>Goto Cue x Executor y thru z calls Cue x for all executors y thru z containing a cue x.</li>
+	<li>Command Assign Executor 1 thru 10 /option=value assign option to all possible executors of given executor range.</li>
+	<li>Fixtures profiles are allowed to use more than 512 DMX channels.</li>
+	<li>onScreen Keyboard: long press Backspace key has been fixed.</li>
+	<li>Follow cues are automatically triggered correctly after finishing manual x-fade to the cue in front of the follow cue.</li>
+	<li>"Xfade and Temp fader are using the Snap percent setting of the cue / Snap% works with XFade and Temp Fader also when fading down.</li>
+	<li>Renumber Cue dialog: Stepping though the dialog using Please when renumbering a single cue has been fixed.</li>
+	<li>Timed macros can be triggered via TelNet.</li>
+	<li>Tracksheet option extract preset can be used in combination with lasso selection.</li>
+	<li>Playback Big View soft fader bounce has been fixed.</li>
+	<li>The command "Menu Update" always opens update menu, even if there is nothing to update - update button is not highlighted.</li>
+	<li>Highlight is not automatically disabled any more when a user in the session forces an upload by leaving Patch and Fixture Schedule.</li>
+	<li>Patch dialog calculator is able to summate dmx addresses input via mathematical expressions like 25+24.</li>
+	<li>Macro wait time ranges can be spread to multiple macro lines if more than one macro line is selected.</li>
+	<li>Button Executor master is automatically reset to 100% when an executor is assigned, copied or moved to a button executor.</li>
+	<li>Group master overview displays different mode group masters of one group separately.</li>
+	<li>7-inch Multitouch functionality has been implemented for pool playbacks.</li>
+	<li>Fixtures not having any 3D body cannot be positioned inside Setup, stage view or 3D any more.</li>
+	<li>Single fixture group name executor display has been improved and looks the same as single fixture group pool name display.</li>
+	<li>Motor Fader functionality of reassigned external fader wings connected to a grandMA2 Ultralight has been fixed.</li>
+	<li>Playback filters of running playbacks are initialized correctly when loading a a show file.</li>
+	<li>Setup DMX Patch column always displays first used DMX Address (DMX start address) of this fixture instead of DMX start address of first subfixture.</li>
+	<li>Running effects view does not show already deleted effects any more.</li>
+	<li>No more additional space is reserved for an additional dimmer attribute, if it's not present in any fixture having a channel ID.</li>
+	<li>Tracksheet autoscrolling in Preview of 'Not Linked' tracksheets has been fixed.</li>
+	<li>Reassigning a fixture type does not destroy link to moving paths any more.</li>
+	<li>Auto created groups can also be used as masking objects.</li>
+	<li>Off + lasso in a fixture sheet has been improved to also work on multiple attributes.</li>
+	<li>Stage Plane dimensions can be adjusted using MA 3D application only.</li>
+	<li>Fixture position and rotation changes can be undone using oops.</li>
+	<li>Sequence Executor Sheet multi-selection using CTRL+touch or CTRL+mouse click has been implemented.</li>
+	<li>Update Oops Update does update the correct part cue again.</li>
+	<li>Fixed Faders are reassigned correctly after changing surfaces.</li>
+	<li>Edit Sequence dialog "Test Cmd" works also with Part Cues or multiple cues selected.</li>
+	<li>DMX Profile editor got a Label Profile button.</li>
+	<li>Nonfunctional Add and Delete buttons inside /setup/Patch only have been removed.</li>
+	<li>Preset pool display of 4 digit preset pool numbers has been improved.</li>
+	<li>Fixture sheet column width of last column can also be saved to default or remembered when recalling a view.</li>
+	<li>Import dialog: Use earliest/use latest softbutton label is changing when using hardkey X19.</li>
+	<li>Edit Cue X - Update please updates all values to their correct part cue.</li>
+	<li>Stage view rotation calculator respects Group/Single rotation.</li>
+	<li>Triggering a button executor from a macro is now respecting current exec time setting.</li>
+	<li>Fixtures can be removed from presets using programmer "Remove" values.</li>
+	<li>Deleting an executor page will automatically unfix all fixed executor of the deleted page.</li>
+	<li>Sheet title bar Preview indicator will stay visible after updating cues in Preview mode.</li>
+	<li>Snap Percent setting will be used when using Exec Time Set Time or Exec Time Manual X-Fade Mode.</li>
+	<li>Activating Auto Fix of already running executors immediately will auto fix executor.</li>
+	<li>Attribute filter menu background has been changed from red to dark grey.</li>
+	<li>Labeling CueParts within store operations also works without having to label Cue Part 0 first.</li>
+	<li>Autofixed Effects using off time are un fixed after being switched off.</li>
+	<li>Split XFade A / B has been improved for non-tracking sequences.</li>
+	<li>Switching off paused chasers considers Off time.</li>
+	<li>Xfade revert is working as expected when jumping inside sequence using Goto or Load.</li>
+	<li>Channel X At +/-Y knocks in current output value +/- Y and is respecting Sequence Masters.</li>
+	<li>MA onPC Wing DMX In has been improved.</li>
+	<li>grandMA2 onPC has been improved to run more smooth on older graphic cards.</li>
+	<li>Numeric keypad hard keys can be assigned to other functions than numbers as well via onPC Keyboard shortcuts.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<h2>Appendix</h2>
+
+<div class="warning">If you would like to update your dimMA system from any version below 7.x please contact your MA-dealer or MA direct for any update information. Should you be using grandMA2 in connection to our dimMA solutions, please get in touch with us, since a console update will now require a NDP update and vice versa. We are happy to assist you.</div>
+
+<div class="warning">The command "store /remove" or pressing [store][cue][2] and the select [remove] in the pop-up will remove the whole attribute with all (!!) its layers for fixtures having any value or effect layer of this attribute active in programmer. It can be filtered to only remove values, value timings or effects by using the buttons in the stored encoder bar. To remove only specific layers, for example only individual effect fade, the operator needs to open the calculator for these layers and select "remove" in the calculator. Afterwards the operator needs to update the cue, or has to use store /merge to remove the specific layers.</div>
+
+<div class="warning">Selecting multiple fixtures with a lasso in the layout view is respecting the snap grid settings to interpolate small position differences of fixture icons. The selection order will always be made inside of one snap grid cell first, afterwards line by line in the direction of the lasso movement.</div>
+
+<div class="warning">
+<ul>
+	<li>Release version <strong>2.3</strong> of grandMA2 divorced values and effect values! Therefore older show files might not be 100% compatible. Therefore please check your show file with the new version before using it live!</li>
+	<li>With Version 2.5.70 the default speed of effects and the rate of effect lines has been exchanged by a single speed per line. Therefore older show files might not be 100% compatible. Please check your show file with the new version before using it live!!</li>
+</ul>
+</div>
+
+<p>&nbsp;</p>
+
+<h2>Known Limitations</h2>
+
+<div class="important">
+<ul>
+	<li>show file Conversion from Version 2.2 and earlier: The speed of a selective effect, stored in a cue, will not be brought correct into programmer, if the cue gets edited and the default speed of the effect in the pool is not 60 BMP.</li>
+	<li>ASCII show import supports Strand ASCII show files only.</li>
+	<li>MA onPC command wing DMX input is supported for the ports "DMX In" and "DMX out A" only. The port "DMX out B" is allowed to be used as DMX out only!</li>
+</ul>
+</div>
+
+		
+	</body>
+</html>

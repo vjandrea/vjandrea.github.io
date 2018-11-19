@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>CITP / MSEX Protocol</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="CITP / MSEX Protocol" />
+	</head>
+	<body>
+		
+		
+		<h1>CITP / MSEX Protocol</h1>
+		
+		<p><strong>C</strong>ONTROLLER <strong>I</strong>NTERFACE <strong>T</strong>RANSPORT <strong>P</strong>ROTOCOL / <strong>M</strong>EDIA <strong>S</strong>ERVER <strong>E</strong>XTEN<strong>S</strong>ION, is an open network protocol used between visualizers, lighting consoles and media servers to transport non-show critical information during pre-production.</p>
+
+<p>The VPU can be used as a Video Streaming Server to a console or a visualiser e.g. MA 3D. Each output and each layer can be streamed independently.</p>
+
+<p>The resolution of each stream is limited to max 64 kbyte per frame and depends on the ratio of the rendered output. From this follows that resolutions are below 200x200 pixels depending on the ratio of the rendered source.</p>
+
+<p>The frame-rate is set by the displaying visualizer and is limited by the VPU software: Currently 30 fps are shared for all outputs (1 output = 30 fps, 2 outputs = 15 fps each, 3 outputs = 10 fps each) and all layers share 15 fps (1 layer = 15 fps each, 10 layers = 1.5 fps each, 20 layers = 0.7 fps each).</p>
+
+<p>If the complete traffic on the network adapter reaches 30MBit, then the VPU will start to limit it output of CITP even more.</p>
+
+<p>CITP connection is not possible when running CITP sender and CITP receiver at the same computer. Setup CITP menu title bar shows current CITP multicast address. This address can be changed. Changing this address changes CITP multicast address for all MA stations (consoles, MA 3D, MA VPU) in current session. Be aware, when changing this address connection to third party CITP stations may not be possible anymore.</p>
+
+<p>CITP can only be enabled in the grandMA2 software if connected to the VPU. To enable CITP on the desk go to <span class="hardkey">Setup&nbsp;</span> <span class="softkey">CITP Network Configuration</span> and set CITP to Enabled:</p>
+
+<figure class="caption"><img alt="CITP Network Configuration at the desk" src="../../../img/ma_vpu/VPU_CITP1.png" />
+<figcaption>CITP Settings</figcaption>
+</figure>
+
+<p>At the VPU the CITP properties can be monitored. Each headline in the Multi Preview indicates if CITP is requested for that output and displays the outgoing fps:</p>
+
+<figure class="caption"><img alt="Layer with CITP information at the Multi Preview" src="../../../img/ma_vpu/VPU_CITP3.png" />
+<figcaption>CITP Preview</figcaption>
+</figure>
+
+<p>Additionally the status bar in the bottom of the GUI reflects the CITP status.</p>
+
+<p>In the docking frame a CITP Status window can be opened to monitor the CITP local and global setting and to see the outgoing streams information:</p>
+
+<p>&nbsp;</p>
+
+<figure class="caption"><img alt="CITP information at the docking frame" src="../../../img/ma_vpu/VPU_CITP2.png" />
+<figcaption>CITP Information</figcaption>
+</figure>
+
+<p>&nbsp;</p>
+
+<p>At the desk a CITP Video window can be created via: Create Basic Window - Other - CITP Video Viewer. The Window looks like this:</p>
+
+<figure class="caption"><img alt="CITP Video Viewer at the desk" src="../../../img/ma_vpu/VPU_CITP4.png" />
+<figcaption>CITP Video Viewer</figcaption>
+</figure>
+
+<p>If the Show Mode is enabled, CITP is automatically disabled.</p>
+
+		
+	</body>
+</html>

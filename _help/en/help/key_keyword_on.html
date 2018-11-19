@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>On Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="On Keyword" />
+	</head>
+	<body>
+		
+		
+		<h1>On Keyword</h1>
+		
+		<p>To get the On keyword in the command line press <span class="hardkey">On</span> or type <strong>On</strong> in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The On keyword can be a function keyword or a helping keyword.</p>
+
+<p>With the On keyword as a function keyword you can:</p>
+
+<ul>
+	<li>Start or restart an executor.</li>
+	<li>Activate parameters in the programmer.</li>
+	<li>Activate selections in the programmer.</li>
+	<li>Activate attributes in the programmer.</li>
+</ul>
+
+<p>With the On keyword as a helping keyword you indicate the start of a temporary function, or the enabled state of a toggling function.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax"><strong>On</strong> [Object-list] / [Option] = [Option Value] </span>(function keyword)</p>
+
+<p><span class="syntax">[Function]<strong> On</strong> [Object-list] / [Option] = [Option Value]&nbsp; </span>(helping keyword)</p>
+
+<p><span class="syntax">[Function] <strong>On</strong></span> (helping keyword)</p>
+
+<h2>Options</h2>
+
+<p>To get a list of all available options to the On keyword, type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; On /?</div>
+
+<p>The On keyword has the following options:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Option</th>
+			<th scope="col">Option Shortcut</th>
+			<th scope="col">Option Value</th>
+			<th scope="col">Option Value Shortcut</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>Normal</td>
+			<td>N</td>
+			<td>Normal on mode.</td>
+		</tr>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>Assert</td>
+			<td>A</td>
+			<td>On asserts the original timing.</td>
+		</tr>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>XAssert</td>
+			<td>XA</td>
+			<td>On asserts the cuetiming of current cue.</td>
+		</tr>
+		<tr>
+			<td>cue_mode</td>
+			<td>cm</td>
+			<td>Release</td>
+			<td>R</td>
+			<td>On finishes the fade-in and switches the executor off.</td>
+		</tr>
+		<tr>
+			<td>userprofile</td>
+			<td>upr</td>
+			<td>"Name of the user profile", e.g. "Dominik"</td>
+			<td>not available</td>
+			<td>Normal On mode with specified user profile.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Examples</h2>
+
+<ul>
+	<li>To activate the parameters of cue 1 from the selected executor, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; On Cue 1</div>
+
+<hr />
+<ul>
+	<li>To activate the parameter of fixture 1 and 3 in the programmer, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; On Fixture 1 + 3</div>
+
+<hr />
+<ul>
+	<li>To flash executor 1.2.4, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Flash On Executor 1.2.4</div>
+
+<hr />
+<ul>
+	<li>To turn highlight on, type in the command line:</li>
+</ul>
+
+<div class="cl_input">[Channel]&gt; Highlight On</div>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>

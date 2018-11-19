@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Profile Keyword</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="Profile Keyword, DMX Profiles, Export DMX Profile" />
+	</head>
+	<body>
+		
+		
+		<h1>Profile Keyword</h1>
+		
+		<p>To get the Profile keyword in the command line, type <strong>Profile </strong>or the shortcut <strong>Pro</strong> in the command line.</p>
+
+<h2>Description</h2>
+
+<p>The Profile keyword is an object keyword to access DMX profiles and DMX profiles points. For more information, see <a href="key_dmx_profiles.html">DMX profiles</a>.</p>
+
+<h2>Syntax</h2>
+
+<p><span class="syntax">[Function] Profile [DMX Profile ID].[DMX Profile Point ID]</span></p>
+
+<p><span class="syntax">Assign Profile [DMX Profile ID].[DMX Profile Point ID] /[Parameter]=[Parameter Value]</span></p>
+
+<h2>Parameter</h2>
+
+<p>The following table displays the assignable parameter for <strong>DMX profiles</strong> via command line.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:33%">Name</td>
+			<td style="width:33%">"80%"</td>
+			<td style="width:33%">Name of the DMX profile.</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>The following table displays the assignable parameter for <strong>DMX profile points </strong>via command line.</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="col">Parameter</th>
+			<th scope="col">Parameter Value</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="width:33%">X</td>
+			<td style="width:33%">0...1</td>
+			<td style="width:33%">Assign the x position in&nbsp;physical values of the point.</td>
+		</tr>
+		<tr>
+			<td>Y</td>
+			<td>0...1</td>
+			<td>Assign the y position in physical values of the point.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Example</h2>
+
+<p>To export DMX profile 1 from the grandMA2 onPC to the folder C:\ProgramData\MA Lighting Technologies\grandma\gma2_V_3.1\importexport:</p>
+
+<p>1. Type in the command line:</p>
+
+<div class="cl_input">[Channel]&gt; Export Profile 1</div>
+
+<p>2. Press <span class="hardkey">Please</span>.</p>
+
+<p>The DMX profile 1 is exported as a .xml file.</p>
+
+		
+	</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Setting up DMX ports on MA devices</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8" />
+		<meta name="keywords" content="DMX ports, DMX in, DMX out, DMX off, DMX universe - change" />
+	</head>
+	<body>
+		
+		
+		<h1>Setting up DMX ports on MA devices</h1>
+		
+		<p>If there is only one station (console or onPC) in the system, then only the DMX ports on the station can be used.</p>
+
+<p>If a session is running and other MA devices are in the session, then it is also possible to change the settings on the DMX ports on those devices.<br />
+&nbsp;</p>
+
+<p>The operation is the same no matter the size of the system. It is done from the <strong>MA Network Configuration</strong>. This can be done by pressing the <span class="hardkey">Setup</span> key and then the <span class="softkey">MA Network Configuration</span> button under "Network".</p>
+
+<p>The MA Network Configuration is separated into different sections. One for each type of MA device. Read more about these section and adding devices in the <a href="key_network_session_add_device.html">Adding devices to your session</a> topic.</p>
+
+<p>The station you are using is always in the system, no matter if it is a console or onPC.</p>
+
+<p>All devices that have a DMX port will have columns for each port. The columns can be named from "XLR A" to "XLR H". The consoles also have a "XLR In".</p>
+
+<p>They could look like this:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_ma-network-configuration_dmx-ports_v3-2.png" />
+<figcaption><em>DMX&nbsp;Ports in the MA Network Configuration</em></figcaption>
+</figure>
+
+<p>If the mode or the universe of a port needs to be changed, then select the relevant cell in the window and edit the cell. This can be done by tapping the the screen encoder, if you are on a console. It is also possible to right click if a mouse or trackball is connected. Or press <span class="hardkey">Edit</span> followed by the cell you want to edit.</p>
+
+<p>When editing a DMX port cell, a pop-up like this appears:</p>
+
+<figure class="caption"><img alt="" src="../../img/menu_ma-network-configuration_dmx-node_configure-port_v3-3.png" />
+<figcaption><em>Configure&nbsp;DMX&nbsp;port pop-up - DMX node version</em></figcaption>
+</figure>
+
+<h3><a id="port_modes" name="port_modes"></a>Port Mode</h3>
+
+<p>The "Port Mode" is a drop down list that has the following options:</p>
+
+<ul>
+	<li><strong>Off</strong> - The DMX port is turned off and the device will not input or output any DMX.</li>
+	<li><strong>In</strong> - The DMX port is functioning as an DMX input. It will merge values into the universe number typed in the green universe field - If "DMX In Merge" is activated in the Setup-&gt;Show-&gt;Patch only-&gt;<a href="key_patch_dmx_parameter_list.html#dmx_list">DMX List</a>.</li>
+	<li><strong>Out</strong> - The DMX port is outputting the DMX universe set in the green universe field.</li>
+</ul>
+
+<p>All DMX ports can be an Input or an Output. It is just a matter of maybe adding a XLR gender changer to the physical connector. The <strong>exceptions</strong> are:</p>
+
+<ul>
+	<li>grandMA2 onPC Command Wing: The connector called "DMX B" / "XLR B" can NOT be input!</li>
+	<li>MA NSP in <strong>Art-Net mode</strong> or <strong>4-port mode</strong>: The connector called "DMX A" / "XLR A" and "DMX B" / "XLR B" can NOT be input!</li>
+</ul>
+
+<div class="important"><strong>Important:</strong><br />
+If a DMX port is turned off or do not transmit DMX data (for any reason), then the port is in <strong>High-Z</strong> mode. This means that there is no data being transmitted at all!</div>
+
+<h3><a id="input_limitation" name="input_limitation"></a>Other limitations with DMX input</h3>
+
+<p>There is limitations regarding the number of DMX sources per universe. It is only allowed that a maximum of <strong>two outside sources</strong> send DMX data to the same Universe -&nbsp; this is <strong>per universe</strong>. It does not matter how the DMX is received. It can come from a DMX port on a console or from a Network Protocol. Only two outside sources per universe.</p>
+
+<p>If there is both an Art-Net and sACN source merging data into the same universe, then the limit of two different sources have been reached.</p>
+
+<p>There is also a limitation regarding the devices receiving the incoming DMX. Any grandMA2 device can only have one DMX port as input per universe. This means that for instance a 4 port can have the four DMX ports as input, but the ports need to send the DMX to different universes. It is the same if the DMX is connected to a console. The DMX ports can be set to receive DMX, but they need to merge it to different universes. A Master in a session can receive DMX data to universe 1 from Art-Net or sACN and use one of the DMX ports as input to universe 1.</p>
+
+<h3>Universe</h3>
+
+<p>The green input field can be used to set the universe number.</p>
+
+<h3><a id="fail_mode" name="fail_mode"></a>DMX Fail Mode - DMX nodes only</h3>
+
+<p>The nodes have an extra option called <strong>DMX Fail Mode</strong>.</p>
+
+<p>This determine what should happen if the node loses connection to the session or the DMX stream is stopped. The DMX stream can stop if there is a show upload or the session has ended.</p>
+
+<p>The options are:</p>
+
+<ul>
+	<li><strong>Timeout 10s</strong></li>
+	<li><strong>Timeout 20s</strong></li>
+	<li><strong>Timeout 30s</strong></li>
+	<li><strong>Timeout 1m</strong></li>
+	<li><strong>Timeout 10m</strong></li>
+	<li><strong>Timeout 30m</strong></li>
+	<li><strong>Timeout 1h</strong></li>
+	<li><strong>Hold</strong></li>
+</ul>
+
+<p>The <strong>Timeout</strong> options are similar except the time. They will hold the DMX values for the chosen time and then stop the DMX stream (High-Z mode).</p>
+
+<p>The <strong>Hold</strong> option will make the node continue to send the DMX values as long as it got power.</p>
+
+<p>Read more about configuring the MA Nodes in the <a href="key_control_ma_xport_node.html">Control the MA Node section</a>.</p>
+
+<h3>Timeout outfade time</h3>
+
+<p>Here it is possible to set a fade time that will be used when a <strong>Timeout</strong> is selected. The DMX values will then fade from their last values to a value of 0. When it has completed the fade, then it will stop transmitting DMX (High-Z mode).</p>
+
+<p>The maximum fade time is 10 seconds.</p>
+
+<p>The <strong>Hold</strong> option also do not have a fade time option since it continues the DMX data stream.</p>
+
+<h3><a id="merge_modes" name="merge_modes"></a>Merge Mode</h3>
+
+<p>The bottom drop down list is for setting how the device should merge incoming DMX data from outside sources, if the device is not under MA-Net control.</p>
+
+<p>This could be DMX nodes that are set to a session number that does not exist. Then they can be used to transport DMX through an Ethernet network - without any consoles or onPCs.</p>
+
+<p>The options in the drop down are:</p>
+
+<ul>
+	<li><strong>None: </strong><br />
+	There will be no merging.</li>
+	<li><strong>LTP:</strong><br />
+	The universes will merge following the LTP (Latest Takes Precedence) rules.</li>
+	<li><strong>HTP:</strong><br />
+	The universes will merge following the HTP (Highest Takes Precedence) rules.</li>
+	<li><strong>LoTP:</strong><br />
+	The universes will merge following the LoTP (Lowest Takes Precedence) rules.</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>When the settings are correct, tap the <span class="softkey">Please</span> button to confirm the settings or tap the <span class="softkey">X</span> in the upper right corner of the pop-up to cancel the change.</p>
+
+<p>Please remember the limitations mentioned <a href="#input_limitation">above</a>.</p>
+
+<h2>Where are the settings stored?</h2>
+
+<p>Changes to the DMX ports on Consoles, onPCs and NPUs are stored as a part of the show file. The settings will be loaded into the devices when a show is loaded, but only if the "Network Config" settings are included when loading from the show file. For more info on loading show files, please have a look at the <a href="key_backup_menu.html">Using the Backup Menu</a> topics.</p>
+
+<p>&nbsp;</p>
+
+<p>The DMX nodes (MA nodes) and MA switches are different. Their settings are stored locally in the devices and a not loaded or changed with the show file.</p>
+
+<p>The configuration of the DMX nodes and switches can be exported and imported. This can be done to/from the hard drive or a USB stick.</p>
+
+<p>Please read the <a href="key_export_and_import.html">Export and Import topics</a> for more information about this.</p>
+
+<p>&nbsp;</p>
+
+		
+	</body>
+</html>
