@@ -1,13 +1,14 @@
--
-layout: page
+---
+layout: post
 title: gma.canbus.hardkey
--
+---
 
-In the last rows of api_test.lua there are two methods that use gma.canbus.hardkey(code, press, hold).
-This function emulates actions on the hardware keys.
+In the last rows of `api_test.lua` there are two methods that use the function `gma.canbus.hardkey(code, press, hold)`.
+This function emulates actions on physical keys on the console.
 
 The key codes discovered so far are listed below, some are still unknown.
 
+````
    1:
    2:
    3: Ch Pg +
@@ -163,3 +164,4 @@ The key codes discovered so far are listed below, some are still unknown.
  153:
  154:
  155 and higher: Macro DefGoPause
+````
