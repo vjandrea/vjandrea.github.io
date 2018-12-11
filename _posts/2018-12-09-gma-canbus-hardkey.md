@@ -44,10 +44,10 @@ The key codes discovered so far are listed below, some are still unknown.
   33: User 1
   34: User 2
   35:
-  36:
-  37:
-  38:
-  39:
+  36: U1
+  37: U2
+  38: U3
+  39: U4
   40: ⦿ ("Nipple")
   41: Fix
   42: Select
