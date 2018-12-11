@@ -11,6 +11,8 @@ It is advisable to "unpress" the button after every stroke, i.e.:
 gma.canbus.hardkey(54, true, false)
 gma.canbus.hardkey(54, false, false)
 ````
+eventually adding a `gma.sleep()` with a short delay between.
+
 The key codes discovered so far are listed below, one remains unknown.
 ````
    1:
@@ -89,7 +91,7 @@ The key codes discovered so far are listed below, one remains unknown.
   74: Sequ [Sequence]
   75: Cue
   76: Exec [Executor]
-  77: 
+  77:
   78:
   79:
   80:
