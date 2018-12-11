@@ -6,8 +6,12 @@ title: gma.canbus.hardkey
 In the last rows of `api_test.lua` there are two methods that use the function `gma.canbus.hardkey(code, press, hold)`.
 This function emulates actions on physical keys on the console.
 
-The key codes discovered so far are listed below, some are still unknown.
-
+It is advisable to "unpress" the button after every stroke, i.e.:
+````
+gma.canbus.hardkey(54, true, false)
+gma.canbus.hardkey(54, false, false)
+````
+The key codes discovered so far are listed below, one remains unknown.
 ````
    1:
    2:
@@ -44,10 +48,10 @@ The key codes discovered so far are listed below, some are still unknown.
   33: User 1
   34: User 2
   35:
-  36:
-  37:
-  38:
-  39:
+  36: U1
+  37: U2
+  38: U3
+  39: U4
   40: ⦿ ("Nipple")
   41: Fix
   42: Select
@@ -68,7 +72,7 @@ The key codes discovered so far are listed below, some are still unknown.
   57: Update
   58: Time
   59: Store
-  60:
+  60: Blind
   61: Freeze
   62: Prvw [Preview]
   63: Assign
@@ -85,7 +89,7 @@ The key codes discovered so far are listed below, some are still unknown.
   74: Sequ [Sequence]
   75: Cue
   76: Exec [Executor]
-  77:
+  77: 
   78:
   79:
   80:
@@ -163,8 +167,6 @@ The key codes discovered so far are listed below, some are still unknown.
  152:
  153:
  154:
- 155 and higher: Macro DefGoPause
-
+≥155: Pause [large]
 ````
-
-The undiscovered keys so far are: `U1-U4` and `Backg [Background]`. Since `Backg` has no function, we might only guess its position among the unassigned keycodes.
+The only undiscovered code corresponds to `Backg [Background]`. Since `Backg` has no function, we might only guess it among the unassigned keycodes.
