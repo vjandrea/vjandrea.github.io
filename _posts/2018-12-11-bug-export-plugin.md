@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'BUG: export plugin'
+title: 'BUG: plugin export'
 ---
 When we try to save a plugin to a USB key, the generated filename changes to that of the first file in the selected storage.
 
