@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.malighting.de/grandma2/xml/MA" xsi:schemaLocation="http://schemas.malighting.de/grandma2/xml/MA http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd" major_vers="3" minor_vers="5" stream_vers="0">
+	<Info datetime="2018-12-14T20:57:57" showfile="new show 2018-12-02" author="@vjandrea"/>
+	<Macro index="0" name="Agenda bug testing">
+		<Appearance Color="cccccc" />
+		<Macroline index="0">
+			<text>Delete Agenda *</text>
+		</Macroline>
+		<Macroline index="1">
+			<text>Store Agenda 1 Thru 15</text>
+		</Macroline>
+		<Macroline index="2">
+			<text>Assign Agenda 1 /Start=absolute</text>
+		</Macroline>
+		<Macroline index="3">
+			<text>Assign Agenda 2 /Start=dawn</text>
+		</Macroline>
+		<Macroline index="4">
+			<text>Assign Agenda 3 /Start=sunrise</text>
+		</Macroline>
+		<Macroline index="5">
+			<text>Assign Agenda 4 /Start=sunset</text>
+		</Macroline>
+		<Macroline index="6">
+			<text>Assign Agenda 5 /Start=dusk</text>
+		</Macroline>
+		<Macroline index="7">
+			<text>Assign Agenda 1 Thru 5 /Time=12h34m56s</text>
+		</Macroline>
+		<Macroline index="8">
+			<text>Assign Agenda 1 /Duration=1h</text>
+		</Macroline>
+		<Macroline index="9">
+			<text>Assign Agenda 2 /Duration=1m</text>
+		</Macroline>
+		<Macroline index="10">
+			<text>Assign Agenda 3 /Duration=1s</text>
+		</Macroline>
+		<Macroline index="11">
+			<text>Assign Agenda 1 /Repeat=none</text>
+		</Macroline>
+		<Macroline index="12">
+			<text>Assign Agenda 2 /Repeat=daily</text>
+		</Macroline>
+		<Macroline index="13">
+			<text>Assign Agenda 3 /Repeat=weekly</text>
+		</Macroline>
+		<Macroline index="14">
+			<text>Assign Agenda 4 /Repeat=annually</text>
+			<info>Described in the manual but does not work</info>
+		</Macroline>
+		<Macroline index="15">
+			<text>Assign Agenda 5 /Repeat=yearly</text>
+			<info>Not in the manual but works</info>
+		</Macroline>
+		<Macroline index="16">
+			<text>Assign Agenda 6 /Repeat=&quot;daily each month&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="17">
+			<text>Assign Agenda 7 /Repeat=&quot;weekly each month&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="18">
+			<text>Assign Agenda 8 /Repeat=&quot;daily each year&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="19">
+			<text>Assign Agenda 9 /Repeat=&quot;weekly each year&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="20">
+			<text>Assign Agenda 10 /Repeat=&quot;monthly each year&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="21">
+			<text>Assign Agenda 11 /Repeat=&quot;every 2nd day&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="22">
+			<text>Assign Agenda 12 /Repeat=&quot;every 3rd day&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="23">
+			<text>Assign Agenda 13 /Repeat=&quot;every 4th day&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="24">
+			<text>Assign Agenda 14 /Repeat=&quot;every 5th day&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="25">
+			<text>Assign Agenda 15 /Repeat=&quot;every 6th day&quot;</text>
+			<info>Quotes required</info>
+		</Macroline>
+		<Macroline index="26" disabled="true">
+			<text>Store Agenda 99</text>
+			<info>Error #16: RESIZE FORBIDDEN</info>
+		</Macroline>
+		<Macroline index="27">
+			<text>List Agenda</text>
+		</Macroline>
+		<Macroline index="28">
+			<text>Export Agenda * &quot;agendatestexport&quot;</text>
+		</Macroline>
+		<Macroline index="29">
+			<text>Delete Agenda *</text>
+		</Macroline>
+		<Macroline index="30">
+			<text>List Agenda</text>
+		</Macroline>
+		<Macroline index="31">
+			<text>Import &quot;agendatestexport&quot; At Agenda 1</text>
+		</Macroline>
+		<Macroline index="32">
+			<text>List Agenda</text>
+		</Macroline>
+	</Macro>
+</MA>
