@@ -84,7 +84,7 @@ Agenda 13 Absolute  12:34:56   0:00:00  Every 4th day
 Agenda 14 Absolute  12:34:56   0:00:00  Every 5th day
 Agenda 15 Absolute  12:34:56   0:00:00  Every 6th day
 ````
-This happens because there's an error in the exported XML, where we see twice "day_each_month".
+This happens because there's an error in the exported XML, where we see twice `"day_each_month"`.
 (Please notice that the Agenda items index starts from 0, not from 1)
 ````xml
 <Agenda index="5" repeat="day_each_month" date="0000-01-01T00:00:00" time="0" duration="0" special_time="absolute" />
@@ -114,4 +114,4 @@ This error is reflected in the [XSD](http://schemas.malighting.de/grandma2/xml/3
 ````
 As you may notice, `"day_each_month"` appears twice, while the second should be, according to the documentation, `"day_each_year"`.
 
-If we edit manually the exported XML and change "day_each_month" to "day_each_year", when we import it won't be recognized and will show up as "None".
+If we edit manually the exported XML and change `"day_each_month"` to `"day_each_year"`, when we import the attribute value won't be recognized and will show up as `None`.
