@@ -92,7 +92,7 @@ This happens because there's an error in the exported XML, where we see twice "d
 <Agenda index="7" repeat="day_each_month" date="0000-01-01T00:00:00" time="0" duration="0" special_time="absolute" />
 <!--                      ^^^^^^^^^^^^^^ day_each_month instead of day_each_year                                  -->
 ````
-This error is reflected in the XSD:
+This error is reflected in the [XSD](http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd):
 ````xml
 <xs:attribute name="repeat" default="none">
 	<xs:simpleType>
