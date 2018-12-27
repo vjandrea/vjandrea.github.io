@@ -41,9 +41,9 @@ Assign Agenda 15 /Repeat="every 6th day"
 List Agenda # Show what we've done
 Export Agenda * "agendatestexport"
 Delete Agenda * # Reset the agenda before reimporting
-List Agenda # Should throw an error because the agenda now is empty 
+List Agenda # Should throw an error because the agenda now is empty
 Import "agendatestexport" At Agenda 1
-List Agenda # Compare with the first List 
+List Agenda # Compare with the first List
 ````
 
 With the first `List` we see:
@@ -85,8 +85,15 @@ Agenda 13 Absolute  12:34:56   0:00:00  Every 4th day
 Agenda 14 Absolute  12:34:56   0:00:00  Every 5th day
 Agenda 15 Absolute  12:34:56   0:00:00  Every 6th day
 ````
-
-This error is reflected in the XSD:
+This happens because there's an error in the exported XML, where we see twice `"day_each_month"`.
+(Please notice that the Agenda items index starts from 0, not from 1)
+````xml
+<Agenda index="5" repeat="day_each_month" date="0000-01-01T00:00:00" time="0" duration="0" special_time="absolute" />
+<Agenda index="6" repeat="week_each_month" date="0000-01-01T00:00:00" time="0" duration="0" special_time="absolute" />
+<Agenda index="7" repeat="day_each_month" date="0000-01-01T00:00:00" time="0" duration="0" special_time="absolute" />
+<!--                      ^^^^^^^^^^^^^^ day_each_month instead of day_each_year                                  -->
+````
+This error is reflected in the [XSD](http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd):
 ````xml
 <xs:attribute name="repeat" default="none">
 	<xs:simpleType>
@@ -107,3 +114,5 @@ This error is reflected in the XSD:
 </xs:attribute>
 ````
 As you may notice, `"day_each_month"` appears twice, while the second should be, according to the documentation, `"day_each_year"`.
+
+If we edit manually the exported XML and change `"day_each_month"` to `"day_each_year"`, when we import the attribute value won't be recognized and will show up as `None`.
