@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'BUG: agenda export & import'
+date: 2018-12-15 23:36 +0100
 ---
 When we export the agenda to an XML file, in a case we lose data when reimporting.
 

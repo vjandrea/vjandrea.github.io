@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Fixture library: XML vs XMLP'
+date: 2018-11-16 23:36 +0100
 ---
 What are the differences between XML and XMLP fixture files?
 XMLP are compressed XMLs with an extra header.

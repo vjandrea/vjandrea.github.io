@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Agenda editing
+date: 2018-10-30 23:36 +0100
 ---
 # *Agenda*
 
