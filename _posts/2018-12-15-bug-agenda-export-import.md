@@ -5,9 +5,9 @@ date: 2018-12-15 23:36 +0100
 ---
 When we export the agenda to an XML file, in a case we lose data when reimporting.
 
-This bug has been verified in version 3.6.1.1
+This bug has been verified in version 3.6.1.1.
 
-To demonstrate this I created a macro, that you can [download it here](/assets/Agenda-bug-testing.xml)
+To demonstrate this I created a macro, that you can [download here](/assets/Agenda-bug-testing.xml)
 
 BEWARE BECAUSE IT RESETS ANY EVENT IN YOUR AGENDA:
 
