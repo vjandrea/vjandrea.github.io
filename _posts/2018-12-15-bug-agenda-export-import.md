@@ -5,9 +5,9 @@ date: 2018-12-15 23:36 +0100
 ---
 When we export the agenda to an XML file, in a case we lose data when reimporting.
 
-This bug has been confirmed in version 3.5.0.6
+This bug has been verified in version 3.6.1.1.
 
-To demonstrate this I created a macro, that you can [download it here](/assets/Agenda-bug-testing.xml)
+To demonstrate this I created a macro, that you can [download here](/assets/Agenda-bug-testing.xml)
 
 BEWARE BECAUSE IT RESETS ANY EVENT IN YOUR AGENDA:
 
@@ -93,7 +93,7 @@ This happens because there's an error in the exported XML, where we see twice `"
 <Agenda index="7" repeat="day_each_month" date="0000-01-01T00:00:00" time="0" duration="0" special_time="absolute" />
 <!--                      ^^^^^^^^^^^^^^ day_each_month instead of day_each_year                                  -->
 ````
-This error is reflected in the [XSD](http://schemas.malighting.de/grandma2/xml/3.5.0/MA.xsd):
+This error is reflected in the [XSD](http://schemas.malighting.de/grandma2/xml/3.6.0/MA.xsd) in line 4786 and 4788:
 ````xml
 <xs:attribute name="repeat" default="none">
 	<xs:simpleType>
