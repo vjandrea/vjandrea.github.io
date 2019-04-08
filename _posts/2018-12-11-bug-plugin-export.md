@@ -2,6 +2,7 @@
 layout: post
 title: 'BUG: plugin export'
 date: 2018-12-11 23:36 +0100
+tags: bug
 ---
 When we try to save a plugin to a USB key, the generated filename changes to that of the first file in the selected storage.
 

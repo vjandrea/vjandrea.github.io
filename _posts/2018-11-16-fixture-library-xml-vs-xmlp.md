@@ -2,6 +2,7 @@
 layout: post
 title: 'Fixture library: XML vs XMLP'
 date: 2018-11-16 23:36 +0100
+tags: xml
 ---
 What are the differences between XML and XMLP fixture files?
 XMLP are compressed XMLs with an extra header.
@@ -35,7 +36,7 @@ MA DATA?﻿<?xml version="1.0" encoding="utf-8"?>
 		</Instances>
 		<Wheels />
 	</FixtureType>
-</MA>$ 
+</MA>$
 ````
 What appears as `MA DATA?` in the `cat` output is actually a 19 bytes header:
 

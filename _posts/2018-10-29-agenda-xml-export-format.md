@@ -2,6 +2,7 @@
 layout: post
 title: Agenda XML export format
 date: 2018-10-29 23:36 +0100
+tags: xml
 ---
 Agenda XML elements generated using the *Export* command are structured like:
 

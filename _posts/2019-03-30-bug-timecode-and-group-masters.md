@@ -2,6 +2,7 @@
 layout: post
 title: 'BUG: Timecode and Group Masters'
 date: 2019-03-30 15:09 +0100
+tags: bug
 ---
 Timecode shows don't handle correctly Group Masters
 

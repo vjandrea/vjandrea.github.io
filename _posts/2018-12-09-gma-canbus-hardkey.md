@@ -2,6 +2,7 @@
 layout: post
 title: gma.canbus.hardkey
 date: 2018-12-09 23:36 +0100
+tags: lua
 ---
 
 In the last rows of `api_test.lua` there are two methods that use the function `gma.canbus.hardkey(code, press, hold)`.
