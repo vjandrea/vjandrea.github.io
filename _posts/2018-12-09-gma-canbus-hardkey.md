@@ -172,4 +172,4 @@ The key codes discovered so far are listed below, one remains unknown.
  154:
 ≥155: Pause [large]
 ````
-The only undiscovered code corresponds to `Backg [Background]`. Since `Backg` has no function, we might only guess it among the unassigned keycodes.
+The only undiscovered key is `Backg [Background]`. Since the `Backg` key has no function (yet), we might only guess it among the unassigned keycodes, probably it corresponds to 35.
