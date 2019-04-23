@@ -6,7 +6,7 @@ tags: bug
 ---
 Timecode shows don't handle correctly Group Masters
 
-This bug has been verified in version 3.6.1.1
+This bug has been verified in version 3.7.0.1
 
 To demonstrate this, I created two fixture groups, Vipers and Dimmers, and created two Group Masters in Negative mode.
 Then I stored two executors with the Dimmer value at full.

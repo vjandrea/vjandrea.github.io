@@ -6,7 +6,7 @@ tags: bug
 ---
 When we export the agenda to an XML file, in a case we lose data when reimporting.
 
-This bug has been verified in version 3.6.1.1.
+This bug has been verified in version 3.7.0.1.
 
 To demonstrate this I created a macro, that you can [download here](/assets/Agenda-bug-testing.xml)
 
@@ -94,7 +94,7 @@ This happens because there's an error in the exported XML, where we see twice `"
 <Agenda index="7" repeat="day_each_month" date="0000-01-01T00:00:00" time="0" duration="0" special_time="absolute" />
 <!--                      ^^^^^^^^^^^^^^ day_each_month instead of day_each_year                                  -->
 ````
-This error is reflected in the [XSD](http://schemas.malighting.de/grandma2/xml/3.6.0/MA.xsd) in line 4786 and 4788:
+This error is reflected in the [XSD](http://schemas.malighting.de/grandma2/xml/3.7.0/MA.xsd) in line 2332 and 2334, and has been present since version 3.2.0:
 ````xml
 <xs:attribute name="repeat" default="none">
 	<xs:simpleType>
@@ -116,4 +116,4 @@ This error is reflected in the [XSD](http://schemas.malighting.de/grandma2/xml/3
 ````
 As you may notice, `"day_each_month"` appears twice, while the second should be, according to the documentation, `"day_each_year"`.
 
-If we edit manually the exported XML and change `"day_each_month"` to `"day_each_year"`, when we import the attribute value won't be recognized and will show up as `None`.
+If we edit manually the exported XML and change `"day_each_month"` to `"day_each_year"`, when we import the XML the attribute value won't be recognized and will show up as `None`.
