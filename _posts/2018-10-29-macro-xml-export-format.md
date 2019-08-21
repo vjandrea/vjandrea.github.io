@@ -2,7 +2,8 @@
 layout: post
 title: Macro XML export format
 date: 2018-10-29 23:36 +0100
-tags: xml
+tags:
+    - XML
 ---
 Macro XML entities generated using the *Export* command are structured like:
 

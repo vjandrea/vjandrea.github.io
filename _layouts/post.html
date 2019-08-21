@@ -25,3 +25,10 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+{%- if page.tags.size > 0 -%}
+<div><strong>Tags: </strong>
+{% for tag in page.tags %}
+    <span> <a href="/tags/{{ tag }}">{{tag}}</a> </span>
+{% endfor %}
+</div>
+{%- endif -%}
